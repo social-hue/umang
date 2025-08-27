@@ -37,7 +37,7 @@ const Footer = () => (
             <p className="text-[#ccc] leading-relaxed lg:text-[18px]  max-w-xs">
               Umang Living is India’s first multi-city senior independent-living
               community, thoughtfully designed with love and respect. We believe
-              that at 55, life doesn’t slow down — it blossoms.. <br />
+              that at 55, life doesn’t slow down — it blossoms. <br />
               <br />
               Whether you are embarking on an exciting new beginning, a peaceful
               retirement, or simply seeking a more fulfilling and connected way
