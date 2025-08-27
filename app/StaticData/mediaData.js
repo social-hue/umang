@@ -1,0 +1,66 @@
+export const mediaData = [
+  {
+    id: "photos",
+    bgColor: "bg-[#af1e5d]", // magenta-red bar
+    title: "PHOTOS & VIDEOS",
+    subtitle: "from projects",
+    images: [
+      "/media/ANNAVARAM1.jpg",
+      "/media/image.jpg",
+      "/media/image-1.jpg",
+      "/media/image-2.jpg",
+      "/media/image-3.jpg",
+      "/media/image-4.jpg",
+      "/media/image-5.jpg",
+      "/media/image-6.jpg",
+    ],
+  },
+  {
+    id: "community",
+    bgColor: "bg-[#008c95]", // teal bar
+    title: "COMMUNITY",
+    subtitle: "events",
+    images: [
+      "/media/ANNAVARAM1.jpg",
+      "/media/image.jpg",
+      "/media/image-1.jpg",
+      "/media/image-2.jpg",
+      "/media/image-3.jpg",
+      "/media/image-4.jpg",
+      "/media/image-5.jpg",
+      "/media/image-6.jpg",
+    ],
+  },
+  {
+    id: "resident",
+    bgColor: "bg-[#af1e5d]",
+    title: "RESIDENT",
+    subtitle: "Testimonials",
+    images: [
+      "/media/ANNAVARAM1.jpg",
+      "/media/image.jpg",
+      "/media/image-1.jpg",
+      "/media/image-2.jpg",
+      "/media/image-3.jpg",
+      "/media/image-4.jpg",
+      "/media/image-5.jpg",
+      "/media/image-6.jpg",
+    ],
+  },
+  {
+    id: "media",
+    bgColor: "bg-[#008c95]",
+    title: "MEDIA",
+    subtitle: "coverage",
+    images: [
+      "/media/ANNAVARAM1.jpg",
+      "/media/image.jpg",
+      "/media/image-1.jpg",
+      "/media/image-2.jpg",
+      "/media/image-3.jpg",
+      "/media/image-4.jpg",
+      "/media/image-5.jpg",
+      "/media/image-6.jpg",
+    ],
+  },
+];
