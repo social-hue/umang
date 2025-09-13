@@ -20,20 +20,20 @@ export default function Header() {
   }, [open]);
 
   return (
-    <header className="w-[92%] mx-auto  transition-all duration-700 ease-in">
+    <header className="w-[92%] my-4 mx-auto  transition-all duration-700 ease-in">
       <div className="flex items-center justify-between">
         <Link href="/">
           <Image
             src="/logo.png"
-            alt="Umang logo"
+            alt="Umang_logo"
             width={300}
             height={80}
-            className="xl:w-[300px] lg:w-[250px] md:w-[220px] w-[200px]"
+            className="xl:w-[250px] lg:w-[210px] md:w-[180px] w-[160px]"
             priority
           />
         </Link>
 
-        <ul className="hidden lg:flex items-center space-x-4 xl:space-x-6 2xl:text-[18px] xl:text-[14px] lg:text-[12px]">
+        <ul className="hidden lg:flex items-center space-x-4 xl:space-x-6 2xl:text-[22px] xl:text-[18px] lg:text-[16px]">
           {navItems.map(({ label, href }) => (
             <li
               key={href}

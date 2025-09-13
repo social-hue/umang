@@ -3,7 +3,7 @@ import {
   Big_Shoulders_Display,
   Barlow_Condensed,
 } from "next/font/google";
-
+import Header from "./components/Header";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 
@@ -82,6 +82,7 @@ export default function RootLayout({ children }) {
           "antialiased",
         ].join(" ")}
       >
+        <Header/>       
         {children}
         <Toaster
           position="top-right"

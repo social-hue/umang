@@ -2,7 +2,7 @@ import Timeline from "../components/about/Timeline";
 import Banner from "../components/Banner";
 import Community from "../components/Community";
 import Footer from "../components/Footer";
-import Header from "../components/Header";
+// import Header from "../components/Header";
 import Aboutus from "../components/project/about";
 import Map from "../components/project/map";
 import PropertySlider from "../components/PropertySlider";
@@ -50,9 +50,9 @@ export const generateMetadata = () => {
 export default function Projects() {
   return (
     <>
-      <div className="py-8 ">
+      {/* <div className="py-8 ">
         <Header />
-      </div>
+      </div> */}
       <Banner title={"Projects"} />
       <div className=" relative overflow-hidden ">
         <div className="absolute -top-[150px] -left-[180px] -z-9">

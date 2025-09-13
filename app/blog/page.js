@@ -3,7 +3,7 @@ import Aboutus from "../components/blog/about";
 import { BlogGrid } from "../components/blog/BlogGrid";
 import Community from "../components/Community";
 import Footer from "../components/Footer";
-import Header from "../components/Header";
+// import Header from "../components/Header";
 import { seoData } from "../lib/seoMeta";
 
 export const generateMetadata = () => {
@@ -46,9 +46,9 @@ export const generateMetadata = () => {
 export default function Blog() {
   return (
     <>
-      <div className="py-8 border">
+      {/* <div className="py-8 border">
         <Header />
-      </div>
+      </div> */}
       <Banner title={" Blog"} />
       <div className=" relative overflow-hidden ">
         <div className="absolute -top-[150px] -left-[180px] -z-9">

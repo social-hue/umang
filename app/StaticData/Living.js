@@ -34,11 +34,11 @@ export const facilities = [
   //   tagline: "For all your medical/healthcare/wellness needs",
   //   accent: "text-pink-600",
   // },
-  {
-    id: 6,
-    icon: "/svgs/medical.svg",
-    title: "Legal Consultation",
-    tagline: "For any land/ property-related issue",
-    accent: "text-teal-600",
-  },
+  // {
+  //   id: 6,
+  //   icon: "/svgs/medical.svg",
+  //   title: "Legal Consultation",
+  //   tagline: "For any land/ property-related issue",
+  //   accent: "text-teal-600",
+  // },
 ];

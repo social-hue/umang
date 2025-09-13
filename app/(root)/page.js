@@ -6,6 +6,7 @@ import Glimps from "../components/Home/Glimps/Glimps";
 import Community from "../components/Community";
 import Footer from "../components/Footer";
 import { seoData } from "../lib/seoMeta";
+import Aboutus from "../components/about/Aboutus";
 
 export const generateMetadata = () => {
   const meta = seoData.home;
@@ -59,8 +60,8 @@ export default function Home() {
   return (
     <>
       <Banner />
-      <About />
-      <div className="py-10 main_width">
+      <Aboutus />
+      {/* <div className="py-10 main_width">
         <FounderMessage
           head={`   
                 <span style="color:#069183">Founder’s</span> Message
@@ -76,7 +77,7 @@ export default function Home() {
           order1={"lg:order-1 order-2"}
           order2={"lg:order-2 order-1"}
         />
-      </div>
+      </div> */}
       <Living />
       <Glimps />
       <Community />

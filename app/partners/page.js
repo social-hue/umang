@@ -1,7 +1,7 @@
 import Banner from "../components/Banner";
 import Community from "../components/Community";
 import Footer from "../components/Footer";
-import Header from "../components/Header";
+// import Header from "../components/Header";
 import Aboutus from "../components/partner/about";
 import Button from "../components/partner/Button";
 import GridCols from "../components/partner/GridCols";
@@ -48,9 +48,9 @@ export const generateMetadata = () => {
 export default function Partners() {
   return (
     <>
-      <div className="py-8 ">
+      {/* <div className="py-8 ">
         <Header />
-      </div>
+      </div> */}
       <Banner title={"Partner With Us"} />
       <div className=" relative overflow-hidden ">
         <div className="absolute -top-[150px] -left-[180px] -z-9">
