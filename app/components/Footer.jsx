@@ -17,14 +17,14 @@ const supportLinks = [
 
 const Footer = () => (
   <footer className="bg-[url(/footer.jpg)] bg-cover text-white text-sm relative  ">
-    <div className="absolute w-full  -top-10">
+    <div className="absolute w-full  -top-6">
       <div className="flex items-center justify-center ">
         <ScrollToTopButton />
       </div>
     </div>
     <div className="overflow-hidden w-full h-full relative">
-      <div className="pt-18 pb-4">
-        <div className="mx-auto main_width px-4 py-12 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-10 relative z-[9]">
+      <div className="pt-8">
+        <div className="mx-auto main_width px-4 py-4 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-10 relative z-[9]">
           {/* Left Logo + Description */}
           <div>
             <div className="flex items-center mb-4">
@@ -36,18 +36,17 @@ const Footer = () => (
             </div>
             <p className="text-[#ccc] leading-relaxed lg:text-[18px]  max-w-xs">
               Umang Living is India’s first multi-city senior independent-living
-              community, thoughtfully designed with love and respect. We believe
-              that at 55, life doesn’t slow down — it blossoms. <br />
-              <br />
+              community, thoughtfully designed with love and respect.<br />
+              {/* <br />
               Whether you are embarking on an exciting new beginning, a peaceful
               retirement, or simply seeking a more fulfilling and connected way
-              to live, Umang Living is where you belong.
+              to live, Umang Living is where you belong. */}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="yellow lg:text-[22px] md:text-[18px] font-semibold mb-4 uppercase">
+            <h4 className="yellow lg:text-[20px] md:text-[16px] font-semibold mb-4 uppercase">
               Quick Links
             </h4>
             <ul className="space-y-3 text-[#ccc] lg:text-[18px]">
@@ -64,7 +63,7 @@ const Footer = () => (
 
           {/* Support Links */}
           <div>
-            <h4 className="yellow lg:text-[22px] md:text-[18px] font-semibold mb-4 uppercase">
+            <h4 className="yellow lg:text-[20px] md:text-[16px] font-semibold mb-4 uppercase">
               Support Links
             </h4>
             <ul className="space-y-3 text-[#ccc] lg:text-[18px]">

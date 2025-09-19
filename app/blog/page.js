@@ -1,7 +1,7 @@
 import Banner from "../components/Banner";
 import Aboutus from "../components/blog/about";
 import { BlogGrid } from "../components/blog/BlogGrid";
-import Community from "../components/Community";
+// import Community from "../components/Community";
 import Footer from "../components/Footer";
 // import Header from "../components/Header";
 import { seoData } from "../lib/seoMeta";
@@ -56,7 +56,7 @@ export default function Blog() {
         </div>
         <Aboutus />
         <BlogGrid />
-        <Community />
+        {/* <Community /> */}
       </div>
       <Footer />
     </>

@@ -1,4 +1,4 @@
-import Aboutus from "../components/about/Aboutus";
+// import Aboutus from "../components/about/Aboutus";
 import Timeline from "../components/about/Timeline";
 import Banner from "../components/Banner";
 import Community from "../components/Community";
@@ -61,7 +61,7 @@ With Umang Living, Mr. Bharadwajj hopes to do more than build beautiful residenc
         <div className="absolute -top-[150px] -left-[180px] -z-9">
           <img src="/rangoli.png" alt="rangoli" className="w-[70%] " />
         </div>
-        <Aboutus />
+        {/* <Aboutus /> */}
         <div className="p-8 rounded-[11px] main_width bg-[#f6f6f6]">
           <FounderMessage
             head={`   

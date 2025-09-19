@@ -1,5 +1,5 @@
 import Banner from "../components/Banner";
-import Community from "../components/Community";
+// import Community from "../components/Community";
 import Footer from "../components/Footer";
 // import Header from "../components/Header";
 import Aboutus from "../components/partner/about";
@@ -73,7 +73,7 @@ export default function Partners() {
             />
           ))}
         </div>
-        <Community />
+        {/* <Community /> */}
       </div>
       <Footer />
     </>
