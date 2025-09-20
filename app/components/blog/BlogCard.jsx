@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link";
 import { CiShare2 } from "react-icons/ci";
 import { motion } from "framer-motion";
