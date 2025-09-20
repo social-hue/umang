@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import Button from "./Button";
 import { motion } from "framer-motion";
@@ -48,3 +49,4 @@ const GridCols = ({ order1, order2, dis, cont1, cont2, type, img, id }) => {
 };
 
 export default GridCols;
+

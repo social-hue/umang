@@ -159,8 +159,8 @@ Our team is always ready to answer your queries and assist you with membership o
 // Main FAQ Section Component
 const FAQSection = () => {
   return (
-    <div className=" lg:p-18 md:p-16 p-10 bg-zinc-150">
-      <h2 className="text-3xl md:text-4xl lg:4xl font-bold text-zinc-800 mb-6 text-center">
+    <div className=" lg:p-16 md:p-16 p-10 bg-zinc-150">
+      <h2 className="text-3xl md:text-4xl lg:4xl font-bold text-zinc-800 mb-8 text-center">
         Got Questions ? We have answers
       </h2>
 

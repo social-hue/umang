@@ -1,3 +1,4 @@
+// "use client"
 import Banner from "../components/Banner";
 // import Community from "../components/Community";
 import Footer from "../components/Footer";

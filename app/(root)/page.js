@@ -1,6 +1,7 @@
 import Banner from "../components/Home/Banner/Banner";
 // import About from "../components/Home/About/about";
 // import FounderMessage from "../components/FounderMessage";
+import floatingButton from "../components/floatingButton/floatingButton";
 import Living from "../components/Home/UmangLiving/Living";
 // import Glimps from "../components/Home/Glimps/Glimps";
 import Community from "../components/Community";
@@ -9,6 +10,7 @@ import { seoData } from "../lib/seoMeta";
 // import Aboutus from "../components/about/Aboutus";
 import FAQSection from "../components/faq/FAQSection";
 import Testimonial from "../components/testimonials/testimonials";
+import FloatingCTA from "../components/floatingButton/floatingButton";
 // import Testimonial from "../components/testimonials/Testimonial";
 // import TestimonialsSection from "../components/TestimonialsSection";
 
@@ -88,6 +90,7 @@ export default function Home() {
       <FAQSection />
       <Community />
       <Footer />
+      <FloatingCTA />
     </>
   );
 }
