@@ -6,7 +6,7 @@ export default function FloatingCTA() {
   return (
     <div className="fixed top-1/2 right-0 z-50 -translate-y-1/2 flex flex-col gap-3">
       {/* Contact Button */}
-      <Link href="tel:+91">
+      <Link href="tel:+18002028704">
         <button className="flex items-center gap-2 bg-[#069183] w-full text-white  font-semibold px-3 py-4 rounded-l-lg shadow-lg hover:bg-[#057366] transition">
           <FaPhoneAlt className="h-5 w-5"/>
         </button>
@@ -14,7 +14,7 @@ export default function FloatingCTA() {
 
       {/* WhatsApp Button */}
       <Link
-        href="https://wa.me/18002028704"
+        href="https://wa.me/919560986669"
         target="_blank"
         rel="noopener noreferrer"
       >

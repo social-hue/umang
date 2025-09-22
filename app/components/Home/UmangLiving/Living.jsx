@@ -170,10 +170,13 @@ export default function Living() {
           viewport={{ once: true }}
           className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4 px-4"
         >
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScQlwi7hkmU9fp7aGSOLfUXPIvQmADduVyPQvVC5PKhcbFyDQ/viewform?usp=header" target="_blank">
           <button className="bg_green hover:bg-green-900 text-white px-6 py-3 rounded-sm font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-auto">
             Join Today
           </button>
-          <a href="tel:18002028704" className="w-full sm:w-auto">
+          </a>
+  
+          <a href="tel:18002028704" className="w-full sm:w-auto" target="_blank">
             <button className="bg-red-800 hover:bg-orange-800 text-white px-6 py-3 rounded-sm font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-auto">
               Call Helpline
             </button>

@@ -100,7 +100,7 @@ export default function FAQSection() {
     <div className="bg-[#f8f8f8a7] py-8 md:py-14 lg:py-16 xl:py-16" ref={faqSectionRef}>
       <section className="w-[80%] mx-auto">
         {/* Headings */}
-        <h2 className="text-zinc-800 font-bold text-[36px] text-center lg:text-[40px] 2xl:text-[42px] mb-6 whitespace-nowrap">
+        <h2 className="text-zinc-800 font-bold text-[32px] text-center lg:text-[40px] 2xl:text-[42px] mb-6 whitespace-nowrap">
           Frequently Asked <span className="text-zinc-600">Questions</span>
         </h2>
         {/* <h3 className="text-zinc-800 font-sans font-semibold sm:text-[40px] md:text-[48px] lg:text-[50px] xl:text-[50px] leading-[1.1] tracking-[-0.045em] ml-[6%] md:ml-[6%] lg:ml-[6%] xl:ml-[6%] mb-8 md:mb-12 lg:mb-12 xl:mb-12 drop-shadow-md max-md:text-[32px]">
@@ -165,7 +165,7 @@ function FAQItem({ faq, index, openFAQs, toggleFAQ }) {
   return (
     <div className="mb-2">
       <button
-        className={`w-full text-left p-3 text-[16px] md:text-[18px] lg:text-[20px]  text-[#ccd6f6] bg-[#112240] border border-[hsla(0,0%,51.4%,0.16)] rounded-md shadow-[0_10px_30px_-15px_rgba(0,0,0,1)] transition hover:shadow-[0_10px_60px_-15px_rgba(0,0,0,1)] relative after:content-['+'] after:font-bold after:absolute after:right-3 ${
+        className={`w-full text-left p-3 text-[17px] md:text-[18px] lg:text-[20px]  text-[#ccd6f6] bg-[#112240] border border-[hsla(0,0%,51.4%,0.16)] rounded-md shadow-[0_10px_30px_-15px_rgba(0,0,0,1)] transition hover:shadow-[0_10px_60px_-15px_rgba(0,0,0,1)] relative after:content-['+'] after:font-bold after:absolute after:right-3 ${
           openFAQs.has(index)
             ? "after:content-['-']"
             : "after:content-['+']"
@@ -181,7 +181,7 @@ function FAQItem({ faq, index, openFAQs, toggleFAQ }) {
             : "max-h-0 invisible"
         }`}
       >
-        <p className="text-[#c2c2c2] text-[16px] md:text-[18px] lg:text-[20px] leading-[1.4] font-light drop-shadow-sm whitespace-pre-line">
+        <p className="text-[#c2c2c2] text-[17px] md:text-[18px] lg:text-[20px] leading-[1.4] font-light drop-shadow-sm whitespace-pre-line">
           {faq.answer}
         </p>
       </div>
