@@ -198,7 +198,7 @@ export default function Header() {
 
       {/* Mobile Drawer */}
       <aside
-        className={`fixed top-0 left-0 h-[340px] w-full bg-[#069183] z-50 shadow-xl transform transition-transform duration-300 lg:hidden ${
+        className={`fixed top-0 left-0 h-full w-full bg-[#069183] z-50 shadow-xl transform transition-transform duration-300 lg:hidden ${
           open ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -314,6 +314,13 @@ export default function Header() {
             );
           })}
         </nav>
+        <div className="p-6 w-full flex ">
+        <a className="w-full sm:w-auto" href="https://docs.google.com/forms/d/e/1FAIpQLScQlwi7hkmU9fp7aGSOLfUXPIvQmADduVyPQvVC5PKhcbFyDQ/viewform?usp=header" target="_blank">
+          <button className="bg-yellow-600 hover:bg-green-900 text-white px-6 py-3 rounded-sm font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-auto">
+            Join Today
+          </button>
+          </a>
+        </div>
       </aside>
     </header>
   );

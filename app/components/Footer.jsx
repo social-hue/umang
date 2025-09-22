@@ -34,10 +34,10 @@ const Footer = () => (
               <img
                 src="/logo.png"
                 alt="Umang Living"
-                className="rounded"
+                className="rounded w-[80%] h-[80px] lg:w-full "
               />
             </div>
-            <p className="text-[#ccc] leading-relaxed lg:text-[18px]  max-w-xs">
+            <p className="text-[#ccc] leading-relaxed text-[17px] lg:text-[18px]  max-w-xs">
               Umang Living is India’s first multi-city senior independent-living
               community, thoughtfully designed with love and respect.<br />
               {/* <br />
