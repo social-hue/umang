@@ -172,7 +172,7 @@ export default function Header() {
 
       {/* Mobile Drawer */}
       <aside
-        className={`fixed top-0 left-0 h-full w-full bg-[#069183] z-50 shadow-xl transform transition-transform duration-300 lg:hidden ${open ? "translate-x-0" : "-translate-x-full"
+        className={`fixed top-0 left-0 h-[340px] w-full bg-[#069183] z-50 shadow-xl transform transition-transform duration-300 lg:hidden ${open ? "translate-x-0" : "-translate-x-full"
           }`}
       >
         {/* Drawer Header */}
@@ -180,7 +180,7 @@ export default function Header() {
           <Image src="/logo.png" alt="" width={190} height={50} />
           <button
             onClick={() => setOpen(false)}
-            className="p-2 border rounded-full bg-green-100 text-green-600"
+            className="p-2 border bg-green-100 text-green-600"
             aria-label="Close menu"
           >
             <FaTimes className="text-xl text-green-700" />
@@ -277,11 +277,11 @@ export default function Header() {
         </nav>
 
         {/* CTA */}
-        <div className="p-6 w-full py-4 flex">
+        {/* <div className="p-6 w-full py-4 flex">
           <div className="bg-black w-full text-center text-white py-4 rounded-[10px] capitalize">
             <span>join the community</span>
           </div>
-        </div>
+        </div> */}
       </aside>
     </header>
   );

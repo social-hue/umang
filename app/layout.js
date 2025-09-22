@@ -6,6 +6,7 @@ import {
 import Header from "./components/Header";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
+import FloatingCTA from "./components/floatingButton/floatingButton";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -94,6 +95,7 @@ export default function RootLayout({ children }) {
             },
           }}
         />
+        <FloatingCTA />
       </body>
     </html>
   );

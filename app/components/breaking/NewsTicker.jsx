@@ -11,7 +11,7 @@ export default function NewsTicker() {
 
   return (
     <>
-      <div className="w-full flex items-center gap-4 font-medium z-50 bg-white/90 backdrop-blur-sm px-4 py-2 shadow-sm border-1 border-zinc-400 overflow-hidden group">
+      <div className="w-full flex items-center gap-4 font-medium bg-white/90 backdrop-blur-sm px-4 py-2 shadow-sm border-1 border-zinc-400 overflow-hidden group">
         {/* Fixed heading */}
         <h3 className="text-lg font-semibold text-gray-800 whitespace-nowrap">
           What's new?

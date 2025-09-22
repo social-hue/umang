@@ -1,8 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { navItems } from "../lib/nav-items";
-import { FaLocationDot } from "react-icons/fa6";
+import { FaLocationDot, FaYoutube } from "react-icons/fa6";
 import ScrollToTopButton from "../helpers/ScrollToTopButton";
+// import { Facebook, Linkedin, Instagram, Twitter } from "lucide-react";
+import { FaFacebookF, FaLinkedinIn, FaInstagram, FaTwitter } from "react-icons/fa";
+
 
 const supportLinks = [
   {
@@ -82,23 +85,61 @@ const Footer = () => (
 
           {/* Newsletter */}
           <div>
-            <h4 className="yellow text-[18px] font-semibold mb-4 uppercase">
-              Join a Newsletter
-            </h4>
-            <form className="flex items-center space-x-1 mb-4">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="bg-[#4F5A68] rounded-tl-[11px] rounded-bl-[11px] text-white px-6 py-3 w-full text-sm placeholder-[#888]  focus:outline-none"
-              />
-              <button
-                type="submit"
-                className="bg-[#00A79C] text-[#fff] font-semibold px-4 py-3 rounded-tr-[11px] rounded-br-[11px] text-sm hover:opacity-90"
-              >
-                SUBSCRIBE
-              </button>
-            </form>
-          </div>
+      <h4 className="yellow text-[18px] font-semibold mb-4 uppercase">
+        Join a Newsletter
+      </h4>
+
+      {/* Newsletter Form */}
+      <form className="flex items-center space-x-1 mb-4">
+        <input
+          type="email"
+          placeholder="Enter your email"
+          className="bg-[#4F5A68] rounded-tl-[11px] rounded-bl-[11px] text-white px-6 py-3 w-full text-sm placeholder-[#888] focus:outline-none"
+        />
+        <button
+          type="submit"
+          className="bg-[#00A79C] text-[#fff] font-semibold px-4 py-3 rounded-tr-[11px] rounded-br-[11px] text-sm hover:opacity-90"
+        >
+          SUBSCRIBE
+        </button>
+      </form>
+
+      {/* Social Media Icons */}
+      <div className="flex justify-center sm:justify-start gap-3">
+        <a
+          href="https://www.facebook.com/people/Umang-Living-Senior-Citizens-Community/61579702657707/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="p-2 rounded-full bg-[#4F5A68] text-white hover:bg-[#00A79C] transition"
+        >
+          <FaFacebookF className="w-4 h-4" />
+        </a>
+        <a
+          href="https://www.linkedin.com/company/umang-living/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="p-2 rounded-full bg-[#4F5A68] text-white hover:bg-[#00A79C] transition"
+        >
+          <FaLinkedinIn className="w-4 h-4" />
+        </a>
+        <a
+          href="https://www.instagram.com/umangliving/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="p-2 rounded-full bg-[#4F5A68] text-white hover:bg-[#00A79C] transition"
+        >
+          <FaInstagram className="w-4 h-4" />
+        </a>
+        <a
+          href="https://www.youtube.com/@UmangLiving"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="p-2 rounded-full bg-[#4F5A68] text-white hover:bg-[#00A79C] transition"
+        >
+          <FaYoutube className="w-4 h-4" />
+        </a>
+      </div>
+      </div>      
         </div>
 
         {/* Bottom Bar */}
