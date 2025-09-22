@@ -100,12 +100,12 @@ export default function FAQSection() {
     <div className="bg-[#f8f8f8a7] py-8 md:py-14 lg:py-16 xl:py-16" ref={faqSectionRef}>
       <section className="w-[80%] mx-auto">
         {/* Headings */}
-        <h2 className="text-zinc-800 font-semibold text-[26px] lg:text-[30px] 2xl:text-[32px] flex items-center mb-6 ml-[4%] md:ml-[6%] lg:ml-[6%] xl:ml-[6%] whitespace-nowrap relative after:content-[''] after:block after:relative after:w-[300px] after:h-[1px] after:ml-5 after:bg-[rgba(52,53,49,0.65)] hover:after:w-[180px] hover:after:bg-[rgba(204,214,246,0.6)] transition-all duration-500">
-          Frequently Asked Questions
+        <h2 className="text-zinc-800 font-bold text-[36px] text-center lg:text-[40px] 2xl:text-[42px] mb-6 whitespace-nowrap">
+          Frequently Asked <span className="text-zinc-600">Questions</span>
         </h2>
-        <h3 className="text-zinc-800 font-sans font-semibold sm:text-[40px] md:text-[48px] lg:text-[50px] xl:text-[50px] leading-[1.1] tracking-[-0.045em] ml-[6%] md:ml-[6%] lg:ml-[6%] xl:ml-[6%] mb-8 md:mb-12 lg:mb-12 xl:mb-12 drop-shadow-md max-md:text-[32px]">
+        {/* <h3 className="text-zinc-800 font-sans font-semibold sm:text-[40px] md:text-[48px] lg:text-[50px] xl:text-[50px] leading-[1.1] tracking-[-0.045em] ml-[6%] md:ml-[6%] lg:ml-[6%] xl:ml-[6%] mb-8 md:mb-12 lg:mb-12 xl:mb-12 drop-shadow-md max-md:text-[32px]">
           Some of the most common questions asked about Umang's Living
-        </h3>
+        </h3> */}
 
         {/* FAQ Grid */}
         <div className="flex gap-1 md:gap-6 lg:gap-6 xl:gap-6 max-md:flex-col">

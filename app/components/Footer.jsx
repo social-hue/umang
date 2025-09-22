@@ -32,7 +32,7 @@ const Footer = () => (
           <div>
             <div className="flex items-center mb-4">
               <img
-                src="/white_logo.png"
+                src="/logo.png"
                 alt="Umang Living"
                 className="rounded"
               />
@@ -52,7 +52,7 @@ const Footer = () => (
             <h4 className="yellow lg:text-[20px] md:text-[16px] font-semibold mb-4 uppercase">
               Quick Links
             </h4>
-            <ul className="space-y-3 text-[#ccc] lg:text-[18px]">
+            <ul className="space-y-3 text-[#ccc] lg:text-[18px] text-[18px]">
               {navItems.map(({ label, href }) => (
                 <li key={href}>
                   <Link href={href} className="hover:text-white transition">
@@ -69,7 +69,7 @@ const Footer = () => (
             <h4 className="yellow lg:text-[20px] md:text-[16px] font-semibold mb-4 uppercase">
               Support Links
             </h4>
-            <ul className="space-y-3 text-[#ccc] lg:text-[18px]">
+            <ul className="space-y-3 text-[#ccc] text-[18px] lg:text-[18px]">
               {supportLinks.map((txt, item) => (
                 <li key={item}>
                   <Link
