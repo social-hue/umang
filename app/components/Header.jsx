@@ -36,7 +36,13 @@ export default function Header() {
     return () => document.removeEventListener("mousedown", handleDocClick);
   }, []);
 
-
+  // helper to close drawer safely after navigation
+  const closeMenusAfterNav = () => {
+    setTimeout(() => {
+      setOpen(false);
+      setDropdownOpen(false);
+    }, 50);
+  };
 
   return (
     <header className="w-[92%] my-4 mx-auto transition-all duration-700 ease-in">
@@ -223,7 +229,7 @@ export default function Header() {
                   <div className="flex items-center justify-between border-b pb-2 border-dashed">
                     <Link
                       href={href}
-                      onClick={() => setOpen(false)}
+                      onClick={closeMenusAfterNav}
                       className={`text-lg w-full ${
                         pathname === href ? "text-[#FCEF44]" : "text-white"
                       }`}
@@ -246,51 +252,42 @@ export default function Header() {
                     </button>
                   </div>
 
-                  {/* Mobile Dropdown - Using same logic as desktop */}
+                  {/* Mobile Dropdown */}
                   {dropdownOpen && (
                     <div className="pl-4 space-y-3">
                       <Link
                         href="/projects"
-                        onClick={() => {
-                          setOpen(false);
-                          setDropdownOpen(false);
-                        }}
+                        onClick={closeMenusAfterNav}
                         className={`block text-lg border-b pb-2 border-dashed w-full transition-colors ${
                           pathname === "/projects"
                             ? "text-[#FCEF44] font-medium"
                             : "text-white hover:text-[#E7216A]"
                         }`}
-                        style={{ minHeight: '44px', display: 'flex', alignItems: 'center' }}
+                        style={{ minHeight: "44px", display: "flex", alignItems: "center" }}
                       >
                         Projects
                       </Link>
                       <Link
                         href="/blog"
-                        onClick={() => {
-                          setOpen(false);
-                          setDropdownOpen(false);
-                        }}
+                        onClick={closeMenusAfterNav}
                         className={`block text-lg border-b pb-2 border-dashed w-full transition-colors ${
                           pathname === "/blog"
                             ? "text-[#FCEF44] font-medium"
                             : "text-white hover:text-[#E7216A]"
                         }`}
-                        style={{ minHeight: '44px', display: 'flex', alignItems: 'center' }}
+                        style={{ minHeight: "44px", display: "flex", alignItems: "center" }}
                       >
                         Blog
                       </Link>
                       <Link
                         href="/lifeAt"
-                        onClick={() => {
-                          setOpen(false);
-                          setDropdownOpen(false);
-                        }}
+                        onClick={closeMenusAfterNav}
                         className={`block text-lg border-b pb-2 border-dashed w-full transition-colors ${
                           pathname === "/lifeAt"
                             ? "text-[#FCEF44] font-medium"
                             : "text-white hover:text-[#E7216A]"
                         }`}
-                        style={{ minHeight: '44px', display: 'flex', alignItems: 'center' }}
+                        style={{ minHeight: "44px", display: "flex", alignItems: "center" }}
                       >
                         Life@
                       </Link>
@@ -306,7 +303,7 @@ export default function Header() {
               <Link
                 key={href}
                 href={href}
-                onClick={() => setOpen(false)}
+                onClick={closeMenusAfterNav}
                 className={`block text-lg border-b pb-2 border-dashed w-full ${
                   pathname === href
                     ? "text-[#FCEF44]"

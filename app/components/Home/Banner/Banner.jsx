@@ -97,7 +97,7 @@ export default function Banner() {
   };
 
   return (
-    <section className="w-full 2xl:h-[740px] lg:h-[560px] md:h-[460px] h-[380px] relative overflow-hidden">
+    <section className="w-full 2xl:h-[760px] lg:h-[560px] md:h-[460px] h-[380px] relative overflow-hidden">
       {/* Carousel Container */}
       <div className="relative w-full 2xl:h-[680] lg:h-[480px] md:h-[380px] h-[300px] overflow-hidden">
         <AnimatePresence initial={false} custom={direction}>
