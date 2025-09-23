@@ -9,7 +9,7 @@ import { navItems } from "../lib/nav-items";
 export default function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false); // mobile drawer
-  const [dropdownOpen, setDropdownOpen] = useState(false); // About Us submenu
+  const [dropdownOpen, setDropdownOpen] = useState(false); // About submenu
   const dropdownRef = useRef(null);
 
   // prevent body scroll when drawer is open
@@ -19,14 +19,13 @@ export default function Header() {
     return () => document.body.classList.remove("overflow-hidden");
   }, [open]);
 
-  // close dropdown when route changes (keeps UI tidy)
+  // close dropdown and drawer on route change
   useEffect(() => {
     setDropdownOpen(false);
-    // also close mobile drawer when navigating
     setOpen(false);
   }, [pathname]);
 
-  // click outside to close dropdown
+  // click outside to close desktop dropdown
   useEffect(() => {
     function handleDocClick(e) {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -55,7 +54,6 @@ export default function Header() {
         {/* Desktop Nav */}
         <ul className="hidden lg:flex items-center space-x-4 xl:space-x-6 2xl:text-[22px] xl:text-[18px] lg:text-[16px]">
           {navItems.map(({ label, href }) => {
-            // Render About Us with separate Link + chevron button
             if (label === "About") {
               return (
                 <li key={href} className="relative" ref={dropdownRef}>
@@ -87,7 +85,7 @@ export default function Header() {
                     </button>
                   </div>
 
-                  {/* Dropdown Menu */}
+                  {/* Desktop Dropdown */}
                   {dropdownOpen && (
                     <ul className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md overflow-hidden z-50">
                       <li>
@@ -151,7 +149,7 @@ export default function Header() {
             );
           })}
 
-          {/* Dialer Button (desktop only) */}
+          {/* Dialer (desktop) */}
           <a
             href="tel:18002028704"
             className="relative z-10 px-3 py-1 inline-flex items-center gap-1.5 rounded-md 
@@ -165,7 +163,7 @@ export default function Header() {
           </a>
         </ul>
 
-        {/* 🔥 Mobile Dialer Button */}
+        {/* Dialer (mobile) */}
         <a
           href="tel:18002028704"
           className="flex lg:hidden md:hidden mr-0 px-3 py-1 items-center gap-2 rounded-md 
@@ -217,15 +215,15 @@ export default function Header() {
         {/* Drawer Nav */}
         <nav className="mt-6 px-6 space-y-4">
           {navItems.map(({ label, href }) => {
-            if (label === "About Us") {
+            if (label === "About") {
               return (
                 <div key={href} className="space-y-2">
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between border-b pb-2 border-dashed">
                     <Link
                       href={href}
                       onClick={() => setOpen(false)}
-                      className={`text-lg border-b pb-2 border-dashed ${
-                        pathname === href ? "text-[#FCEF44]" : "text-[#fff]"
+                      className={`text-lg w-full ${
+                        pathname === href ? "text-[#FCEF44]" : "text-white"
                       }`}
                     >
                       {label}
@@ -246,18 +244,19 @@ export default function Header() {
                     </button>
                   </div>
 
+                  {/* Mobile Dropdown */}
                   {dropdownOpen && (
-                    <div className="pl-4 space-y-2">
+                    <div className="pl-2 space-y-2">
                       <Link
                         href="/projects"
                         onClick={() => {
                           setOpen(false);
                           setDropdownOpen(false);
                         }}
-                        className={`block text-base border-b pb-1 border-dashed ${
+                        className={`block text-lg border-b pb-2 border-dashed w-full ${
                           pathname === "/projects"
                             ? "text-[#FCEF44]"
-                            : "text-[#fff] hover:text-[#E7216A]"
+                            : "text-white hover:text-[#E7216A]"
                         }`}
                       >
                         Projects
@@ -268,10 +267,10 @@ export default function Header() {
                           setOpen(false);
                           setDropdownOpen(false);
                         }}
-                        className={`block text-base border-b pb-1 border-dashed ${
+                        className={`block text-base border-b pb-2 border-dashed w-full ${
                           pathname === "/blog"
                             ? "text-[#FCEF44]"
-                            : "text-[#fff] hover:text-[#E7216A]"
+                            : "text-white hover:text-[#E7216A]"
                         }`}
                       >
                         Blog
@@ -282,10 +281,10 @@ export default function Header() {
                           setOpen(false);
                           setDropdownOpen(false);
                         }}
-                        className={`block text-base border-b pb-1 border-dashed ${
+                        className={`block text-base border-b pb-2 border-dashed w-full ${
                           pathname === "/lifeAt"
                             ? "text-[#FCEF44]"
-                            : "text-[#fff] hover:text-[#E7216A]"
+                            : "text-white hover:text-[#E7216A]"
                         }`}
                       >
                         Life@
@@ -303,10 +302,10 @@ export default function Header() {
                 key={href}
                 href={href}
                 onClick={() => setOpen(false)}
-                className={`block text-lg border-b pb-2 border-dashed ${
+                className={`block text-lg border-b pb-2 border-dashed w-full ${
                   pathname === href
                     ? "text-[#FCEF44]"
-                    : "text-[#fff] hover:text-[#E7216A]"
+                    : "text-white hover:text-[#E7216A]"
                 }`}
               >
                 {label}
@@ -314,11 +313,17 @@ export default function Header() {
             );
           })}
         </nav>
-        <div className="p-6 w-full flex ">
-        <a className="w-full sm:w-auto" href="https://docs.google.com/forms/d/e/1FAIpQLScQlwi7hkmU9fp7aGSOLfUXPIvQmADduVyPQvVC5PKhcbFyDQ/viewform?usp=header" target="_blank">
-          <button className="bg-yellow-600 hover:bg-green-900 text-white px-6 py-3 rounded-sm font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-auto">
-            Join Today
-          </button>
+
+        {/* CTA button */}
+        <div className="p-6 w-full flex">
+          <a
+            className="w-full sm:w-auto"
+            href="https://docs.google.com/forms/d/e/1FAIpQLScQlwi7hkmU9fp7aGSOLfUXPIvQmADduVyPQvVC5PKhcbFyDQ/viewform?usp=header"
+            target="_blank"
+          >
+            <button className="bg-yellow-600 hover:bg-green-900 text-white px-6 py-3 rounded-sm font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-auto">
+              Join Today
+            </button>
           </a>
         </div>
       </aside>

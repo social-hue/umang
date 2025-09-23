@@ -1,7 +1,32 @@
+// {
+//   "compilerOptions": {
+//     "paths": {
+//       "@/*": ["./*"]
+//     }
+//   }
+// }
+
+// {
+//   "compilerOptions": {
+//     "baseUrl": ".",
+//     "paths": {
+//       "@/*": ["app/*"]
+//     }
+//   },
+//   "exclude": ["node_modules"]
+// }
+
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["*"],
+      "@/app/*": ["app/*"],
+      "@/components/*": ["app/components/*"],
+      "@/public/*": ["public/*"]
     }
-  }
+  },
+  "include": ["**/*.js", "**/*.jsx"],
+  "exclude": ["node_modules"]
 }
+

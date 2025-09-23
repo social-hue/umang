@@ -145,7 +145,7 @@ const Footer = () => (
         {/* Bottom Bar */}
         <div className="text-[#999] flex justify-between main_width py-4 text-center border-t border-dashed border-[#333] md:text-[17px]">
           <p>
-            <span className="text-[#f04f67] font-bold">UMANG LIVING</span>{" "}
+            <span className="text-[#f04f67] font-bold">UMANG LIVING SCL PVT Ltd.</span>{" "}
             COPYRIGHT. ALL RIGHTS RESERVED.
           </p>
           <p className="mt-1 lg:flex items-center gap-2 text-[18px] hidden">

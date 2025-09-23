@@ -69,20 +69,12 @@ const faqs = [
 ];
 
 export default function FAQSection() {
-  const [openFAQs, setOpenFAQs] = useState(new Set());
+  const [openIndex, setOpenIndex] = useState(null); // ✅ only one open
   const [showAllMobile, setShowAllMobile] = useState(false);
   const faqSectionRef = useRef(null);
 
   const toggleFAQ = (index) => {
-    setOpenFAQs((prev) => {
-      const newSet = new Set(prev);
-      if (newSet.has(index)) {
-        newSet.delete(index);
-      } else {
-        newSet.add(index);
-      }
-      return newSet;
-    });
+    setOpenIndex((prev) => (prev === index ? null : index));
   };
 
   const leftColumnFAQs = faqs.slice(0, 5);
@@ -90,33 +82,32 @@ export default function FAQSection() {
 
   const handleToggleMobile = () => {
     if (showAllMobile) {
-      // scroll back to top of FAQs when collapsing
       faqSectionRef.current?.scrollIntoView({ behavior: "smooth" });
     }
     setShowAllMobile((prev) => !prev);
   };
 
   return (
-    <div className="bg-[#f8f8f8a7] py-8 md:py-14 lg:py-16 xl:py-16" ref={faqSectionRef}>
+    <div
+      className="bg-[#f8f8f8a7] py-8 md:py-14 lg:py-16 xl:py-16"
+      ref={faqSectionRef}
+    >
       <section className="w-[80%] mx-auto">
-        {/* Headings */}
+        {/* Heading */}
         <h2 className="text-zinc-800 font-bold text-[32px] text-center lg:text-[40px] 2xl:text-[42px] mb-6 whitespace-nowrap">
-          Frequently Asked <span className="text-zinc-600">Questions</span>
+          Frequently Asked <span className="text-[#079080]">Questions</span>
         </h2>
-        {/* <h3 className="text-zinc-800 font-sans font-semibold sm:text-[40px] md:text-[48px] lg:text-[50px] xl:text-[50px] leading-[1.1] tracking-[-0.045em] ml-[6%] md:ml-[6%] lg:ml-[6%] xl:ml-[6%] mb-8 md:mb-12 lg:mb-12 xl:mb-12 drop-shadow-md max-md:text-[32px]">
-          Some of the most common questions asked about Umang's Living
-        </h3> */}
 
         {/* FAQ Grid */}
         <div className="flex gap-1 md:gap-6 lg:gap-6 xl:gap-6 max-md:flex-col">
-          {/* Desktop/Laptop View */}
+          {/* Desktop/Laptop */}
           <div className="hidden md:flex flex-col flex-1">
             {leftColumnFAQs.map((faq, index) => (
               <FAQItem
                 key={index}
                 faq={faq}
                 index={index}
-                openFAQs={openFAQs}
+                openIndex={openIndex}
                 toggleFAQ={toggleFAQ}
               />
             ))}
@@ -129,21 +120,21 @@ export default function FAQSection() {
                   key={actualIndex}
                   faq={faq}
                   index={actualIndex}
-                  openFAQs={openFAQs}
+                  openIndex={openIndex}
                   toggleFAQ={toggleFAQ}
                 />
               );
             })}
           </div>
 
-          {/* Mobile View */}
+          {/* Mobile */}
           <div className="flex flex-col md:hidden">
             {(showAllMobile ? faqs : faqs.slice(0, 5)).map((faq, index) => (
               <FAQItem
                 key={index}
                 faq={faq}
                 index={index}
-                openFAQs={openFAQs}
+                openIndex={openIndex}
                 toggleFAQ={toggleFAQ}
               />
             ))}
@@ -160,28 +151,25 @@ export default function FAQSection() {
   );
 }
 
-/* Reusable FAQ Item Component */
-function FAQItem({ faq, index, openFAQs, toggleFAQ }) {
+/* FAQ Item Component */
+function FAQItem({ faq, index, openIndex, toggleFAQ }) {
+  const isOpen = openIndex === index;
   return (
     <div className="mb-2">
       <button
-        className={`w-full text-left p-3 text-[17px] md:text-[18px] lg:text-[20px]  text-[#ccd6f6] bg-[#112240] border border-[hsla(0,0%,51.4%,0.16)] rounded-md shadow-[0_10px_30px_-15px_rgba(0,0,0,1)] transition hover:shadow-[0_10px_60px_-15px_rgba(0,0,0,1)] relative after:content-['+'] after:font-bold after:absolute after:right-3 ${
-          openFAQs.has(index)
-            ? "after:content-['-']"
-            : "after:content-['+']"
+        className={`w-full text-left p-3 text-[17px] md:text-[18px] lg:text-[20px] text-[#ffffff] bg-[#c12c56] border border-[hsla(0,0%,51.4%,0.16)] rounded-md shadow-[0_10px_30px_-15px_rgba(0,0,0,1)] transition hover:shadow-[0_10px_60px_-15px_rgba(0,0,0,1)] relative after:font-bold after:absolute after:right-3 ${
+          isOpen ? "after:content-['-']" : "after:content-['+']"
         }`}
         onClick={() => toggleFAQ(index)}
       >
         {faq.question}
       </button>
       <div
-        className={`overflow-hidden transition-all duration-300 bg-[#0b1629] border border-[hsla(0,0%,51.4%,0.16)] rounded-md ${
-          openFAQs.has(index)
-            ? "max-h-[1000px] visible mt-3 p-3"
-            : "max-h-0 invisible"
+        className={`overflow-hidden transition-all duration-300 bg-[#c12c56d3] border border-[hsla(0,0%,51.4%,0.16)] rounded-md ${
+          isOpen ? "max-h-[1000px] visible mt-3 p-3" : "max-h-0 invisible"
         }`}
       >
-        <p className="text-[#c2c2c2] text-[17px] md:text-[18px] lg:text-[20px] leading-[1.4] font-light drop-shadow-sm whitespace-pre-line">
+        <p className="text-[#f5f5f5] text-[17px] md:text-[18px] lg:text-[20px] leading-[1.4] font-light drop-shadow-sm whitespace-pre-line">
           {faq.answer}
         </p>
       </div>

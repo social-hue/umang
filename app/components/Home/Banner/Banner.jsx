@@ -14,26 +14,26 @@ const carouselData = [
     subheadline: "Because every age deserves new beginnings",
     description: "A Unique Senior Independent Living Community for the 55+ Generation"
   },
-  {
-    id: 2,
-    image: "/something8.png",
-    headline: "Where Comfort Meets Community",
-    subheadline: "Thoughtfully designed spaces for joyful living",
-    description: "Experience luxury senior living with modern amenities and warm companionship"
-  },
-  {
-    id: 3,
-    image: "/banner.png",
-    headline: "Wellness & Wellness",
-    subheadline: "Your health is our priority",
-    description: "Round-the-clock healthcare services and wellness programs designed for seniors"
-  },
+  // {
+  //   id: 2,
+  //   image: "/something8.png",
+  //   headline: "Where Comfort Meets Community",
+  //   subheadline: "Thoughtfully designed spaces for joyful living",
+  //   description: "Experience luxury senior living with modern amenities and warm companionship"
+  // },
+  // {
+  //   id: 3,
+  //   image: "/banner.png",
+  //   headline: "Wellness & Wellness",
+  //   subheadline: "Your health is our priority",
+  //   description: "Round-the-clock healthcare services and wellness programs designed for seniors"
+  // },
   {
     id: 4,
     image: "/something7.jpg",
-    headline: "Culinary Delights",
-    subheadline: "Nutritious meals that taste like home",
-    description: "Wholesome, flavorful meals tailored to senior health and taste preferences"
+    headline: "Wellness & Healthcare",
+    subheadline: "Your health is our priority",
+    description: "Round-the-clock healthcare services and wellness programs designed for seniors"
   },
   {
     id: 5,
