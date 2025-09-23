@@ -165,7 +165,7 @@ function FAQItem({ faq, index, openIndex, toggleFAQ }) {
         {faq.question}
       </button>
       <div
-        className={`overflow-hidden transition-all duration-300 bg-[#c12c56d3] border border-[hsla(0,0%,51.4%,0.16)] rounded-md ${
+        className={`overflow-hidden transition-all duration-300 bg-[#c12c56e6] border border-[hsla(0,0%,51.4%,0.16)] rounded-md ${
           isOpen ? "max-h-[1000px] visible mt-3 p-3" : "max-h-0 invisible"
         }`}
       >
