@@ -36,14 +36,6 @@ export default function Header() {
     return () => document.removeEventListener("mousedown", handleDocClick);
   }, []);
 
-  // helper to close drawer safely after navigation
-  const closeMenusAfterNav = () => {
-    setTimeout(() => {
-      setOpen(false);
-      setDropdownOpen(false);
-    }, 50);
-  };
-
   return (
     <header className="w-[92%] my-4 mx-auto transition-all duration-700 ease-in">
       <div className="flex items-center justify-between">
@@ -220,100 +212,22 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Drawer Nav */}
+        {/* Drawer Nav - directly list all navItems */}
         <nav className="mt-6 px-6 space-y-4">
-          {navItems.map(({ label, href }) => {
-            if (label === "About") {
-              return (
-                <div key={href} className="space-y-2">
-                  <div className="flex items-center justify-between border-b pb-2 border-dashed">
-                    <Link
-                      href={href}
-                      onClick={closeMenusAfterNav}
-                      className={`text-lg w-full ${
-                        pathname === href ? "text-[#FCEF44]" : "text-white"
-                      }`}
-                    >
-                      {label}
-                    </Link>
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        setDropdownOpen((s) => !s);
-                      }}
-                      aria-label="Toggle About submenu"
-                      className="p-2 text-white hover:text-gray-300 transition-colors"
-                    >
-                      <FaChevronDown
-                        className={`transition-transform duration-300 ${
-                          dropdownOpen ? "rotate-180" : ""
-                        }`}
-                      />
-                    </button>
-                  </div>
-
-                  {/* Mobile Dropdown */}
-                  {dropdownOpen && (
-                    <div className="pl-4 space-y-3">
-                      <Link
-                        href="/projects"
-                        onClick={closeMenusAfterNav}
-                        className={`block text-lg border-b pb-2 border-dashed w-full transition-colors ${
-                          pathname === "/projects"
-                            ? "text-[#FCEF44] font-medium"
-                            : "text-white hover:text-[#E7216A]"
-                        }`}
-                        style={{ minHeight: "44px", display: "flex", alignItems: "center" }}
-                      >
-                        Projects
-                      </Link>
-                      <Link
-                        href="/blog"
-                        onClick={closeMenusAfterNav}
-                        className={`block text-lg border-b pb-2 border-dashed w-full transition-colors ${
-                          pathname === "/blog"
-                            ? "text-[#FCEF44] font-medium"
-                            : "text-white hover:text-[#E7216A]"
-                        }`}
-                        style={{ minHeight: "44px", display: "flex", alignItems: "center" }}
-                      >
-                        Blog
-                      </Link>
-                      <Link
-                        href="/lifeAt"
-                        onClick={closeMenusAfterNav}
-                        className={`block text-lg border-b pb-2 border-dashed w-full transition-colors ${
-                          pathname === "/lifeAt"
-                            ? "text-[#FCEF44] font-medium"
-                            : "text-white hover:text-[#E7216A]"
-                        }`}
-                        style={{ minHeight: "44px", display: "flex", alignItems: "center" }}
-                      >
-                        Life@
-                      </Link>
-                    </div>
-                  )}
-                </div>
-              );
-            }
-
-            if (["/projects", "/blog", "/lifeAt"].includes(href)) return null;
-
-            return (
-              <Link
-                key={href}
-                href={href}
-                onClick={closeMenusAfterNav}
-                className={`block text-lg border-b pb-2 border-dashed w-full ${
-                  pathname === href
-                    ? "text-[#FCEF44]"
-                    : "text-white hover:text-[#E7216A]"
-                }`}
-              >
-                {label}
-              </Link>
-            );
-          })}
+          {navItems.map(({ label, href }) => (
+            <Link
+              key={href}
+              href={href}
+              onClick={() => setOpen(false)}
+              className={`block text-lg border-b pb-2 border-dashed w-full ${
+                pathname === href
+                  ? "text-[#FCEF44]"
+                  : "text-white hover:text-[#E7216A]"
+              }`}
+            >
+              {label}
+            </Link>
+          ))}
         </nav>
 
         {/* CTA button */}
