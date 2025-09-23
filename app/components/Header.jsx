@@ -36,6 +36,8 @@ export default function Header() {
     return () => document.removeEventListener("mousedown", handleDocClick);
   }, []);
 
+
+
   return (
     <header className="w-[92%] my-4 mx-auto transition-all duration-700 ease-in">
       <div className="flex items-center justify-between">
@@ -234,7 +236,7 @@ export default function Header() {
                         setDropdownOpen((s) => !s);
                       }}
                       aria-label="Toggle About submenu"
-                      className="p-1 text-white"
+                      className="p-2 text-white hover:text-gray-300 transition-colors"
                     >
                       <FaChevronDown
                         className={`transition-transform duration-300 ${
@@ -244,20 +246,21 @@ export default function Header() {
                     </button>
                   </div>
 
-                  {/* Mobile Dropdown */}
+                  {/* Mobile Dropdown - Using same logic as desktop */}
                   {dropdownOpen && (
-                    <div className="pl-2 space-y-2">
+                    <div className="pl-4 space-y-3">
                       <Link
                         href="/projects"
                         onClick={() => {
                           setOpen(false);
                           setDropdownOpen(false);
                         }}
-                        className={`block text-lg border-b pb-2 border-dashed w-full ${
+                        className={`block text-lg border-b pb-2 border-dashed w-full transition-colors ${
                           pathname === "/projects"
-                            ? "text-[#FCEF44]"
+                            ? "text-[#FCEF44] font-medium"
                             : "text-white hover:text-[#E7216A]"
                         }`}
+                        style={{ minHeight: '44px', display: 'flex', alignItems: 'center' }}
                       >
                         Projects
                       </Link>
@@ -267,11 +270,12 @@ export default function Header() {
                           setOpen(false);
                           setDropdownOpen(false);
                         }}
-                        className={`block text-base border-b pb-2 border-dashed w-full ${
+                        className={`block text-lg border-b pb-2 border-dashed w-full transition-colors ${
                           pathname === "/blog"
-                            ? "text-[#FCEF44]"
+                            ? "text-[#FCEF44] font-medium"
                             : "text-white hover:text-[#E7216A]"
                         }`}
+                        style={{ minHeight: '44px', display: 'flex', alignItems: 'center' }}
                       >
                         Blog
                       </Link>
@@ -281,11 +285,12 @@ export default function Header() {
                           setOpen(false);
                           setDropdownOpen(false);
                         }}
-                        className={`block text-base border-b pb-2 border-dashed w-full ${
+                        className={`block text-lg border-b pb-2 border-dashed w-full transition-colors ${
                           pathname === "/lifeAt"
-                            ? "text-[#FCEF44]"
+                            ? "text-[#FCEF44] font-medium"
                             : "text-white hover:text-[#E7216A]"
                         }`}
+                        style={{ minHeight: '44px', display: 'flex', alignItems: 'center' }}
                       >
                         Life@
                       </Link>
