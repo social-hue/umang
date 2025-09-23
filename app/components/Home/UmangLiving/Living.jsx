@@ -37,7 +37,7 @@ export default function Living() {
   const handleNext = () => setStartIndex((prev) => Math.min(maxStartIndex, prev + 1));
 
   return (
-    <section className="w-full relative overflow-hidden py-6 md:py-10 lg:py-10 bg-white">
+    <section className="w-full relative overflow-hidden py-6 2xl:py-12 md:py-10 lg:py-10 bg-white">
       <div className="main_width relative z-10">
         {/* Heading */}
         <motion.div
