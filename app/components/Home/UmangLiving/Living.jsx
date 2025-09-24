@@ -3,6 +3,7 @@ import { facilities } from "@/app/StaticData/Living";
 import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -62,7 +63,7 @@ export default function Living() {
           {isMobile ? (
             // ✅ Mobile: simple list
             <div className="flex-1 max-w-6xl w-full px-4">
-              {facilities.map((item) => (
+              {facilities.map((item, i) => (
                 <motion.div
                   key={item.id}
                   variants={fadeIn}
@@ -73,12 +74,13 @@ export default function Living() {
                 >
                   <div className="bg-white rounded-lg overflow-hidden transition-all duration-500 border border-gray-200 h-full flex flex-col group">
                     <div className="relative h-40 overflow-hidden">
-                      <img
+                      <Image
                         src={item.icon}
                         alt={item.title}
-                        className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-                        loading="lazy"
-                        decoding="async"
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                        priority={i < 2}
+                        className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                     </div>
@@ -115,7 +117,7 @@ export default function Living() {
                     width: `${(totalCount * 100) / visibleCount}%`,
                   }}
                 >
-                  {facilities.map((item) => (
+                  {facilities.map((item, i) => (
                     <motion.div
                       key={item.id}
                       variants={fadeIn}
@@ -127,11 +129,13 @@ export default function Living() {
                     >
                       <div className="bg-white rounded-lg overflow-hidden transition-all duration-500 border border-gray-200 h-full flex flex-col group">
                         <div className="relative h-32 md:h-40 overflow-hidden">
-                          <img
+                          <Image
                             src={item.icon}
                             alt={item.title}
-                            className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-                            loading="lazy"
+                            fill
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                            priority={i < 2}
+                            className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                         </div>
@@ -170,15 +174,19 @@ export default function Living() {
           viewport={{ once: true }}
           className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4 px-4"
         >
-          <a className="w-full sm:w-auto" href="https://docs.google.com/forms/d/e/1FAIpQLScQlwi7hkmU9fp7aGSOLfUXPIvQmADduVyPQvVC5PKhcbFyDQ/viewform?usp=header" target="_blank">
-          <button className="bg_green hover:bg-green-900 text-white px-6 py-3 rounded-sm font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-auto">
-            Join Today
-          </button>
+          <a
+            className="w-full sm:w-auto"
+            href="https://docs.google.com/forms/d/e/1FAIpQLScQlwi7hkmU9fp7aGSOLfUXPIvQmADduVyPQvVC5PKhcbFyDQ/viewform?usp=header"
+            target="_blank"
+          >
+            <button className="bg_green hover:bg-green-900 text-white px-6 py-3 rounded-sm font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-auto">
+              Join Today
+            </button>
           </a>
-  
+
           <a href="tel:18002028704" className="w-full sm:w-auto">
             <button className="bg-red-800 hover:bg-orange-800 text-white px-6 py-3 rounded-sm font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-auto">
-              Call Helpline
+              Contact Us
             </button>
           </a>
         </motion.div>
