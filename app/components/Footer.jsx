@@ -128,7 +128,7 @@ const Footer = () => {
               {/* Newsletter Form */}
               <form
                 onSubmit={handleSubmit}
-                className="flex items-center space-x-1 mb-2"
+                className="flex items-center space-x-1 mb-3 lg:mb-2 2xl:mb-2"
               >
                 <input
                   type="email"
