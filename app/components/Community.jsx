@@ -25,18 +25,13 @@ const Community = () => {
             </ul> 
           </div>
           <div className="mt-4 ml-2">
-           <a href="https://docs.google.com/forms/d/e/1FAIpQLScQlwi7hkmU9fp7aGSOLfUXPIvQmADduVyPQvVC5PKhcbFyDQ/viewform?usp=header">
-          <Button
-            design={
-              " gap-2 bg-white rounded-[0px] px-4 py-3 uppercase text-[#222] uppercase rounded-md font-semibold cursor-pointer text-[15px] transition-colors duration-500 ease-in-out hover:text-white hover:bg-black"
-            }
-            content={"Join us Today"}
-            type={"Join us Today"}
-          />
+           <a href="https://docs.google.com/forms/d/e/1FAIpQLScQlwi7hkmU9fp7aGSOLfUXPIvQmADduVyPQvVC5PKhcbFyDQ/viewform?usp=header" target="_main">
+          <button className= "gap-2 bg-white px-4 py-3 uppercase text-[#222] rounded-md font-semibold cursor-pointer text-[15px] transition-colors duration-500 ease-in-out hover:text-white hover:bg-black">
+            Join Us Today
+            </button> 
           </a> 
         </div>
         </div> 
-        
         </div>
       </div>
   );
