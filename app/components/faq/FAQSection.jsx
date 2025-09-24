@@ -16,6 +16,8 @@ const faqs = [
     question: "What facilities are available inside the township?",
     answer: `Umang Living offers retirement-friendly homes and modern amenities, including:
     • Wheelchair-friendly infrastructure
+    • Anti-slip tiles and flooring
+    • Pull out/sliding doors and windows
     • Healthcare support & partnerships with medical providers
     • Concierge desk for daily assistance 
     • Recreational and wellness spaces
