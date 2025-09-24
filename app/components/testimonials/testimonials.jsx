@@ -7,13 +7,13 @@ const testimonials = [
     text: "Since joining Umang Living, I feel more active and engaged than ever. The staff truly cares about our well being.  A truly talented and dedicated team, highly recommend them for anyone.",
     img: "/boy.png",
     name: "Mr. Suresh Jha",
-    rating: 4,
+    rating: 5,
   },
   {
     text: "It's reassuring to know that my parents are in good hands. The medical support and lifestyle activities keep them happy and healthy. Their attention to detail from the initial blueprints to the final.",
     img: "woman.png",
     name: "Mrs. Anita Singh",
-    rating: 4,
+    rating: 5,
   },
   {
     text: "Working with Umang Living to find our new family home was an exceptional experience. Their team's expertise in the local real estate market was invaluable, and they truly listened to our needs.",
