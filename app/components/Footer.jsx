@@ -156,7 +156,7 @@ const Footer = () => {
               )}
 
               {/* Social Media Icons */}
-              <div className="flex justify-center sm:justify-start gap-3">
+              <div className="flex 2xl:mt-3 justify-center sm:justify-start gap-3">
                 <a
                   href="https://www.facebook.com/people/Umang-Living-Senior-Citizens-Community/61579702657707/"
                   target="_blank"

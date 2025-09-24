@@ -16,7 +16,7 @@ const Community = () => {
           </h4>
         </div> 
         <div className="p-4"> 
-          <div className="lg:text-[20px] md:text-[16px] text-[16px]"> 
+          <div className="lg:text-[20px] md:text-[16px] text-[16px] text-white"> 
             <ul> 
               <li><span>&#10004;</span> A safe and welcoming environment</li>
               <li><span>&#10004;</span> Professional healthcare and wellness support</li>
