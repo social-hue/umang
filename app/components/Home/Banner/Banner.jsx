@@ -9,18 +9,18 @@ import NewsTicker from "../../breaking/NewsTicker";
 const carouselData = [
   {
     id: 1,
-    image: "/something4.jpg",
+    image: "/something7.jpg",
     headline: "Ek Duniya Alag Si...",
     subheadline: "Because every age deserves new beginnings",
     description: "A Unique Senior Independent Living Community for the 55+ Generation"
   },
-  {
-    id: 4,
-    image: "/something7.jpg",
-    headline: "Wellness & Healthcare",
-    subheadline: "Your health is our priority",
-    description: "Round-the-clock healthcare services and wellness programs designed for seniors"
-  },
+  // {
+  //   id: 4,
+  //   image: "/something7.jpg",
+  //   headline: "Wellness & Healthcare",
+  //   subheadline: "Your health is our priority",
+  //   description: "Round-the-clock healthcare services and wellness programs designed for seniors"
+  // },
   {
     id: 5,
     image: "/something5.png",

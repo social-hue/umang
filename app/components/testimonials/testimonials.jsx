@@ -134,7 +134,7 @@ export default function Testimonial() {
                   * the remaining space in the fixed-height container.
                 */}
                 <div className="bg-white shadow-lg rounded-lg p-6 md:p-8 h-60 flex flex-col justify-between">
-                  <p className="text-gray-600 mb-6 leading-relaxed text-sm md:text-base flex-grow">
+                  <p className="text-gray-600 mb-6 leading-relaxed text-md md:text-base flex-grow">
                     {t.text}
                   </p>
                   <div className="flex items-center">
