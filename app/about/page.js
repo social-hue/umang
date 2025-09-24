@@ -1,10 +1,10 @@
-import Aboutus from "../components/about/Aboutus";
+// import Aboutus from "../components/about/Aboutus";
 import Timeline from "../components/about/Timeline";
 import Banner from "../components/Banner";
 import Community from "../components/Community";
 import Footer from "../components/Footer";
 import FounderMessage from "../components/FounderMessage";
-import Header from "../components/Header";
+// import Header from "../components/Header";
 import { seoData } from "../lib/seoMeta";
 
 export const generateMetadata = () => {
@@ -53,15 +53,15 @@ Now, he’s pouring all that wisdom into a new venture close to his heart: Umang
 With Umang Living, Mr. Bharadwajj hopes to do more than build beautiful residences—he wants to build a community where every day brings companionship, purpose, and a strong cup of chai.`;
   return (
     <>
-      <div className="py-8 ">
+      {/* <div className="py-8 ">
         <Header />
-      </div>
+      </div> */}
       <Banner title={" About us"} />
       <div className=" relative overflow-hidden ">
         <div className="absolute -top-[150px] -left-[180px] -z-9">
           <img src="/rangoli.png" alt="rangoli" className="w-[70%] " />
         </div>
-        <Aboutus />
+        {/* <Aboutus /> */}
         <div className="p-8 rounded-[11px] main_width bg-[#f6f6f6]">
           <FounderMessage
             head={`   

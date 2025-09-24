@@ -10,11 +10,14 @@
   "dependencies": {
     "@headlessui/react": "^2.2.4",
     "@heroicons/react": "^2.2.0",
+    "date-fns": "^4.1.0",
     "dotenv": "^17.2.0",
     "framer-motion": "^12.19.1",
     "headlessui": "^0.0.0",
+    "lucide-react": "^0.544.0",
     "mysql2": "^3.14.1",
     "next": "15.3.4",
+    "pdf-lib": "^1.17.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hot-toast": "^2.5.2",
@@ -25,6 +28,8 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4.1.12",
+    "@types/node": "24.5.2",
+    "@types/react": "19.1.13",
     "autoprefixer": "^10.4.21",
     "eslint": "^9",
     "eslint-config-next": "15.3.4",

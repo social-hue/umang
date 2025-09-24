@@ -1,6 +1,6 @@
 import Banner from "../components/Banner";
 import Footer from "../components/Footer";
-import Header from "../components/Header";
+// import Header from "../components/Header";
 import Aboutus from "../components/lifeat/about";
 import GridCards from "../components/lifeat/GridCards";
 import { seoData } from "../lib/seoMeta";
@@ -46,9 +46,9 @@ export const generateMetadata = () => {
 export default function Life() {
   return (
     <>
-      <div className="py-8 ">
+      {/* <div className="py-8 ">
         <Header />
-      </div>
+      </div> */}
       <Banner title={"Life at Umang "} />
       <div className=" relative overflow-hidden ">
         <div className="absolute -top-[150px] -left-[180px] -z-9">

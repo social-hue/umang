@@ -5,7 +5,7 @@ import Grid from "../components/contact/Grid";
 import Map from "../components/contact/Map";
 import OfficeDetails from "../components/contact/officeDetails";
 import Footer from "../components/Footer";
-import Header from "../components/Header";
+// import Header from "../components/Header";
 import { seoData } from "../lib/seoMeta";
 
 export const generateMetadata = () => {
@@ -48,9 +48,9 @@ export const generateMetadata = () => {
 export default function Contact() {
   return (
     <>
-      <div className="py-8 ">
+      {/* <div className="py-8 ">
         <Header />
-      </div>
+      </div> */}
       <Banner title={"Connect with Us"} />
 
       <div className=" relative overflow-hidden ">

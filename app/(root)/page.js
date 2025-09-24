@@ -1,11 +1,18 @@
 import Banner from "../components/Home/Banner/Banner";
-import About from "../components/Home/About/about";
-import FounderMessage from "../components/FounderMessage";
+// import About from "../components/Home/About/about";
+// import FounderMessage from "../components/FounderMessage";
+// import floatingButton from "../components/floatingButton/floatingButton";
 import Living from "../components/Home/UmangLiving/Living";
-import Glimps from "../components/Home/Glimps/Glimps";
+// import Glimps from "../components/Home/Glimps/Glimps";
 import Community from "../components/Community";
 import Footer from "../components/Footer";
 import { seoData } from "../lib/seoMeta";
+// import Aboutus from "../components/about/Aboutus";
+import FAQSection from "../components/faq/FAQSection";
+import Testimonial from "../components/testimonials/testimonials";
+import FloatingCTA from "../components/floatingButton/floatingButton";
+// import Testimonial from "../components/testimonials/Testimonial";
+// import TestimonialsSection from "../components/TestimonialsSection";
 
 export const generateMetadata = () => {
   const meta = seoData.home;
@@ -45,22 +52,22 @@ export const generateMetadata = () => {
 };
 
 export default function Home() {
-  const memberContent = `Over the years, I’ve seen how loneliness quietly steals joy from
-                the lives of our elders—even those surrounded by family. I’ve
-                felt that pain closely, watching loved ones grow silent,
-                distant, and forgotten. It broke something in me. How could
-                people who once gave us everything be left with so little—no
-                companionship, no purpose, no joy? That heartbreak stayed with
-                me. For two years, I poured my heart into researching, dreaming,
-                and building Umang Living—a warm, vibrant space where seniors
-                can live with dignity, surrounded by friends, laughter, and
-                meaningful moments. Umang is my way of giving back—a sanctuary
-                where the elderly are not just cared for, but celebrated.`;
+  // const memberContent = `Over the years, I’ve seen how loneliness quietly steals joy from
+  //               the lives of our elders—even those surrounded by family. I’ve
+  //               felt that pain closely, watching loved ones grow silent,
+  //               distant, and forgotten. It broke something in me. How could
+  //               people who once gave us everything be left with so little—no
+  //               companionship, no purpose, no joy? That heartbreak stayed with
+  //               me. For two years, I poured my heart into researching, dreaming,
+  //               and building Umang Living—a warm, vibrant space where seniors
+  //               can live with dignity, surrounded by friends, laughter, and
+  //               meaningful moments. Umang is my way of giving back—a sanctuary
+  //               where the elderly are not just cared for, but celebrated.`;
   return (
     <>
       <Banner />
-      <About />
-      <div className="py-10 main_width">
+      {/* <Aboutus /> */}
+      {/* <div className="py-10 main_width">
         <FounderMessage
           head={`   
                 <span style="color:#069183">Founder’s</span> Message
@@ -76,11 +83,14 @@ export default function Home() {
           order1={"lg:order-1 order-2"}
           order2={"lg:order-2 order-1"}
         />
-      </div>
+      </div> */}
       <Living />
-      <Glimps />
+      {/* <Glimps /> */}
+      <Testimonial />
+      <FAQSection />
       <Community />
       <Footer />
+      {/* <FloatingCTA /> */}
     </>
   );
 }

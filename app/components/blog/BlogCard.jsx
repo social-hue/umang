@@ -1,5 +1,7 @@
+"use client"
 import Link from "next/link";
 import { CiShare2 } from "react-icons/ci";
+import { motion } from "framer-motion";
 
 export const BlogCard = ({
   title,
@@ -13,7 +15,13 @@ export const BlogCard = ({
   authorimg,
 }) => (
   <Link href={`/blog/${slug}`} className="group block">
-    <article className="flex flex-col cursor-pointer rounded-[30px] shadow-md overflow-hidden bg-white transition hover:shadow-xl">
+    <motion.article
+      className="flex flex-col cursor-pointer rounded-[30px] shadow-md overflow-hidden bg-white transition hover:shadow-xl"
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
       <div className="h-[350px] relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-black/30"></div>
 
@@ -21,6 +29,8 @@ export const BlogCard = ({
           src={image}
           alt={title}
           className="h-full w-full object-cover transition-all duration-500 group-hover:scale-[1.1]"
+          loading="lazy"
+          decoding="async"
         />
 
         <div className="flex gap-2 absolute top-6 left-6">
@@ -71,6 +81,6 @@ export const BlogCard = ({
           View post
         </span>
       </div>
-    </article>
+    </motion.article>
   </Link>
 );

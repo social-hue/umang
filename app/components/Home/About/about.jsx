@@ -2,9 +2,9 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="py-10">
-      <div className="main_width  relative  ">
-        <div className="absolute right-0 -bottom-20">
+    <div className="">
+      <div className="main_width relative">
+        <div className="absolute right-0-bottom-20">
           <img
             src="/svgs/child.svg"
             alt="childs"

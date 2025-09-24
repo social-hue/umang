@@ -42,7 +42,7 @@ const Timeline = () => {
               </div>
               <div className="text-center pt-10">
                 <h6 className="yellow font-light lg:text-[30px] md:text-[25px] text-[20px]">
-                  Launching – Navratras{" "}
+                  Launched in Punjab{" "}
                 </h6>
                 <h5 className="font-bold text-white lg:text-[220px] md:text-[150px] text-[110px] leading-[110px] lg:leading-[220px] md:leading-[150px] heading_font">
                   2025
