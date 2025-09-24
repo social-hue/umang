@@ -124,7 +124,7 @@ export default function Header() {
                               : "text-[#0B0B0B]"
                           }`}
                         >
-                          Life@
+                          Life
                         </Link>
                       </li>
                     </ul>
