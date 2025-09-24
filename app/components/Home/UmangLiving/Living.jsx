@@ -180,7 +180,7 @@ export default function Living() {
             target="_blank"
           >
             <button className="bg_green hover:bg-green-900 text-white px-6 py-3 rounded-sm font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-auto">
-              Join Today
+              Join Free Membership
             </button>
           </a>
 
