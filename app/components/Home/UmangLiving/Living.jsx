@@ -53,8 +53,8 @@ export default function Living() {
           </h2>
           <p className="text-lg md:text-lg lg:text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-light">
             Umang Living offers a comprehensive ecosystem for modern senior living.
-            With townships in 75+ cities, curated travel, lifestyle experiences,
-            and healthcare, we are your partner for a secure and enriching lifestyle.
+            With townships in 75+ cities, lifestyle experiences, healthcare and curated travel,
+            we are your partner for a secure and enriching lifestyle.
           </p>
         </motion.div>
 

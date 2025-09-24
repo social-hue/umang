@@ -1,9 +1,15 @@
-import Image from "next/image";
+"use client";
+import { useState } from "react";
 import Link from "next/link";
 import { navItems } from "../lib/nav-items";
 import { FaLocationDot, FaYoutube } from "react-icons/fa6";
 import ScrollToTopButton from "../helpers/ScrollToTopButton";
-import { FaFacebookF, FaLinkedinIn, FaInstagram, FaTwitter } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaLinkedinIn,
+  FaInstagram,
+  FaTwitter,
+} from "react-icons/fa";
 
 const supportLinks = [
   {
@@ -22,6 +28,36 @@ const Footer = () => {
     ["Home", "About", "Partners", "Contact Us"].includes(item.label)
   );
 
+  // Newsletter State
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  // Handle Newsletter Submit
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setMessage("");
+
+    try {
+      const res = await fetch("https://script.google.com/macros/s/AKfycbxGdH72qw7Zb84VIhHVPTR_oxY9JDhovnY0fz68v-FYZncxMYmIf0M5xMOsyJF7IN9M/exec", {
+        method: "POST",
+        body: JSON.stringify({ email }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (res.ok) {
+        setMessage("✅ Subscribed successfully!");
+        setEmail("");
+      } else {
+        setMessage("❌ Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Newsletter Error:", error);
+      setMessage("⚠️ Unable to subscribe right now.");
+    }
+  };
+
   return (
     <footer className="bg-[url(/footer.jpg)] bg-cover text-white text-sm relative">
       <div className="absolute w-full -top-6">
@@ -33,7 +69,6 @@ const Footer = () => {
       <div className="overflow-hidden w-full h-full relative">
         <div className="pt-8">
           <div className="mx-auto main_width px-4 py-4 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-10 relative z-[9]">
-            
             {/* Left Logo + Description */}
             <div>
               <div className="flex items-center mb-4">
@@ -91,10 +126,16 @@ const Footer = () => {
               </h4>
 
               {/* Newsletter Form */}
-              <form className="flex items-center space-x-1 mb-4">
+              <form
+                onSubmit={handleSubmit}
+                className="flex items-center space-x-1 mb-2"
+              >
                 <input
                   type="email"
                   placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
                   className="bg-[#4F5A68] rounded-tl-[11px] rounded-bl-[11px] text-white px-6 py-3 w-full text-sm placeholder-[#888] focus:outline-none"
                 />
                 <button
@@ -104,6 +145,9 @@ const Footer = () => {
                   SUBSCRIBE
                 </button>
               </form>
+              {message && (
+                <p className="text-[#ccc] text-sm mb-3">{message}</p>
+              )}
 
               {/* Social Media Icons */}
               <div className="flex justify-center sm:justify-start gap-3">
@@ -146,8 +190,9 @@ const Footer = () => {
           {/* Bottom Bar */}
           <div className="text-[#999] flex justify-between main_width py-4 text-center border-t border-dashed border-[#333] md:text-[17px]">
             <p>
-              <span className="text-[#f04f67] font-bold tracking-wide">&#169; 2025, UMANG LIVING SCL Pvt Ltd.</span>{" "}
-              {/* COPYRIGHT. ALL RIGHTS RESERVED. */}
+              <span className="text-[#f04f67] font-bold tracking-wide">
+                &#169; 2025, UMANG LIVING SCL Pvt Ltd.
+              </span>{" "}
             </p>
             <p className="mt-1 lg:flex items-center gap-2 text-[18px] hidden">
               <FaLocationDot />

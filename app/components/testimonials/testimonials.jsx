@@ -21,12 +21,12 @@ const testimonials = [
     name: "Mr. Ashok Garg",
     rating: 5,
   },
-  {
-    text: "We entrusted Umang Living with both selling our old property and purchasing a new one, and they handled everything seamlessly. Their knowledge of the market and negotiation skills were top-notch.",
-    img: "boy.png",
-    name: "Mr. Sachin Goyal",
-    rating: 4,
-  },
+  // {
+  //   text: "We entrusted Umang Living with both selling our old property and purchasing a new one, and they handled everything seamlessly. Their knowledge of the market and negotiation skills were top-notch.",
+  //   img: "boy.png",
+  //   name: "Mr. Sachin Goyal",
+  //   rating: 4,
+  // },
   // {
   //   text: "hey ther",
   //   img: "https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/testimonial/2.jpg",

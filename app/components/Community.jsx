@@ -10,7 +10,7 @@ const Community = () => {
           <h4 className="lg:text-[50px] md:text-[30px] text-[24px] lg:leading-[40px]  font-semibold text-white">
             Be a part of our growing family, {""}
             <span className="yellow">
-              <NumberCounter target={11249} duration={2500} />+
+              <NumberCounter target={101249} duration={2500} />+
             </span>{" "}
             Members already !
           </h4>
@@ -36,5 +36,4 @@ const Community = () => {
       </div>
   );
 };
-
 export default Community;

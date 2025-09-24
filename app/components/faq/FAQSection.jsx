@@ -5,7 +5,7 @@ const faqs = [
   {
     question: "What is Umang Living?",
     answer:
-      "Umang Living is a thoughtfully designed senior living community in India that offers comfort, care, and convenience for a fulfilling lifestyle. Our goal is to create a safe, supportive, and vibrant environment where seniors can enjoy independence while having access to healthcare, recreation, and community bonding opportunities.",
+      "Umang Living is a thoughtfully designed largest senior living community in India that offers comfort, care, and convenience for a fulfilling lifestyle. Our goal is to create a safe, supportive, and vibrant environment where seniors can enjoy independence while having access to healthcare, recreation, and community bonding opportunities.",
   },
   {
     question: "Who can become a member?",
@@ -15,11 +15,11 @@ const faqs = [
   {
     question: "What facilities are available inside the township?",
     answer: `Umang Living offers retirement-friendly homes and modern amenities, including:
-    • Barrier-free, wheelchair-friendly infrastructure
+    • Wheelchair-friendly infrastructure
     • Healthcare support & partnerships with medical providers
-    • EV charging stations
+    • 
     • Concierge desk for daily assistance
-    • ATM & banking facilities
+    • 
     • Recreational and wellness spaces
     • Community celebrations and cultural activities
     • Round-the-clock security and emergency response systems`,

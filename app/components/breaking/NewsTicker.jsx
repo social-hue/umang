@@ -3,10 +3,10 @@ import React from "react";
 export default function NewsTicker() {
   const newsItems = [
     "🚀 Coming Soon in 75+ Cities Across India",
-    "📈 More than 1000+ memberships",
-    "🎉 Sign up for our newsletter to receive wellness tips, event updates, and exclusive offers tailored for seniors and their families",
+    "📈 More than 100000+ memberships",
+    "🎉 Sign up for our newsletter to receive exclusive offers, event updates, and wellness tips tailored for seniors and their families",
     "🌻 Join our membership for free!",
-    "📆 Launching this New Year"
+    // "📆 Launching this New Year"
   ];
 
   return (
