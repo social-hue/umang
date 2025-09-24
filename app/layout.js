@@ -3,6 +3,7 @@ import {
   Big_Shoulders_Display,
   Barlow_Condensed,
 } from "next/font/google";
+import Script from "next/script"; // ✅ import Script from next/script
 import Header from "./components/Header";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
@@ -10,20 +11,20 @@ import FloatingCTA from "./components/floatingButton/floatingButton";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "300"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
   variable: "--font-poppins",
 });
 
 const bigShoulders = Big_Shoulders_Display({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "300"],
+  weight: ["300", "400", "500", "600", "700", "800"],
   variable: "--font-big-shoulders",
   display: "swap",
 });
 
 const barlowCondensed = Barlow_Condensed({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "300"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
   variable: "--font-barlow-condensed",
   display: "swap",
 });
@@ -57,8 +58,8 @@ export const metadata = {
     title: "Because every age deserves new beginnings",
     description:
       "Umang Living is India’s first multi-city senior independent-living community, thoughtfully designed with love and respect.",
-    site: "@umangliving", // optional
-    creator: "@umangliving", // optional
+    site: "@umangliving",
+    creator: "@umangliving",
     images: ["https://www.umangliving.com/banner.png"],
   },
 };
@@ -73,8 +74,21 @@ export default function RootLayout({ children }) {
           type="image/x-icon"
           sizes="any"
         />
-      </head>
 
+        {/* ✅ Google Analytics via Next Script */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-X8ZCDZN3QT"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-X8ZCDZN3QT');
+          `}
+        </Script>
+      </head>
       <body
         className={[
           poppins.variable,
@@ -83,7 +97,7 @@ export default function RootLayout({ children }) {
           "antialiased",
         ].join(" ")}
       >
-        <Header/>       
+        <Header />
         {children}
         <Toaster
           position="top-right"

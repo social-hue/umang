@@ -8,53 +8,52 @@ import {
   FaFacebookF,
   FaLinkedinIn,
   FaInstagram,
-  FaTwitter,
 } from "react-icons/fa";
 
 const supportLinks = [
-  {
-    lable: "Privacy Policy",
-    link: "/termsandcondition/privacypolicy",
-  },
-  {
-    lable: "Terms and Conditions",
-    link: "/termsandcondition/termscondition",
-  },
+  { lable: "Privacy Policy", link: "/termsandcondition/privacypolicy" },
+  { lable: "Terms and Conditions", link: "/termsandcondition/termscondition" },
 ];
 
 const Footer = () => {
-  // ✅ Only show Home, About, Partner, Contact Us
+  // ✅ Filter Nav
   const filteredNavItems = navItems.filter((item) =>
     ["Home", "About", "Partners", "Contact Us"].includes(item.label)
   );
 
-  // Newsletter State
+  // ✅ Newsletter State
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  // Handle Newsletter Submit
+  // ✅ Handle Submit
   const handleSubmit = async (e) => {
     e.preventDefault();
     setMessage("");
+    setLoading(true);
 
     try {
-      const res = await fetch("https://script.google.com/macros/s/AKfycbxGdH72qw7Zb84VIhHVPTR_oxY9JDhovnY0fz68v-FYZncxMYmIf0M5xMOsyJF7IN9M/exec", {
-        method: "POST",
-        body: JSON.stringify({ email }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const formData = new FormData();
+      formData.append("email", email);
 
-      if (res.ok) {
-        setMessage("✅ Subscribed successfully!");
-        setEmail("");
-      } else {
-        setMessage("❌ Something went wrong. Please try again.");
-      }
+      const res = await fetch(
+        "https://script.google.com/macros/s/AKfycbxGdH72qw7Zb84VIhHVPTR_oxY9JDhovnY0fz68v-FYZncxMYmIf0M5xMOsyJF7IN9M/exec",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+
+      if (!res.ok) throw new Error("Network response was not ok");
+
+      await res.text();
+      setMessage("✅ Subscribed successfully!");
+      setEmail("");
     } catch (error) {
-      console.error("Newsletter Error:", error);
-      setMessage("⚠️ Unable to subscribe right now.");
+      console.error("Error submitting form:", error);
+      setMessage("❌ Failed to subscribe. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -69,6 +68,7 @@ const Footer = () => {
       <div className="overflow-hidden w-full h-full relative">
         <div className="pt-8">
           <div className="mx-auto main_width px-4 py-4 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-10 relative z-[9]">
+            
             {/* Left Logo + Description */}
             <div>
               <div className="flex items-center mb-4">
@@ -140,13 +140,19 @@ const Footer = () => {
                 />
                 <button
                   type="submit"
-                  className="bg-[#00A79C] text-[#fff] font-semibold px-4 py-3 rounded-tr-[11px] rounded-br-[11px] text-sm hover:opacity-90"
+                  disabled={loading}
+                  className="bg-[#00A79C] text-[#fff] font-semibold px-4 py-3 rounded-tr-[11px] rounded-br-[11px] text-sm hover:opacity-90 flex items-center justify-center min-w-[110px]"
                 >
-                  SUBSCRIBE
+                  {loading ? (
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                  ) : (
+                    "SUBSCRIBE"
+                  )}
                 </button>
               </form>
+
               {message && (
-                <p className="text-[#ccc] text-sm mb-3">{message}</p>
+                <p className="text-[#ccc] text-md mb-3">{message}</p>
               )}
 
               {/* Social Media Icons */}
@@ -192,7 +198,7 @@ const Footer = () => {
             <p>
               <span className="text-[#f04f67] font-bold tracking-wide">
                 &#169; 2025, UMANG LIVING SCL Pvt Ltd.
-              </span>{" "}
+              </span>
             </p>
             <p className="mt-1 lg:flex items-center gap-2 text-[18px] hidden">
               <FaLocationDot />

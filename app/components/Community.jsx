@@ -4,7 +4,7 @@ import Button from "../helpers/Button";
 
 const Community = () => {
   return (
-    <div className="lg:py-6 md:py-8 py-8 bg-[url(/Community.png)] bg-cover lg:h-[350px] flex items-center">
+    <div className="lg:py-8 md:py-8 py-8 bg-[url(/Community.png)] bg-cover lg:h-[340px] flex items-center">
       <div className="main_width">
         <div>
           <h4 className="lg:text-[50px] md:text-[30px] text-[24px] lg:leading-[40px]  font-semibold text-white">
@@ -15,7 +15,7 @@ const Community = () => {
             Members already !
           </h4>
         </div> 
-        <div className="p-6"> 
+        <div className="p-4"> 
           <div className="lg:text-[20px] md:text-[16px] text-[16px]"> 
             <ul> 
               <li><span>&#10004;</span> A safe and welcoming environment</li>
@@ -30,9 +30,9 @@ const Community = () => {
             Join Us Today
             </button> 
           </a> 
-        </div>
+            </div>
         </div> 
-        </div>
+       </div>
       </div>
   );
 };

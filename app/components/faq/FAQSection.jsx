@@ -17,9 +17,7 @@ const faqs = [
     answer: `Umang Living offers retirement-friendly homes and modern amenities, including:
     • Wheelchair-friendly infrastructure
     • Healthcare support & partnerships with medical providers
-    • 
-    • Concierge desk for daily assistance
-    • 
+    • Concierge desk for daily assistance 
     • Recreational and wellness spaces
     • Community celebrations and cultural activities
     • Round-the-clock security and emergency response systems`,
@@ -30,9 +28,9 @@ const faqs = [
       "Yes. We have healthcare tie-ups and trained medical staff available on-site to provide immediate assistance whenever needed. The community also has access to emergency medical response, regular health checkups, and 24/7 support to ensure the well-being of residents.",
   },
   {
-    question: "Are the homes wheelchair-friendly?",
+    question: "When will the projects be launched?",
     answer:
-      "Yes. All homes and township roads are designed to be barrier-free and wheelchair-friendly. Wide doors, ramps, anti-slip flooring, and thoughtful layouts ensure that seniors, including those with mobility challenges, can move around comfortably and safely.",
+      "We are already launched in Punjab and are actively expanding our reach to other states. Our goal is to have a national presence, and we are working on a state-by-state launch plan. We will announce specific launch dates for each new state through our official channels.",
   },
   {
     question: "Can family and friends visit?",
