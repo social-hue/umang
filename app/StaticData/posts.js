@@ -1,5 +1,43 @@
 export const posts = [
   {
+    slug: "Where-Luxury-Meets-Life-After-55",
+    title: "Where Luxury Meets Life After 55",
+    subTitle: "At Umang Living, retirement is not about slowing down, it’s about rediscovering yourself. Here, every day is filled with purpose, joy, and the warmth of a true community.",
+    author: "Sanjayy Bharadwajj",
+    time: "2 minute read",
+    view: "1k views",
+    share: "600 shares",
+    image: "/blog_image.jpg",
+    excerpt: "Life after 55 is often imagined as a quiet, restful phase, but at Umang Living, we believe it’s the perfect time to live fully, pursue passions, and embrace community. We’re more than just a place to reside.",
+    content1: `<p>Life after 55 is often imagined as a quiet, restful phase, but at Umang Living, we believe it’s the perfect time to live fully, pursue passions, and embrace community. We’re more than just a place to reside. We are an all-inclusive, vibrant community you can genuinely call home. Every aspect of Umang Living is designed to cater to the physical, emotional, and social well-being of our residents, ensuring that life after retirement is nothing short of extraordinary.</p>`,
+    // heading: "Problems faced by Senior Citizens",
+    content2: `<h2 style="color: #066666; margin-top: 1.5em;font-weight:600">Your Way of Life</h2>
+    <p>At Umang Living, we understand that each individual has a unique way of living. Our philosophy revolves around supporting seniors to live each day to the fullest, according to their preferences and interests. Whether it’s spending quiet mornings reading, pursuing fitness routines, or attending cultural events, residents have the freedom and support to follow their personal rhythms. We don’t just provide care; we empower residents to maintain independence while having access to assistance whenever needed.</p>
+    <h2 style="color: #066666; margin-top: 1.5em;font-weight:600">Stay Connected</h2>
+    <p>Relationships are the essence of a fulfilling life, and staying connected with loved ones is vital for mental and emotional well-being. Umang Living ensures residents remain in touch with family and friends, whether they live nearby or across town. Our thoughtfully designed communication facilities, cozy meeting spaces, and digital tools allow residents to deepen and cherish their bonds. Celebrating birthdays, anniversaries, or simple coffee mornings with family becomes a seamless experience.</p>
+    <h2 style="color: #066666; margin-top: 1.5em;font-weight:600">Re-Engage and Rediscover</h2>
+    <p>Retirement is not the end of ambition; it’s an opportunity to re-engage with the world. Umang Living offers countless opportunities for residents to form new connections, volunteer, and even begin the second innings of their careers. From community projects to creative workshops and mentorship programs, we encourage seniors to explore their interests, share their skills, and contribute to society. Being part of a vibrant, like-minded community keeps the spirit alive and fosters a sense of purpose every day.</p>
+    <h2 style="color: #066666; margin-top: 1.5em;font-weight:600">Comfort & Safety</h2>
+    <p>Relationships are the essence of a fulfilling life, and staying connected with loved ones is vital for mental and emotional well-being. Umang Living ensures residents remain in touch with family and friends, whether they live nearby or across town. Our thoughtfully designed communication facilities, cozy meeting spaces, and digital tools allow residents to deepen and cherish their bonds. Celebrating birthdays, anniversaries, or simple coffee mornings with family becomes a seamless experience.</p>
+    <h2 style="color: #066666; margin-top: 1.5em;font-weight:600">Live Inspired</h2>
+    <p>Retirement is not the end of ambition; it’s an opportunity to re-engage with the world. Umang Living offers countless opportunities for residents to form new connections, volunteer, and even begin the second innings of their careers. From community projects to creative workshops and mentorship programs, we encourage seniors to explore their interests, share their skills, and contribute to society. Being part of a vibrant, like-minded community keeps the spirit alive and fosters a sense of purpose every day.</p>
+    <h2 style="color: #066666; margin-top: 1.5em;font-weight:600">A Family Serving Family</h2>
+    <p>Relationships are the essence of a fulfilling life, and staying connected with loved ones is vital for mental and emotional well-being. Umang Living ensures residents remain in touch with family and friends, whether they live nearby or across town. Our thoughtfully designed communication facilities, cozy meeting spaces, and digital tools allow residents to deepen and cherish their bonds. Celebrating birthdays, anniversaries, or simple coffee mornings with family becomes a seamless experience.</p>
+    <h2 style="color: #066666; margin-top: 1.5em;font-weight:600">Relish the Taste</h2>
+    <p>Retirement is not the end of ambition; it’s an opportunity to re-engage with the world. Umang Living offers countless opportunities for residents to form new connections, volunteer, and even begin the second innings of their careers. From community projects to creative workshops and mentorship programs, we encourage seniors to explore their interests, share their skills, and contribute to society. Being part of a vibrant, like-minded community keeps the spirit alive and fosters a sense of purpose every day.</p>
+    <h2 style="color: #066666; margin-top: 1.5em;font-weight:600">The Umang Difference</h2>
+    <p>Relationships are the essence of a fulfilling life, and staying connected with loved ones is vital for mental and emotional well-being. Umang Living ensures residents remain in touch with family and friends, whether they live nearby or across town. Our thoughtfully designed communication facilities, cozy meeting spaces, and digital tools allow residents to deepen and cherish their bonds. Celebrating birthdays, anniversaries, or simple coffee mornings with family becomes a seamless experience.</p>
+    <h2 style="color: #066666; margin-top: 1.5em;font-weight:600">Building a True Community</h2>
+    <p>Retirement is not the end of ambition; it’s an opportunity to re-engage with the world. Umang Living offers countless opportunities for residents to form new connections, volunteer, and even begin the second innings of their careers. From community projects to creative workshops and mentorship programs, we encourage seniors to explore their interests, share their skills, and contribute to society. Being part of a vibrant, like-minded community keeps the spirit alive and fosters a sense of purpose every day.</p>
+    <h2 style="color: #066666; margin-top: 1.5em;font-weight:600">Wellness Beyond Care</h2>
+    <p>Relationships are the essence of a fulfilling life, and staying connected with loved ones is vital for mental and emotional well-being. Umang Living ensures residents remain in touch with family and friends, whether they live nearby or across town. Our thoughtfully designed communication facilities, cozy meeting spaces, and digital tools allow residents to deepen and cherish their bonds. Celebrating birthdays, anniversaries, or simple coffee mornings with family becomes a seamless experience.</p>
+    <h2 style="color: #066666; margin-top: 1.5em;font-weight:600">A Home Away from Home</h2>
+    <p>Retirement is not the end of ambition; it’s an opportunity to re-engage with the world. Umang Living offers countless opportunities for residents to form new connections, volunteer, and even begin the second innings of their careers. From community projects to creative workshops and mentorship programs, we encourage seniors to explore their interests, share their skills, and contribute to society. Being part of a vibrant, like-minded community keeps the spirit alive and fosters a sense of purpose every day.</p>
+    <h2 style="color: #066666; margin-top: 1.5em;font-weight:600">Conclusion</h2>
+    <p>Umang Living is a metaphor for care infused with luxury. It stands apart as a space where seniors can embrace their passions, maintain independence, build relationships, and enjoy a fulfilling lifestyle. Life after 55 should be an opportunity for growth, connection, and happiness — and at Umang Living, we ensure every day reflects that ideal.
+Whether it’s the joy of a community gathering, the comfort of personalized care, or the inspiration to explore new interests, Umang Living is redefining senior living — making it a journey of dignity, fulfillment, and endless possibilities.</p>
+   `},
+  {
     slug: "Problems-Faced-by-Senior-Citizens-after-Retirement-in-India",
     title: "Problems Faced by Senior Citizens after Retirement in India",
     subTitle: "Exploring the financial, health, emotional, and social struggles faced by retirees in a changing society. A call for stronger policies, community support, and dignity for senior citizens in their later years.",
@@ -86,7 +124,7 @@ export const posts = [
     <p>The government must strengthen pension systems, expand healthcare access, and promote senior-friendly infrastructure. Equally important is the role of families and communities in respecting, supporting, and engaging the elderly. Technology can also be leveraged to connect seniors with resources, healthcare, and social groups.</p>
     <p>As India moves toward becoming a developed nation, the true measure of progress will lie not only in its economic growth but also in how it treats its elderly. Ensuring that senior citizens live with dignity, independence, and happiness after retirement is not just a duty—it is a moral responsibility of society as a whole.</p>`
 
-   
+
   },
   {
     slug: "Why-Elderly-Communities-Matter-More-Than-Ever",
@@ -132,8 +170,6 @@ export const posts = [
     never alone, where they continue to grow, laugh, dream, and love life.</p>
 <p>We are just getting started. At Umang Living, we are designing not just residences but experiences. Every corner of
     our community is built with empathy, keeping in mind what truly matters to someone in their 60s, 70s, or 80s.</p>
-
-
 `,
   },
   {
