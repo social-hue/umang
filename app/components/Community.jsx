@@ -20,7 +20,7 @@ const Community = () => {
             <ul> 
               <li><span>&#10004;</span> A safe and welcoming environment</li>
               <li><span>&#10004;</span> Professional healthcare and wellness support</li>
-              <li><span>&#10004;</span> Transparent communication and personalized care plans</li>
+              <li><span>&#10004;</span> Transparent communication & personalized care plans</li>
               <li><span>&#10004;</span> Activities that foster social connections</li>
             </ul> 
           </div>

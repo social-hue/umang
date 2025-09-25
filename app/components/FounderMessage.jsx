@@ -19,7 +19,7 @@ const FounderMessage = ({
             className={`md:p-10 p-4 bg-[url(/rangoli_founder.png)] h-full bg-cover rangoli ${order1}`}
           >
             <div className="">
-              <h4 className=" lg:text-[65px] md:text-[45px] text-[35px] lg:leading-[60px]  font-light  font-light  red">
+              <h4 className=" lg:text-[65px] md:text-[45px] text-[35px] lg:leading-[60px] font-light  red">
                 <span dangerouslySetInnerHTML={{ __html: head }}></span>
               </h4>
               <p

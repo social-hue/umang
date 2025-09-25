@@ -35,13 +35,13 @@ const barVariants = {
 export default function BlogBanner({ data }) {
   return (
     <section
-      className={`2xl:h-[800px] xl:h-[700px] h-[600px] ] bg-cover  bg-center bg-top relative`}
+      className={`2xl:h-[800px] xl:h-[700px] h-[600px] ] bg-cover  bg-center relative`}
       style={{ backgroundImage: `url(${data.image})` }}
     >
       <div className="bg-[linear-gradient(90deg,rgba(255,255,255,0.96)_0.17%,rgba(255,255,255,0.18)_73.21%)] h-full">
-        <div className="absolute inset-x-0 white_grid py-10">
+        {/* <div className="absolute inset-x-0 white_grid py-10">
           <Header />
-        </div>
+        </div> */}
         <motion.div
           variants={sectionVariants}
           initial="hidden"
@@ -77,7 +77,7 @@ export default function BlogBanner({ data }) {
                     {data.author}
                   </div>
                   <div className="flex md:text-[14px] lg:text-[16px] text-[13px] md:flex-nowrap flex-wrap   items-center space-x-4">
-                    <div className="flex items-center md:flex hidden">
+                    <div className="items-center md:flex hidden">
                       <hr className=" w-[30px]" />
                     </div>
                     <div className="flex items-center ">

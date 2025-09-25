@@ -9,27 +9,19 @@ const Timeline = () => {
         </h4>
         <div className="text-[#535353] lg:text-[18px] pt-6">
           <p className="lg:text-[22px] md:text-[18px]">
-            We are excited to announce that{" "}
-            <span className="font-semibold">Umang Living</span> will be
-            launching its services this coming Navratras. As we prepare to
-            welcome you into a new way of living, our teams are working
-            tirelessly to ensure every detail reflects comfort, care, and
-            community. With thoughtfully designed homes and enriching
-            experiences, Umang Living is set to redefine senior living in India.
-            Join us this festive season as we begin this joyful new chapter
-            together.
+          In the joyous spirit of Navratras, <span className="font-semibold">Umang Living</span> opens its doors to a new way of life for seniors in India. With thoughtfully designed homes and enriching experiences, we are set to redefine senior living. Join us this festive season as we begin this joyful new chapter, where comfort, care, and community are at the heart of everything we do.
           </p>
         </div>
         <div className="mt-10">
-          <div className="grid xl:grid-cols-[21%_21%_36%_22%] md:grid-cols-[25%_50%_25%] gap-4">
-            <div className="  overflow-hidden rounded-[26px]">
+          <div className="grid xl:grid-cols-[21%_21%_36%_22%] lg:grid-cols-[25%_40%_40%_45] md:grid-cols-[25%_50%_25%] gap-4">
+            <div className="overflow-hidden rounded-[26px]">
               <img
                 src="/Timeline/t01.jpg"
-                className="w-full object-cover  md:h-full lg:h-[640px]"
+                className="w-full object-cover md:h-full lg:h-[640px]"
                 alt="timeline01"
               />
             </div>
-            <div className=" xl:block hidden overflow-hidden rounded-[26px] mt-20">
+            <div className="xl:block hidden overflow-hidden rounded-[26px] mt-20">
               <img
                 src="/Timeline/t02.jpg"
                 className="w-full object-cover lg:h-[640px]"
@@ -49,7 +41,7 @@ const Timeline = () => {
                 </h5>
               </div>
             </div>
-            <div className="  overflow-hidden rounded-[26px]  lg:mt-20">
+            <div className="overflow-hidden rounded-[26px]">
               <img
                 src="/Timeline/t03.jpg"
                 className="w-full object-cover md:h-full lg:h-[640px]"

@@ -47,7 +47,7 @@ export const generateMetadata = () => {
 export default function About() {
   const memberContent = `With over 25 years of leadership in the hospitality industry, Mr. Sanjay Bharadwajj knows how to make people feel truly at home. With a rare mix of strategic smarts and a deep love for crafting meaningful experiences, Mr. Bharadwajj has spent his career decoding what makes places come alive–and people smile.<br/><br/>
 
-From market research to lifestyle design, he’s worn many hats, always guided by a keen understanding of human behavior and an eye for comfort, joy, and connection.
+From market research to lifestyle design, he’s worn many hats, always guided by a keen understanding of human behaviour and an eye for comfort, joy, and connection.
 Now, he’s pouring all that wisdom into a new venture close to his heart: Umang Living—India’s first multi-city independent senior living community. Thoughtfully created to offer vibrant, dignified, and holistic living for the elderly, Umang is not about slowing down—it’s about living fully, joyfully, and on your own terms. <br/><br/>
 
 With Umang Living, Mr. Bharadwajj hopes to do more than build beautiful residences—he wants to build a community where every day brings companionship, purpose, and a strong cup of chai.`;
@@ -79,7 +79,7 @@ With Umang Living, Mr. Bharadwajj hopes to do more than build beautiful residenc
             order2={" order-1"}
           />
         </div>
-        <div className="py-10">
+        {/* <div className="py-10">
           <div className="bg_green pb-4 main_width rounded-[11px] ">
             <div className="lg:p-10 md:p-8 p-6 bg_red  rounded-[11px]">
               <div>
@@ -92,7 +92,7 @@ With Umang Living, Mr. Bharadwajj hopes to do more than build beautiful residenc
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <Timeline />
         <Community />
       </div>

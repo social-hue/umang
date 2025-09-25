@@ -1,7 +1,7 @@
 "use client";
 import { facilities } from "@/app/StaticData/Living";
 import { motion } from "framer-motion";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
@@ -37,6 +37,19 @@ export default function Living() {
   const handlePrev = () => setStartIndex((prev) => Math.max(0, prev - 1));
   const handleNext = () => setStartIndex((prev) => Math.min(maxStartIndex, prev + 1));
 
+  // realistic sizes string for your layout
+  const sizes = useMemo(
+    () =>
+      "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw",
+    []
+  );
+
+  // helper to know if item i is visible in current frame (desktop carousel path)
+  const isIndexVisible = (i) => i >= startIndex && i < startIndex + visibleCount;
+
+  // choose ONE image to be priority: the first visible card
+  const priorityIndex = startIndex;
+
   return (
     <section className="w-full relative overflow-hidden py-6 2xl:py-12 md:py-10 lg:py-10 bg-white">
       <div className="main_width relative z-10">
@@ -63,38 +76,44 @@ export default function Living() {
           {isMobile ? (
             // ✅ Mobile: simple list
             <div className="flex-1 max-w-6xl w-full px-4">
-              {facilities.map((item, i) => (
-                <motion.div
-                  key={item.id}
-                  variants={fadeIn}
-                  initial="hidden"
-                  whileInView="show"
-                  viewport={{ once: true }}
-                  className="w-full mb-4"
-                >
-                  <div className="bg-white rounded-lg overflow-hidden transition-all duration-500 border border-gray-200 h-full flex flex-col group">
-                    <div className="relative h-40 overflow-hidden">
-                      <Image
-                        src={item.icon}
-                        alt={item.title}
-                        fill
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
-                        priority={i < 2}
-                        className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              {facilities.map((item, i) => {
+                const isPriority = i === 0; // first card on mobile is above the fold
+                return (
+                  <motion.div
+                    key={item.id}
+                    variants={fadeIn}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true }}
+                    className="w-full mb-4"
+                  >
+                    <div className="bg-white rounded-lg overflow-hidden transition-all duration-500 border border-gray-200 h-full flex flex-col group">
+                      <div className="relative h-40 overflow-hidden">
+                        <Image
+                          src={item.icon}
+                          alt={item.title}
+                          fill
+                          sizes={sizes}
+                          priority={isPriority}
+                          loading={isPriority ? "eager" : "lazy"}
+                          fetchPriority={isPriority ? "high" : "auto"}
+                          decoding="async"
+                          className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                      </div>
+                      <div className="p-4 flex-1 flex flex-col">
+                        <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-1">
+                          {item.title}
+                        </h3>
+                        <p className="text-gray-600 text-lg leading-relaxed">
+                          {item.tagline}
+                        </p>
+                      </div>
                     </div>
-                    <div className="p-4 flex-1 flex flex-col">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-1">
-                        {item.title}
-                      </h3>
-                      <p className="text-gray-600 text-lg leading-relaxed">
-                        {item.tagline}
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
+                  </motion.div>
+                );
+              })}
             </div>
           ) : (
             <>
@@ -117,39 +136,46 @@ export default function Living() {
                     width: `${(totalCount * 100) / visibleCount}%`,
                   }}
                 >
-                  {facilities.map((item, i) => (
-                    <motion.div
-                      key={item.id}
-                      variants={fadeIn}
-                      initial="hidden"
-                      whileInView="show"
-                      viewport={{ once: true }}
-                      className="flex-none px-2 sm:px-3"
-                      style={{ width: `${100 / visibleCount}%` }}
-                    >
-                      <div className="bg-white rounded-lg overflow-hidden transition-all duration-500 border border-gray-200 h-full flex flex-col group">
-                        <div className="relative h-32 md:h-40 overflow-hidden">
-                          <Image
-                            src={item.icon}
-                            alt={item.title}
-                            fill
-                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
-                            priority={i < 2}
-                            className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                  {facilities.map((item, i) => {
+                    const visible = isIndexVisible(i);
+                    const isPriority = i === priorityIndex; // only first visible
+                    return (
+                      <motion.div
+                        key={item.id}
+                        variants={fadeIn}
+                        initial="hidden"
+                        whileInView="show"
+                        viewport={{ once: true }}
+                        className="flex-none px-2 sm:px-3"
+                        style={{ width: `${100 / visibleCount}%` }}
+                      >
+                        <div className="bg-white rounded-lg overflow-hidden transition-all duration-500 border border-gray-200 h-full flex flex-col group">
+                          <div className="relative h-32 md:h-40 overflow-hidden">
+                            <Image
+                              src={item.icon}
+                              alt={item.title}
+                              fill
+                              sizes={sizes}
+                              priority={isPriority}
+                              loading={visible ? "eager" : "lazy"}
+                              fetchPriority={visible ? "high" : "auto"}
+                              decoding="async"
+                              className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                          </div>
+                          <div className="p-4 flex-1 flex flex-col">
+                            <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 line-clamp-1">
+                              {item.title}
+                            </h3>
+                            <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
+                              {item.tagline}
+                            </p>
+                          </div>
                         </div>
-                        <div className="p-4 flex-1 flex flex-col">
-                          <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 line-clamp-1">
-                            {item.title}
-                          </h3>
-                          <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
-                            {item.tagline}
-                          </p>
-                        </div>
-                      </div>
-                    </motion.div>
-                  ))}
+                      </motion.div>
+                    );
+                  })}
                 </div>
               </div>
 
