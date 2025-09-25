@@ -68,7 +68,7 @@ const Footer = () => {
       <div className="overflow-hidden w-full h-full relative">
         <div className="pt-8">
           <div className="mx-auto main_width px-4 py-4 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-10 relative z-[9]">
-            
+
             {/* Left Logo + Description */}
             <div>
               <div className="flex items-center mb-4">
@@ -131,7 +131,9 @@ const Footer = () => {
                 className="flex items-center space-x-1 mb-3 lg:mb-4 2xl:mb-2"
               >
                 <input
+                  id="email"
                   type="email"
+                  autoComplete="true"
                   placeholder="Enter your email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -194,13 +196,14 @@ const Footer = () => {
           </div>
 
           {/* Bottom Bar */}
-          <div className="text-[#999] flex justify-between main_width py-4 text-center border-t border-dashed border-[#333] md:text-[17px]">
+          <div className="text-[#999] flex justify-center lg:justify-between main_width py-4 text-center border-t border-dashed border-[#333] md:text-[17px] items-center">
             <p>
-              <span className="text-[#f04f67] font-bold tracking-wide">
-                &#169; 2025, UMANG LIVING SCL Pvt Ltd.
+              <span className="text-[#f04f67] text-[16px] font-bold tracking-wide">
+                &#169; 2025 UMANG LIVING SCL Pvt Ltd.
               </span>
             </p>
-            <p className="mt-1 lg:flex items-center gap-2 text-[18px] hidden">
+            {/* stays hidden on small; appears at lg and pushes layout to two columns */}
+            <p className="hidden lg:flex mt-1 items-center gap-2 text-[18px]">
               <FaLocationDot />
               2319, Gold Wing, Wave one Tower, Sector-18, Noida, UP-201301
             </p>

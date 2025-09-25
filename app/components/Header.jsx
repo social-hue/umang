@@ -46,7 +46,7 @@ export default function Header() {
             alt="Umang_logo"
             width={300}
             height={80}
-            className="xl:w-[220px] lg:w-[190px] md:w-[150px] w-[130px] h-auto"
+            className="xl:w-[220px] lg:w-[190px] md:w-[150px] w-[130px]"
             priority
           />
         </Link>
