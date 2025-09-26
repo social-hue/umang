@@ -4,6 +4,8 @@ import Community from "@/app/components/Community";
 import Footer from "@/app/components/Footer";
 import { seoData } from "@/app/lib/seoMeta";
 import { posts } from "@/app/StaticData/posts";
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export const generateMetadata = async ({ params }) => {
@@ -63,10 +65,10 @@ export default async function Page({ params }) {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-gray-800 mb-4">Content not found</h1>
-          <p className="text-gray-600 mb-4">The blog post you're looking for doesn't exist.</p>
-          <a href="/blog" className="text-blue-600 hover:underline">
+          <p className="text-gray-600 mb-4">The blog post you&apos;re looking for doesn&apos;t exist.</p>
+          <Link href="/blog" className="text-blue-600 hover:underline">
             ← Back to Blog
-          </a>
+          </Link>
         </div>
       </div>
     );
@@ -77,7 +79,7 @@ export default async function Page({ params }) {
       <BlogBanner data={content} />
       <div className="relative overflow-hidden">
         <div className="absolute -top-[150px] -left-[180px] -z-9">
-          <img src="/rangoli.png" alt="rangoli" className="w-[70%]" />
+          <Image src="/rangoli.png" alt="rangoli"  className="w-[70%]" />
         </div>
         <div className="py-10">
           <div className="main_width">
@@ -87,7 +89,7 @@ export default async function Page({ params }) {
             ></div>
             <div className="grid grid-cols-[20px_1fr] gap-4 py-6">
               <div>
-                <img src="/svgs/quotent.svg" className="" />
+                <Image src="/svgs/quotent.svg" alt="quotent" />
               </div>
               <div>
                 <div

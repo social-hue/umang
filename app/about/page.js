@@ -1,5 +1,5 @@
 // import Aboutus from "../components/about/Aboutus";
-import Timeline from "../components/about/Timeline";
+// import Timeline from "../components/about/Timeline";
 import Banner from "../components/Banner";
 import Community from "../components/Community";
 import Footer from "../components/Footer";
@@ -93,7 +93,7 @@ With Umang Living, Mr. Bharadwajj hopes to do more than build beautiful residenc
             </div>
           </div>
         </div> */}
-        <Timeline />
+        {/* <Timeline /> */}
         <Community />
       </div>
       <Footer />
