@@ -79,12 +79,13 @@ With Umang Living, Mr. Bharadwajj hopes to do more than build beautiful residenc
             order2={" order-1"}
           />
         </div>
-        {/* <div className="py-10">
+        <Timeline />
+        {/* <div className="py-0">
           <div className="bg_green pb-4 main_width rounded-[11px] ">
-            <div className="lg:p-10 md:p-8 p-6 bg_red  rounded-[11px]">
+            <div className="p-6 bg_red rounded-[11px]">
               <div>
                 <h4 className="yellow xl:text-[50px] lg:text-[40px] md:text-[30px] sm:text-[25px] text-[20px]">
-                  Our Vision Mission
+                  Our Vision & Mission
                 </h4>
                 <p className="text-white lg:text-[50px] md:text-[40px] sm:text-[30px] text-[25px] font-light lg:leading-[72px]">
                   Creating spaces where growing older means living fuller.
@@ -93,7 +94,6 @@ With Umang Living, Mr. Bharadwajj hopes to do more than build beautiful residenc
             </div>
           </div>
         </div> */}
-        <Timeline />
         <Community />
       </div>
       <Footer />

@@ -55,7 +55,6 @@ export default function Header() {
         {/* Desktop Nav */}
         <ul className="hidden lg:flex items-center space-x-4 xl:space-x-6 2xl:text-[22px] xl:text-[18px] lg:text-[16px] min-w-0">
           {navItems.map(({ label, href }) => {
-            if (label === "About") {
               return (
                 <li key={href} className="relative" ref={dropdownRef}>
                   <div className="flex items-center gap-2">
@@ -69,7 +68,7 @@ export default function Header() {
                     >
                       {label}
                     </Link>
-                    <button
+                    {/* <button
                       aria-expanded={dropdownOpen}
                       aria-label="Toggle About submenu"
                       onClick={(e) => {
@@ -83,11 +82,11 @@ export default function Header() {
                           dropdownOpen ? "rotate-180" : ""
                         }`}
                       />
-                    </button>
+                    </button> */}
                   </div>
 
                   {/* Desktop Dropdown */}
-                  {dropdownOpen && (
+                  {/* {dropdownOpen && (
                     <ul className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md overflow-hidden z-50">
                       <li>
                         <Link
@@ -129,13 +128,12 @@ export default function Header() {
                         </Link>
                       </li>
                     </ul>
-                  )}
+                  )} */}
                 </li>
               );
-            }
 
             // hide individual links that are part of the About submenu (keeps desktop nav tidy)
-            if (["/projects", "/blog", "/lifeAt"].includes(href)) return null;
+            // if (["/projects", "/blog", "/lifeAt"].includes(href)) return null;
 
             return (
               <li
