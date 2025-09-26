@@ -2,7 +2,7 @@ import React from "react";
 
 export default function NewsTicker() {
   const newsItems = [
-    "📆 India's largest senior living community has now been launched in Punjab!",
+    "📆 India's largest senior living community is now coming to Jalandhar, Punjab !",
     "🚀 Coming Soon in 75+ Cities Across India",
     "📈 More than 100000+ memberships",
     "🎉 Sign up for our newsletter to receive exclusive offers, event updates, and wellness tips tailored for seniors and their families",
@@ -46,7 +46,7 @@ export default function NewsTicker() {
         }
         .animate-marquee {
           display: inline-flex;
-          animation: marquee 25s linear infinite;
+          animation: marquee 30s linear infinite;
         }
         .group:hover .animate-marquee {
           animation-play-state: paused;

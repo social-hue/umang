@@ -5,6 +5,7 @@
   "scripts": {
     "lint": "next lint",
     "dev": "node server.js",
+    "postbuild": "next-sitemap",
     "build": "next build --no-lint",
     "start": "NODE_ENV=production node server.js"
   },
@@ -18,6 +19,7 @@
     "lucide-react": "^0.544.0",
     "mysql2": "^3.14.1",
     "next": "15.3.4",
+    "next-sitemap": "^4.2.3",
     "pdf-lib": "^1.17.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
