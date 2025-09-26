@@ -2,12 +2,12 @@ import React from "react";
 
 const Timeline = () => {
   return (
-    <div className="py-10">
+    <div className="py-6">
       <div className="main_width">
-        <h4 className="green  lg:text-[65px] md:text-[45px] text-[35px] lg:leading-[60px]">
+        {/* <h4 className="green  lg:text-[65px] md:text-[45px] text-[35px] lg:leading-[60px]">
           Project’s <span className="gradient_text"> Timeline</span>
-        </h4>
-        <div className="text-[#535353] lg:text-[18px] pt-6">
+        </h4> */}
+        <div className="text-[#535353] lg:text-[18px]">
           <p className="lg:text-[22px] md:text-[18px]">
           In the joyous spirit of Navratras, <span className="font-semibold">Umang Living</span> opens its doors to a new way of life for seniors in India. With thoughtfully designed homes and enriching experiences, we are set to redefine senior living. Join us this festive season as we begin this joyful new chapter, where comfort, care, and community are at the heart of everything we do.
           </p>
