@@ -4,7 +4,7 @@ import Community from "@/app/components/Community";
 import Footer from "@/app/components/Footer";
 import { seoData } from "@/app/lib/seoMeta";
 import { posts } from "@/app/StaticData/posts";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -79,7 +79,7 @@ export default async function Page({ params }) {
       <BlogBanner data={content} />
       <div className="relative overflow-hidden">
         <div className="absolute -top-[150px] -left-[180px] -z-9">
-          <Image src="/rangoli.png" alt="rangoli"  className="w-[70%]" />
+          <img src="/rangoli.png" alt="rangoli" className="w-[70%]" />
         </div>
         <div className="py-10">
           <div className="main_width">
@@ -89,7 +89,7 @@ export default async function Page({ params }) {
             ></div>
             <div className="grid grid-cols-[20px_1fr] gap-4 py-6">
               <div>
-                <Image src="/svgs/quotent.svg" alt="quotent" />
+                <img src="/svgs/quotent.svg" alt="quotent" />
               </div>
               <div>
                 <div
