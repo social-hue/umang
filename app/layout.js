@@ -53,6 +53,7 @@ export const metadata = {
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
     title: "Because every age deserves new beginnings",
@@ -62,8 +63,11 @@ export const metadata = {
     creator: "@umangliving",
     images: ["https://www.umangliving.com/banner.png"],
   },
+  other: {
+    "google-site-verification": "YOUR_VERIFICATION_CODE_HERE",
+  },
 };
-
+             
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
