@@ -12,7 +12,7 @@ const Timeline = () => {
           In the joyous spirit of Navratras, <span className="font-semibold">Umang Living</span> opens its doors to a new way of life for seniors in India. With thoughtfully designed homes and enriching experiences, we are set to redefine senior living. Join us this festive season as we begin this joyful new chapter, where comfort, care, and community are at the heart of everything we do.
           </p>
         </div>
-        <div className="mt-10">
+        {/* <div className="mt-10">
           <div className="grid xl:grid-cols-[21%_21%_36%_22%] lg:grid-cols-[25%_40%_40%_45] md:grid-cols-[25%_50%_25%] gap-4">
             <div className="overflow-hidden rounded-[26px]">
               <img
@@ -49,7 +49,7 @@ const Timeline = () => {
               />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
