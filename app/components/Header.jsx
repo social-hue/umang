@@ -1,17 +1,21 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
-import { FaBars, FaTimes, FaChevronDown, FaPhoneAlt } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import {
+  FaBars,
+  FaTimes,
+  FaChevronDown,
+  FaChevronUp,
+  FaPhoneAlt,
+} from "react-icons/fa";
 import { navItems } from "../lib/nav-items";
 
 export default function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false); // mobile drawer
-  const [dropdownOpen, setDropdownOpen] = useState(false); // About submenu
-  const dropdownRef = useRef(null);
+  const [servicesOpen, setServicesOpen] = useState(false); // mobile dropdown
 
   // prevent body scroll when drawer is open
   useEffect(() => {
@@ -20,22 +24,11 @@ export default function Header() {
     return () => document.body.classList.remove("overflow-hidden");
   }, [open]);
 
-  // close dropdown and drawer on route change
+  // close drawer on route change
   useEffect(() => {
-    setDropdownOpen(false);
     setOpen(false);
+    setServicesOpen(false);
   }, [pathname]);
-
-  // click outside to close desktop dropdown
-  useEffect(() => {
-    function handleDocClick(e) {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-        setDropdownOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", handleDocClick);
-    return () => document.removeEventListener("mousedown", handleDocClick);
-  }, []);
 
   return (
     <header className="w-full px-3 sm:w-[92%] my-3 mx-auto transition-all duration-700 ease-in max-w-[1300px]">
@@ -55,11 +48,11 @@ export default function Header() {
         {/* Desktop Nav */}
         <ul className="hidden lg:flex items-center space-x-4 xl:space-x-6 2xl:text-[22px] xl:text-[18px] lg:text-[16px] min-w-0">
           {navItems.map(({ label, href }) => {
+            if (label === "Services") {
               return (
-                <li key={href} className="relative" ref={dropdownRef}>
-                  <div className="flex items-center gap-2">
-                    <Link
-                      href={href}
+                <li key={href} className="relative group">
+                  <div className="flex items-center gap-2 cursor-pointer">
+                    <h3
                       className={`transition-all duration-300 hover:scale-[1.04] whitespace-nowrap ${
                         pathname === href
                           ? "text-[#E7216A] font-semibold"
@@ -67,74 +60,39 @@ export default function Header() {
                       }`}
                     >
                       {label}
-                    </Link>
-                    {/* <button
-                      aria-expanded={dropdownOpen}
-                      aria-label="Toggle About submenu"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        setDropdownOpen((s) => !s);
-                      }}
-                      className="pt-1 rounded-md text-gray-600 hover:text-gray-800"
-                    >
-                      <FaChevronDown
-                        className={`w-4 h-4 transition-transform duration-300 ${
-                          dropdownOpen ? "rotate-180" : ""
-                        }`}
-                      />
-                    </button> */}
+                    </h3>
+                    <FaChevronDown className="mt-0.5 w-3 h-3 text-gray-600 group-hover:rotate-180 transition-transform duration-300" />
                   </div>
 
-                  {/* Desktop Dropdown */}
-                  {/* {dropdownOpen && (
-                    <ul className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md overflow-hidden z-50">
-                      <li>
+                  {/* Dropdown menu */}
+                  <ul className="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md overflow-hidden z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                    {[
+                      { name: "Townships", link: "/services/townships" },
+                      { name: "Stay", link: "/services/stay" },
+                      { name: "Travel", link: "/services/travel" },
+                      { name: "Legal Consultation", link: "/services/legal-consultation" },
+                      { name: "Healing Services", link: "/services/healing-services" },
+                      { name: "General Consultation", link: "/services/general-consultation" },
+                    ].map((s) => (
+                      <li key={s.link}>
                         <Link
-                          href="/projects"
-                          onClick={() => setDropdownOpen(false)}
-                          className={`block px-4 py-2 hover:bg-gray-100 ${
-                            pathname === "/projects"
+                          href={s.link}
+                          className={`block px-4 py-2 hover:bg-gray-100 transition ${
+                            pathname === s.link
                               ? "text-[#E7216A]"
                               : "text-[#0B0B0B]"
                           }`}
                         >
-                          Projects
+                          {s.name}
                         </Link>
                       </li>
-                      <li>
-                        <Link
-                          href="/blog"
-                          onClick={() => setDropdownOpen(false)}
-                          className={`block px-4 py-2 hover:bg-gray-100 ${
-                            pathname === "/blog"
-                              ? "text-[#E7216A]"
-                              : "text-[#0B0B0B]"
-                          }`}
-                        >
-                          Blog
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="/lifeAt"
-                          onClick={() => setDropdownOpen(false)}
-                          className={`block px-4 py-2 hover:bg-gray-100 ${
-                            pathname === "/lifeAt"
-                              ? "text-[#E7216A]"
-                              : "text-[#0B0B0B]"
-                          }`}
-                        >
-                          Life
-                        </Link>
-                      </li>
-                    </ul>
-                  )} */}
+                    ))}
+                  </ul>
                 </li>
               );
+            }
 
-            // hide individual links that are part of the About submenu (keeps desktop nav tidy)
-            // if (["/projects", "/blog", "/lifeAt"].includes(href)) return null;
-
+            // Normal nav items
             return (
               <li
                 key={href}
@@ -193,7 +151,7 @@ export default function Header() {
 
       {/* Mobile Drawer */}
       <aside
-        className={`fixed top-0 left-0 h-full w-full bg-[#069183] z-50 shadow-xl transform transition-transform duration-300 lg:hidden ${
+        className={`fixed top-0 left-0 h-auto w-full bg-[#069183] z-50 shadow-xl transform transition-transform duration-300 lg:hidden ${
           open ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -215,20 +173,71 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Drawer Nav - directly list all navItems */}
-        <nav className="mt-6 px-6 space-y-4" role="navigation" aria-label="Mobile Navigation">
-          {navItems.map(({ label, href }) => (
-            <Link
-              key={href}
-              href={href}
-              onClick={() => setOpen(false)}
-              className={`block text-lg border-b pb-2 border-dashed w-full ${
-                pathname === href ? "text-[#FCEF44]" : "text-white hover:text-[#E7216A]"
-              }`}
-            >
-              {label}
-            </Link>
-          ))}
+        {/* Drawer Nav */}
+        <nav
+          className="mt-6 px-6 space-y-4"
+          role="navigation"
+          aria-label="Mobile Navigation"
+        >
+          {navItems.map(({ label, href }) => {
+            if (label === "Services") {
+              return (
+                <div key={href}>
+                  <button
+                    onClick={() => setServicesOpen(!servicesOpen)}
+                    className="w-full flex items-center justify-between text-lg border-b pb-2 border-dashed text-white hover:text-[#E7216A] transition"
+                  >
+                    <span>Services</span>
+                    {servicesOpen ? (
+                      <FaChevronUp className="w-4 h-4" />
+                    ) : (
+                      <FaChevronDown className="w-4 h-4" />
+                    )}
+                  </button>
+                  {servicesOpen && (
+                    <div className="pl-4 mt-2 space-y-2">
+                      {[
+                        { name: "Townships", link: "/services/townships" },
+                        { name: "Stay", link: "/services/stay" },
+                        { name: "Travel", link: "/services/travel" },
+                        { name: "Legal Consultation", link: "/services/legal-consultation" },
+                        { name: "Healing Services", link: "/services/healing-services" },
+                        { name: "General Consultation", link: "/services/general-consultation" },
+                      ].map((s) => (
+                        <Link
+                          key={s.link}
+                          href={s.link}
+                          onClick={() => setOpen(false)}
+                          className={`block text-lg border-b pb-2 border-dashed w-full ${
+                            pathname === s.link
+                              ? "text-[#FCEF44]"
+                              : "text-white hover:text-[#E7216A]"
+                          }`}
+                        >
+                          {s.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            }
+
+            return (
+              <Link
+                key={href}
+                href={href}
+                onClick={() => setOpen(false)}
+                className={`block text-lg border-b pb-2 border-dashed w-full ${
+                  pathname === href
+                    ? "text-[#FCEF44]"
+                    : "text-white hover:text-[#E7216A]"
+                }`}
+              >
+                {label}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* CTA button */}
