@@ -67,7 +67,7 @@ export default function Header() {
                   {/* Dropdown menu */}
                   <ul className="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md overflow-hidden z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                     {[
-                      { name: "Townships", link: "/services/townships" },
+                      { name: "Township", link: "/services/townships" },
                       { name: "Stay", link: "/services/stay" },
                       { name: "Travel", link: "/services/travel" },
                       { name: "Legal Consultation", link: "/services/legal-consultation" },
@@ -197,7 +197,7 @@ export default function Header() {
                   {servicesOpen && (
                     <div className="pl-4 mt-2 space-y-2">
                       {[
-                        { name: "Townships", link: "/services/townships" },
+                        { name: "Township", link: "/services/townships" },
                         { name: "Stay", link: "/services/stay" },
                         { name: "Travel", link: "/services/travel" },
                         { name: "Legal Consultation", link: "/services/legal-consultation" },
