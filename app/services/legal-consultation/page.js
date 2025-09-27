@@ -1,0 +1,76 @@
+import Image from "next/image";
+import Banner from "../../components/Banner";
+import Community from "../../components/Community";
+import Footer from "../../components/Footer";
+import { seoData } from "../../lib/seoMeta";
+
+export const generateMetadata = () => {
+  const meta = seoData.aboutUs;
+
+  return {
+    title: meta.title,
+    description: meta.description,
+    metadataBase: new URL(meta.url),
+    alternates: {
+      canonical: meta.canonical,
+    },
+    openGraph: {
+      title: meta.title,
+      description: meta.description,
+      url: meta.url,
+      type: meta.type,
+      siteName: meta.siteName,
+      images: [
+        {
+          url: meta.image,
+          width: 1200,
+          height: 630,
+          alt: meta.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: meta.title,
+      description: meta.description,
+      site: "@umangliving",
+      creator: "@umangliving",
+      images: [meta.image],
+    },
+    keywords: meta.keywords.split(",").map((kw) => kw.trim()), // array of keywords
+  };
+};
+
+export default function HealingServices() {
+  return (
+    <>
+      <Banner title={"Healing Services"} />
+      <div className=" relative overflow-hidden ">
+        <div className="absolute -top-[150px] -left-[180px] -z-9">
+          <img src="/rangoli.png" alt="rangoli" className="w-[70%] " />
+        </div>
+        <section className="flex flex-col md:flex-row items-center gap-6 p-6 bg-white rounded-2xl shadow">
+      {/* Left: Image */}
+      <div className="w-full md:w-1/2 relative h-64 md:h-80">
+        <Image
+          src="/services/Legal.png" // replace with your image
+          alt="Rangoli"
+          fill
+          className="object-cover rounded-xl"
+        />
+      </div>
+
+      {/* Right: Text */}
+      <div className="w-full md:w-1/2 text-gray-700">
+        <h2 className="text-2xl font-bold mb-4">Trusted Legal Guidance for Seniors</h2>
+        <p className="text-lg leading-relaxed">
+        Legal matters can often feel overwhelming, especially when it comes to property, inheritance, or retirement-related documentation. Our trusted legal advisors specialize in assisting seniors with clarity and compassion. Whether you are preparing a will, managing property transfers, or navigating complex paperwork, we ensure the process is transparent, secure, and stress-free. Our consultations are designed to empower you with knowledge and peace of mind, helping you make informed decisions to protect your rights and secure your legacy. With professional guidance just a step away, you can rest assured knowing your legal affairs are in safe hands.
+        </p>
+      </div>
+    </section>          
+        <Community />
+      </div>
+      <Footer />
+    </>
+  );
+}
