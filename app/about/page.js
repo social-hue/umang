@@ -1,5 +1,5 @@
 // import Aboutus from "../components/about/Aboutus";
-import Timeline from "../components/about/Timeline";
+// import Timeline from "../components/about/Timeline";
 import Banner from "../components/Banner";
 import Community from "../components/Community";
 import Footer from "../components/Footer";
@@ -79,7 +79,7 @@ With Umang Living, Mr. Bharadwajj hopes to do more than build beautiful residenc
             order2={" order-1"}
           />
         </div>
-        <Timeline />
+        {/* <Timeline /> */}
         {/* <div className="py-0">
           <div className="bg_green pb-4 main_width rounded-[11px] ">
             <div className="p-6 bg_red rounded-[11px]">
