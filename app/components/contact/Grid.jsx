@@ -36,7 +36,7 @@ export default function Grid() {
   };
 
   return (
-    <section className="w-full flex flex-col md:flex-row items-center md:gap-3 mt-8 rounded-2xl max-w-5xl mx-auto">
+    <section className="p-6 w-full flex flex-col md:flex-row items-center md:gap-3 mt-8 rounded-2xl max-w-5xl mx-auto">
       {/* Left Side */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
