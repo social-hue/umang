@@ -6,7 +6,7 @@ import { MdWifiCalling3 } from "react-icons/md";
 const OfficeDetails = () => {
   const data = [
     {
-      title: `<span style="color:#069183">Head </span> <span class="gradient_text">Office</span>`,
+      title: `<span style="color:#069183; font-weight:500">Head </span> <span class="gradient_text font-semibold">Office</span>`,
       details: [
         {
           email: "connect@umangliving.com",
@@ -30,7 +30,7 @@ const OfficeDetails = () => {
   ];
 
   return (
-    <div className="py-10">
+    <div className="py-8">
       <div className="main_width">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start gap-10">
           {data.map((office, index) => (
@@ -49,14 +49,14 @@ const OfficeDetails = () => {
               {office.details.map((item, i) => (
                 <div
                   key={i}
-                  className="space-y-4 mt-4 text-gray-700 text-base "
+                  className="space-y-2 mt-4 text-gray-700 text-base "
                 >
                   <div className="flex items-start text-[#1D1E1C] gap-3 lg:text-[22px] md:text-[18px]">
                     <MdEmail className="text-xl text-[#1D1E1C] mt-2" />
                     <span>{item.email}</span>
                   </div>
                   <div className="flex items-start text-[#1D1E1C] gap-3 lg:text-[22px] md:text-[18px]">
-                    <FaLocationDot className="text-xl text-[#1D1E1C] mt-1" />
+                    <FaLocationDot className="text-xl text-[#1D1E1C] mt-2" />
                     <span>{item.location}</span>
                   </div>
                   <div className="flex items-start text-[#1D1E1C] gap-3 lg:text-[22px] md:text-[18px]">
