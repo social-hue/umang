@@ -43,7 +43,7 @@ export default function PromoCard() {
               src="/popup.jpg"
               alt="Promo"
               fill
-              className="object-fit  w-full h-full"
+              className="object-fit w-full h-full"
               priority
             />
           </div>

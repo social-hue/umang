@@ -1,46 +1,122 @@
-import Link from "next/link";
-import React from "react";
+"use client";
+import { useState } from "react";
+import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
-const Grid = () => {
-  const data = [
-    {
-      img: "/svgs/callback.svg",
-      title: "Call back",
-      href: "tel:+919560986669",
-    },
-    {
-      img: "/svgs/wp.svg",
-      title: "WhatsApp Chat",
-      href: `https://wa.me/919560986669?text=I'd%20like%20to%20chat%20with%20you`,
-    },
-    {
-      img: "/svgs/download.svg",
-      title: "Download brochure",
-      href: "",
-    },
-  ];
+export default function Grid() {
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState(null);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus(null);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) throw new Error("Failed to submit");
+
+      setStatus("success");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (err) {
+      setStatus("error");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <div className="py-10">
-      <div className="main_width">
-        <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-4">
-          {data?.map(({ img, title, href }) => (
-            <Link href={href} key={title} target="_blank">
-              <div className="lg:px-10 lg:py-14 p-8 bg-[#F8F8F8] rounded-[11px] flex items-center  justify-center   border-l-2  border-r-2  border-[#979797] border-dashed ">
-                <div className="flex flex-col items-center ">
-                  <img src={img} alt={title} className="lg:w-auto   w-[70px]" />
-                  <div className="pt-4">
-                    <h4 className="text-[#3D3D3D] font-bold lg:text-[18px] md:text-[12px] uppercase">
-                      {title}
-                    </h4>
-                  </div>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
+    <section className="w-full flex flex-col md:flex-row items-center md:gap-3 mt-8 rounded-2xl max-w-5xl mx-auto">
+      {/* Left Side */}
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="w-full md:w-1/2 flex items-center justify-center p-4 md:p-6"
+      >
+        <h2 className="text-2xl md:text-5xl font-bold text-zinc-800 leading-snug text-center md:text-left">
+          Send your query, <br />{" "}
+          <span className="text-[#079184]">Our team</span> will get back to you soon{" "}
+          <ArrowRight className="inline-block w-6 h-6 md:w-8 md:h-8 text-[#079184]" />
+        </h2>
+      </motion.div>
 
-export default Grid;
+      {/* Right Side - Contact Form */}
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+        className="w-full md:w-[45%] text-zinc-800 p-8 shadow-xl md:ml-6 md:mt-0"
+      >
+        <h2 className="text-2xl font-semibold text-center mb-4 md:mb-6">Contact Us</h2>
+
+        <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
+          {/* Name */}
+          <div>
+            <label className="block text-md font-medium mb-1">Name</label>
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              className="w-full border-b border-gray-400 focus:outline-none focus:border-green-600 p-2"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+
+          {/* Email */}
+          <div>
+            <label className="block text-md font-medium mb-1">Email</label>
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              className="w-full border-b border-gray-400 focus:outline-none focus:border-green-600 p-2"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          {/* Message */}
+          <div>
+            <label className="block text-md font-medium mb-1">Message</label>
+            <textarea
+              rows="4"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              className="w-full border-b border-gray-400 focus:outline-none focus:border-green-600 p-2 resize-none"
+              placeholder="Enter your message"
+              required
+            ></textarea>
+          </div>
+
+          {/* Submit Button */}
+          <button
+            type="submit"
+            disabled={loading}
+            className="w-full bg-gradient-to-r from-[#079184] to-[#075c54] text-white font-medium py-3 hover:opacity-90 transition disabled:opacity-50"
+          >
+            {loading ? "Submitting..." : "Submit"}
+          </button>
+        </form>
+
+        {/* Status messages */}
+        {status === "success" && <p className="text-green-600 mt-4">✅ Message sent successfully!</p>}
+        {status === "error" && <p className="text-red-600 mt-4">❌ Failed to send message. Please try again.</p>}
+      </motion.div>
+    </section>
+  );
+}

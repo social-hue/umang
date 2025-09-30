@@ -1,6 +1,6 @@
 import Banner from "../components/Banner";
 import Community from "../components/Community";
-import Aboutus from "../components/contact/about";
+// import Aboutus from "../components/contact/about";
 import Grid from "../components/contact/Grid";
 import Map from "../components/contact/Map";
 import OfficeDetails from "../components/contact/officeDetails";
@@ -52,12 +52,11 @@ export default function Contact() {
         <Header />
       </div> */}
       <Banner title={"Connect with Us"} />
-
       <div className=" relative overflow-hidden ">
         <div className="absolute -top-[150px] -left-[180px] -z-9">
           <img src="/rangoli.png" alt="rangoli" className="w-[70%] " />
         </div>
-        <Aboutus />
+        {/* <Aboutus /> */}
         <Grid />
         <OfficeDetails />
         <Map />
