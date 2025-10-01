@@ -10,9 +10,9 @@ const OfficeDetails = () => {
       details: [
         {
           email: "connect@umangliving.com",
-          location: "2319, Gold Wing Wave one Tower Sector 18 Noida UP 201301",
-          corporate: "0120 510 9189",
-          call: "+91-95609 86669",
+          location: "2319, Gold Wing, Wave one Tower, Sector 18, Noida, UP-201301",
+          corporate: "0120-510-9189, +91-9871825999",
+          // call: "+91-95609 86669",
         },
       ],
     },
@@ -59,10 +59,10 @@ const OfficeDetails = () => {
                     <FaLocationDot className="text-xl text-[#1D1E1C] mt-2" />
                     <span>{item.location}</span>
                   </div>
-                  <div className="flex items-start text-[#1D1E1C] gap-3 lg:text-[22px] md:text-[18px]">
+                  {/* <div className="flex items-start text-[#1D1E1C] gap-3 lg:text-[22px] md:text-[18px]">
                     <MdWifiCalling3 className="text-xl text-[#1D1E1C] mt-2" />
                     <span>{item.call}</span>
-                  </div>
+                  </div> */}
                   {item.corporate ? (
                     <div className="flex items-start text-[#1D1E1C] gap-3 lg:text-[22px] md:text-[18px]">
                       <MdWifiCalling3 className="text-xl text-[#1D1E1C] mt-2" />
