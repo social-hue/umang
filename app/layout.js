@@ -53,6 +53,7 @@ export const metadata = {
         alt: "Because every age deserves new beginnings",
       },
     ],
+    updatedTime: new Date().toISOString(),
   },
 
   twitter: {
@@ -85,6 +86,29 @@ export default function RootLayout({ children }) {
           strategy="lazyOnload"
           defer
         />
+         <Script id="schema-org" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Umang Living",
+            url: "https://www.umangliving.com/",
+            logo: "https://www.umangliving.com/faviconNew.ico",
+            description:
+              "Umang Living is India’s first multi-city senior independent-living community, thoughtfully designed with love and respect.",
+            contactPoint: {
+              "@type": "ContactPoint",
+              telephone: "+91-XXXXXXXXXX",
+              contactType: "customer service",
+              areaServed: "IN",
+              availableLanguage: "English",
+            },
+            sameAs: [
+              "https://www.facebook.com/umangliving",
+              "https://twitter.com/umangliving",
+              "https://www.instagram.com/umangliving"
+            ]
+          })}
+        </Script>
         <Script id="google-analytics" strategy="afterInteractive" async>
           {`
             window.dataLayer = window.dataLayer || [];
