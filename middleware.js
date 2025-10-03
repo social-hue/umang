@@ -45,5 +45,8 @@ import { NextResponse } from "next/server";
 // to live whole site for live on www.umagliving.com
 
 export function middleware(request) {
-  return NextResponse.next();
+  const response = NextResponse.next();
+  response.headers.set("Last-Modified", new Date().toUTCString());
+  return response;
+  // return NextResponse.next();
 }
