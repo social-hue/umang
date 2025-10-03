@@ -65,7 +65,7 @@ export const metadata = {
     images: ["https://www.umangliving.com/banner.png"],
   },
   other: {
-    "google-site-verification": "YOUR_VERIFICATION_CODE_HERE",
+    "google-site-verification": "googleddd1afab57f5951d.html",
   },
 };
              
@@ -79,12 +79,11 @@ export default function RootLayout({ children }) {
           type="image/x-icon"
           sizes="any"
         />
-
         {/* ✅ Google Analytics via Next Script */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-X8ZCDZN3QT"
-          strategy="afterInteractive"
-          async
+          strategy="lazyOnload"
+          defer
         />
         <Script id="google-analytics" strategy="afterInteractive" async>
           {`

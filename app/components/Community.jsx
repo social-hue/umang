@@ -7,13 +7,13 @@ const Community = () => {
     <div className="lg:py-8 md:py-8 py-8 bg-[url(/Community.png)] bg-cover lg:h-[340px] flex items-center">
       <div className="main_width">
         <div>
-          <h6 className="lg:text-[50px] md:text-[30px] text-[24px] lg:leading-[40px]  font-semibold text-white">
+          <p className="lg:text-[50px] md:text-[30px] text-[24px] lg:leading-[40px]  font-semibold text-white">
             Be a part of our growing family, {""}
             <span className="yellow">
               <NumberCounter target={101249} duration={3000} />+
             </span>{" "}
             Members already !
-          </h6>
+          </p>
         </div> 
         <div className="p-4"> 
           <div className="lg:text-[20px] md:text-[16px] text-[16px] text-white"> 

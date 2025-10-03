@@ -116,7 +116,7 @@ body {
   backdrop-filter: blur(5.434091091156006px);
 }
 
-.swiper-pagination-bullet {
+/* .swiper-pagination-bullet {
   width: 24px !important;
   height: 12px !important;
   background-color: #8f8e8e !important;
@@ -157,14 +157,14 @@ body {
 .custom-swiper-pagination .swiper-pagination-bullet-active {
   background-color: #55bfb1;
   width: 100px;
-}
+} */
 
 /* Optional: Responsive tweak */
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   .custom-swiper-pagination .swiper-pagination-bullet {
     width: 30px;
   }
   .custom-swiper-pagination .swiper-pagination-bullet-active {
     width: 60px;
   }
-}
+} */
