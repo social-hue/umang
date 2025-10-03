@@ -72,7 +72,7 @@ With Umang Living, Mr. Bharadwajj hopes to do more than build beautiful residenc
             des={"Founder, CEO"}
             img={"/new_one.png"}
             size={
-              "text-[#535353] lg:text-[22px] md:text-[20px] xl:leading-[35px] pt-6"
+              "text-[#535353] lg:text-[22px] md:text-[20px] xl:leading-[35px] mt-6"
             }
             grid={`grid 2xl:grid-cols-[1fr_70%] lg:grid-cols-[1fr_60%] `}
             order1={"order-2"}
