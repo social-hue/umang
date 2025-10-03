@@ -69,14 +69,14 @@ const Contents = ({
         </div>
         <div className="">
           {head5 ? (
-            <h4 className=" lg:text-[35px] md:text-[30px] text-[25px] font-semibold lg:leading-[55px] red font-light tracking-[-1.34px]">
+            <h4 className=" lg:text-[35px] md:text-[30px] text-[25px] font-semibold lg:leading-[55px] red tracking-[-1.34px]">
               <span className="green">{head5}</span>
             </h4>
           ) : (
             ""
           )}
           {head6 ? (
-            <h4 className="lg:text-[42px]  font-semibold md:text-[32px]  text-[25px] lg:leading-[55px] red font-light tracking-[-1.34px]">
+            <h4 className="lg:text-[42px]  font-semibold md:text-[32px]  text-[25px] lg:leading-[55px] red tracking-[-1.34px]">
               <span className="">{head6}</span>
             </h4>
           ) : (

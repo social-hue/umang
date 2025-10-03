@@ -70,14 +70,14 @@ export default function Travel() {
               </li>
             </ul>
           </div>
-          <h4 className=" lg:text-[35px]  mt-6 md:text-[30px] text-[25px] font-semibold lg:leading-[55px] red font-light tracking-[-1.34px]">
+          <h4 className=" lg:text-[35px]  mt-6 md:text-[30px] text-[25px] font-semibold lg:leading-[55px] red tracking-[-1.34px]">
             <span className="green">
               Wherever you want to go, we’ll take you there — safely, joyfully,
               and in great company
             </span>
           </h4>
 
-          <h4 className="lg:text-[42px]  font-semibold md:text-[32px]  text-[25px] lg:leading-[55px] red font-light tracking-[-1.34px]">
+          <h4 className="lg:text-[42px]  font-semibold md:text-[32px]  text-[25px] lg:leading-[55px] red tracking-[-1.34px]">
             <span className="">
               Let’s make your next journey unforgettable.
             </span>

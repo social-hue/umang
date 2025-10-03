@@ -63,12 +63,12 @@ export default function Stay() {
         {/* become a member section */}
         <div className="">
           <div className="main_width">
-            <h4 className=" lg:text-[35px] md:text-[30px] text-[25px] font-semibold lg:leading-[55px] red font-light tracking-[-1.34px]">
+            <h4 className=" lg:text-[35px] md:text-[30px] text-[25px] font-semibold lg:leading-[55px] red tracking-[-1.34px]">
               <span className="green">
                 Because life after 55 is about freedom, not limitation.
               </span>
             </h4>
-            <h4 className="lg:text-[42px]  font-semibold md:text-[32px]  text-[25px] lg:leading-[55px] red font-light tracking-[-1.34px]">
+            <h4 className="lg:text-[42px]  font-semibold md:text-[32px]  text-[25px] lg:leading-[55px] red tracking-[-1.34px]">
               <span className="">
                 At Umang Living, we don’t just offer homes — we offer the
                 freedom to live where and how you want.
