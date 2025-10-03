@@ -16,11 +16,11 @@ export default function Life() {
       <Banner title={"Life at Umang "} />
       <div className=" relative overflow-hidden ">
         <div className="absolute -top-[150px] -left-[180px] -z-9">
-          <img src="/rangoli.png" alt="rangoli" className="w-[70%] " />
+          <img src="/rangoli.png" alt="rangoli" loading="lazy" decoding="async" className="w-[70%]" />
         </div>
         <Aboutus />
         <div className="main_width pb-10">
-          <img src="/lifeAt/lifeAt.png" />
+          <img src="/lifeAt/lifeAt.png" alt="lifeAt" loading="lazy" decoding="async" />
         </div>
         <div>
           <Cards />
@@ -35,7 +35,7 @@ export default function Life() {
               <div>
                 <div className="grid sm:grid-cols-[100px_1fr] items-center gap-4">
                   <div className="p-4">
-                    <img src="/svgs/brother.svg" alt="brother" />
+                    <img src="/svgs/brother.svg" alt="brother" loading="lazy" decoding="async" />
                   </div>
                   <div>
                     <p className="text-[#3A3A3A] lg:text-[25px] md:text-[20px] text-[18px]">
@@ -48,7 +48,7 @@ export default function Life() {
                 </div>
                 <div className="grid sm:grid-cols-[100px_1fr] items-center gap-4">
                   <div className="p-4">
-                    <img src="/svgs/gift.svg" alt="brother" />
+                    <img src="/svgs/gift.svg" alt="brother" loading="lazy" decoding="async" />
                   </div>
                   <div>
                     <p className="text-[#3A3A3A] lg:text-[25px] md:text-[20px] text-[18px]">
@@ -61,7 +61,7 @@ export default function Life() {
                 </div>
                 <div className="grid sm:grid-cols-[100px_1fr] items-center gap-4">
                   <div className="p-4">
-                    <img src="/svgs/travel.svg" alt="brother" />
+                    <img src="/svgs/travel.svg" alt="brother" loading="lazy" decoding="async" />
                   </div>
                   <div>
                     <p className="text-[#3A3A3A] lg:text-[25px] md:text-[20px] text-[18px]">
@@ -75,7 +75,7 @@ export default function Life() {
               </div>
             </div>
             <div>
-              <img src="/whyUs.jpg" alt="whyUs" />
+              <img src="/whyUs.jpg" alt="whyUs" loading="lazy" decoding="async" />
             </div>
           </div>
         </div>
@@ -84,7 +84,8 @@ export default function Life() {
             <img
               src="/lifetai02.png"
               alt="happiness"
-              className="w-full h-full object-cover "
+              className="w-full h-full object-cover"
+              loading="lazy" decoding="async"
             />
           </div>
         </div>

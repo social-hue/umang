@@ -79,7 +79,7 @@ export default async function Page({ params }) {
       <BlogBanner data={content} />
       <div className="relative overflow-hidden">
         <div className="absolute -top-[150px] -left-[180px] -z-9">
-          <img src="/rangoli.png" alt="rangoli" className="w-[70%]" />
+          <img src="/rangoli.png" alt="rangoli" loading="lazy" decoding="async" className="w-[70%]" />
         </div>
         <div className="py-10">
           <div className="main_width">
@@ -89,7 +89,7 @@ export default async function Page({ params }) {
             ></div>
             <div className="grid grid-cols-[20px_1fr] gap-4 py-6">
               <div>
-                <img src="/svgs/quotent.svg" alt="quotent" />
+                <img src="/svgs/quotent.svg" alt="quotent" loading="lazy" decoding="async" />
               </div>
               <div>
                 <div

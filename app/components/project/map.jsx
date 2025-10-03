@@ -25,7 +25,7 @@ const Map = () => {
           </p>
         </div>
         <div className="">
-          <img src="/map.png" alt="" />
+          <img src="/map.png" alt="map" loading="lazy" decoding="async" />
         </div>
       </div>
       <div className="main_width mt-4 xl:hidden block">

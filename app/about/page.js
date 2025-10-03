@@ -59,7 +59,7 @@ With Umang Living, Mr. Bharadwajj hopes to do more than build beautiful residenc
       <Banner title={" About us"} />
       <div className=" relative overflow-hidden ">
         <div className="absolute -top-[150px] -left-[180px] -z-9">
-          <img src="/rangoli.png" alt="rangoli" className="w-[70%] " />
+          <img src="/rangoli.png" alt="rangoli" loading="lazy" decoding="async" className="w-[70%]"/>
         </div>
         {/* <Aboutus /> */}
         <div className="p-8 rounded-[11px] main_width bg-[#f6f6f6]">

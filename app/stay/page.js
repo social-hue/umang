@@ -18,7 +18,7 @@ export default function Stay() {
       <Banner title={"Stay"} />
       <div className=" relative overflow-hidden ">
         <div className="absolute -top-[150px] -left-[180px] -z-9">
-          <img src="/rangoli.png" alt="rangoli" className="w-[70%] " />
+          <img src="/rangoli.png" alt="rangoli" className="w-[70%]" loading="lazy" decoding="async" />
         </div>
         <Aboutus />
         <div>
@@ -43,6 +43,7 @@ export default function Stay() {
                         src={data.img}
                         className="w-full h-full object-cover"
                         alt={data.title}
+                        loading="lazy" decoding="async"
                       />
                     </div>
                     <div className="bg-[#F8F8F8] h-full lg:p-6 p-5 text-center ">

@@ -52,7 +52,7 @@ export default function Life() {
       <Banner title={"Life at Umang "} />
       <div className=" relative overflow-hidden ">
         <div className="absolute -top-[150px] -left-[180px] -z-9">
-          <img src="/rangoli.png" alt="rangoli" className="w-[70%] " />
+          <img src="/rangoli.png" alt="rangoli" className="w-[70%]" loading="lazy" decoding="async" />
         </div>
         <Aboutus />
         <div className="main_width pb-10">
@@ -65,6 +65,7 @@ export default function Life() {
                 src="/lifeAt/lifrat1.jpg"
                 alt="lifeat"
                 className="w-full md:h-[400px] object-cover rounded-[30px]"
+                loading="lazy" decoding="async"
               />
               <div className="2xl:mt-10">
                 <h4 className="green 2xl:text-[120px] xl:text-[80px] text-[60px] font-semibold">
@@ -87,6 +88,7 @@ export default function Life() {
                 src="/lifeAt/lifrat2.jpg"
                 alt="lifeat"
                 className="w-full  object-cover rounded-[30px]"
+                loading="lazy" decoding="async"
               />
             </div>
           </div>

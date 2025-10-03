@@ -20,6 +20,7 @@ const Contents = ({
               src={img}
               className="w-full h-full object-cover "
               alt="senior living homes"
+              loading="lazy" decoding="async"
             />
           </div>
 

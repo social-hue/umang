@@ -55,7 +55,7 @@ export default function Partners() {
       <Banner title={"Partner with Us"} />
       <div className=" relative overflow-hidden ">
         <div className="absolute -top-[150px] -left-[180px] -z-9">
-          <img src="/rangoli.png" alt="rangoli" className="w-[70%] " />
+          <img src="/rangoli.png" alt="rangoli" className="w-[70%]" loading="lazy" decoding="async" />
         </div>
         <Aboutus />
 

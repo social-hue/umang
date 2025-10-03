@@ -76,6 +76,8 @@ const Footer = () => {
                   src="/logo.png"
                   alt="Umang Living"
                   className="rounded w-[80%] h-[80px] lg:w-full"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <p className="text-[#ccc] leading-relaxed text-[17px] lg:text-[18px] max-w-xs">
