@@ -15,7 +15,7 @@ export default function ComingSoon() {
       }}
     >
       <div className="max-w-[800px] w-[90%] mx-auto">
-        <img src="/coming.png" alt="coming-soon" className="w-full" />
+        <img src="/coming.png" alt="coming-soon" loading="lazy" decoding="async" className="w-full" />
       </div>
 
       <h1

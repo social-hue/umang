@@ -47,7 +47,7 @@ export default function Townships() {
       <Banner title={"Township"} />
       <div className=" relative overflow-hidden ">
         <div className="absolute -top-[150px] -left-[180px] -z-9">
-          <img src="/rangoli.png" alt="rangoli" className="w-[70%] " />
+          <img src="/rangoli.png" alt="rangoli" className="w-[70%]" loading="lazy" decoding="async" />
         </div>
         <section className="flex flex-col md:flex-row items-center gap-6 p-6 bg-white rounded-2xl shadow">
       {/* Left: Image */}

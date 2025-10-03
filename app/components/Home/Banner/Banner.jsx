@@ -173,19 +173,23 @@ export default function Banner() {
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20">
           <div className="flex space-x-3">
             {carouselData.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                disabled={isTransitioning}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? "bg-white scale-125" : "bg-white/50 hover:bg-white/75"
-                } ${isTransitioning ? "pointer-events-none" : ""}`}
-                style={{
-                  willChange: "transform, background-color",
-                  transform: index === currentSlide ? "scale(1.25)" : "scale(1)",
-                }}
-                aria-label={`Go to slide ${index + 1}`}
-              />
+             <button
+             key={index}
+             onClick={() => goToSlide(index)}
+             disabled={isTransitioning}
+             className={`w-4 h-4 flex items-center justify-center rounded-full 
+                         ${isTransitioning ? "pointer-events-none" : ""}`}
+             aria-label={`Go to slide ${index + 1}`}
+           >
+             <span
+               className={`w-2 h-2 rounded-full transition-all duration-300 
+                 ${index === currentSlide ? "bg-white scale-125" : "bg-white/50 hover:bg-white/75"}`}
+               style={{
+                 willChange: "transform, background-color",
+                 transform: index === currentSlide ? "scale(1.25)" : "scale(1)",
+               }}
+             />
+           </button>
             ))}
           </div>
         </div>

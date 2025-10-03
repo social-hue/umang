@@ -3,7 +3,7 @@ export const seoData = {
     type: "website",
     url: "https://www.umangliving.com/",
     title:
-      "Umang Living: Senior Independent Living Community for people above 55 years of age.",
+      "Umang Living: India's Largest Senior Living Community",
     description:
       "Umang Living is India’s first multi-city senior independent-living community, thoughtfully designed with love and respect.",
 

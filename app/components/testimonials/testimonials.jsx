@@ -111,9 +111,9 @@ export default function Testimonial() {
                       className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full object-cover flex-shrink-0"
                     />
                     <div className="ml-3 sm:ml-4 text-left">
-                      <h6 className="text-gray-800 font-semibold uppercase text-xs sm:text-sm">
+                      <p className="text-gray-800 font-semibold uppercase text-xs sm:text-sm">
                         {t.name}
-                      </h6>
+                      </p>
                       <div className="flex mt-1">
                         {Array.from({ length: 5 }).map((_, idx) => (
                           <FaStar
@@ -135,7 +135,7 @@ export default function Testimonial() {
         </div>
 
         {/* Dots Navigation */}
-        {totalDots > 1 && (
+        {/* {totalDots > 1 && (
           <div className="flex justify-center mt-6 sm:mt-8 space-x-2">
             {Array.from({ length: totalDots }).map((_, i) => (
               <button
@@ -148,7 +148,7 @@ export default function Testimonial() {
               ></button>
             ))}
           </div>
-        )}
+        )} */}
       </div>
     </section>
   );
