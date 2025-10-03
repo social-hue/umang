@@ -143,7 +143,7 @@ const Footer = () => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="bg-[#00A79C] text-[#fff] font-semibold px-4 py-3 rounded-tr-[11px] rounded-br-[11px] text-sm hover:opacity-90 flex items-center justify-center min-w-[110px]"
+                  className="bg-[#057366] text-[#fff] font-semibold px-4 py-3 rounded-tr-[11px] rounded-br-[11px] text-sm hover:opacity-90 flex items-center justify-center min-w-[110px]"
                 >
                   {loading ? (
                     <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
@@ -160,6 +160,7 @@ const Footer = () => {
               {/* Social Media Icons */}
               <div className="flex 2xl:mt-4 justify-center sm:justify-start gap-3">
                 <a
+                  aria-label="Facebook"
                   href="https://www.facebook.com/people/Umang-Living-Senior-Citizens-Community/61579702657707/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -168,6 +169,7 @@ const Footer = () => {
                   <FaFacebookF className="w-4 h-4" />
                 </a>
                 <a
+                  aria-label="LinkedIn"
                   href="https://www.linkedin.com/company/umang-living/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -176,6 +178,7 @@ const Footer = () => {
                   <FaLinkedinIn className="w-4 h-4" />
                 </a>
                 <a
+                  aria-label="Instagram"
                   href="https://www.instagram.com/umangliving/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -184,6 +187,7 @@ const Footer = () => {
                   <FaInstagram className="w-4 h-4" />
                 </a>
                 <a
+                  aria-label="YouTube"
                   href="https://www.youtube.com/@UmangLiving"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -208,10 +212,6 @@ const Footer = () => {
               2319, Gold Wing, Wave one Tower, Sector-18, Noida, UP-201301
             </p>
           </div>
-        </div>
-
-        <div className="absolute -right-[70px] bottom-0">
-          <img src="/svgs/man.svg" className="w-[95%]" alt="man" />
         </div>
       </div>
     </footer>

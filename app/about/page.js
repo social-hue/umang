@@ -45,12 +45,12 @@ export const generateMetadata = () => {
 };
 
 export default function About() {
-  const memberContent = `With over 25 years of leadership in the hospitality industry, Mr. Sanjay Bharadwajj knows how to make people feel truly at home. With a rare mix of strategic smarts and a deep love for crafting meaningful experiences, Mr. Bharadwajj has spent his career decoding what makes places come alive–and people smile.<br/><br/>
+  const memberContent = `With over 25 years of leadership in the hospitality industry, Mr. Sanjayy Bharadwajj knows how to make people feel truly at home. With a rare mix of strategic smarts and a deep love for crafting meaningful experiences, Mr. Bharadwajj has spent his career decoding what makes places come alive and people smile.<br/><br/>
 
-From market research to lifestyle design, he’s worn many hats, always guided by a keen understanding of human behaviour and an eye for comfort, joy, and connection.
-Now, he’s pouring all that wisdom into a new venture close to his heart: Umang Living—India’s first multi-city independent senior living community. Thoughtfully created to offer vibrant, dignified, and holistic living for the elderly, Umang is not about slowing down—it’s about living fully, joyfully, and on your own terms. <br/><br/>
+From market research to lifestyle design, he&apos;s worn many hats, always guided by a keen understanding of human behaviour and an eye for comfort, joy & connection.
+Now, he&apos;s pouring all that wisdom into a new venture close to his heart: Umang Living - India&apos;s first multi-city independent senior living community. Thoughtfully created to offer vibrant, dignified, and holistic living for the elderly, Umang is not about slowing down, it&apos;s about living fully, joyfully and on your own terms.<br/><br/>
 
-With Umang Living, Mr. Bharadwajj hopes to do more than build beautiful residences—he wants to build a community where every day brings companionship, purpose, and a strong cup of chai.`;
+With Umang Living, Mr. Bharadwajj hopes to do more than build beautiful residences - he wants to build a community where every day brings companionship, purpose, and a strong cup of chai.`;
   return (
     <>
       {/* <div className="py-8 ">
@@ -69,14 +69,14 @@ With Umang Living, Mr. Bharadwajj hopes to do more than build beautiful residenc
               `}
             content={memberContent}
             name={"Mr. Sanjayy Bharadwajj"}
-            des={"Founder CEO"}
+            des={"Founder, CEO"}
             img={"/new_one.png"}
             size={
-              "text-[#535353]  lg:text-[22px] md:text-[20px]  xl:leading-[35px] pt-4 "
+              "text-[#535353] lg:text-[22px] md:text-[20px] xl:leading-[35px] pt-6"
             }
             grid={`grid 2xl:grid-cols-[1fr_70%] lg:grid-cols-[1fr_60%] `}
-            order1={"order-2 "}
-            order2={" order-1"}
+            order1={"order-2"}
+            order2={"order-1"}
           />
         </div>
         {/* <Timeline /> */}
