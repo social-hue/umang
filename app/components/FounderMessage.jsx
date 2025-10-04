@@ -1,59 +1,60 @@
-import React from "react";
+"use client";
+import Image from "next/image";
 
-const FounderMessage = ({
-  head,
-  content,
-  name,
-  des,
-  img,
-  grid,
-  order2,
-  order1,
-  size,
-}) => {
+export default function AboutFounder() {
   return (
-    <div className="">
-      <div className="">
-        <div className={grid}>
-          <div
-            className={`md:p-10 p-4 bg-[url(/rangoli_founder.png)] h-full bg-cover rangoli ${order1}`}
-          >
-            <div>
-              <h1 className="lg:text-[65px] md:text-[45px] text-[35px] lg:leading-[60px] font-semibold red">
-                <span dangerouslySetInnerHTML={{ __html: head }}></span>
-              </h1>
-              <p
-                className={size}
-                dangerouslySetInnerHTML={{ __html: content }}
-              ></p>
-              <div className=" text-[#535353] mt-4 ">
-                <h4 className="font-bold xl:text-[34px] lg:text-[20px] md:text-[18px] 2xl:leading-[35px]">
-                  {name}
-                </h4>
-                <p className=" xl:text-[30px] lg:text-[18px] md:text-[16px] 2xl:leading-[35px]">
-                  {des}
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            className={`bg_green pl-4  rounded-tl-[11px] rounded-tr-[150px] ${order2}`}
-          >
-            <div className="bg_red w-full h-full pl-4 rounded-tl-[11px] rounded-tr-[150px] ">
-              <div className="bg-[#ffffff]  w-full h-full  border-[#ffffff] rounded-tl-[11px] rounded-tr-[110px] overflow-hidden">
-                <img
-                  src={img}
-                  className="object-cover w-full h-full"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-            </div>
+    <section className="w-full bg-white py-12">
+      <div className="container mx-auto px-4 md:px-12  flex flex-col md:flex-row items-center md:items-start gap-8">
+        {/* Left Side - Image */}
+        <div className="w-full md:w-1/2">
+          <div className="relative w-full h-full rounded-lg overflow-hidden shadow-lg">
+            <Image
+              src="/new_one.webp" // replace with your actual image path
+              alt="Founder"
+              // fill
+              width={692}
+              height={775}
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
-      </div>
-    </div>
-  );
-};
 
-export default FounderMessage;
+        {/* Right Side - Content */}
+        <div className="mt-4 w-full md:w-1/2 flex flex-col justify-center">
+          <h1 className="text-4xl font-semibold text-teal-700 mb-4">
+            About the <span className="text-pink-600">Founder</span>
+          </h1>
+          <p className="text-gray-700 text-xl leading-relaxed mb-2">
+            With over 25 years of leadership in the hospitality industry,
+            Mr. Sanjayy Bharadwajj knows how to make people feel truly at home.
+            With a rare mix of strategic smarts and a deep love for crafting
+            meaningful experiences, Mr. Bharadwajj has spent his career decoding
+            what makes places come alive and people smile.
+          </p>
+          <p className="text-gray-700 text-xl leading-relaxed mb-2">
+            From market research to lifestyle design, he’s worn many hats, always
+            guided by a keen understanding of human behaviour and an eye for
+            comfort, joy & connection. Now, he’s pouring all that wisdom into a
+            new venture close to his heart: Umang Living – India’s first
+            multi-city independent senior living community.
+          </p>
+          <p className="text-gray-700 text-xl leading-relaxed mb-2">
+            Thoughtfully created to offer vibrant, dignified, and holistic living
+            for the elderly, Umang is not about slowing down, it’s about living
+            fully, joyfully and on your own terms.
+          </p>
+          <p className="text-gray-700 text-xl leading-relaxed mb-2">
+            With Umang Living, Mr. Bharadwajj hopes to do more than build
+            beautiful residences – he wants to build a community where every day
+            brings companionship, purpose, and a strong cup of chai.
+          </p>
+          <h3 className="text-xl font-bold text-gray-900">
+            Mr. Sanjayy Bharadwajj
+          </h3>
+          <p className="text-gray-600 text-lg">Founder, CEO</p>
+        </div>
+      </div>
+    </section>
+  );
+}

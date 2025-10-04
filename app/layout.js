@@ -66,6 +66,7 @@ export const metadata = {
     images: ["https://www.umangliving.com/banner.png"],
   },
   other: {
+    "last-modified": new Date().toUTCString(),
     "google-site-verification": "googleddd1afab57f5951d.html",
   },
 };
@@ -84,7 +85,6 @@ export default function RootLayout({ children }) {
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-X8ZCDZN3QT"
           strategy="lazyOnload"
-          defer
         />
          <Script id="schema-org" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify({
@@ -94,10 +94,10 @@ export default function RootLayout({ children }) {
             url: "https://www.umangliving.com/",
             logo: "https://www.umangliving.com/faviconNew.ico",
             description:
-              "Umang Living is India’s first multi-city senior independent-living community, thoughtfully designed with love and respect.",
+              "Umang Living is India&apos;s first multi-city senior independent-living community, thoughtfully designed with love and respect.",
             contactPoint: {
               "@type": "ContactPoint",
-              telephone: "+91-XXXXXXXXXX",
+              telephone: "+91-9871825999",
               contactType: "customer service",
               areaServed: "IN",
               availableLanguage: "English",
@@ -109,7 +109,7 @@ export default function RootLayout({ children }) {
             ]
           })}
         </Script>
-        <Script id="google-analytics" strategy="afterInteractive" async>
+        <Script id="google-analytics" strategy="lazyOnload" async>
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

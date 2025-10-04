@@ -88,9 +88,9 @@ const Footer = () => {
 
             {/* Quick Links */}
             <div>
-              <h4 className="yellow lg:text-[20px] md:text-[16px] font-semibold mb-4 uppercase">
+              <h6 className="yellow lg:text-[20px] md:text-[16px] font-semibold mb-4 uppercase">
                 Quick Links
-              </h4>
+              </h6>
               <ul className="space-y-3 text-[#ccc] lg:text-[18px] text-[18px]">
                 {filteredNavItems.map(({ label, href }) => (
                   <li key={href}>
@@ -104,9 +104,9 @@ const Footer = () => {
 
             {/* Support Links */}
             <div>
-              <h4 className="yellow lg:text-[20px] md:text-[16px] font-semibold mb-4 uppercase">
+              <p className="yellow lg:text-[20px] md:text-[16px] font-semibold mb-4 uppercase">
                 Support Links
-              </h4>
+              </p>
               <ul className="space-y-3 text-[#ccc] text-[18px] lg:text-[18px]">
                 {supportLinks.map((txt, idx) => (
                   <li key={idx}>
@@ -123,9 +123,9 @@ const Footer = () => {
 
             {/* Newsletter */}
             <div>
-              <h4 className="yellow text-[18px] font-semibold mb-4 uppercase">
+              <h6 className="yellow text-[18px] font-semibold mb-4 uppercase">
                 Join a Newsletter
-              </h4>
+              </h6>
 
               {/* Newsletter Form */}
               <form

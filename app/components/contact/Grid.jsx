@@ -63,32 +63,45 @@ export default function Grid() {
         <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
           {/* Name */}
           <div>
-            <label className="block text-md font-medium mb-1">Name</label>
+            <label
+              htmlFor="name"
+              className="block text-md font-medium mb-1"
+            >
+              Name
+            </label>
             <input
               type="text"
+              id="name"
               name="name"
               value={formData.name}
               onChange={handleChange}
               className="w-full border-b border-gray-400 focus:outline-none focus:border-green-600 p-2"
               placeholder="Enter your name"
               required
+              autoComplete="on"
             />
           </div>
 
           {/* Email */}
           <div>
-            <label className="block text-md font-medium mb-1">Email</label>
+            <label
+              htmlFor="email"
+              className="block text-md font-medium mb-1"
+            >
+              Email
+            </label>
             <input
               type="email"
+              id="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
               className="w-full border-b border-gray-400 focus:outline-none focus:border-green-600 p-2"
               placeholder="Enter your email"
               required
+              autoComplete="on"
             />
           </div>
-
           {/* Message */}
           <div>
             <label className="block text-md font-medium mb-1">Message</label>

@@ -1,6 +1,6 @@
 import React from "react";
 import { NumberCounter } from "../helpers/NumberCounter";
-import Button from "../helpers/Button";
+// import Button from "../helpers/Button";
 
 const Community = () => {
   return (

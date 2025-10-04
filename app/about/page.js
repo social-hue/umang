@@ -56,29 +56,15 @@ With Umang Living, Mr. Bharadwajj hopes to do more than build beautiful residenc
       {/* <div className="py-8 ">
         <Header />
       </div> */}
-      <Banner title={" About us"} />
-      <div className=" relative overflow-hidden ">
+      <Banner title={"About us"} />
+      <div className="relative overflow-hidden ">
         <div className="absolute -top-[150px] -left-[180px] -z-9">
           <img src="/rangoli.png" alt="rangoli" loading="lazy" decoding="async" className="w-[70%]"/>
         </div>
         {/* <Aboutus /> */}
-        <div className="p-8 rounded-[11px] main_width bg-[#f6f6f6]">
-          <FounderMessage
-            head={`   
-                <span style="color:#069183">About the</span> Founder
-              `}
-            content={memberContent}
-            name={"Mr. Sanjayy Bharadwajj"}
-            des={"Founder, CEO"}
-            img={"/new_one.png"}
-            size={
-              "text-[#535353] lg:text-[22px] md:text-[20px] xl:leading-[35px] mt-6"
-            }
-            grid={`grid 2xl:grid-cols-[1fr_70%] lg:grid-cols-[1fr_60%] `}
-            order1={"order-2"}
-            order2={"order-1"}
-          />
-        </div>
+     
+        <FounderMessage/>
+        
         {/* <Timeline /> */}
         {/* <div className="py-0">
           <div className="bg_green pb-4 main_width rounded-[11px] ">

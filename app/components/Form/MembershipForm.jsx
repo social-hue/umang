@@ -48,7 +48,7 @@ const MembershipForm = () => {
           <div className="my-8 flex md:flex-row flex-col  gap-4">
             <input
               type="Membership No"
-              className="bg-white green  outline-none placeholder-[#069183] px-4 lg:w-1/4 w-full py-4 bg-white px-4 py-2 rounded-[11px] focus-within:ring-2 cursor-pointer focus-within:ring-teal-500"
+              className="bg-white green  outline-none placeholder-[#069183] lg:w-1/4 w-full py-4 px-4 rounded-[11px] focus-within:ring-2 cursor-pointer focus-within:ring-teal-500"
               placeholder="Enter Membership No"
             />
             <button className="bg_green cursor-pointer text-white font-semibold px-10 py-3 rounded-md whitespace-nowrap hover:bg-teal-700 transition lg:self-stretch">
@@ -83,7 +83,7 @@ const MembershipForm = () => {
               </select>
             </div>
 
-            <div className="flex-1 bg-white px-4 py-2  rounded-[11px] cursor-pointer focus-within:ring-2 cursor-pointer focus-within:ring-teal-500">
+            <div className="flex-1 bg-white px-4 py-2  rounded-[11px] focus-within:ring-2 cursor-pointer focus-within:ring-teal-500">
               <label className="sr-only" htmlFor="membershipType">
                 Membership Type
               </label>
@@ -101,7 +101,7 @@ const MembershipForm = () => {
               </select>
             </div>
 
-            <div className="flex-1 bg-white px-4   py-2 rounded-[11px] cursor-pointer focus-within:ring-2 cursor-pointer focus-within:ring-teal-500">
+            <div className="flex-1 bg-white px-4   py-2 rounded-[11px] focus-within:ring-2 cursor-pointer focus-within:ring-teal-500">
               <label className="sr-only" htmlFor="subOption">
                 Option
               </label>
