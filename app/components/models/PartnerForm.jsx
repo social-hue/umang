@@ -1,223 +1,204 @@
 "use client";
-import MemberShipForm from "@/app/helpers/MemberShipForm";
-import {
-  Dialog,
-  DialogBackdrop,
-  DialogPanel,
-  DialogTitle,
-} from "@headlessui/react";
-import { EnvelopeIcon } from "@heroicons/react/24/solid";
-import { useState } from "react";
-import toast from "react-hot-toast";
 
-export const formFiled = {
-  1: {
-    title: "Financer / Investor",
-    fields: [
-      { name: "companyName", label: "Company Name", type: "text" },
-      { name: "contactPerson", label: "Contact Person", type: "text" },
-      { name: "contactNumber", label: "Contact Number", type: "tel" },
-      { name: "email", label: "Email Id", type: "email" },
-      { name: "designation", label: "Designation", type: "text" },
-      { name: "message", label: "Message Box", type: "textarea" },
-    ],
-  },
-  2: {
-    title: "Real Estate / Developer",
-    fields: [
-      { name: "companyName", label: "Company Name", type: "text" },
-      { name: "contactPerson", label: "Contact Person", type: "text" },
-      { name: "contactNumber", label: "Contact Number", type: "tel" },
-      { name: "email", label: "Email Id", type: "email" },
-      { name: "designation", label: "Designation", type: "text" },
-      { name: "message", label: "Message Box", type: "textarea" },
-    ],
-  },
-  3: {
-    title: "Land-Owner",
-    fields: [
-      { name: "contactPerson", label: "Contact Person", type: "text" },
-      { name: "contactNumber", label: "Contact Number", type: "tel" },
-      { name: "email", label: "Email Id", type: "email" },
-      { name: "message", label: "Message Box", type: "textarea" },
-    ],
-  },
-  4: {
-    title: "Senior Citizen /Clubs",
-    fields: [
-      { name: "ClubName", label: "Club Name", type: "text" },
-      { name: "contactPerson", label: "Contact Person", type: "text" },
-      { name: "contactNumber", label: "Contact Number", type: "tel" },
-      { name: "email", label: "Email Id", type: "email" },
-      { name: "designation", label: "Designation", type: "text" },
-      { name: "message", label: "Message Box", type: "textarea" },
-    ],
-  },
-};
-export default function PartnerForm({ open, setOpen, colabType, id }) {
+import { useState } from "react";
+import { X, Mail } from "lucide-react";
+
+const PartnerForm = ({ open, setOpen }) => {
+  const [formData, setFormData] = useState({
+    company_name: "",
+    contact_person: "",
+    contact_number: "",
+    email: "",
+    designation: "",
+    message: "",
+  });
+
   const [loading, setLoading] = useState(false);
-  const Close = () => {
-    setOpen(false);
+  const [status, setStatus] = useState(null);
+
+  if (!open) return null;
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const inputFields = formFiled[id];
-  const handleSubmitForm = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    try {
-      const formData = new FormData(e.target);
-      const formObj = Object.fromEntries(formData.entries());
-      const payload = {
-        form_id: id,
-        form_type: colabType,
-        company_name: formObj.companyName ? formObj.companyName : "",
-        club_name: formObj.ClubName ? formObj.ClubName : "",
-        contact_person: formObj.contactPerson ? formObj.contactPerson : "",
-        contact_number: formObj.contactNumber ? formObj.contactNumber : "",
-        email: formObj.email ? formObj.email : "",
-        designation: "Project Manager",
-        message: formObj.message ? formObj.message : "",
-      };
+    setStatus(null);
 
-      const response = await fetch(process.env.NEXT_PUBLIC_API_URL_MULTI_FORM, {
+    try {
+      const res = await fetch("/api/partner-form", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
 
-      const res = await response.json();
-      if (res.success === true) {
-        setLoading(false);
-        toast.success("Thank you for reaching out. We will be in touch soon.");
-        Close();
-        return;
-      } else if (res.success === false) {
-        setLoading(false);
-        toast.error(res.message);
-        return;
+      const data = await res.json();
+
+      if (data.success) {
+        setStatus({ type: "success", msg: data.message });
+        setFormData({
+          company_name: "",
+          contact_person: "",
+          contact_number: "",
+          email: "",
+          designation: "",
+          message: "",
+        });
+      } else {
+        setStatus({ type: "error", msg: data.message });
       }
-    } catch (error) {
-      console.error(error);
+    } catch (err) {
+      setStatus({ type: "error", msg: "Network error. Please try again." });
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
-    <Dialog open={open} onClose={setOpen} className="relative z-50">
-      {/* Backdrop */}
-      <DialogBackdrop className="fixed inset-0 bg-black/40 backdrop-blur-sm" />
-
-      {/* Centered, scrollable container */}
-      <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 overflow-y-auto">
-        <DialogPanel className="w-full lg:w-1/2 max-h-[90vh] overflow-y-auto rounded-2xl bg-white shadow-xl ring-1 ring-black/10">
-          <div className="flex items-center gap-2 bg_green px-6 py-6">
-            <EnvelopeIcon className="h-6 w-6 text-white" />
-            <DialogTitle className="text-lg font-semibold text-white">
-              Collaborate&nbsp;
-              {colabType && (
-                <span className="font-normal text-gray-300">– {colabType}</span>
-              )}
-            </DialogTitle>
+    <div className="fixed inset-0 backdrop-blur-sm flex justify-center items-center z-[999] px-2 sm:px-3">
+      <div
+        className="bg-white w-[95%] sm:w-[90%] md:w-full max-w-2xl rounded-xl shadow-2xl overflow-hidden 
+                   mx-auto max-h-[90vh] sm:max-h-none overflow-y-auto"
+      >
+        {/* Header */}
+        <div className="bg-[#008080] flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 sticky top-0 z-10">
+          <div className="flex items-center gap-2 text-white text-base sm:text-lg font-semibold">
+            <Mail className="w-5 h-5" />
+            <span>Collaborate</span>
           </div>
-          <div className="text-black">
-            <form
-              onSubmit={handleSubmitForm}
-              className="grid grid-cols-1 gap-4 px-6 py-6 sm:grid-cols-2"
+          <button onClick={() => setOpen(false)}>
+            <X className="w-5 h-5 text-white hover:scale-110 transition-transform" />
+          </button>
+        </div>
+
+        {/* Form */}
+        <form onSubmit={handleSubmit} className="p-4 sm:p-6 space-y-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Company Name */}
+            <div>
+              <label className="block text-md text-zinc-800 font-semibold mb-1">
+                Company Name
+              </label>
+              <input
+                name="company_name"
+                type="text"
+                placeholder="Enter Company Name"
+                value={formData.company_name}
+                onChange={handleChange}
+                className="w-full border text-zinc-600 border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-[#008080] outline-none"
+              />
+            </div>
+
+            {/* Contact Person */}
+            <div>
+              <label className="block text-md text-zinc-800 font-semibold mb-1">
+                Contact Person
+              </label>
+              <input
+                name="contact_person"
+                type="text"
+                placeholder="Enter Contact Person"
+                value={formData.contact_person}
+                onChange={handleChange}
+                className="w-full border text-zinc-600 border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-[#008080] outline-none"
+              />
+            </div>
+
+            {/* Contact Number */}
+            <div>
+              <label className="block text-md text-zinc-800 font-semibold mb-1">
+                Contact Number
+              </label>
+              <input
+                name="contact_number"
+                type="tel"
+                placeholder="Enter Contact Number"
+                value={formData.contact_number}
+                onChange={handleChange}
+                className="w-full border text-zinc-600 border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-[#008080] outline-none"
+              />
+            </div>
+
+            {/* Email */}
+            <div>
+              <label className="block text-md text-zinc-800 font-semibold mb-1">
+                Email Id
+              </label>
+              <input
+                name="email"
+                type="email"
+                placeholder="Enter Email Id"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full border text-zinc-600 border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-[#008080] outline-none"
+              />
+            </div>
+
+            {/* Designation */}
+            <div className="md:col-span-2">
+              <label className="block text-md text-zinc-800 font-semibold mb-1">
+                Designation
+              </label>
+              <input
+                name="designation"
+                type="text"
+                placeholder="Enter Designation"
+                value={formData.designation}
+                onChange={handleChange}
+                className="w-full border text-zinc-600 border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-[#008080] outline-none"
+              />
+            </div>
+
+            {/* Message */}
+            <div className="md:col-span-2">
+              <label className="block text-md text-zinc-800 font-semibold mb-1">
+                Message Box
+              </label>
+              <textarea
+                name="message"
+                placeholder="Enter Message Box"
+                rows="4"
+                value={formData.message}
+                onChange={handleChange}
+                className="w-full border border-gray-300 text-zinc-600 rounded-md px-3 py-2 resize-none focus:ring-2 focus:ring-[#008080] outline-none"
+              ></textarea>
+            </div>
+          </div>
+
+          {/* Buttons */}
+          <div className="flex justify-end gap-3 pt-3">
+            <button
+              type="button"
+              onClick={() => setOpen(false)}
+              className="px-5 py-2 border rounded-md text-zinc-800 hover:bg-gray-100 transition"
             >
-              {inputFields?.fields?.map((field) => (
-                <div
-                  key={field.name}
-                  className={`sm:col-span-${
-                    field.type === "textarea" ? "2" : "1"
-                  }`}
-                >
-                  <label
-                    htmlFor={field.name}
-                    className="block font-medium text-gray-900"
-                  >
-                    {field.label}
-                  </label>
-
-                  {field.type === "textarea" ? (
-                    <textarea
-                      id={field.name}
-                      name={field.name}
-                      required
-                      rows="4"
-                      placeholder={`Enter ${field.label}`}
-                      className="mt-1 w-full rounded-md border border-gray-300 px-3 py-3 text-gray-900 shadow-sm placeholder-gray-400 outline-none focus:border-[#069183] focus-within:ring-2 cursor-pointer focus-within:ring-teal-500"
-                    ></textarea>
-                  ) : (
-                    <input
-                      id={field.name}
-                      name={field.name}
-                      type={field.type}
-                      maxLength={field.type === "tel" ? 10 : undefined}
-                      pattern={field.type === "tel" ? "[0-9]{10}" : undefined}
-                      inputMode={field.type === "tel" ? "numeric" : undefined}
-                      required
-                      placeholder={`Enter ${field.label}`}
-                      onChange={(e) => {
-                        const value = e.target.value;
-                        if (
-                          ["contactPerson", "name", "ClubName"].includes(
-                            field.name
-                          ) &&
-                          !/^[A-Za-z\s]*$/.test(value)
-                        ) {
-                          return; // Ignore invalid input
-                        }
-                      }}
-                      className="mt-1 w-full rounded-md border border-gray-300 px-3 py-3 text-gray-900 shadow-sm placeholder-gray-400 outline-none focus:border-[#069183] focus-within:ring-2 cursor-pointer focus-within:ring-teal-500"
-                    />
-                  )}
-                </div>
-              ))}
-
-              {/* Actions */}
-              <div className="col-span-full mt-4 flex flex-col items-stretch gap-3 sm:flex-row sm:justify-end">
-                <button
-                  type="button"
-                  onClick={Close}
-                  className="inline-flex cursor-pointer items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-gray-700 ring-1 ring-gray-300 hover:bg-gray-50"
-                >
-                  Close
-                </button>
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className="inline-flex items-center justify-center gap-2 rounded-md bg-[#B41F56] px-6 py-3 text-sm font-semibold text-white transition active:scale-95 hover:bg-[#069183] disabled:opacity-60 disabled:cursor-not-allowed"
-                >
-                  {loading && (
-                    <svg
-                      className="animate-spin h-5 w-5 text-white"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <circle
-                        className="opacity-25"
-                        cx="12"
-                        cy="12"
-                        r="10"
-                        stroke="currentColor"
-                        strokeWidth="4"
-                      />
-                      <path
-                        className="opacity-75"
-                        fill="currentColor"
-                        d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
-                      />
-                    </svg>
-                  )}
-                  {loading ? "Submitting..." : "Submit"}
-                </button>
-              </div>
-            </form>
+              Close
+            </button>
+            <button
+              type="submit"
+              disabled={loading}
+              className="px-6 py-2 bg-[#d81b60] text-white rounded-md font-semibold hover:bg-[#b0164f] transition"
+            >
+              {loading ? "Submitting..." : "Submit"}
+            </button>
           </div>
-        </DialogPanel>
+
+          {status && (
+            <p
+              className={`text-sm text-center mt-2 ${
+                status.type === "success" ? "text-green-600" : "text-red-600"
+              }`}
+            >
+              {status.msg}
+            </p>
+          )}
+        </form>
       </div>
-    </Dialog>
+    </div>
   );
-}
+};
+
+export default PartnerForm;
