@@ -96,11 +96,11 @@ function FAQItem({ faq, index, openIndex, toggleFAQ }) {
         {faq.question}
       </button>
       <div
-        className={`overflow-hidden transition-all duration-300 bg-[#c12c56e6] border border-[hsla(0,0%,51.4%,0.16)] rounded-md ${
+        className={`overflow-hidden transition-all duration-300 bg-[#c12c56f5] border border-[hsla(0,0%,51.4%,0.16)] rounded-md ${
           isOpen ? "max-h-[1000px] visible mt-2 p-3" : "max-h-0 invisible"
         }`}
       >
-        <p className="text-[#f5f5f5] text-sm sm:text-base lg:text-[18px] leading-relaxed font-light whitespace-pre-line">
+        <p className="text-[#ffffff] text-md sm:text-base lg:text-[19px] leading-relaxed font-light whitespace-pre-line">
           {faq.answer}
         </p>
       </div>

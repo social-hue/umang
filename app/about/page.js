@@ -4,6 +4,10 @@ import Banner from "../components/Banner";
 import Community from "../components/Community";
 import Footer from "../components/Footer";
 import FounderMessage from "../components/FounderMessage";
+import TeamSection from "../components/team/TeamSection";
+import MissionVision from "../components/vision/MissionVision";
+// import { motion } from "framer-motion";
+// import Image from "next/image";
 // import Header from "../components/Header";
 import { seoData } from "../lib/seoMeta";
 
@@ -57,7 +61,7 @@ With Umang Living, Mr. Bharadwajj hopes to do more than build beautiful residenc
         <Header />
       </div> */}
       <Banner title={"About us"} />
-      <div className="relative overflow-hidden ">
+      <div className="relative overflow-hidden">
         <div className="absolute -top-[150px] -left-[180px] -z-9">
           <img src="/rangoli.png" alt="rangoli" loading="lazy" decoding="async" className="w-[70%]"/>
         </div>
@@ -66,20 +70,8 @@ With Umang Living, Mr. Bharadwajj hopes to do more than build beautiful residenc
         <FounderMessage/>
         
         {/* <Timeline /> */}
-        {/* <div className="py-0">
-          <div className="bg_green pb-4 main_width rounded-[11px] ">
-            <div className="p-6 bg_red rounded-[11px]">
-              <div>
-                <h4 className="yellow xl:text-[50px] lg:text-[40px] md:text-[30px] sm:text-[25px] text-[20px]">
-                  Our Vision & Mission
-                </h4>
-                <p className="text-white lg:text-[50px] md:text-[40px] sm:text-[30px] text-[25px] font-light lg:leading-[72px]">
-                  Creating spaces where growing older means living fuller.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> */}
+        <MissionVision />
+        <TeamSection />
         <Community />
       </div>
       <Footer />

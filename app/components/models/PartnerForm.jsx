@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { X, Mail } from "lucide-react";
+import toast from "react-hot-toast";
 
 const PartnerForm = ({ open, setOpen }) => {
   const [formData, setFormData] = useState({
@@ -14,7 +15,6 @@ const PartnerForm = ({ open, setOpen }) => {
   });
 
   const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState(null);
 
   if (!open) return null;
 
@@ -26,7 +26,6 @@ const PartnerForm = ({ open, setOpen }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setStatus(null);
 
     try {
       const res = await fetch("/api/partner-form", {
@@ -38,7 +37,7 @@ const PartnerForm = ({ open, setOpen }) => {
       const data = await res.json();
 
       if (data.success) {
-        setStatus({ type: "success", msg: data.message });
+        toast.success("We'll be in touch soon!", { duration: 3000 });
         setFormData({
           company_name: "",
           contact_person: "",
@@ -48,10 +47,10 @@ const PartnerForm = ({ open, setOpen }) => {
           message: "",
         });
       } else {
-        setStatus({ type: "error", msg: data.message });
+        toast.error(data.message || "Something went wrong");
       }
     } catch (err) {
-      setStatus({ type: "error", msg: "Network error. Please try again." });
+      toast.error("Network error. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -77,7 +76,6 @@ const PartnerForm = ({ open, setOpen }) => {
         {/* Form */}
         <form onSubmit={handleSubmit} className="p-4 sm:p-6 space-y-5">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {/* Company Name */}
             <div>
               <label className="block text-md text-zinc-800 font-semibold mb-1">
                 Company Name
@@ -92,7 +90,6 @@ const PartnerForm = ({ open, setOpen }) => {
               />
             </div>
 
-            {/* Contact Person */}
             <div>
               <label className="block text-md text-zinc-800 font-semibold mb-1">
                 Contact Person
@@ -107,7 +104,6 @@ const PartnerForm = ({ open, setOpen }) => {
               />
             </div>
 
-            {/* Contact Number */}
             <div>
               <label className="block text-md text-zinc-800 font-semibold mb-1">
                 Contact Number
@@ -122,7 +118,6 @@ const PartnerForm = ({ open, setOpen }) => {
               />
             </div>
 
-            {/* Email */}
             <div>
               <label className="block text-md text-zinc-800 font-semibold mb-1">
                 Email Id
@@ -137,7 +132,6 @@ const PartnerForm = ({ open, setOpen }) => {
               />
             </div>
 
-            {/* Designation */}
             <div className="md:col-span-2">
               <label className="block text-md text-zinc-800 font-semibold mb-1">
                 Designation
@@ -152,7 +146,6 @@ const PartnerForm = ({ open, setOpen }) => {
               />
             </div>
 
-            {/* Message */}
             <div className="md:col-span-2">
               <label className="block text-md text-zinc-800 font-semibold mb-1">
                 Message Box
@@ -168,7 +161,6 @@ const PartnerForm = ({ open, setOpen }) => {
             </div>
           </div>
 
-          {/* Buttons */}
           <div className="flex justify-end gap-3 pt-3">
             <button
               type="button"
@@ -185,16 +177,6 @@ const PartnerForm = ({ open, setOpen }) => {
               {loading ? "Submitting..." : "Submit"}
             </button>
           </div>
-
-          {status && (
-            <p
-              className={`text-sm text-center mt-2 ${
-                status.type === "success" ? "text-green-600" : "text-red-600"
-              }`}
-            >
-              {status.msg}
-            </p>
-          )}
         </form>
       </div>
     </div>
