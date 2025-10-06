@@ -1,33 +1,41 @@
-# robots.txt for umangliving.com
-
-# Allow all search engines to crawl the site
+# *
 User-agent: *
-Disallow:
+Allow: /
 
-# Block AI crawlers explicitly
+# Amazonbot
 User-agent: Amazonbot
 Disallow: /
 
+# Applebot-Extended
 User-agent: Applebot-Extended
 Disallow: /
 
+# Bytespider
 User-agent: Bytespider
 Disallow: /
 
+# CCBot
 User-agent: CCBot
 Disallow: /
 
+# ClaudeBot
 User-agent: ClaudeBot
 Disallow: /
 
+# Google-Extended
 User-agent: Google-Extended
 Disallow: /
 
+# GPTBot
 User-agent: GPTBot
 Disallow: /
 
+# meta-externalagent
 User-agent: meta-externalagent
 Disallow: /
 
-# Sitemap location
+# Host
+Host: https://www.umangliving.com
+
+# Sitemaps
 Sitemap: https://www.umangliving.com/sitemap.xml

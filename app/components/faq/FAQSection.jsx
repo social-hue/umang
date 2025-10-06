@@ -70,7 +70,7 @@ export default function FAQSection() {
               <FAQItem key={index} faq={faq} index={index} openIndex={openIndex} toggleFAQ={toggleFAQ} />
             ))}
             <button
-              className="mx-auto mt-4 px-5 py-2 text-sm sm:text-base bg-[#112240] text-white rounded-md shadow-md hover:bg-[#1c3459] transition"
+              className="mx-auto mt-2 px-5 py-2 text-md bg-[#112240] text-white rounded-md shadow-md hover:bg-[#1c3459] transition"
               onClick={handleToggleMobile}
             >
               {showAllMobile ? "View Less" : "View More"}
@@ -88,7 +88,7 @@ function FAQItem({ faq, index, openIndex, toggleFAQ }) {
   return (
     <div className="mb-2 w-full">
       <button
-        className={`w-full text-left px-3 py-3 text-sm sm:text-base lg:text-[20px] text-white bg-[#c12c56] border border-[hsla(0,0%,51.4%,0.16)] rounded-md shadow-md transition relative after:font-bold after:absolute after:right-3 ${
+        className={`w-full text-left px-3 py-3 text-lg lg:text-[20px] text-white bg-[#c12c56] border border-[hsla(0,0%,51.4%,0.16)] rounded-md shadow-md transition relative after:font-bold after:absolute after:right-3 ${
           isOpen ? "after:content-['-']" : "after:content-['+']"
         }`}
         onClick={() => toggleFAQ(index)}
@@ -100,7 +100,7 @@ function FAQItem({ faq, index, openIndex, toggleFAQ }) {
           isOpen ? "max-h-[1000px] visible mt-2 p-3" : "max-h-0 invisible"
         }`}
       >
-        <p className="text-[#ffffff] text-md sm:text-base lg:text-[19px] leading-relaxed font-light whitespace-pre-line">
+        <p className="text-[#ffffff] text-lg lg:text-[19px] leading-relaxed font-light whitespace-pre-line">
           {faq.answer}
         </p>
       </div>
