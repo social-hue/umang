@@ -1,12 +1,13 @@
 "use client";
+
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import toast from "react-hot-toast";
 
 export default function Grid() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState(null);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -15,7 +16,6 @@ export default function Grid() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setStatus(null);
 
     try {
       const res = await fetch("/api/contact", {
@@ -26,10 +26,17 @@ export default function Grid() {
 
       if (!res.ok) throw new Error("Failed to submit");
 
-      setStatus("success");
+      toast.success("Thank you! Your message has been sent.", {
+        duration: 3000,
+        position: "top-center",
+      });
+
       setFormData({ name: "", email: "", message: "" });
     } catch (err) {
-      setStatus("error");
+      toast.error("Failed to send message. Please try again.", {
+        duration: 3000,
+        position: "top-center",
+      });
     } finally {
       setLoading(false);
     }
@@ -56,17 +63,14 @@ export default function Grid() {
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-        className="w-full md:w-[45%] text-zinc-800 p-8 shadow-xl md:ml-6 md:mt-0"
+        className="w-full md:w-[45%] text-zinc-800 p-8 shadow-xl md:ml-6 md:mt-0 bg-white rounded-xl"
       >
         <h2 className="text-2xl font-semibold text-center mb-4 md:mb-6">Contact Us</h2>
 
         <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
           {/* Name */}
           <div>
-            <label
-              htmlFor="name"
-              className="block text-md font-medium mb-1"
-            >
+            <label htmlFor="name" className="block text-md font-medium mb-1">
               Name
             </label>
             <input
@@ -84,10 +88,7 @@ export default function Grid() {
 
           {/* Email */}
           <div>
-            <label
-              htmlFor="email"
-              className="block text-md font-medium mb-1"
-            >
+            <label htmlFor="email" className="block text-md font-medium mb-1">
               Email
             </label>
             <input
@@ -102,6 +103,7 @@ export default function Grid() {
               autoComplete="on"
             />
           </div>
+
           {/* Message */}
           <div>
             <label className="block text-md font-medium mb-1">Message</label>
@@ -120,15 +122,11 @@ export default function Grid() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-gradient-to-r from-[#079184] to-[#075c54] text-white font-medium py-3 hover:opacity-90 transition disabled:opacity-50"
+            className="w-full bg-gradient-to-r from-[#079184] to-[#075c54] text-white font-medium py-3 hover:opacity-90 transition disabled:opacity-50 rounded-md"
           >
             {loading ? "Submitting..." : "Submit"}
           </button>
         </form>
-
-        {/* Status messages */}
-        {status === "success" && <p className="text-green-600 mt-4">✅ Message sent successfully!</p>}
-        {status === "error" && <p className="text-red-600 mt-4">❌ Failed to send message. Please try again.</p>}
       </motion.div>
     </section>
   );

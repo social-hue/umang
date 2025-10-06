@@ -151,8 +151,8 @@ export default function Header() {
 
       {/* Mobile Drawer */}
       <aside
-        className={`fixed top-0 left-0 h-auto w-full bg-[#069183] z-50 shadow-xl transform transition-transform duration-300 lg:hidden ${
-          open ? "translate-x-0" : "-translate-x-full"
+        className={`fixed top-0 left-0 h-full w-full bg-[#069183] z-50 shadow-xl transform transition-transform duration-300 lg:hidden overflow-y-auto ${
+    open ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         {/* Drawer Header */}

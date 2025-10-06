@@ -77,14 +77,14 @@ export default function Testimonial() {
         <h4 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-3">
           Check what our Customers are Saying
         </h4>
-        <p className="text-base sm:text-lg text-zinc-800 max-w-2xl mx-auto mb-10">
+        <p className="text-lg text-zinc-800 max-w-2xl mx-auto mb-6 md:mb-10">
           You can rely on our amazing features list and our customer services
           will be a great experience for you without doubt.
         </p>
       </div>
 
       {/* Carousel */}
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="relative max-w-6xl mx-auto md:px-4 px-8">
         <div className="overflow-hidden">
           <div
             className="flex transition-transform duration-700 ease-in-out"
@@ -101,7 +101,7 @@ export default function Testimonial() {
                 }}
               >
                 <div className="bg-white shadow-lg rounded-lg p-4 sm:p-6 md:p-8 flex flex-col justify-between h-full">
-                  <p className="text-gray-600 mb-6 leading-relaxed text-sm sm:text-base md:text-md flex-grow">
+                  <p className="text-gray-600 mb-6 leading-relaxed text-lg md:text-lg flex-grow">
                     {t.text}
                   </p>
                   <div className="flex items-center">
@@ -111,7 +111,7 @@ export default function Testimonial() {
                       className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full object-cover flex-shrink-0"
                     />
                     <div className="ml-3 sm:ml-4 text-left">
-                      <p className="text-gray-800 font-semibold uppercase text-xs sm:text-sm">
+                      <p className="text-gray-800 font-semibold uppercase text-md sm:text-md">
                         {t.name}
                       </p>
                       <div className="flex mt-1">

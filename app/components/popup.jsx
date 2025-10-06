@@ -56,7 +56,7 @@ export default function PromoCard() {
               rel="noopener noreferrer"
               className="w-full"
             >
-              <button className="w-full bg-[#057366e4] hover:bg-green-700 text-white 
+              <button className="w-full bg-[#129889] hover:bg-[#438a82] text-white 
                                px-4 py-3 text-md
                                sm:px-6 sm:py-3 sm:text-base
                                rounded-lg font-semibold shadow-lg transition-all duration-300 hover:scale-101 hover:shadow-xl text-center">

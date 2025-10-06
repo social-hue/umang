@@ -168,7 +168,7 @@ export default function Living() {
                             <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 line-clamp-1">
                               {item.title}
                             </h3>
-                            <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
+                            <p className="text-gray-600 text-md leading-relaxed line-clamp-3">
                               {item.tagline}
                             </p>
                           </div>
