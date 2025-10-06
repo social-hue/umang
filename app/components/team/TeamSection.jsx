@@ -18,7 +18,7 @@ export default function TeamSection() {
       linkedin: "https://www.linkedin.com/in/varsha-jaiswal-509191202/",
     },
     {
-      name: "Anupam Kinshuk",
+      name: "Anuupam Kinshuk",
       title: "Principal Consultant",
       img: "/anupam.webp",
       desc: "Growth strategist, partnerships, operations, services & technology excellence",
