@@ -60,7 +60,7 @@ export default function Projects() {
         </div>
         {/* <Aboutus /> */}
         <Map />
-        <div className="p-6">
+        <div className="py-6">
           <div className="bg_green main_width rounded-[11px] ">
             <div className="p-6 rounded-[11px]">
               <div>
