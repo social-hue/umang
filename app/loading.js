@@ -1,12 +1,30 @@
-import React from "react";
-import { PacmanLoader } from "react-spinners";
+// app/loading.js
+"use client";
 
-const loading = () => {
+import Image from "next/image";
+import { motion } from "framer-motion";
+
+export default function Loading() {
   return (
-    <div className="h-screen flex items-center justify-center">
-      <PacmanLoader color="#069183" />
+    <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
+      <motion.div
+        initial={{ opacity: 0.2 }}
+        animate={{ opacity: [0.2, 1, 0.2] }}
+        transition={{
+          duration: 0.8,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      >
+        <Image
+          src="/fav.png"
+          alt="Loading..."
+          width={70}
+          height={70}
+          className="object-contain"
+          priority
+        />
+      </motion.div>
     </div>
   );
-};
-
-export default loading;
+}

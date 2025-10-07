@@ -19,8 +19,8 @@ export default function Loading() {
         <Image
           src="/fav.png"
           alt="Loading..."
-          width={80}
-          height={80}
+          width={70}
+          height={70}
           className="object-contain"
           priority
         />
