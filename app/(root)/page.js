@@ -10,7 +10,7 @@ import { seoData } from "../lib/seoMeta";
 // import Aboutus from "../components/about/Aboutus";
 import FAQSection from "../components/faq/FAQSection";
 import Testimonial from "../components/testimonials/testimonials";
-import FloatingCTA from "../components/floatingButton/floatingButton";
+// import FloatingCTA from "../components/floatingButton/floatingButton";
 // import Testimonial from "../components/testimonials/Testimonial";
 // import TestimonialsSection from "../components/TestimonialsSection";
 

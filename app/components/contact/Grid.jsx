@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import toast from "react-hot-toast";
 
 export default function Grid() {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", number: "", message: "" });
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
@@ -31,7 +31,7 @@ export default function Grid() {
         position: "top-center",
       });
 
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ name: "", email: "", number: "", message: "" });
     } catch (err) {
       toast.error("Failed to send message. Please try again.", {
         duration: 3000,
@@ -63,7 +63,7 @@ export default function Grid() {
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-        className="w-full md:w-[45%] text-zinc-800 p-8 shadow-xl md:ml-6 md:mt-0 bg-white rounded-xl"
+        className="w-full md:w-[45%] text-zinc-800 p-8 shadow-xl md:ml-6 md:mt-0 bg-white"
       >
         <h2 className="text-2xl font-semibold text-center mb-4 md:mb-6">Contact Us</h2>
 
@@ -103,17 +103,33 @@ export default function Grid() {
               autoComplete="on"
             />
           </div>
+          <div>
+            <label htmlFor="number" className="block text-md font-medium mb-1">
+              Number
+            </label>
+            <input
+              type="tel"
+              id="number"
+              name="number"
+              value={formData.number}
+              onChange={handleChange}
+              className="w-full border-b border-gray-400 focus:outline-none focus:border-green-600 p-2"
+              placeholder="Enter your number"
+              required
+              autoComplete="on"
+            />
+          </div>
 
           {/* Message */}
           <div>
-            <label className="block text-md font-medium mb-1">Message</label>
+            <label className="block text-md font-medium mb-1">Address</label>
             <textarea
-              rows="4"
+              rows="1"
               name="message"
               value={formData.message}
               onChange={handleChange}
               className="w-full border-b border-gray-400 focus:outline-none focus:border-green-600 p-2 resize-none"
-              placeholder="Enter your message"
+              placeholder="Enter your address"
               required
             ></textarea>
           </div>

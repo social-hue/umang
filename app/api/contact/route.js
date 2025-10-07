@@ -5,15 +5,15 @@ import Contact from "@/models/Contact";
 export async function POST(req) {
   try {
     const body = await req.json();
-    const { name, email, message } = body;
+    const { name, email, number, message } = body;
 
-    if (!name || !email || !message) {
+    if (!name || !email || !message || !number) {
       return new Response(JSON.stringify({ error: "All fields are required" }), { status: 400 });
     }
 
     await dbConnect();
 
-    const newContact = await Contact.create({ name, email, message });
+    const newContact = await Contact.create({ name, email, number, message });
 
     return new Response(JSON.stringify({ success: true, data: newContact }), { status: 201 });
   } catch (error) {
