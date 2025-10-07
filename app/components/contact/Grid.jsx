@@ -31,7 +31,7 @@ export default function Grid() {
         position: "top-center",
       });
 
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ name: "", email: "", number: "", message: "" });
     } catch (err) {
       toast.error("Failed to send message. Please try again.", {
         duration: 3000,
