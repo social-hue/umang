@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function AboutFounder() {
   return (
     <section className="w-full bg-white px-4 py-6 md:py-12 overflow-hidden">
-      <div className="container mx-auto px-2 md:px-12 flex flex-col md:flex-row items-center md:items-start gap-8">
+      <div className="container mx-auto px-2 lg:px-10 flex flex-col lg:flex-row items-center md:items-start gap-8">
         {/* Left Side - Image with animation */}
         <motion.div
           className="w-full md:w-1/2"
@@ -34,7 +34,7 @@ export default function AboutFounder() {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          <h1 className="mt-4 text-4xl font-semibold text-teal-700 mb-4">
+          <h1 className="mt-4 text-4xl md:text-5xl font-semibold text-teal-700 mb-4">
             About the <span className="text-pink-600">Founder</span>
           </h1>
           <p className="text-gray-700 text-xl leading-relaxed mb-2">
