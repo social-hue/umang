@@ -4,13 +4,6 @@ import { motion } from "framer-motion";
 export default function TeamSection() {
   const team = [
     {
-      name: "Sanjayy Bharadwajj",
-      title: "Director",
-      img: "/author1.png",
-      desc: "Visionary leader redefining senior living through compassion and innovation.",
-      linkedin: "https://in.linkedin.com/in/sanjayy-bharadwajj-a87269370",
-    },
-    {
       name: "Varsha Jaiswal",
       title: "Associate Director",
       img: "/varsha.webp",
@@ -31,6 +24,13 @@ export default function TeamSection() {
       desc: "Driving business growth through impactful partnerships and engagement.",
       linkedin: "https://www.linkedin.com/in/priti-pathak-88a0b45",
     },
+    // {
+    //   name: "Ankit Rathi",
+    //   title: "Principal Architect",
+    //   img: "/author1.png",
+    //   desc: "Architect focused on designing senior-friendly, community spaces",
+    //   linkedin: "https://in.linkedin.com/in/sanjayy-bharadwajj-a87269370",
+    // },
   ];
 
   return (
