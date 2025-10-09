@@ -1,27 +1,30 @@
+"use client";
 import React from "react";
 import { FaAngleRight } from "react-icons/fa6";
 
-const Banner = ({ title }) => {
+const Banner = ({ title, bgImage = "/greenBg.jpg" }) => {
   return (
-    <div className="bg-[url(/greenBg.jpg)] bg-right lg:h-[200px] flex items-center  py-10">
-      <div className="main_width">
-        <div className="grid lg:grid-cols-[15px_1fr] grid-cols-[10px_1fr] gap-4">
-          <div className="lg:w-[10px] w-[8px] h-full bg-white "></div>
-          <div>
-            <div>
-              <h2 className=" lg:text-[60px] text-white md:text-[30px] text-[25px]  xl:leading-[80px] lg:leading-[60px] md:leading-[30px] lg:tracking-[-4px]">
-                {title}
-              </h2>
-              <p className="flex pt-2 text-white items-center uppercase font-medium  lg:text-[15px] text-[14px]">
-                Home{" "}
-                <span className="text-sm">
-                  <FaAngleRight />
-                </span>{""}
-                <span className="yellow">{title}</span>
-              </p>
-            </div>
-          </div>
-        </div>
+    <div
+      className="relative flex items-center justify-center text-center bg-cover bg-center"
+      style={{
+        backgroundImage: `url(${bgImage})`,
+        minHeight: "60vh", // increased banner height
+      }}
+    >
+      {/* Dark overlay for better text contrast */}
+      <div className="absolute inset-0 bg-black/50"></div>
+
+      {/* Content */}
+      <div className="relative z-10 max-w-6xl w-full px-4 md:px-8">
+        <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-2 md:mb-3 drop-shadow-lg">
+          {title}
+        </h2>
+
+        <p className="flex items-center justify-center gap-2 text-white uppercase text-sm sm:text-base md:text-lg font-medium">
+          Home
+          <FaAngleRight className="text-white text-sm sm:text-base" />
+          <span className="text-yellow-300">{title}</span>
+        </p>
       </div>
     </div>
   );

@@ -60,11 +60,11 @@ With Umang Living, Mr. Bharadwajj hopes to do more than build beautiful residenc
       {/* <div className="py-8 ">
         <Header />
       </div> */}
-      <Banner title={"About us"} />
+      <Banner title={"About us"} bgImage={"/blog_image.jpg"} />
       <div className="relative overflow-hidden">
-        <div className="absolute -top-[150px] -left-[180px] -z-9">
+        {/* <div className="absolute -top-[150px] -left-[180px] -z-9">
           <img src="/rangoli.png" alt="rangoli" loading="lazy" decoding="async" className="w-[70%]"/>
-        </div>
+        </div> */}
         {/* <Aboutus /> */}
      
         <FounderMessage/>

@@ -51,7 +51,7 @@ export default function Contact() {
       {/* <div className="py-8 ">
         <Header />
       </div> */}
-      <Banner title={"Connect with Us"} />
+      <Banner title={"Connect with Us"} bgImage={"/consultation.jpg"} />
       <div className=" relative overflow-hidden ">
         <div className="absolute -top-[150px] -left-[180px] -z-9">
           <img src="/rangoli.png" alt="rangoli" loading="lazy" decoding="async" className="w-[70%]" />

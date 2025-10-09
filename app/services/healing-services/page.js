@@ -41,15 +41,15 @@ export const generateMetadata = () => {
   };
 };
 
-export default function Townships() {
+export default function HealingServices() {
   return (
     <>
-      <Banner title={"Township"} />
-      <div className=" relative overflow-hidden ">
+      <Banner title={"Healing Services"} bgImage={"/citizen.jpg"}   />
+      <div className="relative overflow-hidden ">
         <div className="absolute -top-[150px] -left-[180px] -z-9">
           <img src="/rangoli.png" alt="rangoli" className="w-[70%]" loading="lazy" decoding="async" />
         </div>
-        <section className="flex flex-col md:flex-row items-center gap-6 p-6 bg-white rounded-2xl shadow">
+        <section className="p-6 md:p-10 md:mx-10 flex flex-col md:flex-row items-center gap-6">
       {/* Left: Image */}
       <div className="w-full md:w-1/2 relative h-64 md:h-80">
         <Image
