@@ -41,7 +41,7 @@ export default function TeamSection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="text-center text-[#101828] text-4xl md:text-5xl leading-light font-semibold mb-4"
+        className="text-center text-teal-700 text-4xl md:text-5xl leading-light font-semibold mb-4"
       >
         Meet our team
       </motion.h2>
