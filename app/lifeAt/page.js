@@ -49,7 +49,7 @@ export default function Life() {
       {/* <div className="py-8 ">
         <Header />
       </div> */}
-      <Banner title={"Life at Umang "} />
+      <Banner title={"Life at Umang "} bgImage={"/something1.jpg"} />
       <div className=" relative overflow-hidden ">
         <div className="absolute -top-[150px] -left-[180px] -z-9">
           <img src="/rangoli.png" alt="rangoli" className="w-[70%]" loading="lazy" decoding="async" />

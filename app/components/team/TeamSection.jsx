@@ -24,17 +24,17 @@ export default function TeamSection() {
       desc: "Driving business growth through impactful partnerships and engagement.",
       linkedin: "https://www.linkedin.com/in/priti-pathak-88a0b45",
     },
-    // {
-    //   name: "Ankit Rathi",
-    //   title: "Principal Architect",
-    //   img: "/author1.png",
-    //   desc: "Architect focused on designing senior-friendly, community spaces",
-    //   linkedin: "https://in.linkedin.com/in/sanjayy-bharadwajj-a87269370",
-    // },
+    {
+      name: "Ankit Rathi",
+      title: "Principal Architect",
+      img: "/ankit.jpeg",
+      desc: "Architect focused on designing senior-friendly & community-oriented living spaces",
+      linkedin: "https://in.linkedin.com/in/",
+    },
   ];
 
   return (
-    <main className="max-w-6xl mx-auto py-10 mb-6 bg-white">
+    <main className="max-w-6xl mx-auto py-12 mb-6 bg-white">
       {/* Heading */}
       <motion.h2
         initial={{ opacity: 0, y: 20 }}

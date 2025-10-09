@@ -1,32 +1,36 @@
 "use client";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 export default function MissionVision() {
+  const videoRef = useRef(null);
+  const [hasPlayed, setHasPlayed] = useState(false);
+  const [videoSrc, setVideoSrc] = useState("");
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          // if video comes into view (even partially) and hasn't played yet
+          if (entry.isIntersecting && !hasPlayed) {
+            setVideoSrc(
+              "https://www.youtube-nocookie.com/embed/ZdekV9sokZ8?autoplay=1&mute=0&controls=1&rel=0&modestbranding=1"
+            );
+            setHasPlayed(true); // mark it as played once
+          }
+        });
+      },
+      { threshold: 0 } // trigger as soon as any part of the element is visible
+    );
+
+    if (videoRef.current) observer.observe(videoRef.current);
+    return () => observer.disconnect();
+  }, [hasPlayed]);
+
   return (
-    <section className="relative py-4 md:py-10 px-6 md:px-12 lg:px-20 overflow-hidden">
-      {/* Decorative Element */}
-      {/* <div className="absolute top-0 right-0 w-64 h-64 bg-[#079184]/10 blur-3xl rounded-full -z-10"></div> */}
-
+    <section className="relative lg:mb-6 py-4 px-6 md:px-12 overflow-hidden">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
-        {/* Left - Image */}
-        {/* <motion.div
-          initial={{ opacity: 0, x: -60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="w-full md:w-1/2 flex justify-center"
-        >
-          <Image
-            src="/mission.jpg"
-            alt="Our Mission & Vision"
-            width={500}
-            height={400}
-            className="rounded-3xl shadow-2xl object-cover w-full h-auto"
-          />
-        </motion.div> */}
-
-        {/* Right - Content */}
+        {/* Right - Text Content */}
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -34,44 +38,48 @@ export default function MissionVision() {
           viewport={{ once: true }}
           className="w-full md:w-1/2 text-zinc-800"
         >
-          <h2 className="text-4xl md:text-5xl font-semibold mb-6 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-semibold mb-4 leading-tight">
             Our <span className="text-[#079184]">Mission & Vision</span>
           </h2>
-          <div className="space-y-6 leading-relaxed text-gray-700">
+          <div className="space-y-5 leading-relaxed text-gray-700">
             <p className="text-xl">
               <span className="font-semibold text-[#e60076]">Mission:</span>{" "}
-              Set the gold standard for senior living in India - where every elder lives with dignity, safety and joy.
+              Set the gold standard for senior living in India — where every
+              elder lives with dignity, safety and joy.
             </p>
             <p className="text-xl">
               <span className="font-semibold text-[#e60076]">Vision:</span>{" "}
-              Build purpose-designed communities that integrate healthcare, culture, and everyday convenience; enable family peace of mind (including NRIs), and deliver measurable outcomes in safety, wellness, and social connection.
+              Build purpose-designed communities that integrate healthcare,
+              culture, and everyday convenience; enable family peace of mind
+              (including NRIs), and deliver measurable outcomes in safety,
+              wellness, and social connection.
             </p>
           </div>
-          {/* 
-          <div className="mt-8">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.97 }}
-              className="bg-gradient-to-r from-[#079184] to-[#075c54] text-white font-medium px-8 py-3 rounded-full shadow-md hover:shadow-lg transition"
-            >
-              Learn More
-            </motion.button>
-          </div> */}
         </motion.div>
+
+        {/* Left - YouTube Video */}
         <motion.div
+          ref={videoRef}
+          className="w-full md:w-1/2"
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="w-full md:w-1/2 flex justify-center"
+          viewport={{ once: true, amount: 0.3 }}
         >
-          <Image
-            src="/citizen.jpg"
-            alt="Our Mission & Vision"
-            width={500}
-            height={400}
-            className="rounded-lg shadow-xl object-cover w-full h-auto"
-          />
+          <div className="relative mt-4 aspect-video overflow-hidden rounded-lg shadow-lg">
+            {videoSrc ? (
+              <iframe
+                src={videoSrc}
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                className="absolute top-0 left-0 w-full h-full rounded-lg"
+              ></iframe>
+            ) : (
+              <div className="absolute top-0 left-0 w-full h-full bg-black rounded-lg" />
+            )}
+          </div>
         </motion.div>
       </div>
     </section>
