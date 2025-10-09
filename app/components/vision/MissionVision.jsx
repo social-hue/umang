@@ -28,8 +28,8 @@ export default function MissionVision() {
   }, [hasPlayed]);
 
   return (
-    <section className="relative lg:mb-6 py-4 px-6 md:px-12 overflow-hidden">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+    <section className="w-full bg-white px-4 lg:px-16 py-10 overflow-hidden">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
         {/* Right - Text Content */}
         <motion.div
           initial={{ opacity: 0, x: 20 }}
