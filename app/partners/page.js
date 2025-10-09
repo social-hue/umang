@@ -52,7 +52,7 @@ export default function Partners() {
       {/* <div className="py-8 ">
         <Header />
       </div> */}
-      <Banner title={"Partner with Us"} bgImage={"/something4.jpg"} />
+      <Banner title={"Partner with Us"} bgImage={"/handshake.jpeg"} />
       <div className=" relative overflow-hidden ">
         <div className="absolute -top-[150px] -left-[180px] -z-9">
           <img src="/rangoli.png" alt="rangoli" className="w-[70%]" loading="lazy" decoding="async" />
