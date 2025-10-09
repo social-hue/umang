@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 
 export default function AboutFounder() {
   return (
-    <section className="w-full bg-white px-4 xl:px-14  py-6 overflow-hidden">
-      <div className="container mx-auto px-2 lg:px-10 flex flex-col xl:flex-row md:flex-row
+    <section className="w-full bg-white px-4 lg:px-16 py-6 2xl:py-12 overflow-hidden">
+      <div className="container mx-auto flex flex-col xl:flex-row md:flex-row
  items-center md:items-start gap-10">
         {/* Left Side - Responsive YouTube Embed */}
         {/* <motion.div
@@ -34,8 +34,8 @@ export default function AboutFounder() {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          <h1 className="text-4xl md:text-5xl font-semibold text-teal-700 mb-4 text-left">
-            About <span className="text-pink-600">Umang Living</span>
+          <h1 className="text-4xl md:text-5xl font-semibold text-zinc-800 mb-4 text-left">
+            About <span className="text-teal-700">Umang Living</span>
           </h1>
           <p className="text-gray-700 text-lg md:text-xl leading-relaxed mb-3">
             At Umang Living, we are committed to redefining aging by

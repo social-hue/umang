@@ -1,8 +1,10 @@
 // import Aboutus from "../components/about/Aboutus";
 // import Timeline from "../components/about/Timeline";
+import Founder from "../components/about/Founder";
 import Banner from "../components/Banner";
 import Community from "../components/Community";
 import Footer from "../components/Footer";
+import AboutFounder from "../components/FounderMessage";
 import FounderMessage from "../components/FounderMessage";
 import TeamSection from "../components/team/TeamSection";
 import MissionVision from "../components/vision/MissionVision";
@@ -65,10 +67,10 @@ With Umang Living, Mr. Bharadwajj hopes to do more than build beautiful residenc
         {/* <div className="absolute -top-[150px] -left-[180px] -z-9">
           <img src="/rangoli.png" alt="rangoli" loading="lazy" decoding="async" className="w-[70%]"/>
         </div> */}
-        {/* <Aboutus /> */}
-     
-        <FounderMessage/>
         
+        <FounderMessage/>
+        <Founder />
+        {/* <Aboutus /> */}
         {/* <Timeline /> */}
         <MissionVision />
         <TeamSection />

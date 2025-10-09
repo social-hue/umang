@@ -41,7 +41,7 @@ export default function TeamSection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="text-center text-[#101828] text-3xl md:text-5xl font-semibold mb-4"
+        className="text-center text-teal-700 text-4xl md:text-5xl leading-light font-semibold mb-4"
       >
         Meet our team
       </motion.h2>
@@ -51,7 +51,7 @@ export default function TeamSection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
         viewport={{ once: true }}
-        className="text-center text-lg text-[#667085] max-w-xl mx-12 md:mx-auto mb-6 font-medium"
+        className="text-center text-lg text-[#667085] max-w-xl mx-12 md:mx-auto mb-6 font-semibold"
       >
         Our philosophy is simple — hire a team of diverse, passionate people and foster a culture
         that empowers you to do your best work.
