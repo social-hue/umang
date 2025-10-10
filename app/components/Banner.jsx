@@ -16,14 +16,14 @@ const Banner = ({ title, bgImage = "/greenBg.jpg" }) => {
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl w-full px-4 md:px-8">
-        <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-2 md:mb-3 drop-shadow-lg">
+        <h2 className="text-white text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-2 md:mb-3 drop-shadow-lg">
           {title}
         </h2>
 
-        <p className="flex items-center justify-center gap-2 text-white uppercase text-sm sm:text-base md:text-lg font-medium">
+        <p className="flex items-center justify-center gap-2 text-white uppercase sm:text-xl md:text-lg font-medium">
           Home
-          <FaAngleRight className="text-white text-sm sm:text-base" />
-          <span className="text-yellow-300">{title}</span>
+          <FaAngleRight className="text-white text-lg sm:text-lg" />
+          <span className="text-yellow-300 text-lg">{title}</span>
         </p>
       </div>
     </div>

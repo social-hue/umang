@@ -1,84 +1,67 @@
-import React from "react";
-import { MdEmail } from "react-icons/md";
-import { FaLocationDot } from "react-icons/fa6";
-import { MdWifiCalling3 } from "react-icons/md";
+"use client";
+import { Mail, MapPin, Phone } from "lucide-react";
 
-const OfficeDetails = () => {
-  const data = [
-    {
-      title: `<span style="color:#069183; font-weight:500">Head </span> <span class="gradient_text font-semibold">Office</span>`,
-      details: [
-        {
-          email: "connect@umangliving.com",
-          location: "2319, Gold Wing, Wave one Tower, Sector 18, Noida, UP-201301",
-          corporate: "0120-510-9189, +91-9871825999",
-          // call: "+91-95609 86669",
-        },
-      ],
-    },
-    // {
-    //   title: `<span style="color:#069183">Regional </span> <span class="gradient_text">Office</span>`,
-    //   details: [
-    //     {
-    //       email: "info@umangliving.com",
-    //       location: "Cabin-7E, B-23, Sector-63, Noida. UP. 201301",
-    //       corporate: "",
-    //       call: "+91-9871825999",
-    //     },
-    //   ],
-    // },
-  ];
-
+export default function ContactGrid() {
   return (
-    <div className="py-8">
-      <div className="main_width">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start gap-10">
-          {data.map((office, index) => (
-            <div
-              className={` ${
-                index !== data.length - 1
-                  ? "md:border-r-2 border-[#9A9A9A] border-dashed"
-                  : ""
-              }`}
-              key={index}
-            >
-              <h4
-                className="lg:text-[65px] md:text-[45px] text-[35px] lg:leading-[60px] font-light mb-6"
-                dangerouslySetInnerHTML={{ __html: office.title }}
-              />
-              {office.details.map((item, i) => (
-                <div
-                  key={i}
-                  className="space-y-2 mt-4 text-gray-700 text-base "
-                >
-                  <div className="flex items-start text-[#1D1E1C] gap-3 lg:text-[22px] md:text-[18px]">
-                    <MdEmail className="text-xl text-[#1D1E1C] mt-2" />
-                    <span>{item.email}</span>
-                  </div>
-                  <div className="flex items-start text-[#1D1E1C] gap-3 lg:text-[22px] md:text-[18px]">
-                    <FaLocationDot className="text-xl text-[#1D1E1C] mt-2" />
-                    <span>{item.location}</span>
-                  </div>
-                  {/* <div className="flex items-start text-[#1D1E1C] gap-3 lg:text-[22px] md:text-[18px]">
-                    <MdWifiCalling3 className="text-xl text-[#1D1E1C] mt-2" />
-                    <span>{item.call}</span>
-                  </div> */}
-                  {item.corporate ? (
-                    <div className="flex items-start text-[#1D1E1C] gap-3 lg:text-[22px] md:text-[18px]">
-                      <MdWifiCalling3 className="text-xl text-[#1D1E1C] mt-2" />
-                      <span>{item.corporate}</span>
-                    </div>
-                  ) : (
-                    " "
-                  )}
-                </div>
-              ))}
+    <div className="py-6 md:py-10 w-full bg-white px-8 lg:px-16  2xl:py-12"> {/* Softer background color for the entire section */}
+      <div className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {/* Email Card */}
+          <div className="bg-white p-6 rounded-lg shadow-lg border border-teal-800 transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5">
+            <div className="flex flex-col items-center justify-center text-center">
+              <div className="p-3 mb-4 rounded-full bg-teal-800 border-2 border-teal-800">
+                <Mail className="text-white w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
+              <a 
+                href="mailto:connect@umangliving.com" 
+                className="text-lg text-gray-700 font-semibold hover:text-teal-800 transition duration-150"
+              >
+                connect@umangliving.com
+              </a>
             </div>
-          ))}
+          </div>
+
+          {/* Location Card */}
+          <div className="bg-white p-6 rounded-lg shadow-lg border border-teal-800 transition-all duration-300 hover:shadow-2xl hover:-translate-y-0.5">
+            <div className="flex flex-col items-center justify-center text-center">
+              <div className="p-3 mb-4 rounded-full bg-teal-800 border-2 border-teal-800">
+                <MapPin className="text-white w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Our Office</h3>
+              <p className="text-base text-gray-700">
+                2319, Gold Wing, Wave one Tower, <br />
+                Sector-18, Noida, UP-201301
+              </p>
+            </div>
+          </div>
+
+          {/* Phone Card */}
+          <div className="bg-white p-6 rounded-lg shadow-lg border border-teal-800 transition-all duration-300 hover:shadow-2xl hover:-translate-y-0.5">
+            <div className="flex flex-col items-center justify-center text-center">
+              <div className="p-3 mb-4 rounded-full bg-teal-800 border-2 border-teal-800">
+                <Phone className="text-white w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Call Us</h3>
+              <div className="text-base text-gray-700 font-semibold">
+                <a 
+                  href="tel:01205109189" 
+                  className="block hover:text-teal-800 transition duration-150"
+                >
+                  0120-510-9189
+                </a>
+                <a 
+                  href="tel:+919560986669" 
+                  className="block hover:text-teal-800 transition duration-150"
+                >
+                  +91 95609 86669
+                </a>
+              </div>
+            </div>
+          </div>
+          
         </div>
       </div>
     </div>
   );
-};
-
-export default OfficeDetails;
+}
