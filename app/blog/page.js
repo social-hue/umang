@@ -49,7 +49,7 @@ export default function Blog() {
       {/* <div className="py-8 border">
         <Header />
       </div> */}
-      <Banner title={" Blog"} bgImage={"/lifestyle/grid/03.jpg"}  />
+      <Banner title={" Blog"} bgImage={"/something4.jpg"}  />
       <div className=" relative overflow-hidden ">
         <div className="absolute -top-[150px] -left-[180px] -z-9">
           <img src="/rangoli.png" alt="rangoli" loading="lazy" decoding="async" className="w-[70%]" />

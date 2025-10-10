@@ -1,55 +1,92 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
 
 export default function Grid() {
-  const [formData, setFormData] = useState({ name: "", email: "", number: "", message: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", number: "", message: "", honeypot: "" });
   const [loading, setLoading] = useState(false);
+  const [csrfToken, setCsrfToken] = useState("");
+
+  // Fetch CSRF token on mount
+  useEffect(() => {
+    const fetchCsrf = async () => {
+      try {
+        const res = await fetch("/api/csrf");
+        const data = await res.json();
+        setCsrfToken(data.token);
+      } catch (err) {
+        console.error("CSRF fetch failed", err);
+      }
+    };
+    fetchCsrf();
+  }, []);
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+
+    // Basic sanitization (trim + no script tags)
+    const cleanValue = value.replace(/<[^>]*>?/gm, "").trim();
+
+    setFormData((prev) => ({ ...prev, [name]: cleanValue }));
+  };
+
+  const validateForm = () => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const numberPattern = /^[0-9]{10}$/;
+
+    if (!emailPattern.test(formData.email)) {
+      toast.error("Please enter a valid email address.");
+      return false;
+    }
+
+    if (!numberPattern.test(formData.number)) {
+      toast.error("Please enter a valid 10-digit number.");
+      return false;
+    }
+
+    if (formData.honeypot) return false; // bot protection
+    return true;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!validateForm()) return;
+
     setLoading(true);
 
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "CSRF-Token": csrfToken,
+        },
         body: JSON.stringify(formData),
       });
 
       if (!res.ok) throw new Error("Failed to submit");
 
-      toast.success("Thank you! Your message has been sent.", {
-        duration: 3000,
-        position: "top-center",
-      });
-
-      setFormData({ name: "", email: "", number: "", message: "" });
+      toast.success("Thank you! Your message has been sent.", { duration: 3000, position: "top-center" });
+      setFormData({ name: "", email: "", number: "", message: "", honeypot: "" });
     } catch (err) {
-      toast.error("Failed to send message. Please try again.", {
-        duration: 3000,
-        position: "top-center",
-      });
+      toast.error("Failed to send message. Please try again.", { duration: 3000, position: "top-center" });
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <section className="p-6 w-full flex flex-col md:flex-row items-center md:gap-4 mt-6 mb-6 rounded-2xl max-w-5xl mx-auto">
+    <section className="w-full py-10">
+      <div className="main_width mx-auto flex flex-col md:flex-row items-center md:gap-10">
       {/* Left Side */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="w-full md:w-1/2 flex items-center justify-center p-4 md:p-6"
+        className="md:w-1/2 flex items-center justify-center p-4 md:p-6"
       >
         <h2 className="text-2xl md:text-5xl font-bold text-zinc-800 leading-snug text-center md:text-left">
           Send your query, <br />{" "}
@@ -63,11 +100,19 @@ export default function Grid() {
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-        className="w-full md:w-[45%] text-zinc-800 p-8 shadow-xl md:ml-6 md:mt-0 bg-white"
+        className="w-full md:w-[40%] text-zinc-800 p-8 shadow-xl md:ml-6 md:mt-0 bg-white"
       >
-        <h2 className="text-2xl font-semibold text-center mb-4 md:mb-6">Contact Us</h2>
-
         <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
+          {/* Honeypot (Hidden Input for Bot Protection) */}
+          <input
+            type="text"
+            name="honeypot"
+            value={formData.honeypot}
+            onChange={handleChange}
+            className="hidden"
+            autoComplete="off"
+          />
+
           {/* Name */}
           <div>
             <label htmlFor="name" className="block text-md font-medium mb-1">
@@ -82,7 +127,7 @@ export default function Grid() {
               className="w-full border-b border-gray-400 focus:outline-none focus:border-green-600 p-2"
               placeholder="Enter your name"
               required
-              autoComplete="on"
+              autoComplete="name"
             />
           </div>
 
@@ -100,9 +145,11 @@ export default function Grid() {
               className="w-full border-b border-gray-400 focus:outline-none focus:border-green-600 p-2"
               placeholder="Enter your email"
               required
-              autoComplete="on"
+              autoComplete="email"
             />
           </div>
+
+          {/* Number */}
           <div>
             <label htmlFor="number" className="block text-md font-medium mb-1">
               Number
@@ -116,7 +163,7 @@ export default function Grid() {
               className="w-full border-b border-gray-400 focus:outline-none focus:border-green-600 p-2"
               placeholder="Enter your number"
               required
-              autoComplete="on"
+              autoComplete="tel"
             />
           </div>
 
@@ -144,6 +191,7 @@ export default function Grid() {
           </button>
         </form>
       </motion.div>
+      </div>
     </section>
   );
 }
