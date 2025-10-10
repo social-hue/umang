@@ -3,7 +3,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 
 export default function ContactGrid() {
   return (
-    <div className="py-6 w-full bg-white px-8 lg:px-16  2xl:py-12"> {/* Softer background color for the entire section */}
+    <div className="py-6 mt-4 w-full bg-white px-8 lg:px-16  2xl:py-12"> {/* Softer background color for the entire section */}
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* Email Card */}

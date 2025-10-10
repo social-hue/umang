@@ -79,13 +79,14 @@ export default function Grid() {
   };
 
   return (
-    <section className="p-6 w-full flex flex-col md:flex-row items-center md:gap-4 mt-6 mb-6 rounded-2xl max-w-5xl mx-auto">
+    <section className="w-full py-10">
+      <div className="main_width mx-auto flex flex-col md:flex-row items-center md:gap-10">
       {/* Left Side */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="w-full md:w-1/2 flex items-center justify-center p-4 md:p-6"
+        className="md:w-1/2 flex items-center justify-center p-4 md:p-6"
       >
         <h2 className="text-2xl md:text-5xl font-bold text-zinc-800 leading-snug text-center md:text-left">
           Send your query, <br />{" "}
@@ -99,10 +100,8 @@ export default function Grid() {
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-        className="w-full md:w-[45%] text-zinc-800 p-8 shadow-xl md:ml-6 md:mt-0 bg-white"
+        className="w-full md:w-[40%] text-zinc-800 p-8 shadow-xl md:ml-6 md:mt-0 bg-white"
       >
-        <h2 className="text-2xl font-semibold text-center mb-4 md:mb-6">Contact Us</h2>
-
         <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
           {/* Honeypot (Hidden Input for Bot Protection) */}
           <input
@@ -172,7 +171,7 @@ export default function Grid() {
           <div>
             <label className="block text-md font-medium mb-1">Address</label>
             <textarea
-              rows="2"
+              rows="1"
               name="message"
               value={formData.message}
               onChange={handleChange}
@@ -192,6 +191,7 @@ export default function Grid() {
           </button>
         </form>
       </motion.div>
+      </div>
     </section>
   );
 }
