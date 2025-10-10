@@ -20,7 +20,7 @@ export default function Loading() {
           src="/fav.png"
           alt="Loading..."
           width={70}
-          height={70}
+          height={60}
           className="object-contain"
           priority
         />

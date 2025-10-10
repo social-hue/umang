@@ -14,7 +14,7 @@ export default function MissionVision() {
           // if video comes into view (even partially) and hasn't played yet
           if (entry.isIntersecting && !hasPlayed) {
             setVideoSrc(
-              "https://www.youtube-nocookie.com/embed/ZdekV9sokZ8?autoplay=1&mute=0&controls=1&rel=0&modestbranding=1"
+              "https://www.youtube-nocookie.com/embed/ZdekV9sokZ8?autoplay=1&mute=1&controls=1&rel=0&modestbranding=1"
             );
             setHasPlayed(true); // mark it as played once
           }

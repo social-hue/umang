@@ -3,6 +3,7 @@ import Community from "../components/Community";
 // import Aboutus from "../components/contact/about";
 import Grid from "../components/contact/Grid";
 import Map from "../components/contact/Map";
+import ContactGrid from "../components/contact/officeDetails";
 import OfficeDetails from "../components/contact/officeDetails";
 import Footer from "../components/Footer";
 // import Header from "../components/Header";
@@ -58,7 +59,7 @@ export default function Contact() {
         </div>
         {/* <Aboutus /> */}
         <Grid />
-        <OfficeDetails />
+        <ContactGrid />
         <Map />
         <Community />
       </div>

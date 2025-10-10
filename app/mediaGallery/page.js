@@ -1,7 +1,7 @@
 import Banner from "../components/Banner";
 import Community from "../components/Community";
 import Footer from "../components/Footer";
-import Header from "../components/Header";
+// import Header from "../components/Header";
 import Aboutus from "../components/MediaGallery/about";
 import MediaGrid from "../components/MediaGrid";
 import { mediaData } from "../StaticData/mediaData";
@@ -9,9 +9,6 @@ import { mediaData } from "../StaticData/mediaData";
 export default function MediaGallery() {
   return (
     <>
-      <div className="py-8 ">
-        <Header />
-      </div>
       <Banner title={"Media Gallery"} />
 
       <div className=" relative overflow-hidden ">
