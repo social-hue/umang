@@ -2,6 +2,7 @@
 import Banner from "../components/Banner";
 // import Community from "../components/Community";
 import Footer from "../components/Footer";
+import PartnerPage from "../components/partner/about";
 // import Header from "../components/Header";
 // import Aboutus from "../components/partner/about";
 import Button from "../components/partner/Button";
@@ -59,15 +60,14 @@ export default function Partners() {
         </div>
         {/* <Aboutus /> */}
 
-        <div className="main_width py-8">
-        <h1 className="text-4xl md:text-5xl font-semibold text-teal-800 mb-4 text-left">
+        {/* <h1 className="text-4xl md:text-5xl font-semibold text-teal-800 mb-4 text-left">
             Why Partner with us ?
         </h1>
         <p className="text-gray-700 text-lg md:text-xl leading-relaxed"> 
          At Umang Living, we take a holistic partnership approach to creating exceptional senior living communities. Our Senior-Friendly Design Support ensures every space is thoughtfully crafted for comfort, safety, and independence. Through our Strategic Marketing & Sales Expertise, we help drive awareness, generate quality leads, and ensure a seamless experience for every homebuyer. Once the community comes to life, our Dedicated Community Operations uphold Umang Living’s promise of care, wellness, and active living, ensuring long-term happiness and peace of mind for every resident and partner.
-        </p>
-        <div className="mt-4"><Button/></div>
-        </div>
+        </p> */}
+        <PartnerPage />
+        {/* <div className="mt-4"><Button/></div> */}
         {/* <Community /> */}
       </div>
       <Footer />

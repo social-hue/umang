@@ -44,8 +44,8 @@ export const facilities = [
   {
     id: 6,
     icon: "/healing.webp",
-    title: "Healing Services",
-    tagline: "We offer personalized care and therapeutic support to help you recover and feel your best.",
+    title: "Health & Wellness",
+    tagline: "We enhance wellness through personalized care and healing services for lasting vitality.",
     accent: "text-teal-600",
   },
   {

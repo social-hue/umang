@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function AboutFounder() {
   return (
-    <section className="w-full bg-white px-4 lg:px-16 py-6 2xl:py-12 overflow-hidden">
+    <section className="main_width bg-white py-6 2xl:py-12 overflow-hidden">
       <div className="container mx-auto flex flex-col xl:flex-row md:flex-row
  items-center md:items-start gap-10">
         {/* Left Side - Responsive YouTube Embed */}

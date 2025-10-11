@@ -60,7 +60,7 @@ export default function Contact() {
         {/* <Aboutus /> */}
         <Grid />
         <ContactGrid />
-        <Map />
+        {/* <Map /> */}
         <Community />
       </div>
       <Footer />
