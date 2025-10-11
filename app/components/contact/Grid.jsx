@@ -79,8 +79,8 @@ export default function Grid() {
   };
 
   return (
-    <section className="w-full py-10">
-      <div className="main_width mx-auto flex flex-col md:flex-row items-center md:gap-10">
+    <section className="w-full bg-[#f9f9f9] py-8 px-6 md:px-12">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:gap-10">
       {/* Left Side */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}

@@ -53,7 +53,7 @@ export default function Projects() {
       {/* <div className="py-8 ">
         <Header />
       </div> */}
-      <Banner title={"Projects"} bgImage={"/abt-us.jpg"} />
+      <Banner title={"Projects"} bgImage={"/something3.jpg"} />
       <div className=" relative overflow-hidden ">
         <div className="absolute -top-[150px] -left-[180px] -z-9">
           <img src="/rangoli.png" alt="rangoli" className="w-[70%]" loading="lazy" decoding="async" />

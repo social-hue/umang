@@ -28,7 +28,7 @@ export default function MissionVision() {
   }, [hasPlayed]);
 
   return (
-    <section className="w-full bg-white px-4 lg:px-16 py-10 overflow-hidden">
+    <section className="main_width bg-white py-10 overflow-hidden">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
         {/* Right - Text Content */}
         <motion.div

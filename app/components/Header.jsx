@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -8,6 +9,7 @@ import {
   FaTimes,
   FaChevronDown,
   FaChevronUp,
+  FaChevronRight,
   FaPhoneAlt,
 } from "react-icons/fa";
 import { navItems } from "../lib/nav-items";
@@ -15,7 +17,9 @@ import { navItems } from "../lib/nav-items";
 export default function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false); // mobile drawer
-  const [servicesOpen, setServicesOpen] = useState(false); // mobile dropdown
+  const [servicesOpen, setServicesOpen] = useState(false); // mobile first-level Services
+  const [generalOpen, setGeneralOpen] = useState(false); // mobile nested Consultation
+  const [healthOpen, setHealthOpen] = useState(false); // mobile nested Health & Wellness
 
   // prevent body scroll when drawer is open
   useEffect(() => {
@@ -28,6 +32,8 @@ export default function Header() {
   useEffect(() => {
     setOpen(false);
     setServicesOpen(false);
+    setGeneralOpen(false);
+    setHealthOpen(false);
   }, [pathname]);
 
   return (
@@ -48,13 +54,14 @@ export default function Header() {
         {/* Desktop Nav */}
         <ul className="hidden lg:flex items-center space-x-4 xl:space-x-6 2xl:text-[22px] xl:text-[18px] lg:text-[16px] min-w-0">
           {navItems.map(({ label, href }) => {
+            // Services dropdown (desktop)
             if (label === "Services") {
               return (
                 <li key={href} className="relative group">
                   <div className="flex items-center gap-2 cursor-pointer">
                     <h3
                       className={`transition-all duration-300 hover:scale-[1.04] whitespace-nowrap ${
-                        pathname === href
+                        pathname.startsWith("/services")
                           ? "text-[#E7216A] font-semibold"
                           : "text-[#0B0B0B]"
                       }`}
@@ -64,29 +71,83 @@ export default function Header() {
                     <FaChevronDown className="mt-0.5 w-3 h-3 text-gray-600 group-hover:rotate-180 transition-transform duration-300" />
                   </div>
 
-                  {/* Dropdown menu */}
-                  <ul className="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md overflow-hidden z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                  {/* top-level dropdown */}
+                  <ul className="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md overflow-visible z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                    {/* simple items */}
                     {[
                       { name: "Township", link: "/services/townships" },
                       { name: "Stay", link: "/services/stay" },
                       { name: "Travel", link: "/services/travel" },
-                      { name: "Legal Consultation", link: "/services/legal-consultation" },
-                      { name: "Healing Services", link: "/services/healing-services" },
-                      { name: "General Consultation", link: "/services/general-consultation" },
                     ].map((s) => (
                       <li key={s.link}>
                         <Link
                           href={s.link}
                           className={`block px-4 py-2 hover:bg-gray-100 transition ${
-                            pathname === s.link
-                              ? "text-[#E7216A]"
-                              : "text-[#0B0B0B]"
+                            pathname === s.link ? "text-[#E7216A]" : "text-[#0B0B0B]"
                           }`}
                         >
                           {s.name}
                         </Link>
                       </li>
                     ))}
+
+                    {/* Nested parent: Health & Wellness -> shows submenu on hover ONLY */}
+                    <li className="relative group/health">
+                      <div className="flex items-center justify-between px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                        <span className={`${pathname.startsWith("/services/healing") ? "text-[#E7216A]" : "text-[#0B0B0B]"}`}>
+                          Health &amp; Wellness
+                        </span>
+                        <FaChevronRight className="w-3 h-3 text-gray-600 group-hover/health:rotate-90 transition-transform duration-300" />
+                      </div>
+
+                      {/* nested submenu (appears to the right on HOVER only) */}
+                      <ul className="absolute top-0 left-full ml-1 w-56 bg-white shadow-lg rounded-md overflow-hidden z-50 opacity-0 invisible group-hover/health:opacity-100 group-hover/health:visible transition-all duration-300">
+                        <li>
+                          <Link
+                            href="/services/healing-services"
+                            className={`block px-4 py-2 hover:bg-gray-100 transition ${
+                              pathname === "/services/healing-services" ? "text-[#E7216A]" : "text-[#0B0B0B]"
+                            }`}
+                          >
+                            Healing Services
+                          </Link>
+                        </li>
+                      </ul>
+                    </li>
+
+                    {/* Nested parent: Consultation -> shows submenu on hover ONLY */}
+                    <li className="relative group/consultation">
+                      <div className="flex items-center justify-between px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                        <span className={`${pathname.startsWith("/services/general") || pathname.startsWith("/services/legal") ? "text-[#E7216A]" : "text-[#0B0B0B]"}`}>
+                          Consultation
+                        </span>
+                        <FaChevronRight className="w-3 h-3 text-gray-600 group-hover/consultation:rotate-90 transition-transform duration-300" />
+                      </div>
+
+                      {/* nested submenu (appears to the right on HOVER only) */}
+                      <ul className="absolute top-0 left-full ml-1 w-56 bg-white shadow-lg rounded-md overflow-hidden z-50 opacity-0 invisible group-hover/consultation:opacity-100 group-hover/consultation:visible transition-all duration-300">
+                        <li>
+                          <Link
+                            href="/services/general-consultation"
+                            className={`block px-4 py-2 hover:bg-gray-100 transition ${
+                              pathname === "/services/general-consultation" ? "text-[#E7216A]" : "text-[#0B0B0B]"
+                            }`}
+                          >
+                            General Consultation
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="/services/legal-consultation"
+                            className={`block px-4 py-2 hover:bg-gray-100 transition ${
+                              pathname === "/services/legal-consultation" ? "text-[#E7216A]" : "text-[#0B0B0B]"
+                            }`}
+                          >
+                            Legal Consultation
+                          </Link>
+                        </li>
+                      </ul>
+                    </li>
                   </ul>
                 </li>
               );
@@ -97,9 +158,7 @@ export default function Header() {
               <li
                 key={href}
                 className={`transition-all duration-300 hover:scale-[1.04] whitespace-nowrap ${
-                  pathname === href
-                    ? "text-[#E7216A] font-semibold"
-                    : "text-[#0B0B0B]"
+                  pathname === href ? "text-[#E7216A] font-semibold" : "text-[#0B0B0B]"
                 }`}
               >
                 <Link href={href}>{label}</Link>
@@ -144,15 +203,13 @@ export default function Header() {
       {/* Mobile overlay */}
       <div
         onClick={() => setOpen(false)}
-        className={`fixed inset-0 bg-black/40 z-40 transition-opacity duration-300 ${
-          open ? "opacity-100 visible" : "opacity-0 invisible"
-        } lg:hidden`}
+        className={`fixed inset-0 bg-black/40 z-40 transition-opacity duration-300 ${open ? "opacity-100 visible" : "opacity-0 invisible" } lg:hidden`}
       />
 
       {/* Mobile Drawer */}
       <aside
         className={`fixed top-0 left-0 h-full w-full bg-[#069183] z-50 shadow-xl transform transition-transform duration-300 lg:hidden overflow-y-auto ${
-    open ? "translate-x-0" : "-translate-x-full"
+          open ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         {/* Drawer Header */}
@@ -164,21 +221,13 @@ export default function Header() {
             height={50}
             className="w-[140px] object-contain"
           />
-          <button
-            onClick={() => setOpen(false)}
-            className="p-2 rounded-md bg-green-100 text-green-700"
-            aria-label="Close menu"
-          >
+          <button onClick={() => setOpen(false)} className="p-2 rounded-md bg-green-100 text-green-700" aria-label="Close menu">
             <FaTimes className="text-xl" />
           </button>
         </div>
 
         {/* Drawer Nav */}
-        <nav
-          className="mt-6 px-6 space-y-4"
-          role="navigation"
-          aria-label="Mobile Navigation"
-        >
+        <nav className="mt-6 px-6 space-y-4" role="navigation" aria-label="Mobile Navigation">
           {navItems.map(({ label, href }) => {
             if (label === "Services") {
               return (
@@ -188,50 +237,63 @@ export default function Header() {
                     className="w-full flex items-center justify-between text-lg border-b pb-2 border-dashed text-white hover:text-[#E7216A] transition"
                   >
                     <span>Services</span>
-                    {servicesOpen ? (
-                      <FaChevronUp className="w-4 h-4" />
-                    ) : (
-                      <FaChevronDown className="w-4 h-4" />
-                    )}
+                    {servicesOpen ? <FaChevronUp className="w-4 h-4" /> : <FaChevronDown className="w-4 h-4" />}
                   </button>
+
                   {servicesOpen && (
                     <div className="pl-4 mt-2 space-y-2">
-                      {[
-                        { name: "Township", link: "/services/townships" },
-                        { name: "Stay", link: "/services/stay" },
-                        { name: "Travel", link: "/services/travel" },
-                        { name: "Legal Consultation", link: "/services/legal-consultation" },
-                        { name: "Healing Services", link: "/services/healing-services" },
-                        { name: "General Consultation", link: "/services/general-consultation" },
-                      ].map((s) => (
-                        <Link
-                          key={s.link}
-                          href={s.link}
-                          onClick={() => setOpen(false)}
-                          className={`block text-lg border-b pb-2 border-dashed w-full ${
-                            pathname === s.link
-                              ? "text-[#FCEF44]"
-                              : "text-white hover:text-[#E7216A]"
-                          }`}
+                      <Link href="/services/townships" onClick={() => setOpen(false)} className={`block text-lg py-1 ${pathname === "/services/townships" ? "text-[#FCEF44]" : "text-white hover:text-[#E7216A]"}`}>Township</Link>
+                      <Link href="/services/stay" onClick={() => setOpen(false)} className={`block text-lg py-1 ${pathname === "/services/stay" ? "text-[#FCEF44]" : "text-white hover:text-[#E7216A]"}`}>Stay</Link>
+                      <Link href="/services/travel" onClick={() => setOpen(false)} className={`block text-lg py-1 ${pathname === "/services/travel" ? "text-[#FCEF44]" : "text-white hover:text-[#E7216A]"}`}>Travel</Link>
+                      
+                      {/* Mobile nested: Health & Wellness parent with chevron */}
+                      <div>
+                        <button
+                          onClick={() => setHealthOpen(!healthOpen)}
+                          className="w-full flex items-center justify-between text-lg py-1 text-white hover:text-[#E7216A] transition"
                         >
-                          {s.name}
-                        </Link>
-                      ))}
+                          <span>Health &amp; Wellness</span>
+                          {healthOpen ? <FaChevronUp className="w-4 h-4" /> : <FaChevronDown className="w-4 h-4" />}
+                        </button>
+
+                        {healthOpen && (
+                          <div className="pl-4 mt-2 space-y-2">
+                            <Link href="/services/healing-services" onClick={() => setOpen(false)} className={`block text-lg py-1 ${pathname === "/services/healing-services" ? "text-[#FCEF44]" : "text-white hover:text-[#E7216A]"}`}>Healing Services</Link>
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Mobile nested: Consultation parent with chevron */}
+                      <div>
+                        <button
+                          onClick={() => setGeneralOpen(!generalOpen)}
+                          className="w-full flex items-center justify-between text-lg py-1 text-white hover:text-[#E7216A] transition"
+                        >
+                          <span>Consultation</span>
+                          {generalOpen ? <FaChevronUp className="w-4 h-4" /> : <FaChevronDown className="w-4 h-4" />}
+                        </button>
+
+                        {generalOpen && (
+                          <div className="pl-4 mt-2 space-y-2">
+                            <Link href="/services/general-consultation" onClick={() => setOpen(false)} className={`block text-lg py-1 ${pathname === "/services/general-consultation" ? "text-[#FCEF44]" : "text-white hover:text-[#E7216A]"}`}>General Consultation</Link>
+                            <Link href="/services/legal-consultation" onClick={() => setOpen(false)} className={`block text-lg py-1 ${pathname === "/services/legal-consultation" ? "text-[#FCEF44]" : "text-white hover:text-[#E7216A]"}`}>Legal Consultation</Link>
+                          </div>
+                        )}
+                      </div>
                     </div>
                   )}
                 </div>
               );
             }
 
+            // Normal nav items
             return (
               <Link
                 key={href}
                 href={href}
                 onClick={() => setOpen(false)}
                 className={`block text-lg border-b pb-2 border-dashed w-full ${
-                  pathname === href
-                    ? "text-[#FCEF44]"
-                    : "text-white hover:text-[#E7216A]"
+                  pathname === href ? "text-[#FCEF44]" : "text-white hover:text-[#E7216A]"
                 }`}
               >
                 {label}
@@ -242,12 +304,7 @@ export default function Header() {
 
         {/* CTA button */}
         <div className="p-6 w-full flex">
-          <a
-            className="w-full sm:w-auto"
-            href="https://docs.google.com/forms/d/e/1FAIpQLScQlwi7hkmU9fp7aGSOLfUXPIvQmADduVyPQvVC5PKhcbFyDQ/viewform?usp=header"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a className="w-full sm:w-auto" href="https://docs.google.com/forms/d/e/1FAIpQLScQlwi7hkmU9fp7aGSOLfUXPIvQmADduVyPQvVC5PKhcbFyDQ/viewform?usp=header" target="_blank" rel="noreferrer">
             <button className="bg-yellow-600 hover:bg-green-900 text-white px-6 py-3 rounded-sm font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-auto">
               Join Today
             </button>
