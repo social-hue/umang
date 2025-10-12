@@ -74,7 +74,7 @@ const PartnerForm = ({ open, setOpen }) => {
         </div>
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="p-4 sm:p-6 space-y-5">
+        <form onSubmit={handleSubmit} className="text-left p-4 sm:p-6 space-y-5">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label className="block text-md text-zinc-800 font-semibold mb-1">
