@@ -22,7 +22,7 @@ export default function PartnerPage() {
         whileInView="visible"
         variants={fadeUp}
         viewport={{ once: true, amount: 0.3 }}
-        className="max-w-6xl mx-auto text-center md:mb-12"
+        className="max-w-6xl mx-auto md:text-center mb-4 md:mb-12"
       >
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-teal-700 mb-4">
           Partner with Umang Living - You Build, We Run & Manage
@@ -34,7 +34,7 @@ export default function PartnerPage() {
       </motion.div>
 
       {/* WHY PARTNER WITH US */}
-      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-6 md:gap-10 mb-20">
+      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-6 md:gap-10 mb-12">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -70,10 +70,10 @@ export default function PartnerPage() {
                 custom={index * 0.15}
                 className="flex items-start gap-3"
               >
-                <Star
+                {/* <Star
                   className="w-5 h-5 text-yellow-500 fill-yellow-500 flex-shrink-0 mt-1.5"
                   strokeWidth={0}
-                />
+                /> */}
                 <span>{item}</span>
               </motion.li>
             ))}
@@ -138,7 +138,7 @@ export default function PartnerPage() {
         whileInView="visible"
         variants={fadeUp}
         viewport={{ once: true, amount: 0.3 }}
-        className="text-center md:py-6 mb-6"
+        className="text-center md:py-6 mb-6 md:mb-2"
       >
         <h2 className="text-3xl md:text-4xl font-bold text-zinc-800 mb-4">
           Join Hands with Umang Living
