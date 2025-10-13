@@ -5,10 +5,9 @@ import { FaAngleRight } from "react-icons/fa6";
 const Banner = ({ title, bgImage = "/greenBg.jpg" }) => {
   return (
     <div
-      className="relative flex items-center justify-center text-center bg-cover bg-center"
+      className={`relative flex items-center justify-center text-center bg-cover bg-center min-h-[45vh] lg:min-h-[60vh]`}
       style={{
         backgroundImage: `url(${bgImage})`,
-        minHeight: "60vh", // increased banner height
       }}
     >
       {/* Dark overlay for better text contrast */}

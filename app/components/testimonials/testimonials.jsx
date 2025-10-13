@@ -74,7 +74,7 @@ export default function Testimonial() {
   return (
     <section className="py-12 sm:py-16 bg-gray-100">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-        <h4 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-3">
+        <h4 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
           Check what our Customers are Saying
         </h4>
         <p className="text-lg text-zinc-800 max-w-2xl mx-auto mb-6 md:mb-10">
