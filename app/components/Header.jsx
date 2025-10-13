@@ -41,13 +41,13 @@ export default function Header() {
       <div className="flex items-center justify-between gap-3 min-w-0">
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
-          <Image
+        <Image
             src="/logo.png"
             alt="Umang Living"
-            width={300}
-            height={80}
+            width={220}
+            height={60}
             priority
-            className="w-[100px] sm:w-[130px] md:w-[150px] lg:w-[190px] xl:w-[220px] object-contain"
+            className="w-[125px] md:w-[150px] lg:w-[190px] xl:w-[220px] object-contain"
           />
         </Link>
 
@@ -213,16 +213,16 @@ export default function Header() {
         }`}
       >
         {/* Drawer Header */}
-        <div className="flex items-center bg-white justify-between px-6 py-4 border-b">
+        <div className="flex items-center bg-white justify-between px-3 py-3">
           <Image
             src="/logo.png"
-            alt="Umang logo"
-            width={190}
-            height={50}
-            className="w-[140px] object-contain"
+            alt="Umang_logo"
+            width={125}
+            height={45}
+            className="object-contain"
           />
           <button onClick={() => setOpen(false)} className="p-2 rounded-md bg-green-100 text-green-700" aria-label="Close menu">
-            <FaTimes className="text-xl" />
+            <FaTimes className="text-lg" />
           </button>
         </div>
 

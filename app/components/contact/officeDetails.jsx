@@ -1,51 +1,117 @@
 "use client";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { motion } from "framer-motion";
 
-export default function ContactGrid() {
+export default function ContactPage() {
+  const fadeUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: (delay = 0) => ({
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, delay, ease: "easeOut" },
+    }),
+  };
+
   return (
-    <section className="w-full bg-[#f9f9f9] py-10 px-6 md:px-12">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-center gap-14">
-        {/* LEFT SIDE - MAP (60%) */}
-        <div className="w-full md:w-[60%] h-[400px] md:h-[450px]">
+    <section className="main_width py-8 md:py-16 overflow-hidden">
+      {/* Heading */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        variants={fadeUp}
+        viewport={{ once: true, amount: 0.3 }}
+        className="text-center mb-12"
+      >
+        <h1 className="text-4xl md:text-5xl font-bold text-teal-700 mb-3">
+          Get in touch with us
+        </h1>
+        <p className="text-lg text-zinc-800 max-w-2xl mx-auto">
+          We're here to help you connect, collaborate, and grow with Umang Living.
+        </p>
+      </motion.div>
+
+      {/* Main layout */}
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-8 items-stretch">
+        {/* Map Section */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeUp}
+          viewport={{ once: true, amount: 0.3 }}
+          custom={0.1}
+          className="lg:col-span-3 h-[400px] md:h-[480px] rounded-xl overflow-hidden shadow-lg"
+        >
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.000107519878!2d77.32041557613556!3d28.569759486927314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce44f4d1b2ae1%3A0xf49003c135d1f106!2sWave%20One%20Noida!5e0!3m2!1sen!2sin!4v1751356949631!5m2!1sen!2sin"
             width="100%"
             height="100%"
-            className="rounded-[4px] shadow-md"
+            className="rounded-xl border-0"
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
-        </div>
+        </motion.div>
 
-        {/* RIGHT SIDE - DETAILS (40%) */}
-        <div className="w-full md:w-[40%] flex flex-col justify-center gap-6 text-gray-800 h-full">
-          <div>
-            <h2 className="text-2xl md:text-2xl font-semibold text-zinc-800 flex items-center gap-2 mb-1">
-              <Mail className="w-6 h-6 mr-1 stroke-[3] text-zinc-800" /> Email Us
-            </h2>
-            <p className="text-lg text-gray-700 ml-9">connect@umangliving.com</p>
+        {/* Contact Details */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeUp}
+          viewport={{ once: true, amount: 0.3 }}
+          custom={0.3}
+          className=" lg:col-span-2 flex flex-col justify-center bg-white p-4 md:p-8"
+        >
+          {/* Email */}
+          <div className="mb-8">
+            <div className="flex items-center gap-3 mb-2">
+              <Mail className="text-teal-700 w-6 h-6 stroke-[2.5]" />
+              <h3 className="text-2xl font-semibold text-zinc-800">
+                Email Us
+              </h3>
+            </div>
+            <p className="text-xl text-zinc-800 ml-9">
+              <a
+                href="mailto:connect@umangliving.com"
+                className="hover:text-teal-900 text-teal-700"
+              >
+                connect@umangliving.com
+              </a>
+            </p>
           </div>
 
-          <div>
-            <h2 className="text-2xl md:text-2xl font-semibold text-zinc-800 flex items-center gap-2 mb-1">
-              <MapPin className="w-6 h-6 mr-1 stroke-[3] text-zinc-800" /> Our Office
-            </h2>
-            <p className="text-lg text-gray-700 ml-9 leading-relaxed">
+          {/* Office Address */}
+          <div className="mb-8">
+            <div className="flex items-center gap-3 mb-2">
+              <MapPin className="text-teal-700 w-6 h-6 stroke-[2.5]" />
+              <h3 className="text-2xl font-semibold text-zinc-800">
+                Our Office
+              </h3>
+            </div>
+            <p className="text-xl text-zinc-800 ml-9 leading-relaxed">
               2319, Gold Wing, Wave One Tower, <br />
               Sector-18, Noida, UP-201301
             </p>
           </div>
 
+          {/* Phone */}
           <div>
-            <h2 className="text-2xl md:text-2xl font-semibold text-zinc-800 flex items-center gap-2 mb-1">
-              <Phone className="w-6 h-6 mr-1 stroke-[3] text-zinc-800" /> Call Us
-            </h2>
-            <div className="ml-9 space-y-1 text-lg text-gray-700">
-              <p>0120-510-9189, +91 95609 86669</p>
+            <div className="flex items-center gap-3 mb-2">
+              <Phone className="text-teal-700 w-6 h-6 stroke-[2.5]" />
+              <h3 className="text-2xl font-semibold text-zinc-800">
+                Call Us
+              </h3>
             </div>
+            <p className="text-xl text-zinc-800 ml-9 leading-relaxed">
+              <a href="tel:01205109189" className="text-teal-700 hover:text-teal-900">
+                0120-510-9189
+              </a>
+              ,{" "}
+              <a href="tel:+919560986669" className="text-teal-700 hover:text-teal-900">
+                +91 95609 86669
+              </a>
+            </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -9,7 +9,7 @@ const Button = () => {
     <div>
       <button
         onClick={() => setOpen(true)}
-        className="inline-block bg-teal-700 text-white px-8 py-3 rounded-full font-semibold hover:bg-teal-800 transition"
+        className="inline-block bg-teal-700 text-white px-6 py-2 rounded-md font-semibold hover:bg-teal-800 transition"
       >
         <span className="relative z-10 text-lg tracking-wide">Join Us Today</span>
       </button>
