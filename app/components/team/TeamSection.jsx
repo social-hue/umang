@@ -34,7 +34,7 @@ export default function TeamSection() {
   ];
 
   return (
-    <main className="max-w-6xl mx-auto py-12 mb-6 bg-white">
+    <main className="max-w-6xl mx-auto py-4 md:py-12 mb-6 bg-white">
       {/* Heading */}
       <motion.h2
         initial={{ opacity: 0, y: 20 }}

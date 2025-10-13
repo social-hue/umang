@@ -37,7 +37,7 @@ export default function FAQSection() {
     <div className="bg-[#f8f8f8a7] py-8 md:py-14 lg:py-16" ref={faqSectionRef}>
       <section className="w-[90%] sm:w-[85%] md:w-[80%] mx-auto">
         {/* Heading */}
-        <h2 className="text-zinc-800 font-bold text-2xl sm:text-3xl lg:text-[40px] text-center mb-6 leading-snug break-words">
+        <h2 className="text-zinc-800 font-bold text-3xl md:text-4xl text-center mb-6 leading-snug break-words">
           Frequently Asked <span className="text-[#079080]">Questions</span>
         </h2>
 

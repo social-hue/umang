@@ -61,7 +61,7 @@ export default function Living() {
           viewport={{ once: true }}
           className="text-center mb-10 px-4"
         >
-          <h2 className="text-[26px] md:text-3xl lg:text-4xl font-bold text-zinc-900 mb-4 md:mb-6 lg:mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 mb-4 md:mb-6 lg:mb-6">
             What does Umang Offer ?
           </h2>
           <p className="text-lg md:text-lg lg:text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-light">
