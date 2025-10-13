@@ -1,39 +1,80 @@
 "use client";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import React, { useEffect, useRef } from "react";
+import { motion, useAnimation, useMotionValue, useTransform } from "framer-motion";
+import Image from "next/image";
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import PropertyCard from "./project/PropertyCard";
+const PropertySlider = ({ listings = [] }) => {
+  const x = useMotionValue(0);
+  const controls = useAnimation();
+  const containerRef = useRef(null);
+  const totalWidth = listings.length * 360; // approximate width per card
 
-export default function PropertySlider({ listings = [] }) {
+  // Continuous leftward motion
+  useEffect(() => {
+    const animate = async () => {
+      while (true) {
+        await controls.start({
+          x: [0, -totalWidth],
+          transition: {
+            ease: "linear",
+            duration: listings.length * 16, // controls speed
+          },
+        });
+        x.set(0); // reset instantly
+      }
+    };
+    animate();
+  }, [controls, x, totalWidth, listings.length]);
+
+  // When user drags, pause auto-scroll and resume later
+  const handleDragStart = () => controls.stop();
+  const handleDragEnd = () => controls.start({
+    x: [x.get(), -totalWidth],
+    transition: { ease: "linear", duration: listings.length * 4 },
+  });
+
   return (
-    <Swiper
-      modules={[Autoplay]}
-      spaceBetween={20}
-      slidesPerView={1}
-      loop={true}
-      speed={5000}
-      autoplay={{
-        delay: 3000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-      }}
-      //   navigation
-      pagination={{ clickable: true }}
-      breakpoints={{
-        640: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 },
-        1280: { slidesPerView: 4 },
-      }}
-      className="w-full"
-    >
-      {listings.map((item, idx) => (
-        <SwiperSlide key={idx}>
-          <PropertyCard {...item} />
-        </SwiperSlide>
-      ))}
-    </Swiper>
+    <div className="relative w-full overflow-hidden mb-6 select-none">
+      <motion.div
+        ref={containerRef}
+        className="flex cursor-grab active:cursor-grabbing"
+        style={{ x }}
+        animate={controls}
+        drag="x"
+        dragConstraints={{ left: -totalWidth, right: 0 }}
+        onDragStart={handleDragStart}
+        onDragEnd={handleDragEnd}
+      >
+        {[...listings, ...listings].map((item, index) => (
+          <div
+            key={index}
+            className="relative flex-shrink-0 w-[260px] sm:w-[320px] md:w-[360px] h-[220px] rounded-xl overflow-hidden mx-2 bg-gray-100 shadow-md"
+          >
+            {/* Image */}
+            <Image
+              src={item.image}
+              alt={item.city}
+              fill
+              className="object-cover hover:scale-110 transition-transform duration-500"
+            />
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center">
+              <h3 className="text-xl md:text-2xl font-semibold text-white">
+                {item.city}
+              </h3>
+              <p className="text-md md:text-base text-zinc-300 mt-1 tracking-wide">
+                Coming Soon
+              </p>
+            </div>
+          </div>
+        ))}
+      </motion.div>
+
+      {/* Fade edges */}
+      <div className="pointer-events-none absolute top-0 left-0 w-8 h-full bg-gradient-to-r from-white via-white/60 to-transparent"></div>
+      <div className="pointer-events-none absolute top-0 right-0 w-8 h-full bg-gradient-to-l from-white via-white/60 to-transparent"></div>
+    </div>
   );
-}
+};
+
+export default PropertySlider;

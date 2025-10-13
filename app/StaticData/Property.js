@@ -11,7 +11,7 @@ export const data = [
     price: 5999,
   },
   {
-    image: "/propertyImage.jpg",
+    image: "/housing1.jpg",
     title: "ParadisePoint Villa",
     city: "Pune",
     beds: 4,
@@ -22,7 +22,7 @@ export const data = [
     price: 5999,
   },
   {
-    image: "/propertyImage.jpg",
+    image: "/housing2.jpg",
     title: "ParadisePoint Villa",
     city: "Amritsar ",
     beds: 4,
@@ -33,7 +33,7 @@ export const data = [
     price: 5999,
   },
   {
-    image: "/propertyImage.jpg",
+    image: "/housing3.jpg",
     title: "ParadisePoint Villa",
     city: "Ahmedabad ",
     beds: 4,
@@ -44,7 +44,7 @@ export const data = [
     price: 5999,
   },
   {
-    image: "/propertyImage.jpg",
+    image: "/housing4.jpg",
     title: "ParadisePoint Villa",
     city: "Chennai",
     beds: 4,
