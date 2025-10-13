@@ -41,13 +41,13 @@ export default function Header() {
       <div className="flex items-center justify-between gap-3 min-w-0">
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
-          <Image
+        <Image
             src="/logo.png"
             alt="Umang Living"
-            width={125}
-            height={45}
+            width={220}
+            height={60}
             priority
-            className="md:w-[180px] md:h-[60px] object-contain"
+            className="w-[125px] md:w-[150px] lg:w-[190px] xl:w-[220px] object-contain"
           />
         </Link>
 
