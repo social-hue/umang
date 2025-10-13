@@ -28,7 +28,7 @@ export default function PartnerPage() {
           Partner with Umang Living - You Build, We Run & Manage
         </h1>
         <p className="text-lg md:text-xl text-zinc-800 leading-relaxed max-w-3xl mx-auto">
-          India's leading <strong>senior living community </strong>, offering
+          India's leading <strong>senior living community</strong>, offering
           end-to-end <strong>operations, sales, marketing,</strong> and <strong>property management</strong> for trusted retirement homes.
         </p>
       </motion.div>
@@ -138,9 +138,9 @@ export default function PartnerPage() {
         whileInView="visible"
         variants={fadeUp}
         viewport={{ once: true, amount: 0.3 }}
-        className="text-center md:py-8 mb-6"
+        className="text-center md:py-6 mb-6"
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-teal-700 mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-zinc-800 mb-4">
           Join Hands with Umang Living
         </h2>
         <p className="text-zinc-800 text-xl max-w-2xl mx-auto mb-6">
