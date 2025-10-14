@@ -12,7 +12,6 @@ import { data } from "../StaticData/Property";
 
 export const generateMetadata = () => {
   const meta = seoData.projects;
-
   return {
     title: meta.title,
     description: meta.description,

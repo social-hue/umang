@@ -88,7 +88,7 @@ function FAQItem({ faq, index, openIndex, toggleFAQ }) {
   return (
     <div className="mb-2 w-full">
       <button
-        className={`w-full text-left px-3 py-3 text-lg lg:text-[20px] text-white bg-[#c12c56] border border-[hsla(0,0%,51.4%,0.16)] rounded-md shadow-md transition relative after:font-bold after:absolute after:right-3 ${
+        className={`w-full text-left px-3 py-3 text-lg lg:text-[20px] text-white bg-[#c12c56] border border-[hsla(0,0%,51.4%,0.16)] rounded-sm shadow-md transition relative after:font-bold after:absolute after:right-3 ${
           isOpen ? "after:content-['-']" : "after:content-['+']"
         }`}
         onClick={() => toggleFAQ(index)}
@@ -96,7 +96,7 @@ function FAQItem({ faq, index, openIndex, toggleFAQ }) {
         {faq.question}
       </button>
       <div
-        className={`overflow-hidden transition-all duration-300 bg-[#c12c56f5] border border-[hsla(0,0%,51.4%,0.16)] rounded-md ${
+        className={`overflow-hidden transition-all duration-300 bg-[#c12c56f5] border border-[hsla(0,0%,51.4%,0.16)] rounded-sm ${
           isOpen ? "max-h-[1000px] visible mt-2 p-3" : "max-h-0 invisible"
         }`}
       >

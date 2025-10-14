@@ -8,7 +8,7 @@ export const facilities = [
   // },
   {
     id: 1,
-    icon: "/community.webp",
+    icon: "/townships2.jpg",
     title: "Townships",
     tagline: "Discover vibrant senior communities across 75+ cities. A safe and connected place to truly belong.",
     accent: "text-teal-600",
@@ -22,7 +22,7 @@ export const facilities = [
   },
   {
     id: 3,
-    icon: "/travel.webp",
+    icon: "/travel1.jpg   ",
     title: "Travel",
     tagline: "Tailored travel designed with seniors in mind. Explore the world with confidence and comfort.",
     accent: "text-teal-600",
