@@ -165,6 +165,18 @@ export default function Header() {
                             Legal Consultation
                           </Link>
                         </li>
+                        <li>
+                          <Link
+                            href="/services/life-coach"
+                            className={`block px-4 py-2 hover:bg-gray-100 transition ${
+                              pathname === "/services/life-coach"
+                                ? "text-[#E7216A]"
+                                : "text-[#0B0B0B]"
+                            }`}
+                          >
+                            Life Coach
+                          </Link>
+                        </li>
                       </ul>
                     </li>
                   </ul>
@@ -258,7 +270,7 @@ export default function Header() {
                 <div key={href}>
                   <button
                     onClick={() => setServicesOpen(!servicesOpen)}
-                    className="w-full flex items-center justify-between text-lg border-b pb-1 border-white/60 text-white hover:text-[#E7216A] transition"
+                    className="w-full flex items-center justify-between text-lg border-b pb-1 border-white/60 text-white hover:text-[#FCEF44] transition"
                   >
                     <span>Services</span>
                     {servicesOpen ? (
@@ -372,6 +384,17 @@ export default function Header() {
                               }`}
                             >
                               Legal Consultation
+                            </Link>
+                            <Link
+                              href="/services/life-coach"
+                              onClick={() => setOpen(false)}
+                              className={`block text-lg py-1 ${
+                                pathname === "/services/life-coach"
+                                  ? "text-[#FCEF44]"
+                                  : "text-white hover:text-[#E7216A]"
+                              }`}
+                            >
+                              Life Coach
                             </Link>
                           </div>
                         )}

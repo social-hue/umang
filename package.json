@@ -12,6 +12,7 @@
   "dependencies": {
     "@headlessui/react": "^2.2.4",
     "@heroicons/react": "^2.2.0",
+    "d3": "^7.9.0",
     "date-fns": "^4.1.0",
     "dotenv": "^17.2.0",
     "framer-motion": "^12.19.1",
@@ -21,15 +22,16 @@
     "mongodb": "^6.20.0",
     "mongoose": "^8.18.3",
     "mysql2": "^3.14.1",
-    "next": "15.3.4",
+    "next": "^14.2.6",
     "next-sitemap": "^4.2.3",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-hot-toast": "^2.5.2",
     "react-icons": "^5.5.0",
     "react-spinners": "^0.17.0",
     "sanitize-html": "^2.17.0",
     "swiper": "^11.2.9",
+    "topojson-client": "^3.1.0",
     "validator": "^13.15.15"
   },
   "devDependencies": {

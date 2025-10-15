@@ -59,23 +59,6 @@ export default function Projects() {
         </div>
         {/* <Aboutus /> */}
         <Map />
-        <div className="py-4">
-          <div className="bg_green main_width rounded-[6px] ">
-            <div className="p-4 rounded-[6px]">
-              <div>
-                <h4 className="text-white md:text-[30px] text-[22px] lg:leading-[40px]">
-                  If you are an elderly and facing any property-related issue
-                  anywhere in India, we are there to help you. Become a member
-                  of Umang Living now, we are just a call away
-                </h4>
-                <p className="lg:text-[34x] md:text-[30px] text-[24px] lg:leading-[40px] text-white font-light">
-                  <span className="yellow font-bold"> 9560986669 </span>(Only
-                  for members)
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
         {/* <BecomeMemberForm /> */}
         <div className="py-6">
           <PropertySlider listings={data} />

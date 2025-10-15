@@ -4,10 +4,9 @@ import { X } from "lucide-react";
 
 export default function BookingModal({ open, onClose }) {
     if (!open) return null;
-
     return (
-        <div className="bg-black/8 fixed inset-0 flex justify-center items-center z-[999] backdrop-blur-xs">
-            <div className="backdrop-blur-xl bg-white w-[90%] max-w-lg p-6 rounded-sm text-zinc-800">
+        <div className="bg-black/10 fixed inset-0 flex justify-center items-center z-[999]">
+            <div className="bg-white border-none w-[90%] max-w-lg p-6 relative rounded-sm text-zinc-800">
                 {/* Close Button */}
                 <button
                     onClick={onClose}
@@ -18,7 +17,7 @@ export default function BookingModal({ open, onClose }) {
 
                 {/* Heading */}
                 <h3 className="text-2xl font-semibold text-zinc-800 mb-4 text-center">
-                    Book Your Char Dham Trip
+                    Book Your Trip !
                 </h3>
 
                 {/* Form */}
@@ -28,12 +27,12 @@ export default function BookingModal({ open, onClose }) {
                         <input
                             type="text"
                             placeholder="Full Name"
-                            className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-teal-700"
+                            className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-600"
                         />
                         <input
                             type="text"
                             placeholder="Contact"
-                            className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-teal-700"
+                            className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-600"
                         />
                     </div>
 
@@ -42,12 +41,12 @@ export default function BookingModal({ open, onClose }) {
                         <input
                             type="date"
                             placeholder="Preferred Date"
-                            className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-teal-700"
+                            className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-600"
                         />
                         <input
                             type="text"
-                            placeholder="Number of Family Members"
-                            className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-teal-700"
+                            placeholder="Number of Travellers"
+                            className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-600"
                         />
                     </div>
 
@@ -55,7 +54,7 @@ export default function BookingModal({ open, onClose }) {
                     <textarea
                         rows="3"
                         placeholder="Message"
-                        className="w-full border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-teal-700 resize-none"
+                        className="w-full border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-600 resize-none"
                     ></textarea>
 
                     {/* Buttons */}
@@ -79,3 +78,4 @@ export default function BookingModal({ open, onClose }) {
         </div>
     );
 }
+

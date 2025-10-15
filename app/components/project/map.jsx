@@ -3,7 +3,7 @@ import React from "react";
 const Map = () => {
   return (
     <>
-      <div className="py-6 md:py-10 main_width grid md:grid-cols-[50%_1fr] lg:grid-cols-[60%_1fr] xl:grids-cols-[50%_1fr] gap-8 md:gap-4">
+      <div className="py-6 md:py-10 main_width grid md:grid-cols-[45%_1fr] lg:grid-cols-[60%_1fr] xl:grids-cols-[50%_1fr] gap-8 md:gap-0">
         <div className="flex flex-col">
           <h1 className="lg:text-[42px] md:text-[40px] text-[30px] lg:leading-[40px] font-semibold ">
             <span className="green">Discover 75 Cities </span>

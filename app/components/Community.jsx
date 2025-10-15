@@ -10,7 +10,7 @@ const Community = () => {
           <p className="lg:text-[50px] md:text-[30px] text-[24px] lg:leading-[40px]  font-semibold text-white">
             Be a part of our growing family, {""}
             <span className="yellow">
-              <NumberCounter target={101249} duration={3000} />+
+              <NumberCounter target={102598} duration={3000} />+
             </span>{" "}
             Members already !
           </p>
