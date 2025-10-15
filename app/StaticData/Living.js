@@ -15,18 +15,19 @@ export const facilities = [
   },
   {
     id: 2,
-    icon: "/services/life-coach.png",
-    title: "Life Coach",
-    tagline: "Guiding seniors toward purpose, balance, and emotional fulfillment in every stage of life.",
-    accent: "text-pink-600",
-  },
-  {
-    id: 3,
     icon: "/travel1.jpg   ",
     title: "Travel",
     tagline: "Tailored travel designed with seniors in mind. Explore the world with confidence and comfort.",
     accent: "text-teal-600",
   },
+  {
+    id: 3,
+    icon: "/services/life-coach.png",
+    title: "Life Coach",
+    tagline: "Guiding seniors toward purpose, balance, and emotional fulfillment in every stage of life.",
+    accent: "text-pink-600",
+  },
+ 
   {
     id: 4,
     icon: "/homestay.webp",
