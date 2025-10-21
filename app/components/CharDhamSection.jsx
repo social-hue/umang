@@ -242,7 +242,7 @@ export default function CharDhamSection() {
           </div>
         ))}
       </motion.div>
-      <div className="mb-3 text-center">
+      <div className="text-center">
         <h2 className="text-zinc-800 text-3xl md:text-4xl font-bold mb-3">
           Tailored Journeys for Timeless Souls
         </h2>
@@ -250,12 +250,12 @@ export default function CharDhamSection() {
           Discover journeys crafted around your comfort, interests, and dreams. Share your preferences, and we&apos;ll design a personalized travel experience made just for you.
         </p>
       </div>
-      <div className="py-8 md:mb-8 md:py-12 grid md:grid-cols-[40%_1fr] lg:grid-cols-[45%_1fr] xl:grids-cols-[50%_1fr] gap-8 md:gap-2">
+      <div className="py-8 md:mb-8 md:py-12 grid md:grid-cols-[40%_1fr] lg:grid-cols-[45%_1fr] xl:grid-cols-[50%_1fr] gap-8 md:gap-2">
         <div className="flex items-center justify-center">
           <img src="/mapp.png" alt="map" loading="lazy" decoding="async" width={340} height={420} />
         </div>
         <div className="flex flex-col justify-center items-center md:justify-start md:items-start">
-          <div className="bg-white border-none w-[90%] max-w-lg p-6 relative rounded-sm text-zinc-800">
+          <div className="bg-white border-none w-[92%] md:w-full max-w-lg p-6 relative rounded-sm text-zinc-800">
             {/* Heading */}
             <h3 className="text-3xl md:text-2xl font-semibold text-zinc-800 mb-4 text-center">
               Plan Your Trip !
@@ -314,7 +314,7 @@ export default function CharDhamSection() {
 
                 <button
                   type="submit"
-                  className="flex items-center gap-2 bg-orange-700 text-white px-8 py-2 rounded-sm shadow hover:bg-orange-800 transition"
+                  className="flex items-center justify-center gap-2 bg-orange-700 text-white px-8 py-2 rounded-sm shadow hover:bg-orange-800 transition"
                 >
                   Send
                 </button>
