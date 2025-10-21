@@ -3,25 +3,25 @@ import React from "react";
 const Map = () => {
   return (
     <>
-      <div className="py-6 md:py-10 main_width grid md:grid-cols-[50%_1fr] lg:grid-cols-[60%_1fr] xl:grids-cols-[50%_1fr] gap-8 md:gap-4">
+      <div className="py-6 md:py-10 main_width grid md:grid-cols-[45%_1fr] lg:grid-cols-[60%_1fr] xl:grids-cols-[50%_1fr] gap-8 md:gap-0">
         <div className="flex flex-col">
-          <h1 className="lg:text-[42px] md:text-[40px] text-[30px] lg:leading-[40px] font-semibold ">
+          <h1 className="md:text-[40px] text-[30px] font-semibold ">
             <span className="green">Discover 75 Cities </span>
-            <span className="gradient_text">Across the Map</span>{" "}
+            <span className="gradient_text">Across the Map</span>
           </h1>
-          <p className="text-[#535353] xl:text-[24px] lg:text-[22px] md:text-[20px] text-[19px] pt-4 ">
+          <p className="text-[#535353] lg:text-lg text-[18px] pt-4 ">
             Umang Living is proud to introduce its upcoming senior living
             communities across 75 cities in India, designed exclusively for the
             55+ generation.
           </p>{" "}
           <br />
-          <p className="green xl:text-[24px] lg:text-[22px] md:text-[20px] text-[19px]">
+          <p className="green lg:text-lg text-[18px]">
             These thoughtfully planned townships offer a blend of comfort,
             companionship, and care - empowering seniors to live independently
             while enjoying a vibrant, supportive environment. With studio, 1, 2
             and 3 BHK options, shared amenities, wellness programs, and
             pan-India mobility, Umang communities are a celebration of aging
-            with dignity, joy, and freedom—where every city feels like home.
+            with dignity, joy, and freedom - where every city feels like home.
           </p>
         </div>
         <div className="flex items-center justify-center">

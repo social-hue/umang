@@ -1,7 +1,12 @@
 import {
   Poppins,
-  Big_Shoulders_Display,
-  Barlow_Condensed,
+  Roboto,
+  Inter,
+  Lato,
+  Montserrat,
+  Outfit,
+  // Big_Shoulders_Display,
+  // Barlow_Condensed,
 } from "next/font/google";
 import Script from "next/script"; // ✅ import Script from next/script
 import Header from "./components/Header";
@@ -14,21 +19,48 @@ const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
   variable: "--font-poppins",
+  display: "swap"
 });
-
-const bigShoulders = Big_Shoulders_Display({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
-  variable: "--font-big-shoulders",
-  display: "swap",
-});
-
-const barlowCondensed = Barlow_Condensed({
+const roboto = Roboto({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-  variable: "--font-barlow-condensed",
+  variable: "--font-roboto",
+  display: "swap"
+});
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+  variable: "--font-inter",
+  display: "swap"
+});
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+  variable: "--font-inter",
+  display: "swap"
+});
+
+// const barlowCondensed = Barlow_Condensed({
+//   subsets: ["latin"],
+//   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+//   variable: "--font-poppins",
+//   display: "swap"
+// });
+
+// const bigShouldersDisplay = Big_Shoulders_Display({
+//   subsets: ["latin"],
+//   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+//   variable: "--font-poppins",
+//   display: "swap"
+// });
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-outfit",
   display: "swap",
 });
+
 
 export const metadata = {
   title: "Because every age deserves new beginnings",
@@ -121,8 +153,6 @@ export default function RootLayout({ children }) {
       <body
         className={[
           poppins.variable,
-          bigShoulders.variable,
-          barlowCondensed.variable,
           "antialiased",
         ].join(" ")}
       >

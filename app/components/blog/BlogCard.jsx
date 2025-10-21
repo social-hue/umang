@@ -46,37 +46,24 @@ export const BlogCard = ({
       </div>
 
       <div className="p-6 flex flex-col gap-4 flex-1">
-        <h3 className="font-barlow font-bold lg:text-[25px] text-[20px] text-[#121416] leading-snug">
+        <h3 className="font-barlow font-bold text-[20px] text-[#121416] leading-snug">
           {title}
         </h3>
-
         <div className="flex 2xl:flex-row flex-col 2xl:items-center items-start gap-2 text-gray-500">
           <div className="flex items-center gap-1">
-            {/* <img
-              src={authorimg}
-              className=" w-[50px] object-cover object-top h-[50px] rounded-full "
-              alt="avatar"
-            /> */}
-            <span className="text-[#121416] font-barlow font-semibold lg:text-[18px] text-[16px] ">
+            <span className="text-[#121416] font-barlow font-semibold text-[16px] ">
               {author}
             </span>
           </div>
-          <div className="flex gap-2 items-center font-medium text-[18px]">
+          <div className="flex gap-2 items-center font-medium text-[16px]">
             <hr className="2xl:w-[40px] w-[30px] 2xl:block hidden" />
             <span className="w-1 h-1 bg-gray-400 rounded-full" />
             <span>{date}</span>
-            {/* <span className="w-1 h-1 bg-gray-400 rounded-full" /> */}
-            {/* <span className="flex items-center gap-1">
-              <CiShare2 />
-              {readTime}
-            </span> */}
           </div>
         </div>
-
-        <p className="text-[#6C757D] font-barlow line-clamp-2 flex-1 lg:text-[22px] md:text-[18px] ">
+        <p className="text-[#6C757D] font-barlow line-clamp-2 flex-1 text-[16px]">
           {excerpt}
         </p>
-
         <span className="mt-2 text-[#E7216A] underline uppercase font-barlow font-semibold text-sm hover:underline">
           View post
         </span>

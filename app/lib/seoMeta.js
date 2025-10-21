@@ -24,6 +24,19 @@ export const seoData = {
     image: "https://www.umangliving.com/new_one.png",
     canonical: "https://www.umangliving.com/about",
   },
+  
+  travel: {
+    type: "website",
+    url: "https://www.umangliving.com/services/travel",
+    title: "Umang Living: Affordable Tour Packages",
+    description:
+      "Creating spaces where growing older means living fuller. Our mission is to transform 55+ senior living in India with luxury, care, and vibrant communities.",
+    keywords:
+      "Umang Living, senior living India, luxury senior living, trusted vridhashram India, modern vridhaashram, old age home, retirement homes, elderly travel, Char Dham Tour, Char Dham Yatra, Kedarnath, Badrinath, Uttarkhand, Travel Booking, Uttarakhand Tour",
+    image: "https://www.umangliving.com/travel-page1.jpg",
+    canonical: "https://www.umangliving.com/services/travel",
+  },
+
 
   projects: {
     type: "website",

@@ -27,23 +27,20 @@ export default function FAQSection() {
   const rightColumnFAQs = faqs.slice(5);
 
   const handleToggleMobile = () => {
-    if (showAllMobile) {
-      faqSectionRef.current?.scrollIntoView({ behavior: "smooth" });
-    }
+    if (showAllMobile) faqSectionRef.current?.scrollIntoView({ behavior: "smooth" });
     setShowAllMobile((prev) => !prev);
   };
 
   return (
     <div className="bg-[#f8f8f8a7] py-8 md:py-14 lg:py-16" ref={faqSectionRef}>
       <section className="w-[90%] sm:w-[85%] md:w-[80%] mx-auto">
-        {/* Heading */}
         <h2 className="text-zinc-800 font-bold text-3xl md:text-4xl text-center mb-6 leading-snug break-words">
           Frequently Asked <span className="text-[#079080]">Questions</span>
         </h2>
 
         {/* FAQ Grid */}
         <div className="flex gap-3 md:gap-6 max-md:flex-col">
-          {/* Desktop/Laptop */}
+          {/* Desktop Columns */}
           <div className="hidden md:flex flex-col flex-1">
             {leftColumnFAQs.map((faq, index) => (
               <FAQItem key={index} faq={faq} index={index} openIndex={openIndex} toggleFAQ={toggleFAQ} />
@@ -64,13 +61,13 @@ export default function FAQSection() {
             })}
           </div>
 
-          {/* Mobile */}
+          {/* Mobile View */}
           <div className="flex flex-col md:hidden">
             {(showAllMobile ? faqs : faqs.slice(0, 5)).map((faq, index) => (
               <FAQItem key={index} faq={faq} index={index} openIndex={openIndex} toggleFAQ={toggleFAQ} />
             ))}
             <button
-              className="mx-auto mt-2 px-5 py-2 text-md bg-[#112240] text-white rounded-md shadow-md hover:bg-[#1c3459] transition"
+              className="mx-auto mt-2 px-5 py-2 text-md cursor-pointer bg-[#112240] text-white rounded-sm shadow-md hover:bg-[#1c3459] transition"
               onClick={handleToggleMobile}
             >
               {showAllMobile ? "View Less" : "View More"}
@@ -82,25 +79,33 @@ export default function FAQSection() {
   );
 }
 
-/* FAQ Item Component */
+/* FAQ Item */
 function FAQItem({ faq, index, openIndex, toggleFAQ }) {
   const isOpen = openIndex === index;
+
   return (
-    <div className="mb-2 w-full">
+    <div
+      className={`mb-3 w-full border border-zinc-500 rounded-sm bg-white transition-shadow duration-300 shadow-sm hover:shadow-md`}
+    >
       <button
-        className={`w-full text-left px-3 py-3 text-lg lg:text-[20px] text-white bg-[#c12c56] border border-[hsla(0,0%,51.4%,0.16)] rounded-md shadow-md transition relative after:font-bold after:absolute after:right-3 ${
-          isOpen ? "after:content-['-']" : "after:content-['+']"
-        }`}
+        className={`w-full text-left px-4 py-2 md:py-3 text-md cursor-pointer font-medium text-zinc-800 flex justify-between items-center transition-colors`}
         onClick={() => toggleFAQ(index)}
       >
-        {faq.question}
+        <span>{faq.question}</span>
+        <span
+          className={`text-zinc-700 text-2xl transition-transform ${
+            isOpen ? "rotate-45" : "rotate-0"
+          }`}
+        >
+          +
+        </span>
       </button>
       <div
-        className={`overflow-hidden transition-all duration-300 bg-[#c12c56f5] border border-[hsla(0,0%,51.4%,0.16)] rounded-md ${
-          isOpen ? "max-h-[1000px] visible mt-2 p-3" : "max-h-0 invisible"
+        className={`overflow-hidden transition-all duration-300 ${
+          isOpen ? "max-h-[1000px] visible border-t border-zinc-500 px-4 py-2 md:py-3" : "max-h-0 invisible"
         }`}
       >
-        <p className="text-[#ffffff] text-lg lg:text-[19px] leading-relaxed font-light whitespace-pre-line">
+        <p className="text-zinc-800 text-md leading-relaxed whitespace-pre-line">
           {faq.answer}
         </p>
       </div>

@@ -3,6 +3,7 @@ import React from "react";
 export default function NewsTicker() {
   const newsItems = [
     "🚀 Coming Soon in 75+ Cities Across India",
+    "📢 Mark your calendars! Travel, Legal and Financial Services go live on November 1, 2025",
     "📆 India's largest senior living community is now coming to Jalandhar, Punjab !",
     "📈 More than 100000+ memberships",
     "🎉 Sign up for our newsletter to receive exclusive offers, event updates, and wellness tips tailored for seniors and their families",
@@ -24,13 +25,12 @@ export default function NewsTicker() {
             {newsItems.concat(newsItems).map((item, index) => (
               <span
                 key={index}
-                className="mx-4 text-gray-600 text-semibold whitespace-nowrap"
+                className="mx-4 text-gray-600 text-md text-semibold whitespace-nowrap"
               >
                 {item}
               </span>
             ))}
           </div>
-
           {/* Gradient fade on right */}
           <div className="absolute top-0 right-0 w-10 h-full bg-gradient-to-l from-white/90 to-transparent pointer-events-none"></div>
         </div>

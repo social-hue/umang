@@ -67,31 +67,31 @@ const Footer = () => {
 
       <div className="overflow-hidden w-full h-full relative">
         <div className="pt-8">
-          <div className="mx-auto main_width px-4 py-4 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-10 relative z-[9]">
-
+          <div className="mx-auto main_width px-4 py-4 grid grid-cols-1 lg:grid-cols-[30%_auto_auto_auto] md:grid-cols-2 gap-10 relative z-[9]">
             {/* Left Logo + Description */}
-            <div>
-              <div className="flex items-center mb-4">
+            <div className="md:-mt-3">
+              <div className="flex items-start mb-2 mr-2">
                 <img
                   src="/logo.png"
                   alt="Umang Living"
-                  className="rounded lg:w-full"
+                  className="rounded"
                   loading="lazy"
                   decoding="async"
+                  width={240}
+                  height={120}
                 />
               </div>
-              <p className="text-[#ccc] leading-relaxed text-[17px] lg:text-[18px] max-w-xs">
+              <p className="text-[#ccc] leading-relaxed text-[16px] max-w-xs">
                 Umang Living is India’s first multi-city senior independent-living
                 community, thoughtfully designed with love and respect.
               </p>
             </div>
-
             {/* Quick Links */}
             <div>
-              <h6 className="yellow lg:text-[20px] md:text-[16px] font-semibold mb-4 uppercase">
+              <h6 className="yellow text-[18px] font-semibold mb-4 uppercase">
                 Quick Links
               </h6>
-              <ul className="space-y-3 text-[#ccc] lg:text-[18px] text-[18px]">
+              <ul className="space-y-3 text-[#ccc] text-[16px]">
                 {filteredNavItems.map(({ label, href }) => (
                   <li key={href}>
                     <Link href={href} className="hover:text-white transition">
@@ -101,13 +101,12 @@ const Footer = () => {
                 ))}
               </ul>
             </div>
-
             {/* Support Links */}
             <div>
-              <p className="yellow lg:text-[20px] md:text-[16px] font-semibold mb-4 uppercase">
+              <p className="yellow text-[18px] font-semibold mb-4 uppercase">
                 Support Links
               </p>
-              <ul className="space-y-3 text-[#ccc] text-[18px] lg:text-[18px]">
+              <ul className="space-y-3 text-[#ccc] text-[16px]">
                 {supportLinks.map((txt, idx) => (
                   <li key={idx}>
                     <Link
@@ -123,9 +122,9 @@ const Footer = () => {
 
             {/* Newsletter */}
             <div>
-              <h6 className="yellow text-[18px] font-semibold mb-4 uppercase">
+              <p className="yellow text-[18px] font-semibold mb-4 uppercase">
                 Join a Newsletter
-              </h6>
+              </p>
 
               {/* Newsletter Form */}
               <form
@@ -140,7 +139,7 @@ const Footer = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="bg-[#4F5A68] rounded-tl-[11px] rounded-bl-[11px] text-white px-6 py-3 w-full text-sm placeholder-[#888] focus:outline-none"
+                  className="bg-[#4F5A68] rounded-tl-[10px] rounded-bl-[10px] text-white px-4 py-3 w-full text-sm placeholder-[#888] focus:outline-none"
                 />
                 <button
                   type="submit"
@@ -204,12 +203,12 @@ const Footer = () => {
           {/* Bottom Bar */}
           <div className="text-[#999] flex justify-center lg:justify-between main_width py-4 text-center border-t border-dashed border-[#333] md:text-[17px] items-center">
             <p>
-              <span className="text-[#f04f67] text-[16px] font-bold tracking-wide">
+              <span className="text-[#f04f67] text-[14px] md:text-[16px] font-semibold tracking-wide">
                 &#169; 2025 UMANG LIVING SCL Pvt Ltd.
               </span>
             </p>
             {/* stays hidden on small; appears at lg and pushes layout to two columns */}
-            <p className="hidden lg:flex mt-1 items-center gap-2 text-[18px]">
+            <p className="hidden lg:flex mt-1 items-center gap-2 text-md">
               <FaLocationDot />
               2319, Gold Wing, Wave one Tower, Sector-18, Noida, UP-201301
             </p>

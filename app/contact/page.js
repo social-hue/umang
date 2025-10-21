@@ -1,12 +1,8 @@
 import Banner from "../components/Banner";
 import Community from "../components/Community";
-// import Aboutus from "../components/contact/about";
 import Grid from "../components/contact/Grid";
-import Map from "../components/contact/Map";
 import ContactGrid from "../components/contact/officeDetails";
-import OfficeDetails from "../components/contact/officeDetails";
 import Footer from "../components/Footer";
-// import Header from "../components/Header";
 import { seoData } from "../lib/seoMeta";
 
 export const generateMetadata = () => {
@@ -49,18 +45,10 @@ export const generateMetadata = () => {
 export default function Contact() {
   return (
     <>
-      {/* <div className="py-8 ">
-        <Header />
-      </div> */}
       <Banner title={"Connect with Us"} bgImage={"/consultation.jpg"} />
       <div className=" relative overflow-hidden ">
-        <div className="absolute -top-[150px] -left-[180px] -z-9">
-          <img src="/rangoli.png" alt="rangoli" loading="lazy" decoding="async" className="w-[70%]" />
-        </div>
-        {/* <Aboutus /> */}
         <Grid />
         <ContactGrid />
-        {/* <Map /> */}
         <Community />
       </div>
       <Footer />

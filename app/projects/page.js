@@ -1,18 +1,13 @@
-// import Timeline from "../components/about/Timeline";
 import Banner from "../components/Banner";
 import Community from "../components/Community";
 import Footer from "../components/Footer";
-// import Header from "../components/Header";
-// import Aboutus from "../components/project/about";
 import Map from "../components/project/map";
 import PropertySlider from "../components/PropertySlider";
-// import BecomeMemberForm from "../helpers/BecomeMemberForm";
 import { seoData } from "../lib/seoMeta";
 import { data } from "../StaticData/Property";
 
 export const generateMetadata = () => {
   const meta = seoData.projects;
-
   return {
     title: meta.title,
     description: meta.description,
@@ -50,34 +45,9 @@ export const generateMetadata = () => {
 export default function Projects() {
   return (
     <>
-      {/* <div className="py-8 ">
-        <Header />
-      </div> */}
       <Banner title={"Projects"} bgImage={"/something3.jpg"} />
       <div className="relative overflow-hidden ">
-        <div className="absolute -top-[150px] -left-[180px] -z-9">
-          <img src="/rangoli.png" alt="rangoli" className="w-[70%]" loading="lazy" decoding="async" />
-        </div>
-        {/* <Aboutus /> */}
         <Map />
-        <div className="py-4">
-          <div className="bg_green main_width rounded-[6px] ">
-            <div className="p-4 rounded-[6px]">
-              <div>
-                <h4 className="text-white md:text-[30px] text-[22px] lg:leading-[40px]">
-                  If you are an elderly and facing any property-related issue
-                  anywhere in India, we are there to help you. Become a member
-                  of Umang Living now, we are just a call away
-                </h4>
-                <p className="lg:text-[34x] md:text-[30px] text-[24px] lg:leading-[40px] text-white font-light">
-                  <span className="yellow font-bold"> 9560986669 </span>(Only
-                  for members)
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* <BecomeMemberForm /> */}
         <div className="py-6">
           <PropertySlider listings={data} />
         </div>

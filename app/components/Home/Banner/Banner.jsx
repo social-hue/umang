@@ -8,7 +8,7 @@ import NewsTicker from "../../breaking/NewsTicker";
 const carouselData = [
   {
     id: 1,
-    image: "/banner.webp",
+    image: "/something7.jpg",
     headline: "Ek Duniya Alag Si...",
     subheadline: "Because every age deserves new beginnings",
     description: "A Unique Senior Independent Living Community for the 55+ Generation",
@@ -118,7 +118,7 @@ export default function Banner() {
                 alt={carouselData[currentSlide].headline}
                 fill
                 sizes="100vw"
-                quality={85}
+                quality={100}
                 placeholder="blur"
                 blurDataURL={blurDataURL}
                 // ✅ Priority ONLY on the very first paint of the first slide
@@ -148,19 +148,19 @@ export default function Banner() {
               <div className="text-white">
                 <motion.h1
                   variants={itemVariants}
-                  className="text-[#f48f1c] 2xl:text-[110px] xl:text-[90px] lg:text-[80px] md:text-[60px] text-[40px] 2xl:leading-[0.82] xl:leading-[0.89] lg:leading-[0.875] md:leading-[1] leading-[1.25] 2xl:tracking-[-3.45px] tracking-[-2.45px]"
+                  className="text-[#f48f1c] 2xl:text-[100px] xl:text-[70px] lg:text-[60px] md:text-[50px] text-[34px]"
                 >
                   {carouselData[currentSlide].headline}
                 </motion.h1>
                 <motion.h2
                   variants={itemVariants}
-                  className="heading_font text-white xl:text-[50px] lg:text-[40px] md:text-[30px] text-[20px] xl:leading-[60px] pt-4 2xl:pt-10"
+                  className=" text-white xl:text-[35px] md:text-[30px] mt-2 md:mt-0 text-[18px]"
                 >
                   {carouselData[currentSlide].subheadline}
                 </motion.h2>
                 <motion.p
                   variants={itemVariants}
-                  className="text-white/90 xl:text-[24px] lg:text-[20px] md:text-[18px] text-[16px] xl:leading-[35px] pt-4 max-w-4xl"
+                  className="hidden md:block text-white xl:text-[24px] lg:text-[20px] md:text-[18px] mt-2 text-[16px] max-w-4xl"
                 >
                   {carouselData[currentSlide].description}
                 </motion.p>
@@ -170,7 +170,7 @@ export default function Banner() {
         </div>
 
         {/* Dots */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20">
+        <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 z-20">
           <div className="flex space-x-3">
             {carouselData.map((_, index) => (
              <button
@@ -196,11 +196,10 @@ export default function Banner() {
       </div>
 
       {/* News Ticker */}
-      <div className="py-4 px-4">
-        <div className="flex item-center justify-center">
+      
+        <div className="py-4 px-4 flex item-center justify-center">
           <NewsTicker />
         </div>
-      </div>
     </section>
   );
 }

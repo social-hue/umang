@@ -24,7 +24,7 @@ export const data = [
   {
     image: "/housing2.jpg",
     title: "ParadisePoint Villa",
-    city: "Amritsar ",
+    city: "Jalandhar",
     beds: 4,
     baths: 3,
     area: 230,

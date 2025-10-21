@@ -290,11 +290,10 @@ For many, life is a checklist—education, job, marriage, raising children, buil
 For years, your calendar may have revolved around meetings, responsibilities, school vacations, bills, and other people’s needs. You were the planner, the provider, the anchor. But now, as you step into retirement, a new kind of freedom awaits—a passport to places you once only dreamed of. <br><br>It’s time to ask yourself: If not now, when?<br><br>Travel after retirement isn’t just a luxury—it’s a gift to your soul, your health, and your sense of purpose. Here’s why you should pack your bags, chase horizons, and start your next great adventure.
 Retirement is the first time in decades that your calendar is truly yours. No school exams, office deadlines, or family functions to schedule around. This is your time—and travel gives you the chance to use it meaningfully. <br><br>Whether it’s a two-day spiritual retreat, a month-long tour of South India, or a cross-country rail journey, every trip you take is a celebration of freedom.
   `,
-    heading: `Travel Keeps You Young—In Mind and Spirit.
+    heading: `Travel Keeps You Young - In Mind and Spirit.
 `,
-    content2: ` <h1 style="color: #0b7c6c; font-weight: 600;">Why Travel After Retirement Is the Best Decision Youll Make</h1>
-
-  <h2 style="color: #066; font-weight: 600; margin-top: 1.5em;">New Places Stimulate Your Brain</h2>
+    content2: `
+  <h1 style="color: #066; font-weight: 600;">New Places Stimulate Your Brain</h1>
   <p>Whether youre navigating a local market in Jaipur, learning the history of ancient temples, or sharing stories with fellow travelers, every experience engages your senses and sharpens your memory. You’re not just sightseeing—you’re actively exercising your mind and heart.</p>
 
   <h2 style="color: #066; font-weight: 600; margin-top: 1.5em;">Discover New Cultures, Connect with New People</h2>

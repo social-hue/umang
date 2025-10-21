@@ -20,7 +20,7 @@ export default function PromoCard() {
   if (!show) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50 p-2 sm:p-4">
+    <div className="fixed inset-0 flex items-center justify-center bg-black/20 z-50 p-2 sm:p-4">
       <div className="relative">
         {/* Close button - positioned outside the card */}
         <button aria-label="Close"
@@ -31,7 +31,8 @@ export default function PromoCard() {
         </button>
 
         {/* Main card */}
-        <div className="bg-white rounded-xl sm:rounded-2xl shadow-2xl 
+        <div className="bg-white rounded-lg
+        shadow-2xl 
                         w-[300px] h-[440px] 
                         sm:w-[320px] lg:h-[450px] 
                         lg:w-[400px]  

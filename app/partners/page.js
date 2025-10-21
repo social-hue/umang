@@ -1,14 +1,7 @@
-// "use client"
 import Banner from "../components/Banner";
-// import Community from "../components/Community";
 import Footer from "../components/Footer";
 import PartnerPage from "../components/partner/about";
-// import Header from "../components/Header";
-// import Aboutus from "../components/partner/about";
-import Button from "../components/partner/Button";
-import GridCols from "../components/partner/GridCols";
 import { seoData } from "../lib/seoMeta";
-import { data } from "../StaticData/partner";
 
 export const generateMetadata = () => {
   const meta = seoData.partners;
@@ -50,25 +43,9 @@ export const generateMetadata = () => {
 export default function Partners() {
   return (
     <>
-      {/* <div className="py-8 ">
-        <Header />
-      </div> */}
       <Banner title={"Partner with Us"} bgImage={"/handshake.jpg"} />
-      <div className=" relative overflow-hidden ">
-        <div className="absolute -top-[150px] -left-[180px] -z-9">
-          <img src="/rangoli.png" alt="rangoli" className="w-[70%]" loading="lazy" decoding="async" />
-        </div>
-        {/* <Aboutus /> */}
-
-        {/* <h1 className="text-4xl md:text-5xl font-semibold text-teal-800 mb-4 text-left">
-            Why Partner with us ?
-        </h1>
-        <p className="text-gray-700 text-lg md:text-xl leading-relaxed"> 
-         At Umang Living, we take a holistic partnership approach to creating exceptional senior living communities. Our Senior-Friendly Design Support ensures every space is thoughtfully crafted for comfort, safety, and independence. Through our Strategic Marketing & Sales Expertise, we help drive awareness, generate quality leads, and ensure a seamless experience for every homebuyer. Once the community comes to life, our Dedicated Community Operations uphold Umang Living’s promise of care, wellness, and active living, ensuring long-term happiness and peace of mind for every resident and partner.
-        </p> */}
+      <div className="relative overflow-hidden">
         <PartnerPage />
-        {/* <div className="mt-4"><Button/></div> */}
-        {/* <Community /> */}
       </div>
       <Footer />
     </>

@@ -22,12 +22,12 @@ export default function PartnerPage() {
         whileInView="visible"
         variants={fadeUp}
         viewport={{ once: true, amount: 0.3 }}
-        className="max-w-6xl mx-auto md:text-center mb-4 md:mb-12"
+        className="max-w-6xl mx-auto text-center mb-4 md:mb-10"
       >
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-teal-700 mb-4">
+        <h1 className="text-3xl md:text-4xl font-bold text-zinc-700 mb-3">
           Partner with Umang Living - You Build, We Run & Manage
         </h1>
-        <p className="text-lg md:text-xl text-zinc-800 leading-relaxed max-w-3xl mx-auto">
+        <p className="text-lg text-zinc-800 leading-relaxed max-w-3xl mx-auto">
           India's leading <strong>senior living community</strong>, offering
           end-to-end <strong>operations, sales, marketing,</strong> and <strong>property management</strong> for trusted retirement homes.
         </p>
@@ -42,18 +42,17 @@ export default function PartnerPage() {
           viewport={{ once: true, amount: 0.3 }}
           className="mt-4"
         >
-          <h2 className="text-3xl md:text-4xl font-semibold text-zinc-800 mb-4">
+          <h2 className="text-2xl font-semibold text-zinc-800 mb-3">
             Why Partner with Us ?
           </h2>
-          <p className="text-zinc-800 text-xl mb-6">
+          <p className="text-zinc-700 text-lg mb-6">
             <strong>Umang Living</strong> partners with developers and serves seniors/families with one promise: we sell faster and run Gold Standard communities. We bring a ready demand funnel, RERA-compliant sales operations, and a proven property-management model that turns inventory into happy, long-term residents.
           </p>
-
-          <h2 className="text-3xl md:text-4xl font-semibold text-zinc-800 mb-4 text-left">
+          <h2 className="text-2xl font-semibold text-zinc-800 mb-3 text-left">
             Our Unique Strengths (USP)
           </h2>
 
-          <ul className="space-y-3 text-zinc-800 text-xl">
+          <ul className="space-y-3 text-zinc-700 text-lg">
             {[
               "Largest senior living community network in India with in-house expertise in Operations, Sales, Marketing & Property Management.",
               "Professionally trained staff dedicated to senior care excellence.",
@@ -66,7 +65,7 @@ export default function PartnerPage() {
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.1 }}
                 custom={index * 0.15}
                 className="flex items-start gap-3"
               >
@@ -85,7 +84,7 @@ export default function PartnerPage() {
           initial="hidden"
           whileInView="visible"
           variants={fadeUp}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-6"
         >
           {[
@@ -118,14 +117,14 @@ export default function PartnerPage() {
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-                custom={i * 0.1}
+                viewport={{ once: true, amount: 0.2 }}
+                custom={i * 0.01}
               >
                 <Icon className="text-yellow-500 w-10 h-10 mb-3" />
-                <h3 className="text-xl font-semibold text-zinc-800 mb-2">
+                <h3 className="text-lg font-semibold text-zinc-800 mb-2">
                   {card.title}
                 </h3>
-                <p className="text-zinc-800 text-lg">{card.desc}</p>
+                <p className="text-zinc-800 text-md">{card.desc}</p>
               </motion.div>
             );
           })}
@@ -140,10 +139,10 @@ export default function PartnerPage() {
         viewport={{ once: true, amount: 0.3 }}
         className="text-center md:py-6 mb-6 md:mb-2"
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-zinc-800 mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-zinc-700 mb-4">
           Join Hands with Umang Living
         </h2>
-        <p className="text-zinc-800 text-xl max-w-2xl mx-auto mb-6">
+        <p className="text-zinc-800 text-lg max-w-2xl mx-auto mb-6">
           Partnering with Umang Living means joining a movement redefining retirement
           living in India. Let's collaborate to create vibrant, emotionally fulfilling,
           and professionally managed senior living communities.

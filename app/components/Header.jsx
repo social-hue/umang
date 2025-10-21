@@ -13,22 +13,22 @@ import {
   FaPhoneAlt,
 } from "react-icons/fa";
 import { navItems } from "../lib/nav-items";
+import "./header.css"; // 👈 added stylesheet import
 
 export default function Header() {
   const pathname = usePathname();
-  const [open, setOpen] = useState(false); // mobile drawer
-  const [servicesOpen, setServicesOpen] = useState(false); // mobile first-level Services
-  const [generalOpen, setGeneralOpen] = useState(false); // mobile nested Consultation
-  const [healthOpen, setHealthOpen] = useState(false); // mobile nested Health & Wellness
+  const [open, setOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [generalOpen, setGeneralOpen] = useState(false);
+  const [healthOpen, setHealthOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
 
-  // prevent body scroll when drawer is open
   useEffect(() => {
     if (open) document.body.classList.add("overflow-hidden");
     else document.body.classList.remove("overflow-hidden");
     return () => document.body.classList.remove("overflow-hidden");
   }, [open]);
 
-  // close drawer on route change
   useEffect(() => {
     setOpen(false);
     setServicesOpen(false);
@@ -36,31 +36,45 @@ export default function Header() {
     setHealthOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    const onScroll = () => {
+      if (window.scrollY > 40) setIsSticky(true);
+      else setIsSticky(false);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="w-full px-3 sm:w-[92%] my-3 mx-auto transition-all duration-700 ease-in max-w-[1300px]">
-      <div className="flex items-center justify-between gap-3 min-w-0">
-        {/* Logo */}
+    <header
+      className={`w-full z-[1000] transition-all duration-500 ease-in-out ${
+        isSticky
+          ? "fixed top-0 left-0 right-0 bg-white shadow-md py-2"
+          : "relative my-3"
+      }`}
+    >
+      <div className="max-w-[1300px] mx-auto px-4 sm:px-6 flex items-center justify-between">
+        {/* Left: Logo */}
         <Link href="/" className="flex-shrink-0">
           <Image
             src="/logo.png"
             alt="Umang Living"
-            width={220}
-            height={60}
+            width={200}
+            height={50}
             priority
-            className="w-[125px] md:w-[150px] lg:w-[190px] xl:w-[220px] object-contain"
+            className="w-[125px] md:w-[150px] lg:w-[170px] xl:w-[200px] object-contain"
           />
         </Link>
 
         {/* Desktop Nav */}
-        <ul className="hidden lg:flex items-center space-x-4 xl:space-x-6 2xl:text-[22px] xl:text-[18px] lg:text-[16px] min-w-0">
+        <ul className="hidden lg:flex items-center space-x-6 xl:space-x-8 text-[16px] 2xl:text-[18px]">
           {navItems.map(({ label, href }) => {
-            // Services dropdown (desktop)
             if (label === "Services") {
               return (
                 <li key={href} className="relative group">
                   <div className="flex items-center gap-2 cursor-pointer">
                     <h3
-                      className={`transition-all duration-300 hover:scale-[1.04] whitespace-nowrap ${
+                      className={`transition-all duration-300 hover:scale-[1.04] ${
                         pathname.startsWith("/services")
                           ? "text-[#E7216A] font-semibold"
                           : "text-[#0B0B0B]"
@@ -68,17 +82,14 @@ export default function Header() {
                     >
                       {label}
                     </h3>
-                    <FaChevronDown className="mt-0.5 w-3 h-3 text-gray-600 group-hover:rotate-180 transition-transform duration-300" />
+                    <FaChevronDown className="w-3 h-3 text-gray-600 group-hover:rotate-180 transition-transform duration-300" />
                   </div>
 
-                  {/* top-level dropdown */}
-                  <ul className="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md overflow-visible z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                    {/* simple items */}
-                    {[
-                      { name: "Township", link: "/services/townships" },
+                  {/* Dropdown */}
+                  <ul className="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                    {[{ name: "Township", link: "/services/townships" },
                       { name: "Stay", link: "/services/stay" },
-                      { name: "Travel", link: "/services/travel" },
-                    ].map((s) => (
+                      { name: "Travel", link: "/services/travel" }].map((s) => (
                       <li key={s.link}>
                         <Link
                           href={s.link}
@@ -93,7 +104,7 @@ export default function Header() {
                       </li>
                     ))}
 
-                    {/* Nested parent: Health & Wellness */}
+                    {/* Health & Wellness */}
                     <li className="relative group/health">
                       <div className="flex items-center justify-between px-4 py-2 hover:bg-gray-100 cursor-pointer">
                         <span
@@ -107,8 +118,7 @@ export default function Header() {
                         </span>
                         <FaChevronRight className="w-3 h-3 text-gray-600 group-hover/health:rotate-90 transition-transform duration-300" />
                       </div>
-
-                      <ul className="absolute top-0 left-full ml-1 w-56 bg-white shadow-lg rounded-md overflow-hidden z-50 opacity-0 invisible group-hover/health:opacity-100 group-hover/health:visible transition-all duration-300">
+                      <ul className="absolute top-0 left-full ml-1 w-56 bg-white shadow-lg rounded-md z-50 opacity-0 invisible group-hover/health:opacity-100 group-hover/health:visible transition-all duration-300">
                         <li>
                           <Link
                             href="/services/healing-services"
@@ -124,7 +134,7 @@ export default function Header() {
                       </ul>
                     </li>
 
-                    {/* Nested parent: Consultation */}
+                    {/* Consultation */}
                     <li className="relative group/consultation">
                       <div className="flex items-center justify-between px-4 py-2 hover:bg-gray-100 cursor-pointer">
                         <span
@@ -139,8 +149,7 @@ export default function Header() {
                         </span>
                         <FaChevronRight className="w-3 h-3 text-gray-600 group-hover/consultation:rotate-90 transition-transform duration-300" />
                       </div>
-
-                      <ul className="absolute top-0 left-full ml-1 w-56 bg-white shadow-lg rounded-md overflow-hidden z-50 opacity-0 invisible group-hover/consultation:opacity-100 group-hover/consultation:visible transition-all duration-300">
+                      <ul className="absolute top-0 left-full ml-1 w-56 bg-white shadow-lg rounded-md z-50 opacity-0 invisible group-hover/consultation:opacity-100 group-hover/consultation:visible transition-all duration-300">
                         <li>
                           <Link
                             href="/services/general-consultation"
@@ -172,11 +181,10 @@ export default function Header() {
               );
             }
 
-            // Normal nav items
             return (
               <li
                 key={href}
-                className={`transition-all duration-300 hover:scale-[1.04] whitespace-nowrap ${
+                className={`transition-all duration-300 hover:scale-[1.04] ${
                   pathname === href
                     ? "text-[#E7216A] font-semibold"
                     : "text-[#0B0B0B]"
@@ -187,39 +195,35 @@ export default function Header() {
             );
           })}
 
-          {/* Dialer (desktop) */}
+          {/* Desktop Dialer */}
           <a
             href="tel:18002028704"
-            className="relative z-10 inline-flex items-center gap-2 rounded-md border-2 border-transparent bg-red-700 text-white text-base font-semibold px-3 py-1 transition-all duration-300 ease-in-out hover:bg-white hover:text-red-700 hover:border-red-700 truncate max-w-[220px]"
-            aria-label="Call us at 1800-202-8704"
+            className="inline-flex items-center gap-2 bg-red-700 text-white px-4 py-2 rounded-md font-semibold border-2 border-transparent hover:bg-white hover:text-red-700 hover:border-red-700 transition"
           >
-            <FaPhoneAlt className="text-current w-5 h-5 flex-shrink-0" />
-            <span className="truncate">1800-202-8704</span>
+            <FaPhoneAlt className="w-5 h-5" />
+            <span className="hidden-below-320">1800-202-8704</span>
           </a>
         </ul>
 
-        {/* Mobile controls */}
+        {/* Mobile Buttons */}
         <div className="flex items-center gap-2 lg:hidden">
           <a
             href="tel:18002028704"
-            className="flex px-2 py-1 items-center gap-2 rounded-md border-2 border-transparent bg-red-700 text-white text-sm sm:text-base font-semibold transition-all duration-300 ease-in-out hover:bg-white hover:text-red-700 hover:border-red-700 truncate max-w-[140px]"
-            aria-label="Call us at 1800-202-8704"
+            className="flex items-center gap-2 px-3 py-1 bg-red-700 text-white text-sm font-semibold rounded-md border-2 border-transparent hover:bg-white hover:text-red-700 hover:border-red-700 transition"
           >
-            <FaPhoneAlt className="text-current w-4 h-4 flex-shrink-0" />
-            <span className="truncate">1800-202-8704</span>
+            <FaPhoneAlt className="w-4 h-4" />
+            <span className="hidden-below-320">1800-202-8704</span>
           </a>
-
           <button
             onClick={() => setOpen(true)}
-            className="p-1 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E7216A]"
-            aria-label="Open menu"
+            className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E7216A]"
           >
-            <FaBars className="text-xl sm:text-2xl text-[#0B0B0B]" />
+            <FaBars className="text-2xl text-[#0B0B0B]" />
           </button>
         </div>
       </div>
 
-      {/* Mobile overlay */}
+      {/* Overlay */}
       <div
         onClick={() => setOpen(false)}
         className={`fixed inset-0 bg-black/40 z-40 transition-opacity duration-300 ${
@@ -227,13 +231,13 @@ export default function Header() {
         } lg:hidden`}
       />
 
-      {/* Mobile Drawer */}
+      {/* Drawer */}
       <aside
-        className={`fixed top-0 left-0 h-full w-full bg-[#069183] z-50 shadow-xl transform transition-transform duration-300 lg:hidden overflow-y-auto ${
+        className={`fixed top-0 left-0 h-full w-full bg-[#069183] z-50 shadow-xl transform transition-transform duration-300 lg:hidden ${
           open ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="flex items-center bg-white justify-between px-3 py-3">
+        <div className="flex items-center justify-between bg-white px-4 sm:px-6 py-3">
           <Image
             src="/logo.png"
             alt="Umang_logo"
@@ -250,22 +254,18 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Drawer Nav */}
-        <nav className="mt-6 px-6 space-y-4" role="navigation" aria-label="Mobile Navigation">
+        <nav className="mt-6 px-6 space-y-4">
+          {/* Services & Other Nav Items (unchanged) */}
           {navItems.map(({ label, href }) => {
             if (label === "Services") {
               return (
                 <div key={href}>
                   <button
                     onClick={() => setServicesOpen(!servicesOpen)}
-                    className="w-full flex items-center justify-between text-lg border-b pb-1 border-white/60 text-white hover:text-[#E7216A] transition"
+                    className="w-full flex items-center justify-between text-lg border-b pb-1 border-white/60 text-white hover:text-[#FCEF44]"
                   >
                     <span>Services</span>
-                    {servicesOpen ? (
-                      <FaChevronUp className="w-4 h-4" />
-                    ) : (
-                      <FaChevronDown className="w-4 h-4" />
-                    )}
+                    {servicesOpen ? <FaChevronUp /> : <FaChevronDown />}
                   </button>
 
                   {servicesOpen && (
@@ -308,14 +308,10 @@ export default function Header() {
                       <div>
                         <button
                           onClick={() => setHealthOpen(!healthOpen)}
-                          className="w-full flex items-center justify-between text-lg py-1 text-white hover:text-[#E7216A] transition"
+                          className="w-full flex items-center justify-between text-lg py-1 text-white hover:text-[#E7216A]"
                         >
                           <span>Health &amp; Wellness</span>
-                          {healthOpen ? (
-                            <FaChevronUp className="w-4 h-4" />
-                          ) : (
-                            <FaChevronDown className="w-4 h-4" />
-                          )}
+                          {healthOpen ? <FaChevronUp /> : <FaChevronDown />}
                         </button>
 
                         {healthOpen && (
@@ -339,14 +335,10 @@ export default function Header() {
                       <div>
                         <button
                           onClick={() => setGeneralOpen(!generalOpen)}
-                          className="w-full flex items-center justify-between text-lg py-1 text-white hover:text-[#E7216A] transition"
+                          className="w-full flex items-center justify-between text-lg py-1 text-white hover:text-[#E7216A]"
                         >
                           <span>Consultation</span>
-                          {generalOpen ? (
-                            <FaChevronUp className="w-4 h-4" />
-                          ) : (
-                            <FaChevronDown className="w-4 h-4" />
-                          )}
+                          {generalOpen ? <FaChevronUp /> : <FaChevronDown />}
                         </button>
 
                         {generalOpen && (
@@ -382,13 +374,12 @@ export default function Header() {
               );
             }
 
-            // Normal nav items
             return (
               <Link
                 key={href}
                 href={href}
                 onClick={() => setOpen(false)}
-                className={`block text-lg border-b pb-2 border-white/60 w-full ${
+                className={`block text-lg border-b pb-2 border-white/60 ${
                   pathname === href
                     ? "text-[#FCEF44]"
                     : "text-white hover:text-[#E7216A]"
@@ -401,14 +392,14 @@ export default function Header() {
         </nav>
 
         {/* CTA */}
-        <div className="p-6 w-full flex">
+        <div className="p-6">
           <a
-            className="w-full sm:w-auto"
             href="https://docs.google.com/forms/d/e/1FAIpQLScQlwi7hkmU9fp7aGSOLfUXPIvQmADduVyPQvVC5PKhcbFyDQ/viewform?usp=header"
             target="_blank"
             rel="noreferrer"
+            className="block w-full"
           >
-            <button className="bg-yellow-600 hover:bg-green-900 text-white px-6 py-3 rounded-sm font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-auto">
+            <button className="w-full bg-yellow-600 hover:bg-green-900 text-white px-6 py-3 rounded-sm font-semibold shadow-lg transition hover:scale-105 hover:shadow-xl">
               Join Today
             </button>
           </a>

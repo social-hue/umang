@@ -63,21 +63,21 @@ export default function Testimonial() {
     return () => clearInterval(interval);
   }, [visible]);
 
-  const goTo = (index) => setCurrent(index);
-  const maxIndex = Math.max(0, testimonials.length - visible);
-  const totalDots = maxIndex + 1;
+  // const goTo = (index) => setCurrent(index);
+  // const maxIndex = Math.max(0, testimonials.length - visible);
+  // const totalDots = maxIndex + 1;
 
   if (!isClient) {
     return null; // prevent hydration mismatch
   }
 
   return (
-    <section className="py-12 sm:py-16 bg-gray-100">
+    <section className="py-12 md:py-14 bg-gray-100">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-        <h4 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
+        <h4 className="text-3xl md:text-4xl font-bold text-zinc-800 mb-3">
           Check what our Customers are Saying
         </h4>
-        <p className="text-lg text-zinc-800 max-w-2xl mx-auto mb-6 md:mb-10">
+        <p className="text-md text-zinc-800 max-w-2xl mx-auto mb-6 md:mb-10">
           You can rely on our amazing features list and our customer services
           will be a great experience for you without doubt.
         </p>
@@ -100,8 +100,8 @@ export default function Testimonial() {
                   width: `${100 / visible}%`,
                 }}
               >
-                <div className="bg-white shadow-lg rounded-lg p-4 sm:p-6 md:p-8 flex flex-col justify-between h-full">
-                  <p className="text-gray-600 mb-6 leading-relaxed text-lg md:text-lg flex-grow">
+                <div className="bg-white shadow-lg rounded-lg p-4 flex flex-col justify-between h-full">
+                  <p className="text-gray-600 mb-5 leading-relaxed text-md flex-grow">
                     {t.text}
                   </p>
                   <div className="flex items-center">
