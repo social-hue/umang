@@ -1,222 +1,133 @@
 "use client";
-import { facilities } from "@/app/StaticData/Living";
-import { motion } from "framer-motion";
-import React, { useState, useEffect, useMemo } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+
 import Image from "next/image";
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import { facilities } from "@/app/StaticData/Living";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
-const fadeIn = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-};
-
-export default function Living() {
-  const [startIndex, setStartIndex] = useState(0);
-  const [visibleCount, setVisibleCount] = useState(4);
-  const [isMobile, setIsMobile] = useState(false);
-
-  const totalCount = facilities.length;
-
-  // ✅ Responsive visible count
+export default function FacilitiesSection() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [cardsPerPage, setCardsPerPage] = useState(4);
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, margin: "-50px" });
+  // Dynamically adjust visible cards based on screen width
   useEffect(() => {
-    const updateVisible = () => {
-      const mobile = window.innerWidth < 640;
-      setIsMobile(mobile);
-      if (mobile) setVisibleCount(1);
-      else if (window.innerWidth < 1024) setVisibleCount(2);
-      else if (window.innerWidth < 1280) setVisibleCount(3);
-      else setVisibleCount(4);
+    const updateCardsPerPage = () => {
+      if (window.innerWidth < 640) setCardsPerPage(1);
+      else if (window.innerWidth < 1024) setCardsPerPage(2);
+      else if (window.innerWidth < 1280) setCardsPerPage(3);
+      else setCardsPerPage(4);
     };
-
-    updateVisible();
-    window.addEventListener("resize", updateVisible);
-    return () => window.removeEventListener("resize", updateVisible);
+    updateCardsPerPage();
+    window.addEventListener("resize", updateCardsPerPage);
+    return () => window.removeEventListener("resize", updateCardsPerPage);
   }, []);
 
-  const maxStartIndex = Math.max(0, totalCount - visibleCount);
-  const handlePrev = () => setStartIndex((prev) => Math.max(0, prev - 1));
-  const handleNext = () => setStartIndex((prev) => Math.min(maxStartIndex, prev + 1));
+  const total = facilities.length;
 
-  // realistic sizes string for your layout
-  const sizes = useMemo(
-    () =>
-      "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw",
-    []
-  );
+  const next = () => {
+    setCurrentIndex((prev) =>
+      prev + cardsPerPage >= total ? 0 : prev + cardsPerPage
+    );
+  };
 
-  // helper to know if item i is visible in current frame (desktop carousel path)
-  const isIndexVisible = (i) => i >= startIndex && i < startIndex + visibleCount;
+  const prev = () => {
+    setCurrentIndex((prev) =>
+      prev - cardsPerPage < 0 ? total - cardsPerPage : prev - cardsPerPage
+    );
+  };
 
-  // choose ONE image to be priority: the first visible card
-  const priorityIndex = startIndex;
+  const visible = facilities.slice(currentIndex, currentIndex + cardsPerPage);
+
+  // If wrapping is needed (like infinite loop effect)
+  const displayedCards =
+    visible.length < cardsPerPage
+      ? [...visible, ...facilities.slice(0, cardsPerPage - visible.length)]
+      : visible;
 
   return (
-    <section className="w-full relative overflow-hidden py-6 2xl:py-12 md:py-10 lg:py-10 bg-white">
-      <div className="main_width relative z-10">
-        {/* Heading */}
-        <motion.div
-          variants={fadeIn}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="text-center mb-10 px-4"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 mb-4 md:mb-6 lg:mb-6">
-            What does Umang Offer ?
-          </h2>
-          <p className="text-lg md:text-lg lg:text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-light">
-            Umang Living offers<span className="font-semibold"> India's largest </span>comprehensive ecosystem for modern senior living.
-            With townships in 75+ cities, lifestyle experiences, healthcare and curated travel,
-            we are your partner for a secure and enriching lifestyle.
-          </p>
-        </motion.div>
-
-        {/* Cards */}
-        <div className="flex items-center justify-center">
-          {isMobile ? (
-            // ✅ Mobile: simple list
-            <div className="flex-1 max-w-6xl w-full px-4">
-              {facilities.map((item, i) => {
-                const isPriority = i === 0; // first card on mobile is above the fold
-                return (
-                  <motion.div
-                    key={item.id}
-                    variants={fadeIn}
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true }}
-                    className="w-full mb-4"
-                  >
-                    <div className="bg-white rounded-lg overflow-hidden transition-all duration-500 border border-gray-200 h-full flex flex-col group">
-                      <div className="relative h-40 overflow-hidden">
-                        <Image
-                          src={item.icon}
-                          alt={item.title}
-                          fill
-                          sizes={sizes}
-                          priority={isPriority}
-                          loading={isPriority ? "eager" : "lazy"}
-                          fetchPriority={isPriority ? "high" : "auto"}
-                          decoding="async"
-                          className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                      </div>
-                      <div className="p-4 flex-1 flex flex-col">
-                        <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-1">
-                          {item.title}
-                        </h3>
-                        <p className="text-gray-600 text-lg leading-relaxed">
-                          {item.tagline}
-                        </p>
-                      </div>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
-          ) : (
-            <>
-              {/* Prev Button */}
-              <button
-                onClick={handlePrev}
-                disabled={startIndex === 0 || totalCount <= visibleCount}
-                className="hidden sm:flex p-3 rounded-full bg-white text-gray-700 shadow-lg hover:bg-gray-50 disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-300 hover:scale-105 mr-3 sm:mr-6"
-                aria-label="Previous"
-              >
-                <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
-              </button>
-
-              {/* Track */}
-              <div className="flex overflow-hidden flex-1 max-w-6xl">
-                <div
-                  className="flex transition-transform duration-500 ease-in-out will-change-transform"
-                  style={{
-                    transform: `translateX(-${startIndex * (100 / visibleCount)}%)`,
-                    width: `${(totalCount * 100) / visibleCount}%`,
-                  }}
-                >
-                  {facilities.map((item, i) => {
-                    const visible = isIndexVisible(i);
-                    const isPriority = i === priorityIndex; // only first visible
-                    return (
-                      <motion.div
-                        key={item.id}
-                        variants={fadeIn}
-                        initial="hidden"
-                        whileInView="show"
-                        viewport={{ once: true }}
-                        className="flex-none px-2 sm:px-3"
-                        style={{ width: `${100 / visibleCount}%` }}
-                      >
-                        <div className="bg-white rounded-lg overflow-hidden transition-all duration-500 border border-gray-200 h-full flex flex-col group">
-                          <div className="relative h-32 md:h-40 overflow-hidden">
-                            <Image
-                              src={item.icon}
-                              alt={item.title}
-                              fill
-                              sizes={sizes}
-                              priority={isPriority}
-                              loading={visible ? "eager" : "lazy"}
-                              fetchPriority={visible ? "high" : "auto"}
-                              decoding="async"
-                              className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                          </div>
-                          <div className="p-4 flex-1 flex flex-col">
-                            <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 line-clamp-1">
-                              {item.title}
-                            </h3>
-                            <p className="text-gray-600 text-md leading-relaxed line-clamp-3">
-                              {item.tagline}
-                            </p>
-                          </div>
-                        </div>
-                      </motion.div>
-                    );
-                  })}
-                </div>
-              </div>
-
-              {/* Next Button */}
-              <button
-                onClick={handleNext}
-                disabled={startIndex >= maxStartIndex || totalCount <= visibleCount}
-                className="hidden sm:flex p-3 rounded-full bg-white text-gray-700 shadow-lg hover:bg-gray-50 disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-300 hover:scale-105 ml-3 sm:ml-6"
-                aria-label="Next"
-              >
-                <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
-              </button>
-            </>
-          )}
-        </div>
-
-        {/* CTA Buttons */}
-        <motion.div
-          variants={fadeIn}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4 px-4"
-        >
-          <a
-            className="w-full sm:w-auto"
-            href="https://docs.google.com/forms/d/e/1FAIpQLScQlwi7hkmU9fp7aGSOLfUXPIvQmADduVyPQvVC5PKhcbFyDQ/viewform?usp=header"
-            target="_blank"
-          >
-            <button className="bg_green hover:bg-green-900 text-white px-6 py-3 rounded-sm font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-auto">
-              Join Free Membership
-            </button>
-          </a>
-
-          <a href="tel:18002028704" className="w-full sm:w-auto">
-            <button className="bg-red-800 hover:bg-orange-800 text-white px-6 py-3 rounded-sm font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-auto">
-              Contact Us
-            </button>
-          </a>
-        </motion.div>
+    <motion.section 
+    ref={sectionRef}
+    initial={{ opacity: 0, y: 20 }}
+    animate={isInView ? { opacity: 1, y: 0 } : {}}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+    className="px-4 md:px-8 relative w-full flex flex-col items-center py-6 md:py-12 bg-white overflow-hidden">
+      <div className="max-w-4xl text-center mb-8 md:mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold text-zinc-800 mb-4">
+          What does <span className="text-teal-700">Umang</span> Offer?
+        </h2>
+        <p className="text-zinc-700 text-md leading-relaxed max-w-3xl mx-auto">
+          Umang Living offers India&apos;s largest comprehensive ecosystem for modern senior living.
+          With townships in 75+ cities, lifestyle experiences, healthcare, and curated travel,
+          we are your partner for a secure and enriching lifestyle.
+        </p>
       </div>
-    </section>
+      <div className="flex justify-between items-center w-[90%] max-w-7xl mb-3">
+        <h2 className="text-3xl font-bold text-zinc-800">
+          Our Facilities
+        </h2>
+        <div className="flex gap-3">
+          <button
+            onClick={prev}
+            className="p-2 rounded-full border cursor-pointer border-zinc-300 hover:bg-zinc-100 transition"
+          >
+            <FaChevronLeft />
+          </button>
+          <button
+            onClick={next}
+            className="p-2 rounded-full border cursor-pointer border-zinc-300 hover:bg-zinc-100 transition"
+          >
+            <FaChevronRight />
+          </button>
+        </div>
+      </div>
+
+      <div className="relative w-[90%] max-w-7xl flex justify-center">
+        <div
+          className={`grid gap-6 w-full`}
+          style={{
+            gridTemplateColumns: `repeat(${cardsPerPage}, minmax(0, 1fr))`,
+            transition: "all 0.3s ease",
+          }}
+        >
+          {displayedCards.map((item) => (
+            <motion.div
+            key={item.id}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: item.id * 0.05 }} 
+            className="flex flex-col bg-white border border-zinc-200 rounded-sm shadow-sm hover:shadow-md cursor-pointer transition-shadow overflow-hidden"
+>
+            <Link
+              key={item.id}
+              href={item.link}
+            >
+              <div className="relative w-full h-46">
+                <Image
+                  src={item.icon}
+                  alt={item.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="flex flex-col p-4 flex-grow">
+                <h3
+                  className={`text-lg font-semibold mb-1 ${item.accent}`}
+                >
+                  {item.title}
+                </h3>
+                <p className="text-zinc-600 text-sm">
+                  {item.tagline}
+                </p>
+              </div>
+            </Link>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </motion.section>
   );
 }

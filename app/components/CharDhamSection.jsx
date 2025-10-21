@@ -211,7 +211,7 @@ export default function CharDhamSection() {
     <section className="text-zinc-800 overflow-hidden">
       {/* Heading */}
       <div className="text-center mb-10">
-        <h2 className="text-4xl md:text-5xl font-bold text-zinc-800 mb-3">
+        <h2 className="text-3xl md:text-4xl font-bold text-zinc-800 mb-3">
           Discover the many shades of India
         </h2>
         <p className="max-w-2xl mx-auto text-lg text-zinc-600">
@@ -242,22 +242,22 @@ export default function CharDhamSection() {
           </div>
         ))}
       </motion.div>
-      <div className="mb-8 text-center">
-        <h2 className="text-zinc-800 text-4xl md:text-5xl font-bold mb-3">
+      <div className="mb-4 text-center">
+        <h2 className="text-zinc-800 text-3xl md:text-4xl font-bold mb-3">
           Tailored Journeys for Timeless Souls
         </h2>
         <p className="max-w-3xl mx-auto text-lg text-zinc-600">
           Discover journeys crafted around your comfort, interests, and dreams. Share your preferences, and we&apos;ll design a personalized travel experience made just for you.
         </p>
       </div>
-      <div className="py-8 md:mb-8 md:py-10 grid md:grid-cols-[40%_1fr] lg:grid-cols-[45%_1fr] xl:grids-cols-[50%_1fr] gap-8 md:gap-4">
+      <div className="py-8 md:mb-8 md:py-12 grid md:grid-cols-[40%_1fr] lg:grid-cols-[45%_1fr] xl:grids-cols-[50%_1fr] gap-8 md:gap-2">
         <div className="flex items-center justify-center">
           <img src="/map.png" alt="map" loading="lazy" decoding="async" width={340} height={420} />
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col justify-center md:justify-start">
           <div className="bg-white border-none w-[90%] max-w-lg p-6 relative rounded-sm text-zinc-800">
             {/* Heading */}
-            <h3 className="text-2xl font-semibold text-zinc-800 mb-4 text-center">
+            <h3 className="text-3xl md:text-2xl font-semibold text-zinc-800 mb-4 text-center">
               Plan Your Trip !
             </h3>
             {/* Form */}
@@ -299,10 +299,10 @@ export default function CharDhamSection() {
 
               {/* Buttons */}
               <div className="flex flex-col sm:flex-row gap-3">
-                <select
+                <select defaultValue="Select Destination"
                   className="flex-1 border border-zinc-300 rounded-sm px-2 py-2 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-600 bg-white cursor-pointer"                  
                 >
-                 <option value="" disabled selected>
+                 <option value="Select Destination" disabled>
           Select Destination
         </option>
                   <option value="Char Dham">Char Dham</option>
@@ -324,8 +324,8 @@ export default function CharDhamSection() {
         </div>
       </div>
       {/* Packages */}
-      <div className="md:mb-10 text-center">
-        <h2 className="text-zinc-800 text-4xl md:text-5xl font-bold">
+      <div className="mb-6 md:mb-10 text-center">
+        <h2 className="text-zinc-800 text-3xl md:text-4xl font-bold">
           Explore Our Pre-defined Packages <ArrowRight className="inline-block" size={28} />
         </h2>
       </div>
@@ -335,7 +335,7 @@ export default function CharDhamSection() {
         variants={fadeUp}
         initial="hidden"
         animate={pkgInView ? "visible" : "hidden"}
-        className="max-w-6xl mx-auto space-y-9 px-6 md:px-0"
+        className="max-w-6xl mx-auto space-y-9"
       >
         {tourPackages.map((pkg, index) => (
           <div
@@ -351,11 +351,11 @@ export default function CharDhamSection() {
 
             <div className="p-4 flex flex-col justify-between">
               <div>
-                <h3 className="text-2xl font-semibold text-zinc-800 mb-2">{pkg.name}</h3>
+                <h3 className="text-xl font-semibold text-zinc-800 mb-2">{pkg.name}</h3>
                 <p className="font-medium text-zinc-700 mb-2">{pkg.duration}</p>
-                <p className="text-lg text-zinc-600 mb-3">{pkg.route}</p>
+                <p className="text-md text-zinc-600 mb-3">{pkg.route}</p>
                 {/* <p className="text-lg font-bold text-zinc-800 mb-3">{pkg.price}</p> */}
-                <div className="text-lg">
+                <div className="text-md">
                   <h4 className="font-semibold text-zinc-800 text-md mb-2">Package Inclusions:</h4>
                   <ul className="list-disc list-inside space-y-0.5 text-zinc-600 text-md">
                     {pkg.inclusions.map((inc, i) => (
@@ -388,20 +388,20 @@ export default function CharDhamSection() {
         variants={fadeUp}
         initial="hidden"
         animate={featuresInView ? "visible" : "hidden"}
-        className="md:mt-20"
+        className="mt-12 md:mt-20"
       >
-        <h2 className="text-zinc-800 text-4xl md:text-5xl mb-7 text-center font-bold">
+        <h2 className="text-zinc-800 text-3xl md:text-4xl mb-6 text-center font-bold">
           Why Choose Us?
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 max-w-7xl mx-auto px-6 md:px-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-8 max-w-7xl mx-auto px-6 md:px-10">
           {features.map((f, i) => (
             <div
               key={i}
-              className="flex flex-col items-center text-center p-6 bg-white hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              className="flex flex-col items-center text-center p-6 bg-white"
             >
               <div className="mb-4">{f.icon}</div>
-              <h3 className="text-2xl font-semibold text-zinc-800 mb-2">{f.title}</h3>
-              <p className="text-lg text-zinc-600 leading-relaxed">{f.desc}</p>
+              <h3 className="text-[20px] font-semibold text-zinc-800 mb-2">{f.title}</h3>
+              <p className="text-md text-zinc-600 leading-relaxed">{f.desc}</p>
             </div>
           ))}
         </div>

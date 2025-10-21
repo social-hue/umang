@@ -1,12 +1,8 @@
-// import Timeline from "../components/about/Timeline";
 import Banner from "../components/Banner";
 import Community from "../components/Community";
 import Footer from "../components/Footer";
-// import Header from "../components/Header";
-// import Aboutus from "../components/project/about";
 import Map from "../components/project/map";
 import PropertySlider from "../components/PropertySlider";
-// import BecomeMemberForm from "../helpers/BecomeMemberForm";
 import { seoData } from "../lib/seoMeta";
 import { data } from "../StaticData/Property";
 
@@ -49,17 +45,9 @@ export const generateMetadata = () => {
 export default function Projects() {
   return (
     <>
-      {/* <div className="py-8 ">
-        <Header />
-      </div> */}
       <Banner title={"Projects"} bgImage={"/something3.jpg"} />
       <div className="relative overflow-hidden ">
-        <div className="absolute -top-[150px] -left-[180px] -z-9">
-          <img src="/rangoli.png" alt="rangoli" className="w-[70%]" loading="lazy" decoding="async" />
-        </div>
-        {/* <Aboutus /> */}
         <Map />
-        {/* <BecomeMemberForm /> */}
         <div className="py-6">
           <PropertySlider listings={data} />
         </div>

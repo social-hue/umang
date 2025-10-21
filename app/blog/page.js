@@ -1,9 +1,6 @@
 import Banner from "../components/Banner";
-import Aboutus from "../components/blog/about";
 import { BlogGrid } from "../components/blog/BlogGrid";
-// import Community from "../components/Community";
 import Footer from "../components/Footer";
-// import Header from "../components/Header";
 import { seoData } from "../lib/seoMeta";
 
 export const generateMetadata = () => {
@@ -46,17 +43,9 @@ export const generateMetadata = () => {
 export default function Blog() {
   return (
     <>
-      {/* <div className="py-8 border">
-        <Header />
-      </div> */}
       <Banner title={" Blog"} bgImage={"/something4.jpg"}  />
       <div className=" relative overflow-hidden ">
-        <div className="absolute -top-[150px] -left-[180px] -z-9">
-          <img src="/rangoli.png" alt="rangoli" loading="lazy" decoding="async" className="w-[70%]" />
-        </div>
-        {/* <Aboutus /> */}
         <BlogGrid />
-        {/* <Community /> */}
       </div>
       <Footer />
     </>

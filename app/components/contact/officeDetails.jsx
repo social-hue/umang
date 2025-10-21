@@ -20,9 +20,9 @@ export default function ContactPage() {
         whileInView="visible"
         variants={fadeUp}
         viewport={{ once: true, amount: 0.3 }}
-        className="text-center mb-12"
+        className="text-center mb-6 md:mb-10"
       >
-        <h1 className="text-4xl md:text-5xl font-bold text-teal-700 mb-3">
+        <h1 className="text-3xl md:text-4xl font-bold text-zinc-800 mb-2">
           Get in touch with us
         </h1>
         <p className="text-lg text-zinc-800 max-w-2xl mx-auto">
@@ -62,14 +62,14 @@ export default function ContactPage() {
           className=" lg:col-span-2 flex flex-col justify-center bg-white p-4 md:p-8"
         >
           {/* Email */}
-          <div className="mb-8">
+          <div className="mb-6">
             <div className="flex items-center gap-3 mb-2">
               <Mail className="text-teal-700 w-6 h-6 stroke-[2.5]" />
-              <h3 className="text-2xl font-semibold text-zinc-800">
+              <h3 className="text-xl font-semibold text-zinc-800">
                 Email Us
               </h3>
             </div>
-            <p className="text-xl text-zinc-800 ml-9">
+            <p className="text-lg text-zinc-800 ml-9">
               <a
                 href="mailto:connect@umangliving.com"
                 className="hover:text-teal-900 text-teal-700"
@@ -80,14 +80,14 @@ export default function ContactPage() {
           </div>
 
           {/* Office Address */}
-          <div className="mb-8">
+          <div className="mb-6">
             <div className="flex items-center gap-3 mb-2">
               <MapPin className="text-teal-700 w-6 h-6 stroke-[2.5]" />
-              <h3 className="text-2xl font-semibold text-zinc-800">
+              <h3 className="text-xl font-semibold text-zinc-800">
                 Our Office
               </h3>
             </div>
-            <p className="text-xl text-zinc-800 ml-9 leading-relaxed">
+            <p className="text-lg text-zinc-800 ml-9 leading-relaxed">
               2319, Gold Wing, Wave One Tower, <br />
               Sector-18, Noida, UP-201301
             </p>
@@ -97,11 +97,11 @@ export default function ContactPage() {
           <div>
             <div className="flex items-center gap-3 mb-2">
               <Phone className="text-teal-700 w-6 h-6 stroke-[2.5]" />
-              <h3 className="text-2xl font-semibold text-zinc-800">
+              <h3 className="text-xl font-semibold text-zinc-800">
                 Call Us
               </h3>
             </div>
-            <p className="text-xl text-zinc-800 ml-9 leading-relaxed">
+            <p className="text-lg text-zinc-800 ml-9 leading-relaxed">
               <a href="tel:01205109189" className="text-teal-700 hover:text-teal-900">
                 0120-510-9189
               </a>

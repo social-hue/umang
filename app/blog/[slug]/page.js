@@ -78,13 +78,9 @@ export default async function Page({ params }) {
     <>
       <BlogBanner data={content} />
       <div className="relative overflow-hidden">
-        <div className="absolute -top-[150px] -left-[180px] -z-9">
-          <img src="/rangoli.png" alt="rangoli" loading="lazy" decoding="async" className="w-[70%]" />
-        </div>
-        <div className="py-10">
-          <div className="main_width">
+          <div className="py-12 main_width">
             <div
-              className="text-[#535353] lg:text-[22px] md:text-[18px]"
+              className="text-[#535353] text-[18px]"
               dangerouslySetInnerHTML={{ __html: content?.content1 || "" }}
             ></div>
             <div className="grid grid-cols-[20px_1fr] gap-4 py-6">
@@ -93,22 +89,21 @@ export default async function Page({ params }) {
               </div>
               <div>
                 <div
-                  className="text-[#B41F56] py-4 xl:text-[50px] lg:text-[40px] lg:leading-[50px] md:text-[35px] md:leading-[45px] text-[30px] font-semibold xl:leading-[60px] uppercase"
+                  className="text-[#B41F56] lg:text-[30px] text-[26px] font-semibold"
                   dangerouslySetInnerHTML={{ __html: content?.heading || "" }}
                 ></div>
               </div>
             </div>
             <div
-              className="text-[#535353] lg:text-[22px] md:text-[18px]"
+              className="text-[#535353] text-[18px]"
               dangerouslySetInnerHTML={{ __html: content?.content2 || "" }}
             ></div>
           </div>
-        </div>
-        <div className="">
+        <div className="mb-0">
           <div className="main_width pt-4">
-            <h4 className="lg:text-[40px] md:text-[35px] text-[30px] lg:leading-[60px] font-light ">
+            <h4 className="text-[28px] md:text-[36px] font-semibold">
               <span className="green">You May</span>
-              <span className="gradient_text"> Also Like</span>
+              <span className="gradient_text"> Also Like :</span>
             </h4>
           </div>
           <BlogGrid limit={3} />

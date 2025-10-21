@@ -1,4 +1,3 @@
-// // import Image from "next/image";
 // import Banner from "../../components/Banner";
 // import Community from "../../components/Community";
 // import Footer from "../../components/Footer";
@@ -47,9 +46,6 @@
 //     <>
 //       <Banner title={"Travel"} bgImage={"/travel-page1.jpg"} />
 //       <div className="main_width py-8 relative overflow-hidden">
-//         <div className="absolute -top-[150px] -left-[180px] -z-9">
-//           <img src="/rangoli.png" alt="rangoli" className="w-[70%]" loading="lazy" decoding="async" />
-//         </div>
 //         <CharDhamSection />
 //       </div>
 //       <Community />

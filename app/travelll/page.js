@@ -1,10 +1,11 @@
-import Banner from "../components/Banner";
-import Footer from "../components/Footer";
-import PartnerPage from "../components/partner/about";
-import { seoData } from "../lib/seoMeta";
+import Banner from "../../components/Banner";
+import Community from "../../components/Community";
+import Footer from "../../components/Footer";
+import { seoData } from "../../lib/seoMeta";
+import CharDhamSection from "@/app/components/CharDhamSection";
 
 export const generateMetadata = () => {
-  const meta = seoData.partners;
+  const meta = seoData.travel;
 
   return {
     title: meta.title,
@@ -40,13 +41,14 @@ export const generateMetadata = () => {
   };
 };
 
-export default function Partners() {
+export default function Travel() {
   return (
     <>
-      <Banner title={"Partner with Us"} bgImage={"/handshake.jpg"} />
-      <div className="relative overflow-hidden">
-        <PartnerPage />
+      <Banner title={"Travel"} bgImage={"/travel-page1.jpg"} />
+      <div className="main_width py-8 relative overflow-hidden">
+        <CharDhamSection />
       </div>
+      <Community />
       <Footer />
     </>
   );

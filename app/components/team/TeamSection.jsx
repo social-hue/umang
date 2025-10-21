@@ -41,7 +41,7 @@ export default function TeamSection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="text-center text-teal-700 text-4xl md:text-5xl leading-light font-semibold mb-4"
+        className="text-center text-teal-700 text-4xl leading-light font-semibold mb-3"
       >
         Meet our team
       </motion.h2>
@@ -51,9 +51,9 @@ export default function TeamSection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
         viewport={{ once: true }}
-        className="text-center text-lg text-[#667085] max-w-xl mx-12 md:mx-auto mb-6 font-semibold"
+        className="text-center text-lg text-[#667085] max-w-xl mx-12 md:mx-auto mb-6"
       >
-        Our philosophy is simple — hire a team of diverse, passionate people and foster a culture
+        Our philosophy is simple - hire a team of diverse, passionate people and foster a culture
         that empowers you to do your best work.
       </motion.p>
 
@@ -84,8 +84,8 @@ export default function TeamSection() {
               className="w-30 h-30 object-cover rounded-full mx-auto mb-3"
             />
             <span className="block text-lg text-zinc-800 font-semibold">{member.name}</span>
-            <span className="block text-zinc-800 font-medium mb-2">{member.title}</span>
-            <p className="text-md text-zinc-800 max-w-[90%] mx-auto mb-2">{member.desc}</p>
+            <span className="block text-md text-zinc-800 font-medium mb-2">{member.title}</span>
+            <p className="text-sm text-zinc-800 max-w-[90%] mx-auto mb-2">{member.desc}</p>
           </motion.a>
         ))}
       </div>
