@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { navItems } from "../lib/nav-items";
-import { FaLocationDot, FaYoutube } from "react-icons/fa6";
+import { FaLocationDot, FaYoutube, FaXTwitter } from "react-icons/fa6";
 import ScrollToTopButton from "../helpers/ScrollToTopButton";
 import {
   FaFacebookF,
@@ -195,6 +195,15 @@ const Footer = () => {
                   className="p-2 rounded-full bg-[#4F5A68] text-white hover:bg-[#00A79C] transition"
                 >
                   <FaYoutube className="w-4 h-4" />
+                </a>
+                <a
+                  aria-label="YouTube"
+                  href="https://x.com/MarketingU82252"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-full bg-[#4F5A68] text-white hover:bg-[#00A79C] transition"
+                >
+                  <FaXTwitter className="w-4 h-4" />
                 </a>
               </div>
             </div>

@@ -63,5 +63,14 @@ export const facilities = [
     link: "/services/general-consultation"
 
   },
+  {
+    id: 8,
+    icon: "/services/Financial.jpg",
+    title: "Financial Consulting",
+    tagline: "Empowering seniors with expert financial guidance for a secure, independent and worry-free future",
+    accent: "text-zinc-800",
+    link: "/services/financial-consulting"
+
+  },
   
 ];

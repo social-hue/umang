@@ -2,9 +2,9 @@ import {
   Poppins,
   Roboto,
   Inter,
-  Lato,
   Montserrat,
   Outfit,
+  Lato
   // Big_Shoulders_Display,
   // Barlow_Condensed,
 } from "next/font/google";
@@ -13,12 +13,18 @@ import Header from "./components/Header";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import FloatingCTA from "./components/floatingButton/floatingButton";
-import PromoCard from "./components/popup";
+// import PromoCard from "./components/popup";
 
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
   variable: "--font-poppins",
+  display: "swap"
+});
+const lato = Lato({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "700", "900"],
+  variable: "--font-lato",
   display: "swap"
 });
 const roboto = Roboto({
@@ -169,7 +175,7 @@ export default function RootLayout({ children }) {
           }}
         />
         <FloatingCTA />
-        <PromoCard />
+        {/* <PromoCard /> */}
       </body>
     </html>
   );
