@@ -261,7 +261,7 @@ export default function CharDhamSection() {
               Plan Your Trip !
             </h3>
             {/* Form */}
-            <form className="space-y-4">
+            <form className="space-y-4 text-sm">
               {/* Row 1: Name + Contact */}
               <div className="flex flex-col sm:flex-row gap-3">
                 <input
