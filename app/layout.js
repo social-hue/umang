@@ -158,7 +158,7 @@ export default function RootLayout({ children }) {
       </head>
       <body
         className={[
-          roboto.variable,
+          poppins.variable,
           "antialiased",
         ].join(" ")}
       >

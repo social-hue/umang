@@ -279,14 +279,8 @@ export default function CharDhamSection() {
               {/* Row 2: Date + Family Members */}
               <div className="flex flex-col sm:flex-row gap-3">
                 <input
-                  type="text"
-                  placeholder="Preferred Date"
-                  onFocus={(e) => e.target.type = 'date'}
-                  onBlur={(e) => {
-                    if (!e.target.value) {
-                      e.target.type = 'text';
-                    }
-                  }}
+                  type="date"
+                  data-placeholder="Preferred Date"
                   className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-600 min-w-0"
                   style={{
                     WebkitAppearance: 'none',
