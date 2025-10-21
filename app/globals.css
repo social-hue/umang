@@ -116,6 +116,40 @@ body {
   backdrop-filter: blur(5.434091091156006px);
 }
 
+/* Normalize date input appearance on mobile */
+input[type="date"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  min-width: 0;
+  width: 100%;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* Prevent input fields from expanding */
+.flex-1 {
+  min-width: 0;
+}
+
+/* Show a pseudo-placeholder using CSS */
+input[type="date"]:not(:focus):not(:valid) {
+  color: transparent;
+}
+
+input[type="date"]:not(:focus):not(:valid)::before {
+  content: attr(data-placeholder);
+  color: #9ca3af; /* zinc-400 color */
+  width: 100%;
+}
+
+/* Alternative: use :invalid selector */
+input[type="date"]:invalid {
+  color: #9ca3af;
+}
 /* .swiper-pagination-bullet {
   width: 24px !important;
   height: 12px !important;

@@ -47,10 +47,10 @@ export default function Header() {
 
   return (
     <header
-      className={`w-full z-[1000] transition-all duration-500 ease-in-out ${
+      className={`w-full z-[1000] transition-all duration-100 ease-in-out ${
         isSticky
-          ? "fixed top-0 left-0 right-0 bg-white shadow-md py-2"
-          : "relative my-3"
+          ? "fixed top-0 left-0 right-0 bg-white shadow-md py-3"
+          : "relative py-3"
       }`}
     >
       <div className="max-w-[1300px] mx-auto px-4 sm:px-6 flex items-center justify-between">
@@ -172,6 +172,18 @@ export default function Header() {
                             }`}
                           >
                             Legal Consultation
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="/services/financial-consulting"
+                            className={`block px-4 py-2 hover:bg-gray-100 transition ${
+                              pathname === "/services/legal-consultation"
+                                ? "text-[#E7216A]"
+                                : "text-[#0B0B0B]"
+                            }`}
+                          >
+                            Financial Consulting
                           </Link>
                         </li>
                       </ul>
@@ -364,6 +376,17 @@ export default function Header() {
                               }`}
                             >
                               Legal Consultation
+                            </Link>
+                            <Link
+                              href="/services/legal-consultation"
+                              onClick={() => setOpen(false)}
+                              className={`block text-lg py-1 ${
+                                pathname === "/services/financial-consulting"
+                                  ? "text-[#FCEF44]"
+                                  : "text-white hover:text-[#E7216A]"
+                              }`}
+                            >
+                              Financial Consulting
                             </Link>
                           </div>
                         )}
