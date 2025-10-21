@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Founder() {
   return (
-    <section className=" bg-white main_width md:py-10 overflow-hidden">
+    <section className=" bg-white main_width md:py-4 overflow-hidden">
       <div className="container mx-auto flex flex-col xl:flex-row md:flex-row
  items-center md:items-start gap-8">
         {/* Left Side - Responsive YouTube Embed */}

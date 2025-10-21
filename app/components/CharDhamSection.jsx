@@ -68,7 +68,7 @@ export default function CharDhamSection() {
     {
       name: "Kerala",
       image: "/travel/kerala.jpeg",
-      desc: "Sail through serene backwaters and palm-lined horizons where time flows slower",
+      desc: "Sail through serene back waters, palm-lined horizons where time flows slower",
     },
     {
       name: "Goa",
@@ -210,7 +210,7 @@ export default function CharDhamSection() {
   return (
     <section className="text-zinc-800 overflow-hidden">
       {/* Heading */}
-      <div className="text-center mb-10">
+      <div className="text-center mb-8">
         <h2 className="text-3xl md:text-4xl font-bold text-zinc-800 mb-3">
           Discover the many shades of India
         </h2>
@@ -236,13 +236,13 @@ export default function CharDhamSection() {
               <Image src={dham.image} alt={dham.name} fill className="object-cover transform transition-transform duration-500 ease-in-out hover:scale-105" />
             </div>
             <div className="p-4">
-              <h3 className="text-xl font-semibold text-zinc-800 mb-1">{dham.name}</h3>
+              <h3 className="text-lg font-semibold text-zinc-800 mb-1">{dham.name}</h3>
               <p className="text-md text-zinc-600">{dham.desc}</p>
             </div>
           </div>
         ))}
       </motion.div>
-      <div className="mb-4 text-center">
+      <div className="mb-3 text-center">
         <h2 className="text-zinc-800 text-3xl md:text-4xl font-bold mb-3">
           Tailored Journeys for Timeless Souls
         </h2>
@@ -252,9 +252,9 @@ export default function CharDhamSection() {
       </div>
       <div className="py-8 md:mb-8 md:py-12 grid md:grid-cols-[40%_1fr] lg:grid-cols-[45%_1fr] xl:grids-cols-[50%_1fr] gap-8 md:gap-2">
         <div className="flex items-center justify-center">
-          <img src="/map.png" alt="map" loading="lazy" decoding="async" width={340} height={420} />
+          <img src="/mapp.png" alt="map" loading="lazy" decoding="async" width={340} height={420} />
         </div>
-        <div className="flex flex-col justify-center md:justify-start">
+        <div className="flex flex-col justify-center items-center md:justify-start md:items-start">
           <div className="bg-white border-none w-[90%] max-w-lg p-6 relative rounded-sm text-zinc-800">
             {/* Heading */}
             <h3 className="text-3xl md:text-2xl font-semibold text-zinc-800 mb-4 text-center">

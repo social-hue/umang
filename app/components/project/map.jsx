@@ -21,7 +21,7 @@ const Map = () => {
             while enjoying a vibrant, supportive environment. With studio, 1, 2
             and 3 BHK options, shared amenities, wellness programs, and
             pan-India mobility, Umang communities are a celebration of aging
-            with dignity, joy, and freedom—where every city feels like home.
+            with dignity, joy, and freedom - where every city feels like home.
           </p>
         </div>
         <div className="flex items-center justify-center">
