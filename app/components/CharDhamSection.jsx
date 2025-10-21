@@ -262,72 +262,78 @@ export default function CharDhamSection() {
             </h3>
             {/* Form */}
             <form className="space-y-4 text-md">
-  {/* Row 1: Name + Contact */}
-  <div className="flex flex-col sm:flex-row gap-3">
-    <input
-      type="text"
-      placeholder="Full Name"
-      className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-600"
-    />
-    <input
-      type="tel"
-      placeholder="Contact"
-      className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-600"
-    />
-  </div>
-  
-  {/* Row 2: Date + Family Members */}
-  <div className="flex flex-col sm:flex-row gap-3">
-    <input
-      type="date"
-      placeholder="Preferred Date"
-      className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-600 min-w-0"
-      style={{ 
-        WebkitAppearance: 'none',
-        MozAppearance: 'textfield'
-      }}
-    />
-    <input
-      type="number"
-      placeholder="Number of Travellers"
-      min="1"
-      className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-600"
-    />
-  </div>
-  
-  {/* Row 3: Description */}
-  <div className="flex flex-col gap-3">
-    <textarea
-      rows="3"
-      placeholder="Describe Your Tour"
-      className="w-full border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-600 resize-none"
-    ></textarea>
-  </div>
+              {/* Row 1: Name + Contact */}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-600"
+                />
+                <input
+                  type="tel"
+                  placeholder="Contact"
+                  className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-600"
+                />
+              </div>
 
-  {/* Buttons */}
-  <div className="flex flex-col sm:flex-row gap-3">
-    <select 
-      defaultValue="Select Destination"
-      className="flex-1 border border-zinc-300 rounded-sm px-2 py-2 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-600 bg-white cursor-pointer"                  
-    >
-      <option value="Select Destination" disabled>
-        Select Destination
-      </option>
-      <option value="Char Dham">Char Dham</option>
-      <option value="Goa">Goa</option>
-      <option value="Darjeeling">Darjeeling</option>
-      <option value="Kerala">Kerala</option>
-      <option value="Other">Other</option>
-    </select>
+              {/* Row 2: Date + Family Members */}
+              <div className="flex flex-col sm:flex-row gap-3">
+              <input
+  type="text"
+  placeholder="Preferred Date (DD/MM/YYYY)"
+  onFocus={(e) => e.target.type = 'date'}
+  onBlur={(e) => {
+    if (!e.target.value) {
+      e.target.type = 'text';
+    }
+  }}
+  className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-600 min-w-0"
+  style={{ 
+    WebkitAppearance: 'none',
+    MozAppearance: 'textfield'
+  }}
+/>
+                <input
+                  type="number"
+                  placeholder="Number of Travellers"
+                  min="1"
+                  className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-600"
+                />
+              </div>
 
-    <button
-      type="submit"
-      className="flex items-center justify-center gap-2 bg-orange-700 text-white px-8 py-2 rounded-sm shadow hover:bg-orange-800 transition whitespace-nowrap"
-    >
-      Send
-    </button>
-  </div>
-</form>
+              {/* Row 3: Description */}
+              <div className="flex flex-col gap-3">
+                <textarea
+                  rows="3"
+                  placeholder="Describe Your Tour"
+                  className="w-full border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-600 resize-none"
+                ></textarea>
+              </div>
+
+              {/* Buttons */}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <select
+                  defaultValue="Select Destination"
+                  className="flex-1 border border-zinc-300 rounded-sm px-2 py-2 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-600 bg-white cursor-pointer"
+                >
+                  <option value="Select Destination" disabled>
+                    Select Destination
+                  </option>
+                  <option value="Char Dham">Char Dham</option>
+                  <option value="Goa">Goa</option>
+                  <option value="Darjeeling">Darjeeling</option>
+                  <option value="Kerala">Kerala</option>
+                  <option value="Other">Other</option>
+                </select>
+
+                <button
+                  type="submit"
+                  className="flex items-center justify-center gap-2 bg-orange-700 text-white px-8 py-2 rounded-sm shadow hover:bg-orange-800 transition whitespace-nowrap"
+                >
+                  Send
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
