@@ -254,7 +254,7 @@ export default function CharDhamSection() {
         <div className="flex items-center justify-center">
           <img src="/mapp.png" alt="map" loading="lazy" decoding="async" width={340} height={420} />
         </div>
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col">
           <div className="bg-white border-none w-[92%] md:w-full max-w-lg p-6 relative rounded-sm text-zinc-800">
             {/* Heading */}
             <h3 className="text-3xl md:text-2xl font-semibold text-zinc-800 mb-4 text-center">
