@@ -7,45 +7,44 @@ export default function PromoCard() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    // Show popup immediately on mount (every load/refresh)
     setShow(true);
   }, []);
 
   const handleClose = () => setShow(false);
 
   if (!show) return null;
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm px-3 py-4 sm:px-6 sm:py-6">
-      <div className="relative">
-        <div className="relative">
-        {/* Popup card with image */}
-        <div className="bg-none rounded-lg overflow-visible relative">
-          <div className="relative flex items-center justify-center p-3 sm:p-4 md:p-6">
-            <Image
-              src="/pop-up.png"
-              alt="Promo"
-              width={800}
-              height={400}
-              priority
-              quality={100}
-              className="w-auto h-[420px] max-w-full object-contain"
-              style={{ height: '420px', width: 'auto' }}
-            />
-          </div>   
-          {/* Close button - positioned relative to the white card */}
-          <button
-            onClick={handleClose}
-            aria-label="Close"
-            className="absolute top-2 right-2 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition z-10"
-          >
-            <X className="w-5 h-5 text-zinc-700" />
-          </button>
-        </div>
+    <div className="z-[10000] fixed inset-0 flex items-center justify-center bg-black/40 backdrop-blur-sm px-3 py-4 sm:px-6 sm:py-6">
+      <div className="bg-none rounded-lg overflow-visible flex items-center justify-center">
+        {/* Image container */}
+        <div className="relative flex flex-col items-center justify-center">
+          <div className="flex items-center justify-center w-full mb-2">
+            {/* Close button — flex-aligned instead of absolute */}
+            <button
+              onClick={handleClose}
+              aria-label="Close"
+              className="cursor-pointer p-1.5 bg-white hover:bg-gray-200 rounded-full transition z-10"
+            >
+              <X className="w-7 h-7 md:w-6 md:h-6 text-zinc-800 stroke-2 hover:scale-110" />
+            </button>
+          </div>
+          <Image
+            src="/pop-up.png"
+            alt="Promo"
+            width={800}
+            height={400}
+            priority
+            quality={100}
+            className="w-auto h-[420px] max-w-full object-contain"
+            style={{ height: "420px", width: "auto" }}
+          />
         </div>
       </div>
     </div>
   );
 }
+
 
 
        {/* Button container */}
