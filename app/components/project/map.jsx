@@ -9,13 +9,13 @@ const Map = () => {
             <span className="green">Discover 75 Cities </span>
             <span className="gradient_text">Across the Map</span>
           </h1>
-          <p className="text-[#535353] lg:text-lg text-[18px] pt-4 ">
+          <p className="text-zinc-800 lg:text-lg text-[18px] pt-4 ">
             Umang Living is proud to introduce its upcoming senior living
             communities across 75 cities in India, designed exclusively for the
             55+ generation.
           </p>{" "}
           <br />
-          <p className="green lg:text-lg text-[18px]">
+          <p className="text-zinc-800 lg:text-lg text-[18px]">
             These thoughtfully planned townships offer a blend of comfort,
             companionship, and care - empowering seniors to live independently
             while enjoying a vibrant, supportive environment. With studio, 1, 2

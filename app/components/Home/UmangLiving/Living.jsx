@@ -59,7 +59,7 @@ export default function FacilitiesSection() {
         <h2 className="text-3xl md:text-4xl font-bold text-zinc-800 mb-4">
           What does <span className="text-teal-700">Umang</span> Offer?
         </h2>
-        <p className="text-zinc-700 text-md leading-relaxed max-w-3xl mx-auto">
+        <p className="text-zinc-700 text-lg leading-relaxed max-w-3xl mx-auto">
           Umang Living offers India&apos;s largest comprehensive ecosystem for modern senior living.
           With townships in 75+ cities, lifestyle experiences, healthcare, and curated travel,
           we are your partner for a secure and enriching lifestyle.
@@ -119,7 +119,7 @@ export default function FacilitiesSection() {
                 >
                   {item.title}
                 </h3>
-                <p className="text-zinc-600 text-sm">
+                <p className="text-zinc-600 text-md">
                   {item.tagline}
                 </p>
               </div>

@@ -18,10 +18,10 @@ const Community = () => {
         <div className="py-2"> 
           <div className="lg:text-[18px] text-[16px] text-white"> 
             <ul className="space-y-1"> 
-              <li><span>&#10004;</span> A safe and welcoming environment</li>
-              <li><span>&#10004;</span> Professional healthcare and wellness support</li>
-              <li><span>&#10004;</span> Transparent communication & personalized care plans</li>
-              <li><span>&#10004;</span> Activities that foster social connections</li>
+              <li><span className="text-white">&#10004;</span> A safe and welcoming environment</li>
+              <li><span className="text-white">&#10004;</span> Professional healthcare and wellness support</li>
+              <li><span className="text-white">&#10004;</span> Transparent communication & personalized care plans</li>
+              <li><span className="text-white">&#10004;</span> Activities that foster social connections</li>
             </ul> 
           </div>
           <div className="mt-4 ml-2">
