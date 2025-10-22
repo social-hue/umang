@@ -49,12 +49,12 @@ export default function FacilitiesSection() {
       : visible;
 
   return (
-    <motion.section 
-    ref={sectionRef}
-    initial={{ opacity: 0, y: 20 }}
-    animate={isInView ? { opacity: 1, y: 0 } : {}}
-    transition={{ duration: 0.8, ease: "easeOut" }}
-    className="px-4 md:px-8 relative w-full flex flex-col items-center py-6 md:py-12 bg-white overflow-hidden">
+    <motion.section
+      ref={sectionRef}
+      initial={{ opacity: 0, y: 20 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="px-4 md:px-8 relative w-full flex flex-col items-center py-6 md:py-12 bg-white overflow-hidden">
       <div className="max-w-4xl text-center mb-8 md:mb-6">
         <h2 className="text-3xl md:text-4xl font-bold text-zinc-800 mb-4">
           What does <span className="text-teal-700">Umang</span> Offer?
@@ -72,15 +72,15 @@ export default function FacilitiesSection() {
         <div className="flex gap-3">
           <button
             onClick={prev}
-            className="p-2 rounded-full border cursor-pointer border-zinc-300 hover:bg-zinc-100 transition"
+            className="p-2 rounded-full border cursor-pointer border-zinc-500 hover:bg-zinc-300 transition"
           >
-            <FaChevronLeft />
+            <FaChevronLeft className="text-zinc-500" />
           </button>
           <button
             onClick={next}
-            className="p-2 rounded-full border cursor-pointer border-zinc-300 hover:bg-zinc-100 transition"
+            className="p-2 rounded-full border cursor-pointer border-zinc-500 hover:bg-zinc-300 transition"
           >
-            <FaChevronRight />
+            <FaChevronRight className="text-zinc-500" />
           </button>
         </div>
       </div>
@@ -95,46 +95,55 @@ export default function FacilitiesSection() {
         >
           {displayedCards.map((item, index) => (
             <motion.div
-            key={`${currentIndex}-${index}-${item.id}`}
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: index * 0.05 }} 
-            className="flex flex-col bg-white border border-zinc-200 rounded-sm shadow-sm hover:shadow-md cursor-pointer transition-shadow overflow-hidden"
->
-            <Link
-              href={item.link}
+              key={`${currentIndex}-${index}-${item.id}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: index * 0.05 }}
+              className="flex flex-col bg-white border border-zinc-200 rounded-sm shadow-sm hover:shadow-md cursor-pointer transition-shadow overflow-hidden"
             >
-              <div className="relative w-full h-46">
-                <Image
-                  src={item.icon}
-                  alt={item.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="flex flex-col p-4 flex-grow">
-                <h3
-                  className={`text-lg font-semibold mb-1 ${item.accent}`}
-                >
-                  {item.title}
-                </h3>
-                <p className="text-zinc-600 text-md">
-                  {item.tagline}
-                </p>
-              </div>
-            </Link>
+              <Link
+                href={item.link}
+              >
+                <div className="relative w-full h-46">
+                  <Image
+                    src={item.icon}
+                    alt={item.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="flex flex-col p-4 flex-grow">
+                  <h3
+                    className={`text-lg font-semibold mb-1 ${item.accent}`}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-zinc-600 text-md">
+                    {item.tagline}
+                  </p>
+                </div>
+              </Link>
             </motion.div>
           ))}
         </div>
       </div>
-      {/* <div className="flex gap-4 mt-6 md:mt-10">
-        <button className="px-8 py-3 bg-pink-700 text-white rounded-sm font-semibold hover:bg-teal-800 transition">
-          Join our Membership
-        </button>
-        <button className="px-8 py-3 bg-white text-teal-700 rounded-sm font-semibold border-2 border-teal-700 hover:bg-teal-50 transition">
-          Contact us
-        </button>
-      </div> */}
+      <div className="flex flex-col md:flex-row gap-4 mt-6 md:mt-8">
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLScQlwi7hkmU9fp7aGSOLfUXPIvQmADduVyPQvVC5PKhcbFyDQ/viewform?usp=header"
+          target="_main"
+          className="w-full md:w-auto"
+        >
+          <button className="w-full md:w-auto px-8 py-3 bg-red-800 text-white rounded-sm font-semibold hover:bg-red-700 transition">
+            Join our Membership
+          </button>
+        </a>
+
+        <a href="tel:18002028704" className="w-full md:w-auto">
+          <button className="w-full md:w-auto px-8 py-3 bg-teal-700 text-white rounded-sm font-semibold hover:bg-teal-600 transition">
+            Contact us
+          </button>
+        </a>
+      </div>
     </motion.section>
   );
 }

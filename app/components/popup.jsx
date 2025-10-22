@@ -7,7 +7,16 @@ export default function PromoCard() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    setShow(true);
+    const hasShown = sessionStorage.getItem("promoShown");
+
+    if (!hasShown) {
+      const timer = setTimeout(() => {
+        setShow(true);
+        sessionStorage.setItem("promoShown", "true");
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   const handleClose = () => setShow(false);
@@ -44,7 +53,6 @@ export default function PromoCard() {
     </div>
   );
 }
-
 
 
        {/* Button container */}
