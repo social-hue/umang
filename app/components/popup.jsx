@@ -7,50 +7,49 @@ export default function PromoCard() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    // Show popup after 5 seconds on every page load/reload
-    const timer = setTimeout(() => setShow(true), 5000);
-    return () => clearTimeout(timer);
+    // Show popup immediately on mount (every load/refresh)
+    setShow(true);
   }, []);
 
-  const handleClose = () => {
-    setShow(false);
-    // No localStorage - popup will show again on next page load/reload
-  };
+  const handleClose = () => setShow(false);
 
   if (!show) return null;
-
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black/20 z-50 p-2 sm:p-4">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm px-3 py-4 sm:px-6 sm:py-6">
       <div className="relative">
-        {/* Close button - positioned outside the card */}
-        <button aria-label="Close"
-          onClick={handleClose}
-          className="cursor-pointer absolute -top-2 -right-2 sm:-top-3 sm:-right-3 z-10 bg-white rounded-full p-1.5 sm:p-2 shadow-lg text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors duration-200"
-        >
-          <X className="w-4 h-4 sm:w-5 sm:h-5" />
-        </button>
-
-        {/* Main card */}
-        <div className="bg-white rounded-lg
-        shadow-2xl 
-                        w-[300px] h-[440px] 
-                        sm:w-[320px] lg:h-[450px] 
-                        lg:w-[400px]  
-                        overflow-hidden flex flex-col">
-          
-          {/* Image container - takes up most of the space */}
-          <div className="h-[370px] sm:flex-1 relative overflow-hidden">
+        <div className="relative">
+        {/* Popup card with image */}
+        <div className="bg-none rounded-lg overflow-visible relative">
+          <div className="relative flex items-center justify-center p-3 sm:p-4 md:p-6">
             <Image
-              src="/popup.jpg"
+              src="/pop-up.png"
               alt="Promo"
-              fill
-              className="object-fit w-full h-full"
+              width={800}
+              height={400}
               priority
+              quality={100}
+              className="w-auto h-[420px] max-w-full object-contain"
+              style={{ height: '420px', width: 'auto' }}
             />
-          </div>
+          </div>   
+          {/* Close button - positioned relative to the white card */}
+          <button
+            onClick={handleClose}
+            aria-label="Close"
+            className="absolute top-2 right-2 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition z-10"
+          >
+            <X className="w-5 h-5 text-zinc-700" />
+          </button>
+        </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
-          {/* Button container */}
-          <div className="h-[68px] lg:h-[72px] flex items-center justify-center p-3">
+
+       {/* Button container */}
+          {/* <div className="h-[68px] lg:h-[72px] flex items-center justify-center p-3">
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLScQlwi7hkmU9fp7aGSOLfUXPIvQmADduVyPQvVC5PKhcbFyDQ/viewform?usp=header"
               target="_blank"
@@ -64,9 +63,4 @@ export default function PromoCard() {
                 Join Free Membership
               </button>
             </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+          </div> */}
