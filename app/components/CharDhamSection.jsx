@@ -330,7 +330,7 @@ export default function CharDhamSection() {
       {/* Packages */}
       <div className="mb-6 md:mb-10 text-center">
         <h2 className="text-zinc-800 text-3xl md:text-4xl font-bold">
-          Explore Our Pre-defined Packages <ArrowRight className="inline-block" size={28} />
+          Explore Our Packages <ArrowRight className="inline-block" size={28} />
         </h2>
       </div>
 

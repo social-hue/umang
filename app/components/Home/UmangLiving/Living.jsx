@@ -93,16 +93,15 @@ export default function FacilitiesSection() {
             transition: "all 0.3s ease",
           }}
         >
-          {displayedCards.map((item) => (
+          {displayedCards.map((item, index) => (
             <motion.div
-            key={item.id}
+            key={`${currentIndex}-${index}-${item.id}`}
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: item.id * 0.05 }} 
+            transition={{ duration: 0.5, delay: index * 0.05 }} 
             className="flex flex-col bg-white border border-zinc-200 rounded-sm shadow-sm hover:shadow-md cursor-pointer transition-shadow overflow-hidden"
 >
             <Link
-              key={item.id}
               href={item.link}
             >
               <div className="relative w-full h-46">
@@ -128,6 +127,14 @@ export default function FacilitiesSection() {
           ))}
         </div>
       </div>
+      {/* <div className="flex gap-4 mt-6 md:mt-10">
+        <button className="px-8 py-3 bg-pink-700 text-white rounded-sm font-semibold hover:bg-teal-800 transition">
+          Join our Membership
+        </button>
+        <button className="px-8 py-3 bg-white text-teal-700 rounded-sm font-semibold border-2 border-teal-700 hover:bg-teal-50 transition">
+          Contact us
+        </button>
+      </div> */}
     </motion.section>
   );
 }
