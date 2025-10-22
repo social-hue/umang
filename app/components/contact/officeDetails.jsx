@@ -98,7 +98,7 @@ export default function ContactPage() {
             <div className="flex items-center gap-3 mb-2">
               <Phone className="text-teal-700 w-6 h-6 stroke-[2.5]" />
               <h3 className="text-xl font-semibold text-zinc-800">
-                Call Us | <span className="text-zinc-800 text-lg">10:00 AM - 6:00 PM (Mon - Sat)</span>
+                Call Us | <span className="text-zinc-800 text-lg">10:00 AM - 6:00 PM (IST) | Mon - Sat</span>
               </h3>
             </div>
             <p className="text-lg text-zinc-800 ml-9 leading-relaxed">

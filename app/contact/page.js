@@ -2,7 +2,7 @@ import Banner from "../components/Banner";
 import Community from "../components/Community";
 import Grid from "../components/contact/Grid";
 import ContactGrid from "../components/contact/officeDetails";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 import { seoData } from "../lib/seoMeta";
 
 export const generateMetadata = () => {
@@ -51,7 +51,7 @@ export default function Contact() {
         <ContactGrid />
         <Community />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
