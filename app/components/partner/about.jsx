@@ -27,7 +27,7 @@ export default function PartnerPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-zinc-800 mb-3">
           Partner with Umang Living - You Build, We Run & Manage
         </h1>
-        <p className="text-md text-zinc-800 leading-relaxed max-w-3xl mx-auto">
+        <p className="text-lg text-zinc-800 leading-relaxed max-w-3xl mx-auto">
           India's leading <strong>senior living community</strong>, offering
           end-to-end <strong>operations, sales, marketing,</strong> and <strong>property management</strong> for trusted retirement homes.
         </p>

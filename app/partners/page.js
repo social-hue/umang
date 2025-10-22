@@ -1,5 +1,5 @@
 import Banner from "../components/Banner";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 import PartnerPage from "../components/partner/about";
 import { seoData } from "../lib/seoMeta";
 
@@ -47,7 +47,7 @@ export default function Partners() {
       <div className="relative overflow-hidden">
         <PartnerPage />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

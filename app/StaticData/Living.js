@@ -19,7 +19,7 @@ export const facilities = [
     id: 3,
     icon: "/law.webp",
     title: "Legal Consultation",
-    tagline: "Expert advice for land and property matters. Trusted guidance to secure your peace of mind.",
+    tagline: "Expert advice for land & property matters. Trusted guidance to secure your peace of mind.",
     accent: "text-zinc-800",
     link: "/services/legal-consultation"
   },
@@ -27,7 +27,7 @@ export const facilities = [
     id: 4,
     icon: "/services/Financial.jpg",
     title: "Financial Consulting",
-    tagline: "Empowering seniors with expert financial guidance for a secure, independent and worry-free future",
+    tagline: "Empowering seniors with expert financial guidance for a secure, independent & worry-free future",
     accent: "text-zinc-800",
     link: "/services/financial-consulting"
   },
