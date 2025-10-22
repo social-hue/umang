@@ -27,7 +27,7 @@ export default function PartnerPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-zinc-800 mb-3">
           Partner with Umang Living - You Build, We Run & Manage
         </h1>
-        <p className="text-md text-zinc-800 leading-relaxed max-w-3xl mx-auto">
+        <p className="text-lg text-zinc-800 leading-relaxed max-w-3xl mx-auto">
           India's leading <strong>senior living community</strong>, offering
           end-to-end <strong>operations, sales, marketing,</strong> and <strong>property management</strong> for trusted retirement homes.
         </p>
@@ -45,14 +45,14 @@ export default function PartnerPage() {
           <h2 className="text-2xl font-semibold text-zinc-800 mb-3">
             Why Partner with Us ?
           </h2>
-          <p className="text-zinc-700 text-lg mb-6">
+          <p className="text-zinc-700 text-lg leading-relaxed mb-6">
             <strong>Umang Living</strong> partners with developers and serves seniors/families with one promise: we sell faster and run Gold Standard communities. We bring a ready demand funnel, RERA-compliant sales operations, and a proven property-management model that turns inventory into happy, long-term residents.
           </p>
           <h2 className="text-2xl font-semibold text-zinc-800 mb-3 text-left">
             Our Unique Strengths (USP)
           </h2>
 
-          <ul className="space-y-3 text-zinc-700 text-lg">
+          <ol className="list-decimal space-y-0.5 text-zinc-700 text-lg leading-relaxed">
             {[
               "Largest senior living community network in India with in-house expertise in Operations, Sales, Marketing & Property Management.",
               "Professionally trained staff dedicated to senior care excellence.",
@@ -76,9 +76,8 @@ export default function PartnerPage() {
                 <span>{item}</span>
               </motion.li>
             ))}
-          </ul>
+          </ol>
         </motion.div>
-
         {/* Grid cards */}
         <motion.div
           initial="hidden"

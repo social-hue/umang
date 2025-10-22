@@ -13,6 +13,7 @@ import Header from "./components/Header";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import FloatingCTA from "./components/floatingButton/floatingButton";
+import Footer from "./components/Footer";
 // import PromoCard from "./components/popup";
 
 const poppins = Poppins({
@@ -158,7 +159,7 @@ export default function RootLayout({ children }) {
       </head>
       <body
         className={[
-          poppins.variable,
+          roboto.variable,
           "antialiased",
         ].join(" ")}
       >
@@ -174,6 +175,7 @@ export default function RootLayout({ children }) {
             },
           }}
         />
+        <Footer />
         <FloatingCTA />
         {/* <PromoCard /> */}
       </body>

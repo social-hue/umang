@@ -1,5 +1,5 @@
 import Banner from "../components/Banner";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 import Aboutus from "../components/lifeat/about";
 import GridCards from "../components/lifeat/GridCards";
 import { seoData } from "../lib/seoMeta";
@@ -66,7 +66,7 @@ export default function Life() {
           ))}
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

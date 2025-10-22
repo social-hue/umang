@@ -1,6 +1,6 @@
 import Banner from "../components/Banner";
 import Community from "../components/Community";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 import Map from "../components/project/map";
 import PropertySlider from "../components/PropertySlider";
 import { seoData } from "../lib/seoMeta";
@@ -53,7 +53,7 @@ export default function Projects() {
         </div>
         <Community />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

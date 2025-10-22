@@ -1,7 +1,7 @@
 import Founder from "../components/about/Founder";
 import Banner from "../components/Banner";
 import Community from "../components/Community";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 import FounderMessage from "../components/FounderMessage";
 import TeamSection from "../components/team/TeamSection";
 import MissionVision from "../components/vision/MissionVision";
@@ -53,7 +53,7 @@ export default function About() {
       <MissionVision />
       <TeamSection />
       <Community />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

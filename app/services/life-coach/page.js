@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Banner from "../../components/Banner";
 import Community from "../../components/Community";
-import Footer from "../../components/Footer";
+// import Footer from "../../components/Footer";
 import { seoData } from "../../lib/seoMeta";
 
 export const generateMetadata = () => {
@@ -69,7 +69,7 @@ export default function LifeCoach() {
                 </section>
                 <Community />
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </>
     );
 }

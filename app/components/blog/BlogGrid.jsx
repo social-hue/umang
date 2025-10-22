@@ -104,7 +104,7 @@ const POSTS = [
     authorimg: "/blog/avtar.jpg",
     readTime: "1K shares",
     excerpt:
-      "You’ve worked hard your entire life—raising a family, building a career, supporting loved ones, and managing responsibilities.",
+      "You’ve worked hard your entire life - raising a family, building a career, supporting loved ones, and managing responsibilities.",
   },
 ];
 
@@ -120,3 +120,13 @@ export const BlogGrid = ({ limit }) => {
     </section>
   );
 };
+
+
+
+
+
+
+
+
+
+

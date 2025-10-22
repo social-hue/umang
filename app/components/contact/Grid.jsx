@@ -88,13 +88,12 @@ export default function Grid() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="md:w-1/2 flex items-center justify-center p-4 md:p-6"
       >
-        <h2 className="text-2xl md:text-4xl font-bold text-zinc-800 leading-snug text-center md:text-left">
+        <h2 className="text-[28px] md:text-[40px] font-bold text-zinc-800 leading-snug text-center md:text-left">
           Send your query, <br />{" "}
           <span className="text-[#079184]">Our team</span> will get back to you soon{" "}
           <ArrowRight className="inline-block w-6 h-6 md:w-8 md:h-8 text-[#079184]" />
         </h2>
       </motion.div>
-
       {/* Right Side - Contact Form */}
       <motion.div
         initial={{ opacity: 0, x: 50 }}
@@ -112,7 +111,6 @@ export default function Grid() {
             className="hidden"
             autoComplete="off"
           />
-
           {/* Name */}
           <div>
             <label htmlFor="name" className="block text-md font-medium mb-1">

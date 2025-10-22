@@ -1,6 +1,6 @@
-"use client"
+"use client";
+
 import Link from "next/link";
-import { CiShare2 } from "react-icons/ci";
 import { motion } from "framer-motion";
 
 export const BlogCard = ({
@@ -12,32 +12,30 @@ export const BlogCard = ({
   readTime,
   excerpt,
   slug,
-  authorimg,
 }) => (
   <Link href={`/blog/${slug}`} className="group block">
     <motion.article
-      className="flex flex-col cursor-pointer rounded-[30px] shadow-md overflow-hidden bg-white transition hover:shadow-xl"
+      className="flex flex-col cursor-pointer rounded-sm overflow-hidden bg-white border border-zinc-200 shadow-sm hover:shadow-md transition-all duration-300"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
-      <div className="h-[350px] relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full bg-black/30"></div>
-
+      {/* Image */}
+      <div className="h-[220px] relative overflow-hidden">
         <img
           src={image}
           alt={title}
-          className="h-full w-full object-cover transition-all duration-500 group-hover:scale-[1.1]"
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           loading="lazy"
           decoding="async"
         />
-
-        <div className="flex gap-2 absolute top-6 left-6">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/20 to-transparent"></div>
+        <div className="absolute top-3 left-3 flex flex-wrap gap-2">
           {categories.map((cat) => (
             <span
               key={cat}
-              className="uppercase text-[16px] font-semibold text-white white_blur px-2 py-1 rounded-sm tracking-wider"
+              className="uppercase text-md font-semibold text-white bg-teal-700/70 px-3 py-0.5 rounded-sm tracking-wide"
             >
               {cat}
             </span>
@@ -45,27 +43,21 @@ export const BlogCard = ({
         </div>
       </div>
 
-      <div className="p-6 flex flex-col gap-4 flex-1">
-        <h3 className="font-barlow font-bold text-[20px] text-[#121416] leading-snug">
+      {/* Content */}
+      <div className="p-4 flex flex-col gap-2 flex-1">
+        <h3 className="font-semibold text-[18px] text-zinc-800 leading-snug group-hover:text-teal-700 transition-colors">
           {title}
         </h3>
-        <div className="flex 2xl:flex-row flex-col 2xl:items-center items-start gap-2 text-gray-500">
-          <div className="flex items-center gap-1">
-            <span className="text-[#121416] font-barlow font-semibold text-[16px] ">
-              {author}
-            </span>
-          </div>
-          <div className="flex gap-2 items-center font-medium text-[16px]">
-            <hr className="2xl:w-[40px] w-[30px] 2xl:block hidden" />
-            <span className="w-1 h-1 bg-gray-400 rounded-full" />
-            <span>{date}</span>
-          </div>
+        <div className="flex items-center text-md text-zinc-500 gap-2">
+          <span className="font-medium">{author}</span>
+          <span className="w-1 h-1 bg-zinc-400 rounded-full" />
+          <span>{date}</span>
         </div>
-        <p className="text-[#6C757D] font-barlow line-clamp-2 flex-1 text-[16px]">
+        <p className="text-zinc-600 text-md line-clamp-2 leading-relaxed">
           {excerpt}
         </p>
-        <span className="mt-2 text-[#E7216A] underline uppercase font-barlow font-semibold text-sm hover:underline">
-          View post
+        <span className="mt-1 text-teal-700 font-medium text-md hover:underline">
+          View post →
         </span>
       </div>
     </motion.article>

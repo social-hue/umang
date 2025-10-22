@@ -255,7 +255,7 @@ export default function CharDhamSection() {
           <img src="/mapp.png" alt="map" loading="lazy" decoding="async" width={340} height={420} />
         </div>
         <div className="flex flex-col justify-center items-center md:justify-start md:items-start">
-          <div className="bg-white border-none w-[92%] md:w-full max-w-lg p-6 relative rounded-sm text-zinc-800">
+          <div className="bg-white border-none w-[92%] md:w-full max-w-lg p-2 md:p-6 relative rounded-sm text-zinc-800">
             {/* Heading */}
             <h3 className="text-3xl md:text-2xl font-semibold text-zinc-800 mb-4 text-center">
               Plan Your Trip !
@@ -267,31 +267,27 @@ export default function CharDhamSection() {
                 <input
                   type="text"
                   placeholder="Full Name"
-                  className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-600"
+                  className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-500 focus:outline-none focus:border-zinc-600"
                 />
                 <input
                   type="tel"
                   placeholder="Contact"
-                  className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-600"
+                  className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-500 focus:outline-none focus:border-zinc-600"
                 />
               </div>
 
               {/* Row 2: Date + Family Members */}
               <div className="flex flex-col sm:flex-row gap-3">
-                <input
-                  type="date"
-                  data-placeholder="Preferred Date"
-                  className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-600 min-w-0"
-                  style={{
-                    WebkitAppearance: 'none',
-                    MozAppearance: 'textfield'
-                  }}
+              <input
+                  type="text"
+                  placeholder="Preferred Date"
+                  className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-500 focus:outline-none focus:border-zinc-600"
                 />
                 <input
                   type="number"
                   placeholder="Number of Travellers"
                   min="1"
-                  className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-600"
+                  className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-500 focus:outline-none focus:border-zinc-600"
                 />
               </div>
 
@@ -300,7 +296,7 @@ export default function CharDhamSection() {
                 <textarea
                   rows="3"
                   placeholder="Describe Your Tour"
-                  className="w-full border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-600 resize-none"
+                  className="w-full border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-500 focus:outline-none focus:border-zinc-600 resize-none"
                 ></textarea>
               </div>
 
@@ -308,7 +304,7 @@ export default function CharDhamSection() {
               <div className="flex flex-col sm:flex-row gap-3">
                 <select
                   defaultValue="Select Destination"
-                  className="flex-1 border border-zinc-300 rounded-sm px-2 py-2 text-zinc-800 placeholder-zinc-400 focus:outline-none focus:border-zinc-600 bg-white cursor-pointer"
+                  className="flex-1 border border-zinc-300 rounded-sm px-2 py-2 text-zinc-700 placeholder-zinc-500 focus:outline-none focus:border-zinc-600 bg-white cursor-pointer"
                 >
                   <option value="Select Destination" disabled>
                     Select Destination
