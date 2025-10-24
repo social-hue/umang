@@ -60,8 +60,8 @@ export default function FacilitiesSection() {
           What does <span className="text-teal-700">Umang</span> Offer?
         </h2>
         <p className="text-zinc-700 text-lg leading-relaxed max-w-3xl mx-auto">
-          Umang Living offers India&apos;s largest comprehensive ecosystem for modern senior living.
-          With townships in 75+ cities, lifestyle experiences, healthcare, and curated travel,
+          Umang Living offers India&apos;s largest comprehensive ecosystem for modern senior living,
+          with townships in 75+ cities, lifestyle experiences, healthcare, and curated travel,
           we are your partner for a secure and enriching lifestyle.
         </p>
       </div>

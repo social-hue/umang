@@ -45,7 +45,7 @@ export default function PromoCard() {
             height={400}
             priority
             quality={100}
-            className="w-auto h-[420px] max-w-full object-contain"
+            className="w-auto h-[420px] rounded-xl max-w-full object-contain"
             style={{ height: "420px", width: "auto" }}
           />
         </div>

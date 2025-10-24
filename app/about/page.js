@@ -47,7 +47,7 @@ export const generateMetadata = () => {
 export default function About() {
   return (
     <>
-      <Banner title={"About us"} bgImage={"/blog_image.jpg"} />
+      <Banner title={"About us"} bgImage={"/something8.png"} />
       <FounderMessage/>
       <Founder />
       <MissionVision />

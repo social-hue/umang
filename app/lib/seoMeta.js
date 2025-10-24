@@ -5,8 +5,7 @@ export const seoData = {
     title:
       "Umang Living: India's Largest Senior Living Community",
     description:
-      "Umang Living is India’s first multi-city senior independent-living community, thoughtfully designed with love and respect.",
-
+      "Umang Living is India’s first multi-city senior living community, thoughtfully designed with love and respect.",
     keywords:
       "luxury senior living India, retirement homes India, vridhashram in Delhi, modern vridhaashram, trusted senior living, old age homes, senior care",
     image: "https://www.umangliving.com/banner.png",
@@ -36,7 +35,6 @@ export const seoData = {
     image: "https://www.umangliving.com/travel-page1.jpg",
     canonical: "https://www.umangliving.com/services/travel",
   },
-
 
   projects: {
     type: "website",
@@ -152,5 +150,6 @@ export const seoData = {
         "At Umang Living, we believe that the golden years of life deserve to be filled with joy, purpose, and companionship. That’s the very foundation on which this project was born — from a deeply personal space of observing how emotional well-being declines when seniors feel left behind by a fast-moving world.",
       image: "https://www.umangliving.com/blog/blog_latest01.jpg",
     },
+    
   ],
 };

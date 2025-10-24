@@ -139,7 +139,7 @@ export default function Header() {
                       <div className="flex items-center justify-between px-4 py-2 hover:bg-gray-100 cursor-pointer">
                         <span
                           className={`${
-                            pathname.startsWith("/services/general") ||
+                            pathname.startsWith("/services/financial") ||
                             pathname.startsWith("/services/legal")
                               ? "text-[#E7216A]"
                               : "text-[#0B0B0B]"
@@ -151,7 +151,7 @@ export default function Header() {
                       </div>
                       <ul className="absolute top-0 left-full ml-1 w-56 bg-white shadow-lg rounded-md z-50 opacity-0 invisible group-hover/consultation:opacity-100 group-hover/consultation:visible transition-all duration-300">
                         <li>
-                          <Link
+                          {/* <Link
                             href="/services/general-consultation"
                             className={`block px-4 py-2 hover:bg-gray-100 transition ${
                               pathname === "/services/general-consultation"
@@ -160,7 +160,7 @@ export default function Header() {
                             }`}
                           >
                             General Consultation
-                          </Link>
+                          </Link> */}
                         </li>
                         <li>
                           <Link
@@ -178,7 +178,7 @@ export default function Header() {
                           <Link
                             href="/services/financial-consulting"
                             className={`block px-4 py-2 hover:bg-gray-100 transition ${
-                              pathname === "/services/legal-consultation"
+                              pathname === "/services/financial-consulting"
                                 ? "text-[#E7216A]"
                                 : "text-[#0B0B0B]"
                             }`}
@@ -355,7 +355,7 @@ export default function Header() {
 
                         {generalOpen && (
                           <div className="pl-4 mt-2 space-y-2">
-                            <Link
+                            {/* <Link
                               href="/services/general-consultation"
                               onClick={() => setOpen(false)}
                               className={`block text-lg py-1 ${
@@ -365,7 +365,7 @@ export default function Header() {
                               }`}
                             >
                               General Consultation
-                            </Link>
+                            </Link> */}
                             <Link
                               href="/services/legal-consultation"
                               onClick={() => setOpen(false)}
@@ -378,7 +378,7 @@ export default function Header() {
                               Legal Consultation
                             </Link>
                             <Link
-                              href="/services/legal-consultation"
+                              href="/services/financial-consulting"
                               onClick={() => setOpen(false)}
                               className={`block text-lg py-1 ${
                                 pathname === "/services/financial-consulting"
