@@ -54,7 +54,6 @@
 //   );
 // }
 
-
 import Image from "next/image";
 import Banner from "../../components/Banner";
 import Community from "../../components/Community";
@@ -102,10 +101,8 @@ export default function Travel() {
   return (
     <>
       <Banner title={"Travel"} bgImage={"/citizen.jpg"}   />
-      <div className=" relative overflow-hidden ">
-        <div className="absolute -top-[150px] -left-[180px] -z-9">
-          <img src="/rangoli.png" alt="rangoli" className="w-[70%]" loading="lazy" decoding="async" />
-        </div>
+      <div className="relative overflow-hidden">
+      <div className="p-4 bg-red-700 text-center text-white text-xl md:text-2xl font-bold">Our Travel Services are launching on 1 November, 2025 </div>
         <section className="p-6 md:p-10 md:mx-10 flex flex-col md:flex-row items-center gap-6">
       {/* Left: Image */}
       <div className="w-full md:w-1/2 relative h-64 md:h-80">
@@ -116,10 +113,9 @@ export default function Travel() {
           className="object-cover rounded-xl"
         />
       </div>
-
       {/* Right: Text */}
       <div className="w-full md:w-1/2 text-gray-700">
-        <h2 className="text-2xl font-bold mb-4">Stress-Free Travel for Seniors 55+</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">Stress-Free Travel for Seniors 55+</h2>
         <p className="text-lg leading-relaxed">
         Traveling in your golden years should be exciting, enriching, and above all—stress-free. That’s why we organize senior-friendly tours and experiences tailored to the unique needs of older adults. From serene weekend getaways to spiritual pilgrimages and curated heritage tours, each trip prioritizes safety, comfort, and accessibility. Our dedicated travel coordinators ensure proper planning, comfortable transport, senior-friendly accommodations, and on-trip assistance so that you can enjoy every journey without worry. These experiences not only help you discover new destinations but also foster connections with fellow travelers who share your zest for life.
         </p>

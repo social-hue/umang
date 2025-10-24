@@ -34,7 +34,7 @@ export default function MissionVision() {
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
           viewport={{ once: true }}
           className="w-full md:w-1/2 text-zinc-800"
         >

@@ -10,11 +10,11 @@ export default function AboutFounder() {
           className="mt-4 w-full flex flex-col justify-center"
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true, amount: 0.3 }}
         >
           <h1 className="text-4xl md:text-4xl font-semibold text-zinc-800 mb-4 text-left">
-            About <span className="text-teal-700">Umang Living</span>
+            About <span className="text-teal-700">Umang </span>Living
           </h1>
           <p className="text-gray-700 text-lg leading-relaxed mb-3">
             At Umang Living, we are committed to redefining aging by

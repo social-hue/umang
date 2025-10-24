@@ -44,11 +44,10 @@ export const generateMetadata = () => {
 export default function HealingServices() {
   return (
     <>
-      <Banner title={"Healing Services"} bgImage={"/citizen.jpg"}   />
+      <Banner title={"Healing Services"} bgImage={"/healing-banner.jpg"}   />
       <div className="relative overflow-hidden ">
-        <div className="absolute -top-[150px] -left-[180px] -z-9">
-          <img src="/rangoli.png" alt="rangoli" className="w-[70%]" loading="lazy" decoding="async" />
-        </div>
+      <div className="p-2 bg-green-700 text-center text-white text-xl md:text-2xl font-semibold">Our Healing Services are launching on 1 November, 2025 </div>
+
         <section className="p-6 md:p-10 md:mx-10 flex flex-col md:flex-row items-center gap-6">
       {/* Left: Image */}
       <div className="w-full md:w-1/2 relative h-64 md:h-80">
@@ -62,7 +61,7 @@ export default function HealingServices() {
 
       {/* Right: Text */}
       <div className="w-full md:w-1/2 text-gray-700">
-        <h2 className="text-2xl font-bold mb-4">Holistic Wellness for Mind and Body</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">Holistic Wellness for Mind and Body</h2>
         <p className="text-lg leading-relaxed">
         True well-being goes beyond medical care—it includes nurturing your body, mind, and spirit. Our healing services combine traditional and modern approaches to support holistic senior health. From yoga and meditation sessions that bring calmness and balance, to physiotherapy that enhances mobility and relieves pain, we offer a wide range of programs designed to meet your unique needs. We also include alternative therapies, relaxation practices, and group wellness activities that build resilience and positivity. These services are thoughtfully structured to reduce stress, promote active living, and enhance the overall quality of life, ensuring you enjoy your golden years with renewed energy and vitality.
         </p>

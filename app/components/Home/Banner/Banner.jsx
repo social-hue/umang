@@ -11,129 +11,139 @@ const carouselData = [
     image: "/something7.jpg",
     headline: "Ek Duniya Alag Si...",
     subheadline: "Because every age deserves new beginnings",
-    description: "A Unique Senior Independent Living Community for the 55+ Generation",
+    description:
+      "A Unique Senior Independent Living Community for the 55+ Generation",
   },
   {
     id: 5,
     image: "/something5.webp",
     headline: "Active Lifestyle",
     subheadline: "Stay engaged, stay happy",
-    description: "Fitness centers, recreational activities, and social events for an active lifestyle",
+    description:
+      "Fitness centers, recreational activities, and social events for an active lifestyle",
   },
   {
     id: 6,
     image: "/something6.webp",
     headline: "Peace of Mind",
     subheadline: "Security and care you can trust",
-    description: "24/7 security, emergency response, and comprehensive care services",
+    description:
+      "24/7 security, emergency response, and comprehensive care services",
   },
 ];
 
+// ✅ Fast, smooth crossfade with no gaps
 const slideVariants = {
-  enter: (direction) => ({ x: direction > 0 ? "100%" : "-100%", opacity: 0, scale: 1.05 }),
-  center: { zIndex: 1, x: 0, opacity: 1, scale: 1 },
-  exit: (direction) => ({ zIndex: 0, x: direction < 0 ? "100%" : "-100%", opacity: 0, scale: 0.95 }),
+  enter: { opacity: 0 },
+  center: {
+    opacity: 1,
+    transition: { duration: 0.4, ease: [0.4, 0, 0.2, 1] },
+  },
+  exit: {
+    opacity: 0,
+    transition: { duration: 0.3, ease: [0.4, 0, 0.2, 1] },
+  },
 };
 
 const textVariants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: { y: 0, opacity: 1, transition: { duration: 0.6, ease: "easeOut", staggerChildren: 0.1 } },
+  hidden: { y: 15, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.4, ease: "easeOut", staggerChildren: 0.06 },
+  },
 };
 
 const itemVariants = {
-  hidden: { y: 15, opacity: 0 },
-  visible: { y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeOut" } },
+  hidden: { y: 12, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.35, ease: "easeOut" },
+  },
 };
 
 export default function Banner() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [direction, setDirection] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [nextSlide, setNextSlide] = useState(null);
   const intervalRef = useRef(null);
+  const isTransitioningRef = useRef(false);
 
-  // ✅ Only consider the *first render* as "priority" for slide 0
-  const firstRenderRef = useRef(true);
-  useEffect(() => {
-    firstRenderRef.current = false;
-  }, []);
-
+  // Auto-rotate slides with reduced interval
   const startAutoSwipe = useCallback(() => {
     if (intervalRef.current) clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => {
-      if (!isTransitioning) {
-        setDirection(1);
+      if (!isTransitioningRef.current) {
         setCurrentSlide((prev) => (prev + 1) % carouselData.length);
       }
-    }, 4000);
-  }, [isTransitioning]);
+    }, 4000); // Reduced from 5000ms to 4000ms
+  }, []);
 
   useEffect(() => {
     startAutoSwipe();
-    return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current);
-    };
+    return () => clearInterval(intervalRef.current);
   }, [startAutoSwipe]);
+
+  // Preload next image
+  useEffect(() => {
+    const next = (currentSlide + 1) % carouselData.length;
+    setNextSlide(next);
+  }, [currentSlide]);
 
   const goToSlide = useCallback(
     (index) => {
-      if (index === currentSlide || isTransitioning) return;
-      setDirection(index > currentSlide ? 1 : -1);
+      if (index === currentSlide || isTransitioningRef.current) return;
+      isTransitioningRef.current = true;
       setCurrentSlide(index);
       startAutoSwipe();
+      setTimeout(() => {
+        isTransitioningRef.current = false;
+      }, 400);
     },
-    [currentSlide, isTransitioning, startAutoSwipe]
+    [currentSlide, startAutoSwipe]
   );
-
-  const handleAnimationStart = useCallback(() => setIsTransitioning(true), []);
-  const handleAnimationComplete = useCallback(() => setIsTransitioning(false), []);
-
-  // simple tiny blur placeholder
-  const blurDataURL =
-    "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAICEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R+Sh//Z";
 
   return (
     <section className="w-full 2xl:h-[760px] lg:h-[560px] md:h-[460px] h-[380px] relative overflow-hidden">
       <div className="relative w-full 2xl:h-[680px] lg:h-[480px] md:h-[380px] h-[300px] overflow-hidden">
-        <AnimatePresence initial={false} custom={direction} onExitComplete={handleAnimationComplete}>
+        {/* ✅ Preload next image invisibly */}
+        {nextSlide !== null && nextSlide !== currentSlide && (
+          <div className="absolute inset-0 pointer-events-none opacity-0">
+            <Image
+              src={carouselData[nextSlide].image}
+              alt="preload"
+              fill
+              sizes="100vw"
+              quality={100}
+              priority
+            />
+          </div>
+        )}
+
+        {/* ✅ Smooth crossfade transition */}
+        <AnimatePresence initial={false} mode="wait">
           <motion.div
             key={currentSlide}
-            custom={direction}
             variants={slideVariants}
             initial="enter"
             animate="center"
             exit="exit"
-            onAnimationStart={handleAnimationStart}
-            onAnimationComplete={handleAnimationComplete}
-            transition={{
-              x: { type: "tween", duration: 0.5, ease: [0.25, 0.1, 0.25, 1] },
-              opacity: { duration: 0.3 },
-              scale: { duration: 0.5, ease: "easeOut" },
-            }}
             className="absolute inset-0 w-full h-full"
-            style={{ willChange: "transform, opacity" }}
           >
-            <div className="absolute inset-0">
-              <Image
-                src={carouselData[currentSlide].image}
-                alt={carouselData[currentSlide].headline}
-                fill
-                sizes="100vw"
-                quality={100}
-                placeholder="blur"
-                blurDataURL={blurDataURL}
-                // ✅ Priority ONLY on the very first paint of the first slide
-                priority={firstRenderRef.current && currentSlide === 0}
-                loading={firstRenderRef.current && currentSlide === 0 ? "eager" : "lazy"}
-                fetchPriority={firstRenderRef.current && currentSlide === 0 ? "high" : "auto"}
-                className="object-cover"
-                style={{ transform: "translate3d(0,0,0)", backfaceVisibility: "hidden" }}
-              />
-              <div className="absolute inset-0 bg-black/40" />
-            </div>
+            <Image
+              src={carouselData[currentSlide].image}
+              alt={carouselData[currentSlide].headline}
+              fill
+              sizes="100vw"
+              quality={100}
+              priority={currentSlide === 0}
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-black/40" />
           </motion.div>
         </AnimatePresence>
 
-        {/* Content */}
+        {/* Content Layer */}
         <div className="absolute inset-0 z-10 flex items-center">
           <div className="main_width w-full">
             <motion.div
@@ -142,7 +152,6 @@ export default function Banner() {
               initial="hidden"
               animate="visible"
               className="grid lg:grid-cols-[10px_1fr] md:grid-cols-[8px_1fr] grid-cols-[6px_1fr] lg:gap-8 gap-4 items-start"
-              style={{ willChange: "transform, opacity" }}
             >
               <motion.div variants={itemVariants} className="w-full h-full origin-top bg_red" />
               <div className="text-white">
@@ -154,7 +163,7 @@ export default function Banner() {
                 </motion.h1>
                 <motion.h2
                   variants={itemVariants}
-                  className=" text-white xl:text-[35px] md:text-[30px] mt-2 md:mt-0 text-[18px]"
+                  className="text-white xl:text-[35px] md:text-[30px] mt-2 md:mt-0 text-[18px]"
                 >
                   {carouselData[currentSlide].subheadline}
                 </motion.h2>
@@ -169,37 +178,33 @@ export default function Banner() {
           </div>
         </div>
 
-        {/* Dots */}
+        {/* Dots Navigation */}
         <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 z-20">
           <div className="flex space-x-3">
             {carouselData.map((_, index) => (
-             <button
-             key={index}
-             onClick={() => goToSlide(index)}
-             disabled={isTransitioning}
-             className={`w-4 h-4 flex items-center justify-center rounded-full 
-                         ${isTransitioning ? "pointer-events-none" : ""}`}
-             aria-label={`Go to slide ${index + 1}`}
-           >
-             <span
-               className={`w-2 h-2 rounded-full transition-all duration-300 
-                 ${index === currentSlide ? "bg-white scale-125" : "bg-white/50 hover:bg-white/75"}`}
-               style={{
-                 willChange: "transform, background-color",
-                 transform: index === currentSlide ? "scale(1.25)" : "scale(1)",
-               }}
-             />
-           </button>
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className="w-4 h-4 flex items-center justify-center rounded-full"
+                aria-label={`Go to slide ${index + 1}`}
+              >
+                <span
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    index === currentSlide
+                      ? "bg-white scale-125"
+                      : "bg-white/50 hover:bg-white/75"
+                  }`}
+                />
+              </button>
             ))}
           </div>
         </div>
       </div>
 
       {/* News Ticker */}
-      
-        <div className="py-4 px-4 flex item-center justify-center">
-          <NewsTicker />
-        </div>
+      <div className="py-4 px-4 flex items-center justify-center">
+        <NewsTicker />
+      </div>
     </section>
   );
 }
