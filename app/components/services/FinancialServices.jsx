@@ -135,7 +135,7 @@ export default function FinancialServices() {
       <div className="mt-12 max-w-5xl mx-auto">
       <FAQFinance />
       </div>
-      <div className="mt-20">
+      <div className="mt-16">
       <div className="bg-zinc-800 p-6 rounded-2xl border-l-4 border-teal-800 text-white mb-6">
         <p className="text-lg italic">
           Important: <span className="text-zinc-100 font-medium">Umang Living</span> provides concierge access and coordination with independent legal professionals. We are not a law firm and do not offer legal representation directly.

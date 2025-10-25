@@ -4,7 +4,7 @@ import toast, { Toaster } from "react-hot-toast";
 
 // import { Calendar, ChevronLeft, ChevronRight } from "lucide-react";
 
-export default function AppointmentSection() {
+export default function LegalFormSection() {
   return (
     <section className="bg-gradient-to-br from-zinc-100 to-zinc-200 py-16 px-6 md:px-12 lg:px-20">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
@@ -23,7 +23,7 @@ export default function AppointmentSection() {
           {/* <h3 className="text-2xl text-center font-bold text-zinc-800 mb-4">
             Schedule Your Consultation
           </h3> */}
-          <AppointmentForm />
+          <LegalForm />
         </div>
       </div>
     </section>
@@ -239,7 +239,7 @@ export default function AppointmentSection() {
 // }
 
 
-function AppointmentForm() {
+function LegalForm() {
   const [form, setForm] = useState({
     fullName: "",
     email: "",
@@ -256,7 +256,7 @@ function AppointmentForm() {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch("/api/finance", {
+      const res = await fetch("/api/legal", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),

@@ -44,9 +44,9 @@ export const generateMetadata = () => {
 export default function HealingServices() {
   return (
     <>
-      <Banner title={"Healing Services"} bgImage={"/healing-banner.jpg"}   />
+      <Banner title={"Healing Services"} bgImage={"/healing-bannerr.png"}   />
       <div className="relative overflow-hidden ">
-      <div className="p-2 bg-green-700 text-center text-white text-xl md:text-2xl font-semibold">Our Healing Services are launching on 1 November, 2025 </div>
+      <div className="p-2 bg-red-700 text-center text-white text-xl md:text-[22px] font-semibold">Our Healing Services are launching on 1 November, 2025 </div>
 
         <section className="p-6 md:p-10 md:mx-10 flex flex-col md:flex-row items-center gap-6">
       {/* Left: Image */}

@@ -276,19 +276,27 @@ export default function CharDhamSection() {
                 />
               </div>
 
-              {/* Row 2: Date + Family Members */}
+              {/* Row 2: Date + Travellers Dropdown */}
               <div className="flex flex-col sm:flex-row gap-3">
-              <input
+                <input
                   type="text"
                   placeholder="Preferred Date"
                   className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-500 focus:outline-none focus:border-zinc-600"
                 />
-                <input
-                  type="number"
-                  placeholder="Number of Travellers"
-                  min="1"
-                  className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-500 focus:outline-none focus:border-zinc-600"
-                />
+
+                {/* Custom Dropdown for Travellers */}
+                <select
+                  defaultValue=""
+                  className="flex-1 border border-zinc-300 rounded-sm px-2 py-2 text-zinc-700 placeholder-zinc-500 focus:outline-none focus:border-zinc-600 bg-white cursor-pointer"
+                >
+                  <option value="" disabled>
+                    Number of Travellers
+                  </option>
+                  <option value="0-5">0-5</option>
+                  <option value="5-10">5-10</option>
+                  <option value="10-15">10-15</option>
+                  <option value="more">More</option>
+                </select>
               </div>
 
               {/* Row 3: Description */}
@@ -300,7 +308,7 @@ export default function CharDhamSection() {
                 ></textarea>
               </div>
 
-              {/* Buttons */}
+              {/* Row 4: Destination + Submit */}
               <div className="flex flex-col sm:flex-row gap-3">
                 <select
                   defaultValue="Select Destination"
@@ -324,6 +332,7 @@ export default function CharDhamSection() {
                 </button>
               </div>
             </form>
+
           </div>
         </div>
       </div>

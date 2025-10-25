@@ -11,7 +11,7 @@ const Banner = ({ title, bgImage = "/greenBg.jpg" }) => {
       }}
     >
       {/* Dark overlay for better text contrast */}
-      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="absolute inset-0 bg-black/55"></div>
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl w-full px-4 md:px-8">

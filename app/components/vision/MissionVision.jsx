@@ -28,7 +28,7 @@ export default function MissionVision() {
   }, [hasPlayed]);
 
   return (
-    <section className="main_width bg-white py-4 mb-6 overflow-hidden">
+    <section className="main_width bg-white py-4 mb-8 overflow-hidden">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
         {/* Right - Text Content */}
         <motion.div
@@ -38,8 +38,8 @@ export default function MissionVision() {
           viewport={{ once: true }}
           className="w-full md:w-1/2 text-zinc-800"
         >
-          <h2 className="text-4xl md:text-4xl font-semibold mb-4 leading-tight">
-            Our <span className="text-[#079184]">Mission & Vision</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+            Our Mission & Vision
           </h2>
           <div className="space-y-5 leading-relaxed text-gray-700">
             <p className="text-lg">

@@ -138,7 +138,7 @@ export default function PartnerPage() {
         viewport={{ once: true, amount: 0.3 }}
         className="text-center md:py-6 mb-6 md:mb-2"
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-zinc-700 mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-zinc-800 mb-4">
           Join Hands with Umang Living
         </h2>
         <p className="text-zinc-800 text-lg max-w-2xl mx-auto mb-6">
