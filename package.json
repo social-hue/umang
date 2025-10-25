@@ -6,7 +6,7 @@
     "lint": "next lint",
     "dev": "node server.js",
     "postbuild": "next-sitemap",
-    "build": "next build --no-lint",
+    "build": "next build",
     "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
