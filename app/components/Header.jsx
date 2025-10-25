@@ -47,7 +47,7 @@ export default function Header() {
 
   return (
     <header
-      className={`w-full z-[1000] transition-all duration-100 ease-in-out ${
+      className={`w-full z-[1000] transition-all duration-300 ease-in-out ${
         isSticky
           ? "fixed top-0 left-0 right-0 bg-white shadow-md py-3"
           : "relative py-3"
@@ -116,9 +116,9 @@ export default function Header() {
                         >
                           Health &amp; Wellness
                         </span>
-                        <FaChevronRight className="w-3 h-3 text-gray-600 group-hover/health:rotate-90 transition-transform duration-300" />
+                        {/* <FaChevronRight className="w-3 h-3 text-gray-600 group-hover/health:rotate-90 transition-transform duration-300" /> */}
                       </div>
-                      <ul className="absolute top-0 left-full ml-1 w-56 bg-white shadow-lg rounded-md z-50 opacity-0 invisible group-hover/health:opacity-100 group-hover/health:visible transition-all duration-300">
+                      {/* <ul className="absolute top-0 left-full ml-1 w-56 bg-white shadow-lg rounded-md z-50 opacity-0 invisible group-hover/health:opacity-100 group-hover/health:visible transition-all duration-300">
                         <li>
                           <Link
                             href="/services/healing-services"
@@ -131,7 +131,7 @@ export default function Header() {
                             Healing Services
                           </Link>
                         </li>
-                      </ul>
+                      </ul> */}
                     </li>
 
                     {/* Consultation */}
@@ -323,12 +323,12 @@ export default function Header() {
                           className="w-full flex items-center justify-between text-lg py-1 text-white hover:text-[#E7216A]"
                         >
                           <span>Health &amp; Wellness</span>
-                          {healthOpen ? <FaChevronUp /> : <FaChevronDown />}
+                          {/* {healthOpen ? <FaChevronUp /> : <FaChevronDown />} */}
                         </button>
 
                         {healthOpen && (
                           <div className="pl-4 mt-2 space-y-2">
-                            <Link
+                            {/* <Link
                               href="/services/healing-services"
                               onClick={() => setOpen(false)}
                               className={`block text-lg py-1 ${
@@ -338,7 +338,7 @@ export default function Header() {
                               }`}
                             >
                               Healing Services
-                            </Link>
+                            </Link> */}
                           </div>
                         )}
                       </div>

@@ -1,7 +1,8 @@
 import { createServer } from 'http'
 import { parse } from 'url'
 import next from 'next'
- 
+import dotenv from 'dotenv'
+dotenv.config({ path: '.env.local' })
 const port = parseInt(process.env.PORT || '3000', 10)
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })

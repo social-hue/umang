@@ -13,8 +13,8 @@ export default function AboutFounder() {
           transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          <h1 className="text-4xl md:text-4xl font-semibold text-zinc-800 mb-4 text-left">
-            About <span className="text-teal-700">Umang </span>Living
+          <h1 className="text-3xl md:text-4xl font-bold text-zinc-800 mb-4 text-left">
+            About <span className="text-zinc-800">Us</span>
           </h1>
           <p className="text-gray-700 text-lg leading-relaxed mb-3">
             At Umang Living, we are committed to redefining aging by

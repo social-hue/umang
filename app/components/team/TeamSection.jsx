@@ -34,14 +34,14 @@ export default function TeamSection() {
   ];
 
   return (
-    <main className="max-w-6xl mx-auto py-4 md:py-12 mb-6 bg-white">
+    <main className="max-w-6xl mx-auto py-4 md:py-16 mb-6 bg-white">
       {/* Heading */}
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="text-center text-teal-700 text-4xl leading-light font-semibold mb-3"
+        className="text-center text-zinc-800 text-3xl md:text-4xl leading-light font-bold mb-3"
       >
         Meet our team
       </motion.h2>

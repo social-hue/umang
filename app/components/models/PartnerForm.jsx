@@ -57,12 +57,15 @@ const PartnerForm = ({ open, setOpen }) => {
   };
 
   return (
-    <div className="fixed inset-0 backdrop-blur-sm flex justify-center items-center z-[999] px-2 sm:px-3">
+    <div
+      className="fixed inset-0 backdrop-blur-sm flex flex-col sm:flex-row 
+                 justify-center sm:items-center items-start sm:overflow-hidden 
+                 overflow-y-auto z-[100000] px-6 py-4"
+    >
       <div
-        className="bg-white w-[95%] sm:w-[90%] md:w-full max-w-2xl rounded-xl shadow-2xl overflow-hidden 
-                   mx-auto max-h-[90vh] sm:max-h-none overflow-y-auto"
+        className="bg-white w-full sm:w-[90%] md:w-full max-w-[38rem] rounded-xl shadow-2xl 
+                   mx-auto sm:my-0 my-auto sm:max-h-none max-h-[80vh] overflow-y-auto"
       >
-        {/* Header */}
         <div className="bg-[#008080] flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 sticky top-0 z-10">
           <div className="flex items-center gap-2 text-white text-base sm:text-lg font-semibold">
             <Mail className="w-5 h-5" />
@@ -86,7 +89,7 @@ const PartnerForm = ({ open, setOpen }) => {
                 placeholder="Enter Company Name"
                 value={formData.company_name}
                 onChange={handleChange}
-                className="w-full border text-zinc-600 border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-[#008080] outline-none"
+                className="w-full border text-zinc-600 border-gray-300 rounded-md px-3 py-2 focus:ring-1 focus:ring-teal-600 outline-none"
               />
             </div>
 
@@ -100,7 +103,7 @@ const PartnerForm = ({ open, setOpen }) => {
                 placeholder="Enter Contact Person"
                 value={formData.contact_person}
                 onChange={handleChange}
-                className="w-full border text-zinc-600 border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-[#008080] outline-none"
+                className="w-full border text-zinc-600 border-gray-300 rounded-md px-3 py-2 focus:ring-1 focus:ring-teal-600 outline-none"
               />
             </div>
 
@@ -114,7 +117,7 @@ const PartnerForm = ({ open, setOpen }) => {
                 placeholder="Enter Contact Number"
                 value={formData.contact_number}
                 onChange={handleChange}
-                className="w-full border text-zinc-600 border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-[#008080] outline-none"
+                className="w-full border text-zinc-600 border-gray-300 rounded-md px-3 py-2 focus:ring-1 focus:ring-teal-600 outline-none"
               />
             </div>
 
@@ -128,7 +131,7 @@ const PartnerForm = ({ open, setOpen }) => {
                 placeholder="Enter Email Id"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full border text-zinc-600 border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-[#008080] outline-none"
+                className="w-full border text-zinc-600 border-gray-300 rounded-md px-3 py-2 focus:ring-1 focus:ring-teal-600 outline-none"
               />
             </div>
 
@@ -142,7 +145,7 @@ const PartnerForm = ({ open, setOpen }) => {
                 placeholder="Enter Designation"
                 value={formData.designation}
                 onChange={handleChange}
-                className="w-full border text-zinc-600 border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-[#008080] outline-none"
+                className="w-full border text-zinc-600 border-gray-300 rounded-md px-3 py-2 focus:ring-1 focus:ring-teal-600 outline-none"
               />
             </div>
 
@@ -153,15 +156,15 @@ const PartnerForm = ({ open, setOpen }) => {
               <textarea
                 name="message"
                 placeholder="Enter Message Box"
-                rows="4"
+                rows="2"
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full border border-gray-300 text-zinc-600 rounded-md px-3 py-2 resize-none focus:ring-2 focus:ring-[#008080] outline-none"
+                className="w-full border border-gray-300 text-zinc-600 rounded-md px-3 py-2 resize-none focus:ring-1 focus:ring-teal-600 outline-none"
               ></textarea>
             </div>
           </div>
 
-          <div className="flex justify-end gap-3 pt-3">
+          <div className="flex justify-end gap-3">
             <button
               type="button"
               onClick={() => setOpen(false)}

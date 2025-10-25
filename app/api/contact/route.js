@@ -1,5 +1,5 @@
 // app/api/contact/route.js
-import dbConnect from "@/db/mongodb";
+import dbConnect  from "@/db/mongodb";
 import Contact from "@/models/Contact";
 import sanitizeHtml from "sanitize-html";
 import validator from "validator";

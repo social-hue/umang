@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
@@ -104,8 +103,8 @@ export default function Banner() {
   );
 
   return (
-    <section className="w-full 2xl:h-[760px] lg:h-[560px] md:h-[460px] h-[380px] relative overflow-hidden">
-      <div className="relative w-full 2xl:h-[680px] lg:h-[480px] md:h-[380px] h-[300px] overflow-hidden">
+    <section className="w-full 2xl:h-[800px] xl:h-[600px] lg:h-[560px] md:h-[460px] h-[380px] relative overflow-hidden">
+      <div className="relative w-full 2xl:h-[680px] xl:h-[520px] lg:h-[480px] md:h-[380px] h-[300px] overflow-hidden">
         {/* ✅ Preload next image invisibly */}
         {nextSlide !== null && nextSlide !== currentSlide && (
           <div className="absolute inset-0 pointer-events-none opacity-0">

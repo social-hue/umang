@@ -51,7 +51,6 @@ export default function Contact() {
         <ContactGrid />
         <Community />
       </div>
-      {/* <Footer /> */}
     </>
   );
 }

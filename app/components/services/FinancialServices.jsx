@@ -97,7 +97,7 @@ export default function FinancialServices() {
             </h3>
             <p className="text-zinc-800 mb-2 leading-relaxed">{srv.desc}</p>
             <motion.a
-              href="#contact"
+              href="tel:18002028704"
               className=" text-red-700 font-medium"
             >
               Enquire Now <span><ArrowRight className="text-red-700 w-4 h-4 inline-block"/></span>
@@ -115,15 +115,15 @@ export default function FinancialServices() {
         Ready to file or plan ?
       </h2>
       <p className="text-zinc-800 text-lg flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4">
-        <span className="flex items-center gap-2 text-orange-800 font-bold">
+        <span className="flex items-center gap-2 text-orange-800 text-2xl font-bold">
           Call <FaPhoneAlt className="text-orange-800 text-lg w-5 h-5" />
         </span>
         <span className="hidden md:inline text-zinc-600">|</span>
-        <span className="flex items-center gap-2 text-teal-700 font-bold">
+        <span className="flex items-center gap-2 text-2xl md:text-xl text-teal-700 font-bold">
           WhatsApp <FaWhatsapp className="text-teal-700 text-lg w-6 h-6" />
         </span>
         <span className="hidden md:inline text-zinc-600">|</span>
-        <span className="text-zinc-800 font-medium">
+        <span className="text-zinc-800 font-medium text-[22px] md:text-xl">
           Book a free 30-min review today.
         </span>
       </p>
@@ -132,7 +132,7 @@ export default function FinancialServices() {
         <AppointmentSection />
     </div>
       {/* FAQs */}
-      <div className="mt-12 max-w-5xl mx-auto">
+      <div className="mt-12 max-w-5xl mx-4 md:mx-auto">
       <FAQFinance />
       </div>
       <div className="mt-20">
@@ -145,19 +145,3 @@ export default function FinancialServices() {
     </section>
   );
 }
-
-// function FAQ({ q, a }) {
-//   const [open, setOpen] = useState(false);
-//   return (
-//     <div
-//       className="border border-zinc-800 rounded-sm p-3 cursor-pointer hover:border-zinc-700 transition-all"
-//       onClick={() => setOpen(!open)}
-//     >
-//       <div className="flex justify-between items-center">
-//         <h4 className="text-zinc-800 font-medium text-lg">{q}</h4>
-//         <span className="text-zinc-800 font-bold text-xl">{open ? "−" : "+"}</span>
-//       </div>
-//       {open && <p className="text-zinc-800 mt-3">{a}</p>}
-//     </div>
-//   );
-// }

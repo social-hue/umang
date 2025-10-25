@@ -38,10 +38,10 @@ export default function MissionVision() {
           viewport={{ once: true }}
           className="w-full md:w-1/2 text-zinc-800"
         >
-          <h2 className="text-4xl md:text-4xl font-semibold mb-4 leading-tight">
-            Our <span className="text-[#079184]">Mission & Vision</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+            Our <span className="text-zinc-800">Mission & Vision</span>
           </h2>
-          <div className="space-y-5 leading-relaxed text-gray-700">
+          <div className="space-y-5 leading-relaxed text-zinc-800">
             <p className="text-lg">
               <span className="font-semibold text-[#e60076]">Mission :</span>{" "}
               Set the gold standard for senior living in India - where every

@@ -8,29 +8,24 @@ export default function FAQFinance() {
 
   const faqs = [
     {
-      question: "How many team members can I invite?",
+      question: "Can you file returns for my parents remotely?",
       answer:
-        "You can invite up to 10 team members on the free plan and unlimited members on the premium plan.",
+        "Yes—secure uploads, video consent, and e-verification make it fully remote.",
     },
     {
-      question: "What is the maximum file upload size?",
+      question: "Do you advise on investments?",
       answer:
-        "The maximum file upload size is 2GB. You can increase this limit with a premium subscription.",
+        "We coordinate with SEBI-registered advisors where required and disclose any fees/commissions."
     },
     {
-      question: "How do I reset my password?",
+      question: "Can you handle NRI property sale tax?",
       answer:
-        "Click on ‘Forgot Password’ at the login screen, and we’ll send you a password reset link via email.",
+        "Yes—capital gains computation, TDS management, and 15CA/CB with CA sign-off.",
     },
     {
-      question: "Can I cancel my subscription?",
+      question: "Do you store my financial data?",
       answer:
-        "Yes, you can cancel your subscription anytime from your account settings page.",
-    },
-    {
-      question: "Do you provide additional support?",
-      answer:
-        "We provide 24/7 support through chat and email for all premium users.",
+        "Only what’s needed, with consent and limited-time access; download your dossier anytime.",
     },
   ];
 
@@ -65,12 +60,12 @@ export default function FAQFinance() {
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full text-left flex justify-between items-center py-3 text-lg font-medium text-zinc-900 hover:text-orange-600 transition-colors"
+                className="w-full text-left flex justify-between items-center py-3 text-lg font-medium text-zinc-900 hover:text-teal-700 transition-colors"
               >
                 <span
                   className={
                     openIndex === index
-                      ? "text-orange-600 font-semibold"
+                      ? "text-teal-700 font-semibold"
                       : "text-zinc-900"
                   }
                 >
@@ -78,7 +73,7 @@ export default function FAQFinance() {
                 </span>
                 <span
                   className={`transition-transform duration-300 ${
-                    openIndex === index ? "rotate-180 text-orange-600" : ""
+                    openIndex === index ? "rotate-180 text-teal-700" : ""
                   }`}
                 >
                   ▼
