@@ -1,12 +1,8 @@
 "use client";
 
 import React from "react";
-// import Header from "../../Header";
 import { IoMdTime } from "react-icons/io";
 import { motion } from "framer-motion";
-// import { CgLoadbarSound } from "react-icons/cg";
-// import { CiFacebook } from "react-icons/ci";
-// import { FaXTwitter } from "react-icons/fa6";
 
 const sectionVariants = {
   hidden: {},

@@ -1,6 +1,5 @@
 import Banner from "../components/Banner";
 import { BlogGrid } from "../components/blog/BlogGrid";
-// import Footer from "../components/Footer";
 import { seoData } from "../lib/seoMeta";
 
 export const generateMetadata = () => {
@@ -43,11 +42,10 @@ export const generateMetadata = () => {
 export default function Blog() {
   return (
     <>
-      <Banner title={"Blog"} bgImage={"/something4.jpg"}  />
+      <Banner title={"Blog"} bgImage={"/banner/blog-banner.webp"}  />
       <div className="relative overflow-hidden py-6">
         <BlogGrid />
       </div>
-      {/* <Footer /> */}
     </>
   );
 }

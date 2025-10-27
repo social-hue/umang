@@ -1,6 +1,6 @@
 export const data = [
   {
-    image: "/propertyImage.jpg",
+    image: "/properties/propertyImage.webp",
     city: "Goa",
     title: "ParadisePoint Villa",
     beds: 4,
@@ -11,7 +11,7 @@ export const data = [
     price: 5999,
   },
   {
-    image: "/housing1.jpg",
+    image: "/properties/housing1.webp",
     title: "Varanasi",
     city: "Varanasi",
     beds: 4,
@@ -22,7 +22,7 @@ export const data = [
     price: 5999,
   },
   {
-    image: "/housing2.jpg",
+    image: "/properties/housing2.webp",
     title: "ParadisePoint Villa",
     city: "Jalandhar",
     beds: 4,
@@ -33,7 +33,7 @@ export const data = [
     price: 5999,
   },
   {
-    image: "/housing3.jpg",
+    image: "/properties/housing3.webp",
     title: "ParadisePoint Villa",
     city: "Ayodhya",
     beds: 4,
@@ -44,7 +44,7 @@ export const data = [
     price: 5999,
   },
   {
-    image: "/Indore.jpg",
+    image: "/properties/housing5.webp",
     title: "ParadisePoint Villa",
     city: "Indore",
     beds: 4,
@@ -55,7 +55,7 @@ export const data = [
     price: 5999,
   },
   {
-    image: "/Mathura.jpg",
+    image: "/properties/Mathura.webp",
     title: "ParadisePoint Villa",
     city: "Mathura/Vrindavan",
     beds: 4,
@@ -66,7 +66,7 @@ export const data = [
     price: 5999,
   },
   {
-    image: "/Mumbai.jpg",
+    image: "/properties/Mumbai.webp",
     title: "ParadisePoint Villa",
     city: "Mumbai",
     beds: 4,

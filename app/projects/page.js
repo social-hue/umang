@@ -1,6 +1,5 @@
 import Banner from "../components/Banner";
 import Community from "../components/Community";
-// import Footer from "../components/Footer";
 import Map from "../components/project/map";
 import PropertySlider from "../components/PropertySlider";
 import { seoData } from "../lib/seoMeta";
@@ -45,15 +44,23 @@ export const generateMetadata = () => {
 export default function Projects() {
   return (
     <>
-      <Banner title={"Projects"} bgImage={"/something3.jpg"} />
-      <div className="relative overflow-hidden ">
+      <Banner title={"Projects"} bgImage={"/banner/projects-banner.webp"} />
+      <div className="relative overflow-hidden">
         <Map />
         <div className="py-6">
           <PropertySlider listings={data} />
         </div>
         <Community />
       </div>
-      {/* <Footer /> */}
     </>
   );
 }
+
+
+
+
+
+
+
+
+

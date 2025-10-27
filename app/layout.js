@@ -5,8 +5,6 @@ import {
   Montserrat,
   Outfit,
   Lato
-  // Big_Shoulders_Display,
-  // Barlow_Condensed,
 } from "next/font/google";
 import Script from "next/script"; // ✅ import Script from next/script
 import Header from "./components/Header";
@@ -59,14 +57,6 @@ const montserrat = Montserrat({
 //   variable: "--font-poppins",
 //   display: "swap"
 // });
-
-const outfit = Outfit({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
-  variable: "--font-outfit",
-  display: "swap",
-});
-
 
 export const metadata = {
   title: "Because every age deserves new beginnings",

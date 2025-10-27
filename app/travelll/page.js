@@ -43,7 +43,7 @@ export const generateMetadata = () => {
 export default function Travel() {
   return (
     <>
-      <Banner title={"Travel"} bgImage={"/travel-page1.jpg"} />
+      <Banner title={"Travel"} bgImage={"/Banner/travel-banner.webp"} />
       <div className="main_width py-8 relative overflow-hidden">
         <CharDhamSection />
       </div>

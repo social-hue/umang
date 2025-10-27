@@ -43,7 +43,7 @@ export const generateMetadata = () => {
 export default function Partners() {
   return (
     <>
-      <Banner title={"Partner with Us"} bgImage={"/handshake.jpg"} />
+      <Banner title={"Partner with Us"} bgImage={"/banner/partner-banner.webp"} />
       <div className="relative overflow-hidden">
         <PartnerPage />
       </div>

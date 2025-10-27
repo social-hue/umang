@@ -6,7 +6,7 @@ const POSTS = [
     title: "Where Luxury Meets Life After 55",
     slug: "Where-Luxury-Meets-Life-After-55",
     categories: ["LifeStyle", "Senior Living"],
-    image: "/blog_image.jpg",
+    image: "/blog/blog9.jpg",
     author: "Sanjayy Bharadwajj",
     date: "September 20, 2025",
     authorimg: "/sanjay_avtar.jpg",
@@ -46,7 +46,7 @@ const POSTS = [
     title: "Why India Elders Need More Than Just Shelter",
     slug: "Why-Indias-Elders-Need-More-Than-Just-Shelter",
     categories: ["unhygienic", "unsafe conditions"],
-    image: "/blog1.jpg",
+    image: "/blog/something8.png",
     author: "Sanjayy Bharadwajj",
     date: "August 5, 2025",
     authorimg: "/sanjay_avtar.jpg",
@@ -80,32 +80,32 @@ const POSTS = [
     excerpt:
       "For years, your calendar may have revolved around meetings, responsibilities, school vacations, bills, and other people’s needs.",
   },
-  {
-    id: 7,
-    title: "Rediscovering Spirituality After Retirement",
-    slug: "Rediscovering-Spirituality-After-Retirement",
-    categories: ["guides", "retirees"],
-    image: "/spritual.jpg",
-    author: "Gopinath Pant",
-    date: "June 20, 2025",
-    authorimg: "/blog/avtar.jpg",
-    readTime: "1K shares",
-    excerpt:
-      "Retirement is not just the end of a career—its the beginning of a new, quieter, and more reflective phase of life. It’s when the noise begins to settle, and the soul finally has room to speak.",
-  },
-  {
-    id: 8,
-    title: "Plan a Healthy, Happy Retirement",
-    slug: "Plan-a-Healthy-Happy-Retirement",
-    categories: ["guides", "retirees"],
-    image: "/glimps/1.jpg",
-    author: "Dipankar Sen",
-    date: "June 5, 2025",
-    authorimg: "/blog/avtar.jpg",
-    readTime: "1K shares",
-    excerpt:
-      "You’ve worked hard your entire life - raising a family, building a career, supporting loved ones, and managing responsibilities.",
-  },
+  // {
+  //   id: 7,
+  //   title: "Rediscovering Spirituality After Retirement",
+  //   slug: "Rediscovering-Spirituality-After-Retirement",
+  //   categories: ["guides", "retirees"],
+  //   image: "/spritual.jpg",
+  //   author: "Gopinath Pant",
+  //   date: "June 20, 2025",
+  //   authorimg: "/blog/avtar.jpg",
+  //   readTime: "1K shares",
+  //   excerpt:
+  //     "Retirement is not just the end of a career—its the beginning of a new, quieter, and more reflective phase of life. It’s when the noise begins to settle, and the soul finally has room to speak.",
+  // },
+  // {
+  //   id: 8,
+  //   title: "Plan a Healthy, Happy Retirement",
+  //   slug: "Plan-a-Healthy-Happy-Retirement",
+  //   categories: ["guides", "retirees"],
+  //   image: "/glimps/1.jpg",
+  //   author: "Dipankar Sen",
+  //   date: "June 5, 2025",
+  //   authorimg: "/blog/avtar.jpg",
+  //   readTime: "1K shares",
+  //   excerpt:
+  //     "You’ve worked hard your entire life - raising a family, building a career, supporting loved ones, and managing responsibilities.",
+  // },
 ];
 
 export const BlogGrid = ({ limit }) => {

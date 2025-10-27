@@ -7,7 +7,7 @@ export const posts = [
     time: "2 minute read",
     view: "1k views",
     share: "600 shares",
-    image: "/blog_image.jpg",
+    image: "/blog/blog9.jpg",
     excerpt: "Life after 55 is often imagined as a quiet, restful phase, but at Umang Living, we believe it’s the perfect time to live fully, pursue passions, and embrace community. We’re more than just a place to reside.",
     content1: `<p>Life after 55 is often imagined as a quiet, restful phase, but at Umang Living, we believe it’s the perfect time to live fully, pursue passions, and embrace community. We’re more than just a place to reside. We are an all-inclusive, vibrant community you can genuinely call home. Every aspect of Umang Living is designed to cater to the physical, emotional, and social well-being of our residents, ensuring that life after retirement is nothing short of extraordinary.</p>`,
     // heading: "Problems faced by Senior Citizens",
@@ -181,7 +181,7 @@ Whether it’s the joy of a community gathering, the comfort of personalized car
     time: "2 minute read",
     view: "1.6K views",
     share: "1.2K shares",
-    image: "/blog1.jpg",
+    image: "/blog/blog1.jpg",
     excerpt:
       "A few days back, I came across a heart-wrenching story. Over 100 elderly citizens were rescued from an unregistered old age home in Noida",
     content1: `A few days back, I came across a heart-wrenching story. Over 100 elderly citizens were rescued from an unregistered old age home in Noida—crammed into just 13 rooms, surviving in unhygienic, unsafe conditions. Some were abandoned, others ill, and many simply had nowhere else to go. <br>As someone who works every day to create spaces where seniors can live with dignity, this story shook me. And it reminded me, once again, why Umang Living exists.
@@ -335,176 +335,176 @@ Retirement is the first time in decades that your calendar is truly yours. No sc
 
 `,
   },
-  {
-    slug: "Rediscovering-Spirituality-After-Retirement",
-    title: `Rediscovering Spirituality After Retirement`,
-    subTitle:
-      "Retirement is not just the end of a career—its the beginning of a new, quieter, and more reflective phase of life.<br> It’s when the noise begins to settle, and the soul finally has room to speak. ",
-    author: "Gopinath Pant",
-    time: "2 minute read",
-    view: "1.6K views",
-    share: "1.2K shares",
-    image: "/spritual.jpg",
-    excerpt: "Aenean eleifend arcu nec massa pulvinar…",
-    content1: `
-  Retirement is not just the end of a career—its the beginning of a new, quieter, and more reflective phase of life. It’s when the noise begins to settle, and the soul finally has room to speak. And for many, this marks the perfect time to begin—or deepen—a journey of <span style="font-weight:600">spirituality</span>.<br><br>
+//   {
+//     slug: "Rediscovering-Spirituality-After-Retirement",
+//     title: `Rediscovering Spirituality After Retirement`,
+//     subTitle:
+//       "Retirement is not just the end of a career—its the beginning of a new, quieter, and more reflective phase of life.<br> It’s when the noise begins to settle, and the soul finally has room to speak. ",
+//     author: "Gopinath Pant",
+//     time: "2 minute read",
+//     view: "1.6K views",
+//     share: "1.2K shares",
+//     image: "/spritual.jpg",
+//     excerpt: "Aenean eleifend arcu nec massa pulvinar…",
+//     content1: `
+//   Retirement is not just the end of a career—its the beginning of a new, quieter, and more reflective phase of life. It’s when the noise begins to settle, and the soul finally has room to speak. And for many, this marks the perfect time to begin—or deepen—a journey of <span style="font-weight:600">spirituality</span>.<br><br>
     
-    In earlier years, life may have felt like a race. Between responsibilities, deadlines, and duties to others, there was often little time to pause, breathe, and ask the deeper questions: Who am I? What brings me peace? What lies beyond the material world?In earlier years, life may have felt like a race. Between responsibilities, deadlines, and duties to others, there was often little time to pause, breathe, and ask the deeper questions:<i> Who am I? What brings me peace? What lies beyond the material world? </i><br><br>
-    Retirement offers that sacred pause. Here’s why turning to spirituality at this stage can be the most enriching gift you give yourself.<br>A Time to Reflect, Not Just Rest<br>
-     `,
-    heading: `After decades of outward activity, retirement invites inward reflection. This isn’t just about slowing down—it’s about becoming aware.
-    `,
-    content2: ` <h1 style="color: #0b7c6c; font-weight: 600;">The Role of Spirituality in Retirement</h1>
+//     In earlier years, life may have felt like a race. Between responsibilities, deadlines, and duties to others, there was often little time to pause, breathe, and ask the deeper questions: Who am I? What brings me peace? What lies beyond the material world?In earlier years, life may have felt like a race. Between responsibilities, deadlines, and duties to others, there was often little time to pause, breathe, and ask the deeper questions:<i> Who am I? What brings me peace? What lies beyond the material world? </i><br><br>
+//     Retirement offers that sacred pause. Here’s why turning to spirituality at this stage can be the most enriching gift you give yourself.<br>A Time to Reflect, Not Just Rest<br>
+//      `,
+//     heading: `After decades of outward activity, retirement invites inward reflection. This isn’t just about slowing down—it’s about becoming aware.
+//     `,
+//     content2: ` <h1 style="color: #0b7c6c; font-weight: 600;">The Role of Spirituality in Retirement</h1>
 
-  <h2 style="color: #066; font-weight: 600; margin-top: 1.5em;">Spirituality Helps You</h2>
-  <ul style="margin-left: 20px;list-style-type:disc">
-    <li>Reflect on the meaning of your journey</li>
-    <li>Let go of past regrets and attachments</li>
-    <li>Accept life’s changes with grace</li>
-    <li>Find peace in the present moment</li>
-  </ul>
-  <p>This reflection is not passive. It is a powerful, healing process that brings clarity, contentment, and a sense of wholeness.</p>
+//   <h2 style="color: #066; font-weight: 600; margin-top: 1.5em;">Spirituality Helps You</h2>
+//   <ul style="margin-left: 20px;list-style-type:disc">
+//     <li>Reflect on the meaning of your journey</li>
+//     <li>Let go of past regrets and attachments</li>
+//     <li>Accept life’s changes with grace</li>
+//     <li>Find peace in the present moment</li>
+//   </ul>
+//   <p>This reflection is not passive. It is a powerful, healing process that brings clarity, contentment, and a sense of wholeness.</p>
 
-  <h2 style="color: #066; font-weight: 600; margin-top: 1.5em;">Seeking Purpose Beyond Roles</h2>
-  <p>Throughout life, we wear many labels—parent, professional, provider, caretaker. But when these roles fade, many feel lost. Spirituality gently reminds you that you are more than your roles. You are a soul on a journey.</p>
-  <p>Exploring your spiritual side helps you:</p>
-  <ul style="margin-left: 20px;list-style-type:disc">
-    <li>Reconnect with your inner self</li>
-    <li>Detach from ego and status</li>
-    <li>Discover a lasting sense of purpose beyond achievements</li>
-  </ul>
-  <p>It’s about moving from “doing” to simply being—and finding immense peace in that shift.</p>
+//   <h2 style="color: #066; font-weight: 600; margin-top: 1.5em;">Seeking Purpose Beyond Roles</h2>
+//   <p>Throughout life, we wear many labels—parent, professional, provider, caretaker. But when these roles fade, many feel lost. Spirituality gently reminds you that you are more than your roles. You are a soul on a journey.</p>
+//   <p>Exploring your spiritual side helps you:</p>
+//   <ul style="margin-left: 20px;list-style-type:disc">
+//     <li>Reconnect with your inner self</li>
+//     <li>Detach from ego and status</li>
+//     <li>Discover a lasting sense of purpose beyond achievements</li>
+//   </ul>
+//   <p>It’s about moving from “doing” to simply being—and finding immense peace in that shift.</p>
 
-  <h2 style="color: #066; font-weight: 600; margin-top: 1.5em;">Embracing Peace Over Possession</h2>
-  <p>The first half of life is often about accumulating—degrees, wealth, property, accolades. But the second half is about letting go—of clutter, expectations, and the need to control everything.</p>
-  <p>Spirituality helps you shift from the pursuit of more to the joy of enough. You learn to:</p>
-  <ul style="margin-left: 20px;list-style-type:disc">
-    <li>Find happiness in simplicity</li>
-    <li>Experience joy in stillness</li>
-    <li>Trust the flow of life</li>
-    <li>Accept impermanence with ease</li>
-  </ul>
-  <p>This inner surrender brings freedom, not fear.</p>
+//   <h2 style="color: #066; font-weight: 600; margin-top: 1.5em;">Embracing Peace Over Possession</h2>
+//   <p>The first half of life is often about accumulating—degrees, wealth, property, accolades. But the second half is about letting go—of clutter, expectations, and the need to control everything.</p>
+//   <p>Spirituality helps you shift from the pursuit of more to the joy of enough. You learn to:</p>
+//   <ul style="margin-left: 20px;list-style-type:disc">
+//     <li>Find happiness in simplicity</li>
+//     <li>Experience joy in stillness</li>
+//     <li>Trust the flow of life</li>
+//     <li>Accept impermanence with ease</li>
+//   </ul>
+//   <p>This inner surrender brings freedom, not fear.</p>
 
-  <h2 style="color: #066; font-weight: 600; margin-top: 1.5em;">Building a Relationship with the Divine</h2>
-  <p>Whether through prayer, meditation, satsang, seva, or silence, retirement opens the door to a deeper relationship with the divine—however you define it.</p>
-  <p>You may choose to:</p>
-  <ul style="margin-left: 20px;list-style-type:disc">
-    <li>Spend time in temples or spiritual communities</li>
-    <li>Read sacred texts like the Gita, Upanishads, or Bible</li>
-    <li>Practice mantra chanting, mindfulness, or breathwork</li>
-    <li>Attend discourses or listen to spiritual music</li>
-  </ul>
-  <p>The beauty of this journey is that there’s no one path—only the one that feels true to your heart.</p>
+//   <h2 style="color: #066; font-weight: 600; margin-top: 1.5em;">Building a Relationship with the Divine</h2>
+//   <p>Whether through prayer, meditation, satsang, seva, or silence, retirement opens the door to a deeper relationship with the divine—however you define it.</p>
+//   <p>You may choose to:</p>
+//   <ul style="margin-left: 20px;list-style-type:disc">
+//     <li>Spend time in temples or spiritual communities</li>
+//     <li>Read sacred texts like the Gita, Upanishads, or Bible</li>
+//     <li>Practice mantra chanting, mindfulness, or breathwork</li>
+//     <li>Attend discourses or listen to spiritual music</li>
+//   </ul>
+//   <p>The beauty of this journey is that there’s no one path—only the one that feels true to your heart.</p>
 
-  <h2 style="color: #066; font-weight: 600; margin-top: 1.5em;">Healing and Forgiveness Become Easier</h2>
-  <p>As we age, we carry emotional baggage—unspoken words, old wounds, unresolved relationships. Spirituality provides the tools for healing and forgiveness. It allows you to:</p>
-  <ul style="margin-left: 20px;list-style-type:disc">
-    <li>Release bitterness and pain</li>
-    <li>Make peace with your past</li>
-    <li>Offer forgiveness to yourself and others</li>
-    <li>Move forward lighter and freer</li>
-  </ul>
-  <p>This emotional cleansing can be more powerful than any medicine—restoring your mental and physical health alike.</p>
+//   <h2 style="color: #066; font-weight: 600; margin-top: 1.5em;">Healing and Forgiveness Become Easier</h2>
+//   <p>As we age, we carry emotional baggage—unspoken words, old wounds, unresolved relationships. Spirituality provides the tools for healing and forgiveness. It allows you to:</p>
+//   <ul style="margin-left: 20px;list-style-type:disc">
+//     <li>Release bitterness and pain</li>
+//     <li>Make peace with your past</li>
+//     <li>Offer forgiveness to yourself and others</li>
+//     <li>Move forward lighter and freer</li>
+//   </ul>
+//   <p>This emotional cleansing can be more powerful than any medicine—restoring your mental and physical health alike.</p>
 
-  <h2 style="color: #066; font-weight: 600; margin-top: 1.5em;">You Set an Example for the Next Generation</h2>
-  <p>When children and grandchildren see you living with peace, wisdom, and faith, they too feel inspired to lead more grounded lives. You become a living example of inner strength, resilience, and compassion.</p>
-  <p>Your spiritual journey becomes a silent blessing that ripples across generations.</p>
+//   <h2 style="color: #066; font-weight: 600; margin-top: 1.5em;">You Set an Example for the Next Generation</h2>
+//   <p>When children and grandchildren see you living with peace, wisdom, and faith, they too feel inspired to lead more grounded lives. You become a living example of inner strength, resilience, and compassion.</p>
+//   <p>Your spiritual journey becomes a silent blessing that ripples across generations.</p>
 
-  <h2 style="color: #066; font-weight: 600; margin-top: 1.5em;">Preparing for the Ultimate Journey</h2>
-  <p>Spirituality doesn’t mean obsessing over death—it means embracing life with awareness. It teaches that every moment is sacred, and that this world is a beautiful, temporary home.</p>
-  <p>Instead of fearing what lies ahead, you learn to:</p>
-  <ul style="margin-left: 20px;list-style-type:disc">
-    <li>Live fully in the now</li>
-    <li>Be grateful for what you have</li>
-    <li>Accept the cycle of life with grace</li>
-  </ul>
-  <p>This acceptance brings deep calm, joy, and surrender—not sadness.</p>
+//   <h2 style="color: #066; font-weight: 600; margin-top: 1.5em;">Preparing for the Ultimate Journey</h2>
+//   <p>Spirituality doesn’t mean obsessing over death—it means embracing life with awareness. It teaches that every moment is sacred, and that this world is a beautiful, temporary home.</p>
+//   <p>Instead of fearing what lies ahead, you learn to:</p>
+//   <ul style="margin-left: 20px;list-style-type:disc">
+//     <li>Live fully in the now</li>
+//     <li>Be grateful for what you have</li>
+//     <li>Accept the cycle of life with grace</li>
+//   </ul>
+//   <p>This acceptance brings deep calm, joy, and surrender—not sadness.</p>
 
     
-    `,
-  },
-  {
-    slug: "Plan-a-Healthy-Happy-Retirement",
-    title: `Plan a Healthy, Happy Retirement`,
-    subTitle:
-      "You’ve worked hard your entire life—raising a family, building a career, supporting loved ones,<br> and managing responsibilities.. ",
-    author: "Dipankar Sen",
-    time: "2 minute read",
-    view: "1.6K views",
-    share: "1.2K shares",
-    image: "/glimps/1.jpg",
-    excerpt: "Aenean eleifend arcu nec massa pulvinar…",
-    content1: `
- You’ve worked hard your entire life—raising a family, building a career, supporting loved ones, and managing responsibilities. Now, as you step into retirement, you finally have the time and freedom to live life on your terms.<br><br>
-But heres the truth: freedom means little without good health.<br><br>
-That’s why your retirement years should be more than just restful—they should be joyful, active, and healthy. Because after all, health is the greatest wealth, and this is your time to truly enjoy it.<br><br>
-  <h1 style="color: #0b7c6c; font-weight: 600;">Good Health = True Independence</h1>
-  <p>Many people save for financial security in retirement—but forget the importance of physical security. A healthy body means:</p>
-  <ul style="margin-left: 20px;">
-    <li>You can travel freely</li>
-    <li>Perform daily tasks with ease</li>
-    <li>Stay mentally sharp and emotionally stable</li>
-    <li>Avoid dependence on others for routine care</li>
-  </ul>
-  <p>True independence in retirement is not about having more help—it’s about needing less of it. And that comes from taking care of your health, one small habit at a time.</p>
+//     `,
+//   },
+//   {
+//     slug: "Plan-a-Healthy-Happy-Retirement",
+//     title: `Plan a Healthy, Happy Retirement`,
+//     subTitle:
+//       "You’ve worked hard your entire life—raising a family, building a career, supporting loved ones,<br> and managing responsibilities.. ",
+//     author: "Dipankar Sen",
+//     time: "2 minute read",
+//     view: "1.6K views",
+//     share: "1.2K shares",
+//     image: "/glimps/1.jpg",
+//     excerpt: "Aenean eleifend arcu nec massa pulvinar…",
+//     content1: `
+//  You’ve worked hard your entire life—raising a family, building a career, supporting loved ones, and managing responsibilities. Now, as you step into retirement, you finally have the time and freedom to live life on your terms.<br><br>
+// But heres the truth: freedom means little without good health.<br><br>
+// That’s why your retirement years should be more than just restful—they should be joyful, active, and healthy. Because after all, health is the greatest wealth, and this is your time to truly enjoy it.<br><br>
+//   <h1 style="color: #0b7c6c; font-weight: 600;">Good Health = True Independence</h1>
+//   <p>Many people save for financial security in retirement—but forget the importance of physical security. A healthy body means:</p>
+//   <ul style="margin-left: 20px;">
+//     <li>You can travel freely</li>
+//     <li>Perform daily tasks with ease</li>
+//     <li>Stay mentally sharp and emotionally stable</li>
+//     <li>Avoid dependence on others for routine care</li>
+//   </ul>
+//   <p>True independence in retirement is not about having more help—it’s about needing less of it. And that comes from taking care of your health, one small habit at a time.</p>
 
- `,
-    heading: `Your Body Deserves Care After Years of Giving   `,
-    content2: `<p>For decades, your body supported your every move—early mornings, long days, stress, travel, illness, and hard work. Now it’s time to repay that debt with care, rest, and nurturing.</p>
-  <ul style="margin-left: 20px;list-style-type:disc">
-    <li>Eat clean, nourishing meals</li>
-    <li>Practice gentle exercise like yoga or walking</li>
-    <li>Go for regular check-ups</li>
-    <li>Sleep well and stay hydrated</li>
-  </ul>
-  <p>Think of it as tuning up a classic car—when well maintained, it runs beautifully for years.</p>
+//  `,
+//     heading: `Your Body Deserves Care After Years of Giving   `,
+//     content2: `<p>For decades, your body supported your every move—early mornings, long days, stress, travel, illness, and hard work. Now it’s time to repay that debt with care, rest, and nurturing.</p>
+//   <ul style="margin-left: 20px;list-style-type:disc">
+//     <li>Eat clean, nourishing meals</li>
+//     <li>Practice gentle exercise like yoga or walking</li>
+//     <li>Go for regular check-ups</li>
+//     <li>Sleep well and stay hydrated</li>
+//   </ul>
+//   <p>Think of it as tuning up a classic car—when well maintained, it runs beautifully for years.</p>
 
-  <h2 style="color: #066; font-weight: 600; margin-top: 1.5em;">Physical Health Supports Mental Joy</h2>
-  <p>A healthy lifestyle isn’t just about avoiding disease—it’s about feeling good every day. When your body is active, your mind follows:</p>
-  <ul style="margin-left: 20px;list-style-type:disc">
-    <li>You feel more motivated and energetic</li>
-    <li>You enjoy hobbies, outings, and family time</li>
-    <li>Your confidence improves</li>
-    <li>Stress, anxiety, and isolation reduce</li>
-  </ul>
-  <p>Staying healthy in retirement is about staying happy in retirement. Your mood, your relationships, and your sense of purpose all start with how you feel inside.</p>
+//   <h2 style="color: #066; font-weight: 600; margin-top: 1.5em;">Physical Health Supports Mental Joy</h2>
+//   <p>A healthy lifestyle isn’t just about avoiding disease—it’s about feeling good every day. When your body is active, your mind follows:</p>
+//   <ul style="margin-left: 20px;list-style-type:disc">
+//     <li>You feel more motivated and energetic</li>
+//     <li>You enjoy hobbies, outings, and family time</li>
+//     <li>Your confidence improves</li>
+//     <li>Stress, anxiety, and isolation reduce</li>
+//   </ul>
+//   <p>Staying healthy in retirement is about staying happy in retirement. Your mood, your relationships, and your sense of purpose all start with how you feel inside.</p>
 
-  <h2 style="color: #066; font-weight: 600; margin-top: 1.5em;">Prevention Is Better Than Cure</h2>
-  <p>Health issues often sneak up quietly with age. But the good news is—many conditions are preventable or manageable with lifestyle changes.</p>
-  <p>By investing in wellness now, you avoid costly, painful medical treatments later. This means:</p>
-  <ul style="margin-left: 20px;list-style-type:disc">
-    <li>Fewer hospital visits</li>
-    <li>Reduced medication dependency</li>
-    <li>More time and money to spend on experiences you love</li>
-  </ul>
-  <p>A healthy lifestyle is the best long-term insurance policy—one that pays in years, not rupees.</p>
+//   <h2 style="color: #066; font-weight: 600; margin-top: 1.5em;">Prevention Is Better Than Cure</h2>
+//   <p>Health issues often sneak up quietly with age. But the good news is—many conditions are preventable or manageable with lifestyle changes.</p>
+//   <p>By investing in wellness now, you avoid costly, painful medical treatments later. This means:</p>
+//   <ul style="margin-left: 20px;list-style-type:disc">
+//     <li>Fewer hospital visits</li>
+//     <li>Reduced medication dependency</li>
+//     <li>More time and money to spend on experiences you love</li>
+//   </ul>
+//   <p>A healthy lifestyle is the best long-term insurance policy—one that pays in years, not rupees.</p>
 
-  <h2 style="color: #066; font-weight: 600; margin-top: 1.5em;">Stay Young at Heart—Literally and Figuratively</h2>
-  <p>Regular movement, nutritious food, and meaningful connection don’t just improve lifespan—they improve healthspan. That’s the number of years you live well, not just live.</p>
-  <p>Dance, laugh, travel, paint, cook, walk, explore—and see how your heart, joints, and spirit thank you for it. You may not be 25 again, but you can certainly feel more alive than ever.</p>
+//   <h2 style="color: #066; font-weight: 600; margin-top: 1.5em;">Stay Young at Heart—Literally and Figuratively</h2>
+//   <p>Regular movement, nutritious food, and meaningful connection don’t just improve lifespan—they improve healthspan. That’s the number of years you live well, not just live.</p>
+//   <p>Dance, laugh, travel, paint, cook, walk, explore—and see how your heart, joints, and spirit thank you for it. You may not be 25 again, but you can certainly feel more alive than ever.</p>
 
-  <h2 style="color: #066; font-weight: 600; margin-top: 1.5em;">A Happy Retirement Is a Shared One</h2>
-  <p>Staying healthy allows you to truly enjoy time with your spouse, grandchildren, old friends, and new ones. You can:</p>
-  <ul style="margin-left: 20px;list-style-type:disc">
-    <li>Attend weddings and family functions with energy</li>
-    <li>Travel with loved ones</li>
-    <li>Be present as a mentor and storyteller</li>
-    <li>Share meals, memories, and festivals without limitation</li>
-  </ul>
-  <p>Good health helps you be part of life’s moments—not just a spectator.</p>
+//   <h2 style="color: #066; font-weight: 600; margin-top: 1.5em;">A Happy Retirement Is a Shared One</h2>
+//   <p>Staying healthy allows you to truly enjoy time with your spouse, grandchildren, old friends, and new ones. You can:</p>
+//   <ul style="margin-left: 20px;list-style-type:disc">
+//     <li>Attend weddings and family functions with energy</li>
+//     <li>Travel with loved ones</li>
+//     <li>Be present as a mentor and storyteller</li>
+//     <li>Share meals, memories, and festivals without limitation</li>
+//   </ul>
+//   <p>Good health helps you be part of life’s moments—not just a spectator.</p>
 
-  <h2 style="color: #066; font-weight: 600; margin-top: 1.5em;">Health Is the Foundation for Joyful Living</h2>
-  <p>Retirement should be more than survival—it should be about thriving. Whether you dream of:</p>
-  <ul style="margin-left: 20px;list-style-type:disc">
-    <li>Traveling the country</li>
-    <li>Exploring spirituality</li>
-    <li>Starting a small business</li>
-    <li>Pursuing art, music, or learning</li>
-  </ul>
-  <p>None of it is possible without the energy and clarity that good health provides.<br />
-  When your body feels light, your heart feels free.</p>
+//   <h2 style="color: #066; font-weight: 600; margin-top: 1.5em;">Health Is the Foundation for Joyful Living</h2>
+//   <p>Retirement should be more than survival—it should be about thriving. Whether you dream of:</p>
+//   <ul style="margin-left: 20px;list-style-type:disc">
+//     <li>Traveling the country</li>
+//     <li>Exploring spirituality</li>
+//     <li>Starting a small business</li>
+//     <li>Pursuing art, music, or learning</li>
+//   </ul>
+//   <p>None of it is possible without the energy and clarity that good health provides.<br />
+//   When your body feels light, your heart feels free.</p>
     
-    `,
-  },
+//     `,
+//   },
 ];

@@ -4,7 +4,6 @@ import Community from "@/app/components/Community";
 import Footer from "@/app/components/Footer";
 import { seoData } from "@/app/lib/seoMeta";
 import { posts } from "@/app/StaticData/posts";
-// import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 

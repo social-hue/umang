@@ -1,7 +1,7 @@
 export const facilities = [
   {
     id: 1,
-    icon: "/townships2.jpg",
+    icon: "/facilities/townships.jpg",
     title: "Townships",
     tagline: "Discover senior communities across 75+ cities. A safe and connected place to truly belong.",
     accent: "text-zinc-800",
@@ -9,7 +9,7 @@ export const facilities = [
   },
   {
     id: 2,
-    icon: "/travel1.jpg",
+    icon: "/facilities/travel.webp",
     title: "Travel",
     tagline: "Tailored travel designed with seniors in mind. Explore the world with confidence & comfort.",
     accent: "text-zinc-800",
@@ -17,7 +17,7 @@ export const facilities = [
   },
     {
     id: 3,
-    icon: "/law.webp",
+    icon: "/facilities/law.webp",
     title: "Legal Consultation",
     tagline: "Expert advice for land & property matters. Trusted guidance to secure your peace of mind.",
     accent: "text-zinc-800",
@@ -25,15 +25,15 @@ export const facilities = [
   },
   {
     id: 4,
-    icon: "/services/Financial.jpg",
+    icon: "/facilities/Financial.jpg",
     title: "Financial Consulting",
-    tagline: "Empowering seniors with expert financial guidance for a secure, independent & worry-free future",
+    tagline: "Empowering seniors with expert financial guidance for a secure, & worry-free future",
     accent: "text-zinc-800",
     link: "/services/financial-consulting"
   },
   {
     id: 5,
-    icon: "/services/life-coach.png",
+    icon: "/facilities/life-coach.png",
     title: "Life Coach",
     tagline: "Guiding seniors toward purpose, balance, and emotional fulfillment in every stage of life.",
     accent: "text-zinc-800",
@@ -41,7 +41,7 @@ export const facilities = [
   },
   {
     id: 6,
-    icon: "/homestay.webp",
+    icon: "/facilities/homestay.webp",
     title: "Stay",
     tagline: "Enjoy flexible, stays designed for comfort & peace of mind. Feel at home, wherever you are.",
     accent: "text-zinc-800",

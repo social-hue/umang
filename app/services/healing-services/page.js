@@ -44,7 +44,7 @@ export const generateMetadata = () => {
 export default function HealingServices() {
   return (
     <>
-      <Banner title={"Healing Services"} bgImage={"/healing-bannerr.png"}   />
+      <Banner title={"Healing Services"} bgImage={"/banner/healing-banner.webp"}   />
       <div className="relative overflow-hidden ">
       {/* <div className="p-2 bg-red-700 text-center text-white text-xl md:text-[22px] font-semibold">Our Healing Services are launching on 1 November, 2025 </div> */}
 
