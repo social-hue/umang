@@ -1,6 +1,5 @@
 import Banner from "../components/Banner";
 import Community from "../components/Community";
-import Footer from "../components/Footer";
 import { seoData } from "../lib/seoMeta";
 import CharDhamSection from "@/app/components/CharDhamSection";
 
@@ -49,7 +48,6 @@ export default function Travel() {
         <CharDhamSection />
       </div>
       <Community />
-      <Footer />
     </>
   );
 }

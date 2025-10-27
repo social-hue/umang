@@ -4,9 +4,16 @@ import { Phone, ArrowRight, Award, Globe2, Headphones, Users, ShieldCheck } from
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import BookingModal from "./BookingModal";
+import TourForm from "./Form/TravelForm";
 
 export default function CharDhamSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedTour, setSelectedTour] = useState(null); // store clicked package name
+
+  const handleEnquireClick = (pkg) => {
+    setSelectedTour(pkg.name);
+    setIsModalOpen(true);
+  };
 
   const dhamRef = useRef(null);
   const dhamInView = useInView(dhamRef, { once: true, margin: "-60px" });
@@ -108,7 +115,7 @@ export default function CharDhamSection() {
     {
       name: "Kedarnath-Badrinath Tour (Do Dham Tour From Haridwar)",
       duration: "05 Nights / 06 Days",
-      route: " Haridwar – Guptkashi – Kedarnath – Gouptkashi – Badrinath – Rudraprayag Haridwar",
+      route: "Haridwar – Guptkashi – Kedarnath – Gouptkashi – Badrinath – Rudraprayag Haridwar",
       price: "Rs. 12500/- Per Person (Starting Price)",
       inclusions: [
         "02 Night Hotel Accommodation in Rudraprayag",
@@ -122,7 +129,7 @@ export default function CharDhamSection() {
     {
       name: "Char Dham Tour Package",
       duration: "09 Nights / 10 Days",
-      route: " Haridwar – Guptkashi – Kedarnath – Gouptkashi – Haridwar",
+      route: "Haridwar – Guptkashi – Kedarnath – Gouptkashi – Haridwar",
       price: "Rs. 17500/- Per Person (Starting Price)",
       inclusions: [
         "02 Night Hotel Accommodation in Rudraprayag",
@@ -136,7 +143,7 @@ export default function CharDhamSection() {
     {
       name: "Kedarnath Tour Package (Ek Dham Tour From Delhi)",
       duration: "04 Nights / 05 Days",
-      route: " Haridwar – Guptkashi – Kedarnath – Guptkashi – Haridwar",
+      route: "Haridwar – Guptkashi – Kedarnath – Guptkashi – Haridwar",
       price: "Rs. 9500/- Per Person (Starting Price)",
       inclusions: [
         "01 Night Hotel Accommodation in Rudraprayag",
@@ -261,77 +268,7 @@ export default function CharDhamSection() {
               Plan Your Trip !
             </h3>
             {/* Form */}
-            <form className="space-y-4 text-md">
-              {/* Row 1: Name + Contact */}
-              <div className="flex flex-col sm:flex-row gap-3">
-                <input
-                  type="text"
-                  placeholder="Full Name"
-                  className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-500 focus:outline-none focus:border-zinc-600"
-                />
-                <input
-                  type="tel"
-                  placeholder="Contact"
-                  className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-500 focus:outline-none focus:border-zinc-600"
-                />
-              </div>
-
-              {/* Row 2: Date + Travellers Dropdown */}
-              <div className="flex flex-col sm:flex-row gap-3">
-                <input
-                  type="text"
-                  placeholder="Preferred Date"
-                  className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-500 focus:outline-none focus:border-zinc-600"
-                />
-
-                {/* Custom Dropdown for Travellers */}
-                <select
-                  defaultValue=""
-                  className="flex-1 border border-zinc-300 rounded-sm px-2 py-2 text-zinc-700 placeholder-zinc-500 focus:outline-none focus:border-zinc-600 bg-white cursor-pointer"
-                >
-                  <option value="" disabled>
-                    Number of Travellers
-                  </option>
-                  <option value="0-5">0-5</option>
-                  <option value="5-10">5-10</option>
-                  <option value="10-15">10-15</option>
-                  <option value="more">More</option>
-                </select>
-              </div>
-
-              {/* Row 3: Description */}
-              <div className="flex flex-col gap-3">
-                <textarea
-                  rows="3"
-                  placeholder="Describe Your Tour"
-                  className="w-full border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-500 focus:outline-none focus:border-zinc-600 resize-none"
-                ></textarea>
-              </div>
-
-              {/* Row 4: Destination + Submit */}
-              <div className="flex flex-col sm:flex-row gap-3">
-                <select
-                  defaultValue="Select Destination"
-                  className="flex-1 border border-zinc-300 rounded-sm px-2 py-2 text-zinc-700 placeholder-zinc-500 focus:outline-none focus:border-zinc-600 bg-white cursor-pointer"
-                >
-                  <option value="Select Destination" disabled>
-                    Select Destination
-                  </option>
-                  <option value="Char Dham">Char Dham</option>
-                  <option value="Goa">Goa</option>
-                  <option value="Darjeeling">Darjeeling</option>
-                  <option value="Kerala">Kerala</option>
-                  <option value="Other">Other</option>
-                </select>
-
-                <button
-                  type="submit"
-                  className="flex items-center justify-center gap-2 bg-orange-700 text-white px-8 py-2 rounded-sm shadow hover:bg-orange-800 transition whitespace-nowrap"
-                >
-                  Send
-                </button>
-              </div>
-            </form>
+            <TourForm />
 
           </div>
         </div>
@@ -367,7 +304,7 @@ export default function CharDhamSection() {
                 <h3 className="text-xl font-semibold text-zinc-800 mb-2">{pkg.name}</h3>
                 <p className="font-medium text-zinc-700 mb-2">{pkg.duration}</p>
                 <p className="text-md text-zinc-600 mb-3">{pkg.route}</p>
-                {/* <p className="text-lg font-bold text-zinc-800 mb-3">{pkg.price}</p> */}
+
                 <div className="text-md">
                   <h4 className="font-semibold text-zinc-800 text-md mb-2">Package Inclusions:</h4>
                   <ul className="list-disc list-inside space-y-0.5 text-zinc-600 text-md">
@@ -380,19 +317,23 @@ export default function CharDhamSection() {
 
               <div className="mt-4 mb-1 flex gap-3">
                 <button
-                  onClick={() => setIsModalOpen(true)}
-                  className="flex items-center justify-center gap-2 bg-orange-700 text-white px-4 py-2 rounded-sm hover:bg-orange-800 transition"
+                  onClick={() => handleEnquireClick(pkg)}
+                  className="flex cursor-pointer items-center justify-center gap-2 bg-orange-700 text-white px-4 py-2 rounded-sm hover:bg-orange-800 transition"
                 >
                   Enquire Now <ArrowRight size={16} />
                 </button>
-                <BookingModal open={isModalOpen} onClose={() => setIsModalOpen(false)} />
-                <button className="flex items-center justify-center gap-2 border border-zinc-800 text-zinc-700 px-4 py-2 rounded-sm hover:bg-teal-50 transition">
+                <button className="flex cursor-pointer items-center justify-center gap-2 border border-zinc-800 text-zinc-700 px-4 py-2 rounded-sm hover:bg-teal-50 transition">
                   <Phone size={16} /> Call Now
                 </button>
               </div>
             </div>
           </div>
         ))}
+        <BookingModal
+        open={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        tourname={selectedTour}
+      />
       </motion.div>
 
       {/* Why Choose Us */}

@@ -68,7 +68,7 @@ export default function ITRSection() {
             <span className="text-red-700">Free*</span> ITR Filing for Members
           </h2>
           <p className="text-zinc-600 text-base sm:text-lg max-w-md mx-auto md:mx-0">
-            Enter your Membership ID, We'll reach out to you! <br className="hidden sm:block" /> Become Our Member Today{" "}
+            Enter your Membership ID, We'll reach out to you! <br className="hidden sm:block" />Become <span className="font-bold">Our Member</span> Today{" "}
             <ArrowRight className="inline-block w-5 h-5 text-teal-700 ml-1 align-middle" />
           </p>
         </div>

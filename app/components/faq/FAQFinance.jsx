@@ -65,12 +65,12 @@ export default function FAQFinance() {
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full text-left flex justify-between items-center py-3 text-lg font-medium text-zinc-900 hover:text-orange-600 transition-colors"
+                className="w-full text-left flex justify-between items-center py-3 text-lg font-medium text-zinc-900 hover:text-teal-800 transition-colors"
               >
                 <span
                   className={
                     openIndex === index
-                      ? "text-orange-600 font-semibold"
+                      ? "text-teal-800 font-semibold"
                       : "text-zinc-900"
                   }
                 >
@@ -78,7 +78,7 @@ export default function FAQFinance() {
                 </span>
                 <span
                   className={`transition-transform duration-300 ${
-                    openIndex === index ? "rotate-180 text-orange-600" : ""
+                    openIndex === index ? "rotate-180 text-teal-800" : ""
                   }`}
                 >
                   ▼
