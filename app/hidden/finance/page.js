@@ -1,15 +1,15 @@
-import Banner from "../components/Banner";
-import Community from "../components/Community";
-import { seoData } from "../lib/seoMeta";
-import CharDhamSection from "@/app/components/CharDhamSection";
+import FinancialServices from "@/app/components/services/FinancialServices";
+import Banner from "../../components/Banner";
+import Community from "../../components/Community";
+import { seoData } from "../../lib/seoMeta";
 
 export const generateMetadata = () => {
-  const meta = seoData.travel;
+  const meta = seoData.aboutUs;
 
   return {
     title: meta.title,
     description: meta.description,
-    metadataBase: new URL(meta.url),
+    metadataBase: new URL(meta.url),  
     alternates: {
       canonical: meta.canonical,
     },
@@ -40,12 +40,12 @@ export const generateMetadata = () => {
   };
 };
 
-export default function Travel() {
+export default function FinancialConsulting() {
   return (
     <>
-      <Banner title={"Travel"} bgImage={"/Banner/travel-banner.webp"} />
-      <div className="main_width py-8 relative overflow-hidden">
-        <CharDhamSection />
+      <Banner title={"Financial Consulting"} bgImage={"/banner/finance-banner.jpg"}  />
+      <div className="relative overflow-hidden">
+      <FinancialServices />
       </div>
       <Community />
     </>

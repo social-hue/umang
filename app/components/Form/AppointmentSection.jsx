@@ -1,6 +1,6 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
-import toast, { Toaster } from "react-hot-toast";
+import React, { useState } from "react";
+import toast from "react-hot-toast";
 
 // import { Calendar, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -263,7 +263,7 @@ function AppointmentForm() {
       });
       const data = await res.json();
       if (data.success) {
-        toast.success(data.message);
+        toast.success("Thank you! We'll be in touch soon", { duration: 3000, position: "top-center" });
         setForm({ fullName: "", email: "", phone: "", message: "" });
       } else {
         toast.error(data.message || "Failed to book appointment.");

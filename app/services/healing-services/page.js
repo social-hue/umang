@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Banner from "../../components/Banner";
 import Community from "../../components/Community";
-// import Footer from "../../components/Footer";
 import { seoData } from "../../lib/seoMeta";
 
 export const generateMetadata = () => {
@@ -37,7 +36,7 @@ export const generateMetadata = () => {
       creator: "@umangliving",
       images: [meta.image],
     },
-    keywords: meta.keywords.split(",").map((kw) => kw.trim()), // array of keywords
+    keywords: meta.keywords.split(",").map((kw) => kw.trim()), 
   };
 };
 
@@ -47,7 +46,6 @@ export default function HealingServices() {
       <Banner title={"Healing Services"} bgImage={"/banner/healing-banner.webp"}   />
       <div className="relative overflow-hidden ">
       {/* <div className="p-2 bg-red-700 text-center text-white text-xl md:text-[22px] font-semibold">Our Healing Services are launching on 1 November, 2025 </div> */}
-
       <section className="p-6 md:p-10 md:mx-10 flex flex-col md:flex-row items-center gap-6">
       {/* Left: Image */}
       <div className="w-full md:w-1/2 relative h-64 md:h-80">
@@ -68,7 +66,6 @@ export default function HealingServices() {
     </section>             
         <Community />
       </div>
-      {/* <Footer /> */}
     </>
   );
 }

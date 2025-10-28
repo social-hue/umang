@@ -54,7 +54,7 @@ export default function TourForm() {
         toast.error(data?.message || `Server error (${res.status})`);
       } else {
         const data = await res.json();
-        toast.success(data?.message || "Submitted successfully!");
+        toast.success("Thank you! We'll be in touch soon", { duration: 3000, position: "top-center" });
         setForm({
           fullName: "",
           contact: "",

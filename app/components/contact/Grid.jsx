@@ -69,7 +69,7 @@ export default function Grid() {
 
       if (!res.ok) throw new Error("Failed to submit");
 
-      toast.success("Thank you! Your message has been sent.", { duration: 3000, position: "top-center" });
+      toast.success("Thank you! We'll be in touch soon", { duration: 3000, position: "top-center" });
       setFormData({ name: "", email: "", number: "", message: "", honeypot: "" });
     } catch (err) {
       toast.error("Failed to send message. Please try again.", { duration: 3000, position: "top-center" });
