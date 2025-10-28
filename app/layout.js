@@ -136,6 +136,7 @@ export default function RootLayout({ children }) {
             style: {
               background: "#333",
               color: "#fff",
+              zIndex: 100000
             },
           }}
         />

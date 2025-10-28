@@ -17,7 +17,7 @@ export default function Founder() {
         >
           <div className="mt-3 relative overflow-hidden rounded-lg shadow-lg">
             <Image
-              src="/author1.png"
+              src="/people/author1.png"
               alt="Loading..."
               width={440}
               height={160}

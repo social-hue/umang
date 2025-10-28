@@ -8,7 +8,7 @@ export default function PartnerPage() {
     <section className="main_width py-8 overflow-hidden">
       {/* Entire section wrapped in one motion container */}
       <motion.div
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 0.6 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.2 }}

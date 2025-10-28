@@ -65,7 +65,7 @@ export default function BookingModal({ tourname, open, onClose }) {
   };
 
   return (
-    <div className="bg-black/50 fixed inset-0 flex justify-center items-center z-[999]">
+    <div className="bg-black/50 fixed inset-0 flex justify-center items-center z-[500]">
       {/* Toast Notifications */}
       {/* <Toaster position="top-right" /> */}
 
