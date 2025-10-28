@@ -64,22 +64,22 @@ export default function CharDhamSection() {
   const dhamHighlights = [
     {
       name: "Char Dham",
-      image: "/travel/kedarnath.jpeg",
+      image: "/travel/kedarnath.webp",
       desc: "A journey through the Himalayas that blends faith & nature",
     },
     {
       name: "Darjeeling",
-      image: "/travel/darjeeling.jpeg",
+      image: "/travel/darjeeling.webp",
       desc: "Wake up to misty mornings, rolling tea gardens, and the whisper of mountain air.",
     },
     {
       name: "Kerala",
-      image: "/travel/kerala.jpeg",
+      image: "/travel/kerala.webp",
       desc: "Sail through serene back waters, palm-lined horizons where time flows slower",
     },
     {
       name: "Goa",
-      image: "/travel/goa.jpeg",
+      image: "/travel/goa.webp",
       desc: "Golden beaches, Portuguese charm, and nights that never lose their rhythm.",
     },
   ];
@@ -96,7 +96,7 @@ export default function CharDhamSection() {
         "02 Breakfast & 02 Dinner",
         "All Toll Parking Tax",
       ],
-      image: "/travel1.jpg",
+      image: "/facilities/travel.webp",
     },
     {
       name: "Badrinath Tour Package (Ek Dham Tour From Haridwar)",
@@ -110,7 +110,7 @@ export default function CharDhamSection() {
         "All Toll Parking Tax",
       ],
       image:
-        "/travel/badri2.jpeg",
+        "/travel/badri2.webp",
     },
     {
       name: "Kedarnath-Badrinath Tour (Do Dham Tour From Haridwar)",
@@ -124,7 +124,7 @@ export default function CharDhamSection() {
         "All Toll Parking Tax",
       ],
       image:
-        "/travel/do-dham.jpeg",
+        "/travel/do-dham.webp",
     },
     {
       name: "Char Dham Tour Package",
@@ -138,7 +138,7 @@ export default function CharDhamSection() {
         "All Toll Parking Tax",
       ],
       image:
-        "/travel/chardham.jpeg",
+        "/travel/chardham.webp",
     },
     {
       name: "Kedarnath Tour Package (Ek Dham Tour From Delhi)",
@@ -153,7 +153,7 @@ export default function CharDhamSection() {
         "All Toll Parking Tax",
       ],
       image:
-        "/travel/kedarnath.jpeg",
+        "/travel/kedarnath.webp",
     },
     {
       name: "Badrinath Tour Package (Ek Dham Tour From Delhi)",
@@ -167,7 +167,7 @@ export default function CharDhamSection() {
         "All Toll Parking Tax",
       ],
       image:
-        "/travel/badri2.jpeg",
+        "/travel/badri2.webp",
     },
     {
       name: "Char Dham Tour Package From Delhi",
@@ -181,7 +181,7 @@ export default function CharDhamSection() {
         "02 Night Hotel Accommodation in Gouptkashi",
       ],
       image:
-        "/travel/chardham.jpeg",
+        "/travel/chardham.webp",
     },
     {
       name: "Do Dham From Dehradun By Helicopter",
@@ -195,7 +195,7 @@ export default function CharDhamSection() {
         "Including Hotel Meal",
       ],
       image:
-        "/travel/do-dham.jpeg",
+        "/travel/do-dham.webp",
     },
     {
       name: "Char Dham From Dehradun By Helicopter",
@@ -209,7 +209,7 @@ export default function CharDhamSection() {
         "Including Hotel Meal",
       ],
       image:
-        "/travel/chardham.jpeg",
+        "/travel/chardham.webp",
     }
     // ... (keep your tourPackages array same)
   ];
