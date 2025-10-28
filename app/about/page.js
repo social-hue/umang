@@ -1,7 +1,6 @@
 import Founder from "../components/about/Founder";
 import Banner from "../components/Banner";
 import Community from "../components/Community";
-// import Footer from "../components/Footer";
 import FounderMessage from "../components/FounderMessage";
 import TeamSection from "../components/team/TeamSection";
 import MissionVision from "../components/vision/MissionVision";
@@ -47,13 +46,12 @@ export const generateMetadata = () => {
 export default function About() {
   return (
     <>
-      <Banner title={"About us"} bgImage={"/banner/about-banner.webp"} />
+      <Banner title={"About us"} bgImage={"/banner/about-banner1.webp"} />
       <FounderMessage/>
       <Founder />
       <MissionVision />
       <TeamSection />
       <Community />
-      {/* <Footer /> */}
     </>
   );
 }

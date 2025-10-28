@@ -35,7 +35,7 @@ export default function FAQLegal() {
 
   return (
     <div>
-      <h2 className="text-3xl md:text-[36px] text-center font-bold text-zinc-900 mb-2">Frequently Asked Questions</h2>
+      <h2 className="text-3xl md:text-[38px] text-center font-bold text-zinc-900 mb-2">Frequently Asked Questions</h2>
     
     <div className="flex flex-col md:flex-row items-center justify-center w-full mx-auto md:gap-14">
       {/* Left Image Section */}

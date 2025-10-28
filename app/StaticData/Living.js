@@ -49,7 +49,7 @@ export const facilities = [
   },
   {
     id: 7,
-    icon: "/healing.webp",
+    icon: "/facilities/healing.webp",
     title: "Health & Wellness",
     tagline: "We enhance wellness through personalized care and healing services for lasting vitality.",
     accent: "text-zinc-800",
@@ -57,7 +57,7 @@ export const facilities = [
   },
   {
     id: 8,
-    icon: "/consultation.webp",
+    icon: "/facilities/consultation.webp",
     title: "General Consultation",
     tagline: "Our consultations provide trusted advice and personalized solutions for all your needs.",
     accent: "text-zinc-800",
@@ -65,7 +65,7 @@ export const facilities = [
   },
   {
     id: 8,
-    icon: "/services/Financial.jpg",
+    icon: "/facilities/Financial.jpg",
     title: "Financial Consulting",
     tagline: "Empowering seniors with expert financial guidance for a secure, independent and worry-free future",
     accent: "text-zinc-800",

@@ -43,7 +43,7 @@ export const generateMetadata = () => {
 export default function FinancialConsulting() {
   return (
     <>
-      <Banner title={"Financial Consulting"} bgImage={"/banner/finance-banner.webp"}  />
+      <Banner title={"Financial Consulting"} bgImage={"/banner/finance-banner.jpg"}  />
       <div className="relative overflow-hidden ">
       <FinancialServices />
       </div>

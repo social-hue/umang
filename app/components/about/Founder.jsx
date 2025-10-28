@@ -35,7 +35,7 @@ export default function Founder() {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          <h1 className="text-3xl md:text-4xl font-bold text-zinc-800 mb-4 text-left">
+          <h1 className="text-3xl md:text-[40px] font-bold text-zinc-800 mb-4 text-left">
             Our Founder
           </h1>
           <p className="text-gray-700 text-lg leading-relaxed mb-3">

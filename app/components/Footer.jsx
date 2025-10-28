@@ -58,7 +58,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[url(/footer.jpg)] bg-cover text-white text-sm relative">
+    <footer className="bg-[url(/footer.webp)] bg-cover text-white text-sm relative">
       <div className="absolute w-full -top-6">
         <div className="flex items-center justify-center">
           <ScrollToTopButton />

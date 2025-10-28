@@ -224,17 +224,17 @@ export default function Header() {
             className="flex items-center gap-2 px-3 py-1 bg-red-700 text-white text-sm font-semibold rounded-md border-2 border-transparent hover:bg-white hover:text-red-700 hover:border-red-700 transition"
           >
             <FaPhoneAlt className="w-4 h-4" />
-            <span className="hidden-below-320">1800-202-8704</span>
+            <span className="hidden-below-370">1800-202-8704</span>
           </a>
           <button
             onClick={() => setOpen(true)}
+            aria-label="hamburger"
             className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#E7216A]"
           >
             <FaBars className="text-2xl text-[#0B0B0B]" />
           </button>
         </div>
       </div>
-
       {/* Overlay */}
       <div
         onClick={() => setOpen(false)}
@@ -242,7 +242,6 @@ export default function Header() {
           open ? "opacity-100 visible" : "opacity-0 invisible"
         } lg:hidden`}
       />
-
       {/* Drawer */}
       <aside
         className={`fixed top-0 left-0 h-full w-full bg-[#069183] z-50 shadow-xl transform transition-transform duration-300 lg:hidden ${

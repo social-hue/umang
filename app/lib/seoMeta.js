@@ -5,7 +5,7 @@ export const seoData = {
     title:
       "Umang Living: India's Largest Senior Living Community",
     description:
-      "Secure, age friendly homes with 24/7 support, facility management and community life",
+      "Secure, age friendly homes with 24/7 support, facility management and community life for parents 60+. Book a video walkthrough or WhatsApp us.",
     keywords:
       "luxury, Punjab, Jalandhar Senior Living, Townships, 1BHK 2BHK in Punjab, safe, 24/7, support, parents 60+, whatsapp now  senior living India, retirement homes India, vridhashram in Delhi, modern vridhaashram, trusted senior living, old age homes, senior care",
     image: "https://www.umangliving.com/banner.png",

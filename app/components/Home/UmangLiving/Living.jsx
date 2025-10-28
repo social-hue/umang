@@ -70,12 +70,14 @@ export default function FacilitiesSection() {
         </h2>
         <div className="flex gap-3">
           <button
+            aria-label="prev"
             onClick={prev}
             className="p-2 rounded-full border cursor-pointer border-zinc-500 hover:bg-zinc-300 transition"
           >
             <FaChevronLeft className="text-zinc-500" />
           </button>
           <button
+            aria-label="next"
             onClick={next}
             className="p-2 rounded-full border cursor-pointer border-zinc-500 hover:bg-zinc-300 transition"
           >

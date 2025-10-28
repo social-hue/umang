@@ -1,11 +1,4 @@
-import {
-  Poppins,
-  Roboto,
-  Inter,
-  Montserrat,
-  Outfit,
-  Lato
-} from "next/font/google";
+import { Roboto } from "next/font/google";
 import Script from "next/script"; // ✅ import Script from next/script
 import Header from "./components/Header";
 import "./globals.css";
@@ -13,44 +6,26 @@ import { Toaster } from "react-hot-toast";
 import FloatingCTA from "./components/floatingButton/floatingButton";
 import Footer from "./components/Footer";
 import PromoCard from "./components/popup";
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-  variable: "--font-poppins",
-  display: "swap"
-});
-const lato = Lato({
-  subsets: ["latin"],
-  weight: ["100", "300", "400", "700", "900"],
-  variable: "--font-lato",
-  display: "swap"
-});
+
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
   variable: "--font-roboto",
   display: "swap"
 });
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-  variable: "--font-inter",
-  display: "swap"
-});
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-  variable: "--font-inter",
-  display: "swap"
-});
 
+// const montserrat = Montserrat({
+//   subsets: ["latin"],
+//   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+//   variable: "--font-inter",
+//   display: "swap"
+// });
 // const barlowCondensed = Barlow_Condensed({
 //   subsets: ["latin"],
 //   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
 //   variable: "--font-poppins",
 //   display: "swap"
 // });
-
 // const bigShouldersDisplay = Big_Shoulders_Display({
 //   subsets: ["latin"],
 //   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],

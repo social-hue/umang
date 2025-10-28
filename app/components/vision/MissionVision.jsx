@@ -38,7 +38,7 @@ export default function MissionVision() {
           viewport={{ once: true }}
           className="w-full md:w-1/2 text-zinc-800"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+          <h2 className="text-3xl md:text-[40px] font-bold mb-4 leading-tight">
             Our Mission & Vision
           </h2>
           <div className="space-y-5 leading-relaxed text-gray-700">

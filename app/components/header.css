@@ -1,5 +1,5 @@
-@media (max-width: 320px) {
-    .hidden-below-320 {
+@media (max-width: 370px) {
+    .hidden-below-370 {
       display: none !important;
     }
   }

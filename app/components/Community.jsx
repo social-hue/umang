@@ -4,7 +4,7 @@ import { NumberCounter } from "../helpers/NumberCounter";
 
 const Community = () => {
   return (
-    <div className="lg:py-8 md:py-8 py-8 bg-[url(/Community.png)] bg-cover md:h-[400px] xl:h-[360px] flex items-center">
+    <div className="lg:py-8 md:py-8 py-8 bg-[url(/Community.webp)] bg-cover md:h-[400px] xl:h-[360px] flex items-center">
       <div className="main_width">
         <div>
           <p className="lg:text-[40px] md:text-[30px] text-[24px] md:leading-[58px] font-semibold text-white">

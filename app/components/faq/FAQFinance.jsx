@@ -35,7 +35,7 @@ export default function FAQFinance() {
 
   return (
     <div>
-    <h2 className="text-3xl md:text-[36px] text-center font-bold text-zinc-800 mb-2">Frequently Asked Questions</h2>    
+    <h2 className="text-3xl md:text-[38px] text-center font-bold text-zinc-800 mb-2">Frequently Asked Questions</h2>    
     <div className="flex flex-col md:flex-row items-center justify-center w-full mx-auto md:gap-14">
       {/* Left Image Section */}
       <div className="w-full md:w-[45%] flex justify-center md:justify-start">

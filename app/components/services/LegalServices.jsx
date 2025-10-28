@@ -73,7 +73,7 @@ export default function LegalServices() {
 
   return (
     <section className="text-zinc-800 py-10">
-      <div className="max-w-6xl mx-auto text-center mb-12">
+      <div className="max-w-6xl mx-auto text-center mb-8">
         <h1 className="text-3xl md:text-4xl font-bold text-zinc-800 mb-6">
           Legal & Documentation Services for Seniors and Families
         </h1>
@@ -81,11 +81,10 @@ export default function LegalServices() {
           At Umang Living, legal care is simple, respectful, and transparent.
           From will & estate planning to property disputes and NRI documentation,
           our curated legal network helps seniors and families resolve issues
-          quickly—with fixed-fee quotes, clear timelines, and regular updates
+          quickly with fixed-fee quotes, clear timelines, and regular updates
           through our concierge team.
         </p>
       </div>
-
       {/* Services Grid */}
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((srv, idx) => (
@@ -101,12 +100,12 @@ export default function LegalServices() {
               href="tel:18002028704"
               className=" text-red-700 font-medium"
             >
-              Enquire Now <span><ArrowRight className="text-red-700 w-4 h-4 inline-block"/></span>
+              Enquire Now <span><ArrowRight className="text-red-700 w-4 h-4 inline-block" /></span>
             </motion.a>
           </motion.div>
         ))}
       </div>
-        {/* <div className="py-12">
+      {/* <div className="py-12">
             <Timelinee />
         </div> */}
       {/* Disclaimer */}
@@ -115,27 +114,37 @@ export default function LegalServices() {
           Important: <span className="text-white font-medium">Umang Living</span> provides concierge access and coordination with independent legal professionals. We are not a law firm and do not offer legal representation directly.
         </p>
       </div> */}
-      <div className="mt-16 mb-10 text-center">
-      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-zinc-800">
-        Ready to file or plan?
-      </h2>
-      <p className="text-zinc-800 text-lg flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4">
-        <span className="flex items-center gap-2 text-2xl md:text-xl text-orange-800 font-bold">
-          Call <FaPhoneAlt className="text-orange-800 text-lg w-5 h-5" />
-        </span>
-        <span className="hidden md:inline text-zinc-600">|</span>
-        <span className="flex items-center gap-2 text-2xl md:text-xl text-teal-700 font-bold">
-          WhatsApp <FaWhatsapp className="text-teal-700 text-lg w-6 h-6" />
-        </span>
-        <span className="hidden md:inline text-zinc-600">|</span>
-        <span className="text-zinc-800 font-medium text-[22px] md:text-xl">
-          Book a free 30-min review today.
-        </span>
-      </p>
-    </div>
-    <LegalFormSection />
-       <div className="mt-10 md:mt-14 max-w-5xl mx-4 md:mx-auto">
-      <FAQLegal />
+      <div className="py-8 md:py-14 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-zinc-800">
+          Ready to file or plan ?
+        </h2>
+        <p className="text-zinc-800 text-lg flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4">
+          <a
+            href="tel:18002028704"
+            className="flex items-center gap-2 text-orange-800 font-semibold hover:scale-105 transition-transform"
+          >
+            <FaPhoneAlt className="text-orange-800 text-xl" />
+            <span>Call Us</span>
+          </a>
+          <span className="hidden md:inline text-zinc-600">|</span>
+          <a
+            href="https://wa.me/919560986669"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-teal-700 font-semibold hover:scale-105 transition-transform"
+          >
+            <FaWhatsapp className="text-teal-700 text-2xl" />
+            <span>Chat on WhatsApp</span>
+          </a>
+          <span className="hidden md:inline text-zinc-600">|</span>
+          <span className="text-zinc-800 font-medium">
+            Book a free 30-min review today.
+          </span>
+        </p>
+      </div>
+      <LegalFormSection />
+      <div className="mt-8 md:mt-16 max-w-5xl mx-4 md:mx-auto">
+        <FAQLegal />
       </div>
     </section>
   );
