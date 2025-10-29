@@ -20,18 +20,6 @@ const roboto = Roboto({
 //   variable: "--font-inter",
 //   display: "swap"
 // });
-// const barlowCondensed = Barlow_Condensed({
-//   subsets: ["latin"],
-//   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-//   variable: "--font-poppins",
-//   display: "swap"
-// });
-// const bigShouldersDisplay = Big_Shoulders_Display({
-//   subsets: ["latin"],
-//   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-//   variable: "--font-poppins",
-//   display: "swap"
-// });
 
 export const metadata = {
   title: "Because every age deserves new beginnings",
@@ -100,7 +88,7 @@ export default function RootLayout({ children }) {
               "Umang Living is India&apos;s first multi-city senior independent-living community, thoughtfully designed with love and respect.",
             contactPoint: {
               "@type": "ContactPoint",
-              telephone: "+91-9871825999",
+              telephone: "+91-9560986669",
               contactType: "customer service",
               areaServed: "IN",
               availableLanguage: "English",

@@ -2,13 +2,13 @@
 "use client";
 import React, { useState } from "react";
 import { ArrowRight } from "lucide-react";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 export default function ITRSection() {
   const [membershipId, setMembershipId] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const allowedRegex = /^[A-Za-z0-9\-_]+$/;
+  const allowedRegex = /^[A-Za-z0-9\-_/\\]+$/;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -68,7 +68,7 @@ export default function ITRSection() {
             <span className="text-red-700">Free*</span> ITR Filing for Members
           </h2>
           <p className="text-zinc-600 text-base sm:text-lg max-w-md mx-auto md:mx-0">
-            Enter your Membership ID, We'll reach out to you! <br className="hidden sm:block" />Become <span className="font-bold">Our Member</span> Today{" "}
+            Enter your Membership ID, We'll reach out to you! <br className="hidden sm:block" />Become <a href="https://docs.google.com/forms/d/e/1FAIpQLScQlwi7hkmU9fp7aGSOLfUXPIvQmADduVyPQvVC5PKhcbFyDQ/viewform?usp=header" target="_main"><span className="cursor-pointer font-bold">Our Member</span></a> Today{" "}
             <ArrowRight className="inline-block w-5 h-5 text-teal-700 ml-1 align-middle" />
           </p>
         </div>
