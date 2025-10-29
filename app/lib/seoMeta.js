@@ -5,9 +5,9 @@ export const seoData = {
     title:
       "Umang Living: India's Largest Senior Living Community",
     description:
-      "Secure, age friendly homes with 24/7 support, facility management and community life for parents 60+. Book a video walkthrough or WhatsApp us.",
+      "Secure, age friendly homes with 24/7 support, facility management and community life for parents 55+. Book a video walkthrough or WhatsApp us.",
     keywords:
-      "luxury, Punjab, Jalandhar Senior Living, Townships, 1BHK 2BHK in Punjab, safe, 24/7, support, parents 60+, whatsapp now  senior living India, retirement homes India, vridhashram in Delhi, modern vridhaashram, trusted senior living, old age homes, senior care",
+      "luxury, punjab, jalandhar senior living, townships, 1 BHK 2 BHK in punjab, safe, 24/7, support, parents 55+, whatsapp now  senior living India, retirement homes India, trusted senior living, old age homes, senior care",
     image: "https://www.umangliving.com/banner.png",
     canonical: "https://www.umangliving.com/",
   },
@@ -15,24 +15,24 @@ export const seoData = {
   aboutUs: {
     type: "website",
     url: "https://www.umangliving.com/about",
-    title: "About Umang Living: India’s Premier 55+ Senior Living.",
+    title: "About Umang Living | India’s Leading 55+ Senior Living Community",
     description:
-      "Creating spaces where growing older means living fuller. Our mission is to transform 55+ senior living in India with luxury, care, and vibrant communities.",
+      "Discover Umang Living’s mission to redefine senior living in India - where luxury, care, and connection create fulfilling lifestyles for the 55+ community.",
     keywords:
-      "Umang Living, senior living India, luxury senior living, trusted vridhashram India, modern vridhaashram, old age home, retirement homes, elderly travel",
-    image: "https://www.umangliving.com/new_one.png",
+      "Umang Living, about Umang Living, senior living India, luxury senior living, retirement homes India, 55 plus communities India, independent senior living, active senior lifestyle India, modern retirement communities, senior citizen homes India, senior wellness and care, premium old age homes India, community living for seniors, senior living company India, retirement lifestyle India, senior housing developers India, assisted living India, luxury retirement living, trusted senior living brand India",
+    image: "https://www.umangliving.com/banner/about-banner1.webp",
     canonical: "https://www.umangliving.com/about",
   },
   
   travel: {
     type: "website",
     url: "https://www.umangliving.com/services/travel",
-    title: "Umang Living: Affordable Tour Packages For Senior Citizens",
+    title: "Umang Living: Senior-Friendly Travel & Holiday Experiences in India",
     description:
-      "Creating spaces where growing older means living fuller. Our mission is to transform 55+ senior living in India with luxury, care, and vibrant communities.",
+      "Discover curated travel experiences designed exclusively for seniors and retirees across India. Umang Living offers safe, comfortable, and companion-led holidays that combine relaxation, culture, and community - so every journey feels worry-free and enriching.",
     keywords:
-      "Umang Living, senior living India, luxury senior living, trusted vridhashram India, modern vridhaashram, old age home, retirement homes, elderly travel, Char Dham Tour, Char Dham Yatra, Kedarnath, Badrinath, Uttarkhand, Travel Booking, Uttarakhand Tour",
-    image: "https://www.umangliving.com/travel-page1.jpg",
+      "Umang Living, senior travel India, travel for elderly, retirement travel packages, senior citizen tours India, senior living travel experiences, group tours for seniors, safe travel for elderly, assisted holidays for seniors, senior citizen vacation ideas, Umang Living travel, senior-friendly holidays India, senior tours with healthcare support, best travel options for seniors in India, elderly tour packages, senior travel community India, luxury travel for seniors, independent living with travel, senior leisure travel India, retirement lifestyle experiences, senior group trips India Char Dham Tour, Char Dham Yatra, Kedarnath, Travel Booking",
+    image: "https://www.umangliving.com/travel/travel-banner.webp",
     canonical: "https://www.umangliving.com/services/travel",
   },
 
@@ -43,7 +43,7 @@ export const seoData = {
     description:
       "Umang Living is proud to introduce its upcoming senior living communities across 75 cities in India, designed exclusively for the 55+ generation.",
     keywords:
-      "luxury senior housing projects India, retirement homes Bangalore, senior living Delhi NCR, modern Vridhaashram, old age home, retirement homes,",
+      "luxury senior housing projects India, retirement homes, punjab, senior living jalandhar, senior living Delhi NCR, retirement homes,",
     image: "https://www.umangliving.com/banner.png",
     canonical: "https://www.umangliving.com/projects",
   },
@@ -67,7 +67,7 @@ export const seoData = {
     description:
       "Partner with Umang Living to build luxury 55+ senior housing in India. Join the future of trusted retirement communities. Connect now.",
     keywords:
-      "modern vridhaashram, senior housing India, partner with Umang Living, senior living investment India, retirement homes partnership, investors, financers, real estate developers, builders, senior citizen clubs",
+      "senior housing India, partner with Umang Living, senior living investment India, retirement homes partnership, investors, financers, real estate developers, builders, senior citizen clubs",
     image: "https://www.umangliving.com/partner/p1.jpg",
     canonical: "https://www.umangliving.com/partners",
   },

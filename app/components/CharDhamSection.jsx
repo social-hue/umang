@@ -322,9 +322,11 @@ export default function CharDhamSection() {
                 >
                   Enquire Now <ArrowRight size={16} />
                 </button>
+                <a href="tel:18002028704">
                 <button className="flex cursor-pointer items-center justify-center gap-2 border border-zinc-800 text-zinc-700 px-4 py-2 rounded-sm hover:bg-teal-50 transition">
                   <Phone size={16} /> Call Now
                 </button>
+                </a>
               </div>
             </div>
           </div>
