@@ -42,7 +42,6 @@ export default function FacilitiesSection() {
 
   const visible = facilities.slice(currentIndex, currentIndex + cardsPerPage);
 
-  // If wrapping is needed (like infinite loop effect)
   const displayedCards =
     visible.length < cardsPerPage
       ? [...visible, ...facilities.slice(0, cardsPerPage - visible.length)]
@@ -56,7 +55,7 @@ export default function FacilitiesSection() {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="px-4 md:px-8 relative w-full flex flex-col items-center py-6 md:py-12 bg-white overflow-hidden">
       <div className="max-w-4xl text-center mb-8 md:mb-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-zinc-800 mb-4">
+        <h2 className="text-3xl md:text-[40px] font-bold text-zinc-800 mb-4">
           What does <span className="text-teal-700">Umang</span> Offer?
         </h2>
         <p className="text-zinc-700 text-lg leading-relaxed max-w-3xl mx-auto">
@@ -71,12 +70,14 @@ export default function FacilitiesSection() {
         </h2>
         <div className="flex gap-3">
           <button
+            aria-label="prev"
             onClick={prev}
             className="p-2 rounded-full border cursor-pointer border-zinc-500 hover:bg-zinc-300 transition"
           >
             <FaChevronLeft className="text-zinc-500" />
           </button>
           <button
+            aria-label="next"
             onClick={next}
             className="p-2 rounded-full border cursor-pointer border-zinc-500 hover:bg-zinc-300 transition"
           >

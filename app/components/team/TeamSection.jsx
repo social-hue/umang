@@ -6,28 +6,28 @@ export default function TeamSection() {
     {
       name: "Varsha Jaiswal",
       title: "Associate Director",
-      img: "/varsha.webp",
+      img: "/people/varsha.webp",
       desc: "Strategic operations expert ensuring efficient project execution and excellence.",
       linkedin: "https://www.linkedin.com/in/varsha-jaiswal-509191202/",
     },
     {
       name: "Anuupam Kinshuk",
       title: "Principal Consultant",
-      img: "/anupam.webp",
+      img: "/people/anupam.webp",
       desc: "Growth strategist, partnerships, operations, services & technology excellence",
       linkedin: "https://www.linkedin.com/in/anuupam",
     },
     {
       name: "Priti Pathak",
       title: "Vice President",
-      img: "/priti.webp",
+      img: "/people/priti.webp",
       desc: "Driving business growth through impactful partnerships and engagement.",
       linkedin: "https://www.linkedin.com/in/priti-pathak-88a0b45",
     },
     {
       name: "Ankit Rathi",
       title: "Principal Architect",
-      img: "/ankit.jpeg",
+      img: "/people/ankit.jpeg",
       desc: "Architect focused on designing senior-friendly & community-oriented living spaces",
       linkedin: "https://in.linkedin.com/in/",
     },
@@ -41,7 +41,7 @@ export default function TeamSection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="text-center text-teal-700 text-4xl leading-light font-semibold mb-3"
+        className="text-center text-zinc-800 text-3xl md:text-[40px] leading-light font-bold mb-3"
       >
         Meet our team
       </motion.h2>

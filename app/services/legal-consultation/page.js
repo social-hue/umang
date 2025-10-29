@@ -1,6 +1,5 @@
 // import Banner from "../../components/Banner";
 // import Community from "../../components/Community";
-// // import Footer from "../../components/Footer";
 // import { seoData } from "../../lib/seoMeta";
 // import LegalServices from "@/app/components/services/LegalServices";
 
@@ -44,7 +43,7 @@
 // export default function LegalConsultation() {
 //   return (
 //     <>
-//       <Banner title={"Legal Consultation"} bgImage={"/travel-page1.jpg"}   />
+//       <Banner title={"Legal Consultation"} bgImage={"/banner/legal-banner.webp"}   />
 //       <div className="main_width relative overflow-hidden ">
 //       <LegalServices />
 //       </div>
@@ -57,7 +56,6 @@
 import Image from "next/image";
 import Banner from "../../components/Banner";
 import Community from "../../components/Community";
-// import Footer from "../../components/Footer";
 import { seoData } from "../../lib/seoMeta";
 
 export const generateMetadata = () => {
@@ -100,9 +98,9 @@ export const generateMetadata = () => {
 export default function LegalConsultation() {
   return (
     <>
-      <Banner title={"Legal Consultation"} bgImage={"/finance-banner.jpg"}   />
+      <Banner title={"Legal Consultation"} bgImage={"/banner/legal-banner.webp"}   />
       <div className="relative overflow-hidden ">
-      <div className="p-2 bg-red-700 text-center text-white text-xl md:text-2xl font-semibold">Our Legal Consultation Services are launching on 1 November, 2025 </div>
+      <div className="p-2 bg-red-700 text-center text-white text-xl md:text-[22px] font-semibold">Our Legal Consultation Services are launching on 1 November, 2025 </div>
         <section className="p-6 md:p-10 md:mx-10 flex flex-col md:flex-row items-center gap-6">
       {/* Left: Image */}
       <div className="w-full md:w-1/2 relative h-64 md:h-80">

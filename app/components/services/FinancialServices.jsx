@@ -107,21 +107,31 @@ export default function FinancialServices() {
       </div>
     
       {/* Call to Action */}
-      <div className="mt-16">
+      <div className="py-6 md:py-12">
         <ITRSection />
       </div>
-      <div className="mt-16 text-center">
+      <div className="py-4 text-center">
       <h2 className="text-3xl md:text-4xl font-bold mb-4 text-zinc-800">
         Ready to file or plan ?
       </h2>
       <p className="text-zinc-800 text-lg flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4">
-        <span className="flex items-center gap-2 text-orange-800 font-bold">
-          Call <FaPhoneAlt className="text-orange-800 text-lg w-5 h-5" />
-        </span>
+      <a
+          href="tel:18002028704"
+          className="flex items-center gap-2 text-orange-800 font-semibold hover:scale-105 transition-transform"
+        >
+          <FaPhoneAlt className="text-orange-800 text-xl" />
+          <span>Call Us</span>
+        </a>
         <span className="hidden md:inline text-zinc-600">|</span>
-        <span className="flex items-center gap-2 text-teal-700 font-bold">
-          WhatsApp <FaWhatsapp className="text-teal-700 text-lg w-6 h-6" />
-        </span>
+        <a
+          href="https://wa.me/919560986669"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 text-teal-700 font-semibold hover:scale-105 transition-transform"
+        >
+          <FaWhatsapp className="text-teal-700 text-2xl" />
+          <span>Chat on WhatsApp</span>
+        </a>
         <span className="hidden md:inline text-zinc-600">|</span>
         <span className="text-zinc-800 font-medium">
           Book a free 30-min review today.
@@ -132,15 +142,14 @@ export default function FinancialServices() {
         <AppointmentSection />
     </div>
       {/* FAQs */}
-      <div className="mt-12 max-w-5xl mx-auto">
+      <div className="mt-8 md:mt-10 mb-8 max-w-5xl mx-4 md:mx-auto">
       <FAQFinance />
       </div>
-      <div className="mt-20">
+      
       <div className="bg-zinc-800 p-6 rounded-2xl border-l-4 border-teal-800 text-white mb-6">
         <p className="text-lg italic">
           Important: <span className="text-zinc-100 font-medium">Umang Living</span> provides concierge access and coordination with independent legal professionals. We are not a law firm and do not offer legal representation directly.
         </p>
-      </div>
       </div>
     </section>
   );

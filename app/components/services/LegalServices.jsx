@@ -1,73 +1,79 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import AppointmentSection from "../Form/AppointmentSection";
 import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import FAQLegal from "../faq/FAQLegal";
-import Timelinee from "../timelinee";
+import { ArrowRight } from "lucide-react";
+import LegalFormSection from "../Form/LegalFormSection";
 
 export default function LegalServices() {
   const services = [
     {
-      title: "Will & Estate Planning",
-      desc: "Will drafting, codicils, registration guidance, executorship setup.",
+      title: "Intellectual Property Laws",
+      description:
+        "Protect and commercialize your ideas with our end-to-end IP solutions. From registration to enforcement, we secure your innovation globally.",
     },
     {
-      title: "Property Matters",
-      desc: "Title search, due diligence, mutation, partition, property disputes (civil), tenancy & recovery.",
+      title: "Gaming Laws",
+      description:
+        "We guide fantasy, esports, and real-money gaming platforms through licensing and compliance. Our legal support ensures fair play and regulatory integrity.",
     },
     {
-      title: "Civil Advisory",
-      desc: "Notices, agreements, contracts (sale/lease/service), consumer grievances.",
+      title: "Corporate & Commercial Laws",
+      description:
+        "From incorporation to exits, we support your business journey with strategic legal advice. Our focus—clarity, compliance, and commercial agility.",
     },
     {
-      title: "Criminal Advisory (Triage)",
-      desc: "FIR guidance, anticipatory/regular bail strategy, representation via network lawyers.",
+      title: "Litigation & Dispute Resolution",
+      description:
+        "We represent clients before all major courts and tribunals with strategic precision. Our litigation team ensures clarity, speed, and effective resolution.",
     },
     {
-      title: "NRI Legal Assistance",
-      desc: "PoA drafting, embassy/legalisation, appearance via counsel, inheritance/succession for overseas families.",
+      title: "Banking & Financial Laws",
+      description:
+        "Advising banks, NBFCs, and fintechs on regulation, enforcement, and restructuring. We turn complex financial compliance into seamless execution.",
     },
     {
-      title: "IP Disputes",
-      desc: "Trademark/copyright filings and infringement responses.",
+      title: "Information Technology & Data Privacy",
+      description:
+        "Stay compliant with India’s evolving IT and data protection landscape. We secure your digital operations through robust policies and risk frameworks.",
     },
     {
-      title: "Documentation & Attestations",
-      desc: "Affidavits, indemnities, stamp duty guidance, e-sign, notarisation, apostille.",
+      title: "White Collar Crimes",
+      description:
+        "We defend corporates and promoters in high-stakes financial investigations. Our team ensures strategic handling of fraud, PMLA, and regulatory actions.",
+    },
+    {
+      title: "International Arbitration & ADR",
+      description:
+        "Resolve cross-border disputes with confidence. We manage arbitrations globally, from strategy and venue selection to enforcement and settlement.",
+    },
+    {
+      title: "Real Estate Laws",
+      description:
+        "Your trusted partner in property due diligence, documentation, and RERA advisory. We safeguard investments for individuals and developers alike.",
+    },
+    {
+      title: "Blockchain & Digital Assets",
+      description:
+        "We empower Web3 ventures and crypto innovators with legal clarity. Our advisory bridges technology, regulation, and token-based innovation.",
+    },
+    {
+      title: "Policy & Government Advisory",
+      description:
+        "Collaborating with industry and regulators, we shape policy impact and compliance. From white papers to ESG frameworks, we guide institutional influence.",
+    },
+    {
+      title: "Venture Capital & Private Equity Advisory",
+      description:
+        "We structure deals that drive growth and investor confidence. From term sheets to exits, our legal support fuels sustainable capital journeys.",
     },
   ];
 
-  const faqs = [
-    {
-      q: "Can you help if my children live abroad?",
-      a: "Yes. We coordinate PoA, video KYC, and embassy/apostille so NRIs can act without travel.",
-    },
-    {
-      q: "Do you offer fixed prices?",
-      a: "For most documentation and standard matters we provide a fixed-fee. Litigation is quoted with clear caps.",
-    },
-    {
-      q: "Are my documents secure?",
-      a: "Yes. We use consent-based sharing, audit trails, and limited-time access links.",
-    },
-    {
-      q: "Do you appear in court?",
-      a: "Representation is through our networked advocates; Umang manages scheduling and updates.",
-    },
-  ];
-
-  const steps = [
-    "Triage (free 15-min) – understand your matter & documents.",
-    "Scope & Quote – fixed-fee/capped retainer with inclusions & timeline.",
-    "KYC & Consent – secure doc upload/pickup; PoA if required.",
-    "Execution – filings, hearings, registrations; milestone updates via concierge.",
-    "Closure Kit – final orders, copies, next-step guidance.",
-  ];
 
   return (
     <section className="text-zinc-800 py-10">
-      <div className="max-w-6xl mx-auto text-center mb-12">
+      <div className="max-w-6xl mx-auto text-center mb-8">
         <h1 className="text-3xl md:text-4xl font-bold text-zinc-800 mb-6">
           Legal & Documentation Services for Seniors and Families
         </h1>
@@ -75,32 +81,31 @@ export default function LegalServices() {
           At Umang Living, legal care is simple, respectful, and transparent.
           From will & estate planning to property disputes and NRI documentation,
           our curated legal network helps seniors and families resolve issues
-          quickly—with fixed-fee quotes, clear timelines, and regular updates
+          quickly with fixed-fee quotes, clear timelines, and regular updates
           through our concierge team.
         </p>
       </div>
-
       {/* Services Grid */}
-      <div className="grid md:grid-cols-3 gap-6 mb-20">
-        {services.map((service, i) => (
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {services.map((srv, idx) => (
           <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: i * 0.1 }}
-            viewport={{ once: true }}
-            className="p-6 rounded-2xl border border-zinc-700 hover:border-zinc-700 transition-all hover:shadow-[0_0_20px_-5px_rgba(13,148,136,0.5)]"
+            key={idx}
+            className={`p-4 rounded-sm border border-zinc-700 hover:border-zinc-700 transition-all duration-300 flex flex-col justify-between shadow-md`}
           >
-            <h3 className="text-zinc-800 text-xl font-semibold mb-3">
-              {service.title}
+            <h3 className="text-xl font-semibold mb-3 text-zinc-800">
+              {srv.title}
             </h3>
-            <p className="text-zinc-800 text-md leading-relaxed">
-              {service.desc}
-            </p>
+            <p className="text-zinc-800 mb-2 leading-relaxed">{srv.description}</p>
+            <motion.a
+              href="tel:18002028704"
+              className=" text-red-700 font-medium"
+            >
+              Enquire Now <span><ArrowRight className="text-red-700 w-4 h-4 inline-block" /></span>
+            </motion.a>
           </motion.div>
         ))}
       </div>
-        {/* <div className="py-12">
+      {/* <div className="py-12">
             <Timelinee />
         </div> */}
       {/* Disclaimer */}
@@ -109,90 +114,38 @@ export default function LegalServices() {
           Important: <span className="text-white font-medium">Umang Living</span> provides concierge access and coordination with independent legal professionals. We are not a law firm and do not offer legal representation directly.
         </p>
       </div> */}
-      <div className="mt-16 mb-10 text-center">
-      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-zinc-800">
-        Ready to file or plan?
-      </h2>
-      <p className="text-zinc-800 text-lg flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4">
-        <span className="flex items-center gap-2 text-orange-800 font-bold">
-          Call <FaPhoneAlt className="text-orange-800 text-lg w-5 h-5" />
-        </span>
-        <span className="hidden md:inline text-zinc-600">|</span>
-        <span className="flex items-center gap-2 text-teal-700 font-bold">
-          WhatsApp <FaWhatsapp className="text-teal-700 text-lg w-6 h-6" />
-        </span>
-        <span className="hidden md:inline text-zinc-600">|</span>
-        <span className="text-zinc-800 font-medium">
-          Book a free 30-min review today.
-        </span>
-      </p>
-    </div>
-      {/* How It Works */}
-      {/* <div className="text-center mb-20">
-        <h2 className="text-2xl md:text-4xl font-bold text-teal-600 mb-8">
-          How It Works
+      <div className="py-8 md:py-14 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-zinc-800">
+          Ready to file or plan ?
         </h2>
-        <div className="max-w-3xl mx-auto">
-          {steps.map((step, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="flex items-start gap-4 mb-5 text-left"
-            >
-              <div className="bg-teal-700 text-zinc-100 w-8 h-8 flex items-center justify-center rounded-full font-semibold shrink-0">
-                {index + 1}
-              </div>
-              <p className="text-zinc-300 leading-relaxed">{step}</p>
-            </motion.div>
-          ))}
-        </div>
-      </div> */}
-    <AppointmentSection />
-      {/* FAQs */}
-      {/* <div className="mt-12 max-w-4xl mx-auto">
-        <h3 className="text-3xl md:text-4xl font-bold text-zinc-800 mb-6 text-center">Frequently Asked Questions</h3>
-        <div className="space-y-6">
-          {faqs.map((faq, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-gray-100 p-6 rounded-2xl border border-zinc-700 shadow-lg hover:shadow-lg transition-all"
-            >
-              <h3 className="text-zinc-800 font-semibold mb-2">{faq.q}</h3>
-              <p className="text-zinc-700 text-md leading-relaxed">{faq.a}</p>
-            </motion.div>
-          ))}
-        </div>
-      </div> */}
-       <div className="mt-14 max-w-5xl mx-auto">
-      <FAQLegal />
+        <p className="text-zinc-800 text-lg flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4">
+          <a
+            href="tel:18002028704"
+            className="flex items-center gap-2 text-orange-800 font-semibold hover:scale-105 transition-transform"
+          >
+            <FaPhoneAlt className="text-orange-800 text-xl" />
+            <span>Call Us</span>
+          </a>
+          <span className="hidden md:inline text-zinc-600">|</span>
+          <a
+            href="https://wa.me/919560986669"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-teal-700 font-semibold hover:scale-105 transition-transform"
+          >
+            <FaWhatsapp className="text-teal-700 text-2xl" />
+            <span>Chat on WhatsApp</span>
+          </a>
+          <span className="hidden md:inline text-zinc-600">|</span>
+          <span className="text-zinc-800 font-medium">
+            Book a free 30-min review today.
+          </span>
+        </p>
       </div>
-      {/* <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl md:text-4xl font-bold text-center text-teal-600 mb-8">
-          FAQs
-        </h2>
-        <div className="space-y-6">
-          {faqs.map((faq, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-zinc-800 p-6 rounded-2xl border border-zinc-700 hover:border-teal-700 transition-all"
-            >
-              <h3 className="text-teal-500 font-semibold mb-2">{faq.q}</h3>
-              <p className="text-zinc-400 text-sm leading-relaxed">{faq.a}</p>
-            </motion.div>
-          ))}
-        </div>
-      </div> */}
+      <LegalFormSection />
+      <div className="mt-8 md:mt-16 max-w-5xl mx-4 md:mx-auto">
+        <FAQLegal />
+      </div>
     </section>
   );
 }

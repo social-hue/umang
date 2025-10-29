@@ -5,9 +5,9 @@ export const seoData = {
     title:
       "Umang Living: India's Largest Senior Living Community",
     description:
-      "Umang Living is India’s first multi-city senior living community, thoughtfully designed with love and respect.",
+      "Secure, age friendly homes with 24/7 support, facility management and community life for parents 60+. Book a video walkthrough or WhatsApp us.",
     keywords:
-      "luxury senior living India, retirement homes India, vridhashram in Delhi, modern vridhaashram, trusted senior living, old age homes, senior care",
+      "luxury, Punjab, Jalandhar Senior Living, Townships, 1BHK 2BHK in Punjab, safe, 24/7, support, parents 60+, whatsapp now  senior living India, retirement homes India, vridhashram in Delhi, modern vridhaashram, trusted senior living, old age homes, senior care",
     image: "https://www.umangliving.com/banner.png",
     canonical: "https://www.umangliving.com/",
   },
@@ -27,7 +27,7 @@ export const seoData = {
   travel: {
     type: "website",
     url: "https://www.umangliving.com/services/travel",
-    title: "Umang Living: Affordable Tour Packages",
+    title: "Umang Living: Affordable Tour Packages For Senior Citizens",
     description:
       "Creating spaces where growing older means living fuller. Our mission is to transform 55+ senior living in India with luxury, care, and vibrant communities.",
     keywords:

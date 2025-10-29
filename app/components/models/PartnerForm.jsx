@@ -57,7 +57,7 @@ const PartnerForm = ({ open, setOpen }) => {
   };
 
   return (
-    <div className="fixed inset-0 backdrop-blur-sm flex justify-center items-center z-[999] px-2 sm:px-3">
+    <div className="fixed inset-0 backdrop-blur-sm flex justify-center items-center z-[10000] px-2 sm:px-3">
       <div
         className="bg-white w-[95%] sm:w-[90%] md:w-full max-w-2xl rounded-xl shadow-2xl overflow-hidden 
                    mx-auto max-h-[90vh] sm:max-h-none overflow-y-auto"
@@ -153,7 +153,7 @@ const PartnerForm = ({ open, setOpen }) => {
               <textarea
                 name="message"
                 placeholder="Enter Message Box"
-                rows="4"
+                rows="2"
                 value={formData.message}
                 onChange={handleChange}
                 className="w-full border border-gray-300 text-zinc-600 rounded-md px-3 py-2 resize-none focus:ring-2 focus:ring-[#008080] outline-none"
@@ -161,7 +161,7 @@ const PartnerForm = ({ open, setOpen }) => {
             </div>
           </div>
 
-          <div className="flex justify-end gap-3 pt-3">
+          <div className="flex justify-end gap-3">
             <button
               type="button"
               onClick={() => setOpen(false)}

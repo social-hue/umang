@@ -8,23 +8,23 @@ import NewsTicker from "../../breaking/NewsTicker";
 const carouselData = [
   {
     id: 1,
-    image: "/something7.jpg",
+    image: "/banner/home-banner-2.webp",
     headline: "Ek Duniya Alag Si...",
     subheadline: "Because every age deserves new beginnings",
     description:
       "A Unique Senior Independent Living Community for the 55+ Generation",
   },
   {
-    id: 5,
-    image: "/something5.webp",
+    id: 2,
+    image: "/banner/home-banner-3.webp",
     headline: "Active Lifestyle",
     subheadline: "Stay engaged, stay happy",
     description:
       "Fitness centers, recreational activities, and social events for an active lifestyle",
   },
   {
-    id: 6,
-    image: "/something6.webp",
+    id: 3,
+    image: "/banner/home-banner-4.webp",
     headline: "Peace of Mind",
     subheadline: "Security and care you can trust",
     description:

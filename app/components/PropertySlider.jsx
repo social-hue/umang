@@ -9,7 +9,6 @@ const PropertySlider = ({ listings = [] }) => {
   const containerRef = useRef(null);
   const totalWidth = listings.length * 360; // approximate width per card
 
-  // Continuous leftward motion
   useEffect(() => {
     const animate = async () => {
       while (true) {
@@ -26,7 +25,6 @@ const PropertySlider = ({ listings = [] }) => {
     animate();
   }, [controls, x, totalWidth, listings.length]);
 
-  // When user drags, pause auto-scroll and resume later
   const handleDragStart = () => controls.stop();
   const handleDragEnd = () => controls.start({
     x: [x.get(), -totalWidth],
@@ -57,7 +55,6 @@ const PropertySlider = ({ listings = [] }) => {
               fill
               className="object-cover hover:scale-110 transition-transform duration-500"
             />
-            {/* Overlay */}
             <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center">
               <h3 className="text-xl md:text-2xl font-semibold text-white">
                 {item.city}
@@ -69,7 +66,6 @@ const PropertySlider = ({ listings = [] }) => {
           </div>
         ))}
       </motion.div>
-
       {/* Fade edges */}
       <div className="pointer-events-none absolute top-0 left-0 w-8 h-full bg-gradient-to-r from-white via-white/60 to-transparent"></div>
       <div className="pointer-events-none absolute top-0 right-0 w-8 h-full bg-gradient-to-l from-white via-white/60 to-transparent"></div>

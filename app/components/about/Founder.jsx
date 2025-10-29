@@ -17,7 +17,7 @@ export default function Founder() {
         >
           <div className="mt-3 relative overflow-hidden rounded-lg shadow-lg">
             <Image
-              src="/author1.png"
+              src="/people/author1.png"
               alt="Loading..."
               width={440}
               height={160}
@@ -35,8 +35,8 @@ export default function Founder() {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          <h1 className="text-4xl md:text-4xl font-semibold text-zinc-800 mb-4 text-left">
-            Our <span className="text-teal-700">Founder</span>
+          <h1 className="text-3xl md:text-[40px] font-bold text-zinc-800 mb-4 text-left">
+            Our Founder
           </h1>
           <p className="text-gray-700 text-lg leading-relaxed mb-3">
             With over 25 years in hospitality leadership, <span className="font-semibold">Mr. Sanjayy Bharadwajj</span> understands how to make people feel at home. Combining strategic insight with a passion for creating meaningful experiences, he has dedicated his career to understanding what makes spaces come alive and people smile. From market research to lifestyle design, his work reflects a deep grasp of human behavior and a focus on comfort, joy, and connection.

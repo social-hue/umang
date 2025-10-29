@@ -8,30 +8,25 @@ export default function FAQLegal() {
 
   const faqs = [
     {
-      question: "How many team members can I invite?",
+      question: "Can you help if my children live abroad?",
       answer:
-        "You can invite up to 10 team members on the free plan and unlimited members on the premium plan.",
+        "Yes. We coordinate PoA, video KYC, and embassy/apostille so NRIs can act without travel.",
     },
     {
-      question: "What is the maximum file upload size?",
+      question: "Do you offer fixed prices?",
       answer:
-        "The maximum file upload size is 2GB. You can increase this limit with a premium subscription.",
+        "For most documentation and standard matters we provide a fixed-fee. Litigation is quoted with clear caps.",
     },
     {
-      question: "How do I reset my password?",
+      question: "Are my documents secure?",
       answer:
-        "Click on ‘Forgot Password’ at the login screen, and we’ll send you a password reset link via email.",
+        "Yes. We use consent-based sharing, audit trails, and limited-time access links.",
     },
     {
-      question: "Can I cancel my subscription?",
+      question: "Do you appear in court?",
       answer:
-        "Yes, you can cancel your subscription anytime from your account settings page.",
-    },
-    {
-      question: "Do you provide additional support?",
-      answer:
-        "We provide 24/7 support through chat and email for all premium users.",
-    },
+        "Representation is through our networked advocates; Umang manages scheduling and updates.",
+    }
   ];
 
   const toggleFAQ = (index) => {
@@ -40,7 +35,7 @@ export default function FAQLegal() {
 
   return (
     <div>
-      <h2 className="text-3xl text-center font-bold text-zinc-900 mb-2">Frequently Asked Questions</h2>
+      <h2 className="text-3xl md:text-[38px] text-center font-bold text-zinc-900 mb-2">Frequently Asked Questions</h2>
     
     <div className="flex flex-col md:flex-row items-center justify-center w-full mx-auto md:gap-14">
       {/* Left Image Section */}
@@ -67,12 +62,12 @@ export default function FAQLegal() {
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full text-left flex justify-between items-center py-3 text-lg font-medium text-zinc-900 hover:text-orange-600 transition-colors"
+                className="w-full text-left flex justify-between items-center py-3 text-lg font-medium text-zinc-900 hover:text-teal-800 transition-colors"
               >
                 <span
                   className={
                     openIndex === index
-                      ? "text-orange-600 font-semibold"
+                      ? "text-teal-800 font-semibold"
                       : "text-zinc-900"
                   }
                 >
@@ -80,7 +75,7 @@ export default function FAQLegal() {
                 </span>
                 <span
                   className={`transition-transform duration-300 ${
-                    openIndex === index ? "rotate-180 text-orange-600" : ""
+                    openIndex === index ? "rotate-180 text-teal-800" : ""
                   }`}
                 >
                   ▼
