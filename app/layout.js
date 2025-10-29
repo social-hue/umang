@@ -1,4 +1,4 @@
-import { Roboto } from "next/font/google";
+import { Roboto, Montserrat } from "next/font/google";
 import Script from "next/script"; // ✅ import Script from next/script
 import Header from "./components/Header";
 import "./globals.css";
@@ -14,24 +14,13 @@ const roboto = Roboto({
   display: "swap"
 });
 
-// const montserrat = Montserrat({
-//   subsets: ["latin"],
-//   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-//   variable: "--font-inter",
-//   display: "swap"
-// });
-// const barlowCondensed = Barlow_Condensed({
-//   subsets: ["latin"],
-//   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-//   variable: "--font-poppins",
-//   display: "swap"
-// });
-// const bigShouldersDisplay = Big_Shoulders_Display({
-//   subsets: ["latin"],
-//   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-//   variable: "--font-poppins",
-//   display: "swap"
-// });
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+  variable: "--font-inter",
+  display: "swap"
+});
+
 
 export const metadata = {
   title: "Because every age deserves new beginnings",
@@ -100,7 +89,7 @@ export default function RootLayout({ children }) {
               "Umang Living is India&apos;s first multi-city senior independent-living community, thoughtfully designed with love and respect.",
             contactPoint: {
               "@type": "ContactPoint",
-              telephone: "+91-9871825999",
+              telephone: "+91-9560986669",
               contactType: "customer service",
               areaServed: "IN",
               availableLanguage: "English",
@@ -123,7 +112,7 @@ export default function RootLayout({ children }) {
       </head>
       <body
         className={[
-          roboto.variable,
+          montserrat.variable,
           "antialiased",
         ].join(" ")}
       >

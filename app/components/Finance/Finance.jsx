@@ -2,13 +2,13 @@
 "use client";
 import React, { useState } from "react";
 import { ArrowRight } from "lucide-react";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 export default function ITRSection() {
   const [membershipId, setMembershipId] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const allowedRegex = /^[A-Za-z0-9\-_]+$/;
+  const allowedRegex = /^[A-Za-z0-9\-_/\\]+$/;
 
   const handleSubmit = async (e) => {
     e.preventDefault();

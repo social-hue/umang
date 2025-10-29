@@ -7,7 +7,7 @@ export const posts = [
     time: "2 minute read",
     view: "1k views",
     share: "600 shares",
-    image: "/blog/blog9.jpg",
+    image: "/glimps/1.webp",
     excerpt: "Life after 55 is often imagined as a quiet, restful phase, but at Umang Living, we believe it’s the perfect time to live fully, pursue passions, and embrace community. We’re more than just a place to reside.",
     content1: `<p>Life after 55 is often imagined as a quiet, restful phase, but at Umang Living, we believe it’s the perfect time to live fully, pursue passions, and embrace community. We’re more than just a place to reside. We are an all-inclusive, vibrant community you can genuinely call home. Every aspect of Umang Living is designed to cater to the physical, emotional, and social well-being of our residents, ensuring that life after retirement is nothing short of extraordinary.</p>`,
     // heading: "Problems faced by Senior Citizens",
@@ -45,7 +45,7 @@ Whether it’s the joy of a community gathering, the comfort of personalized car
     time: "3 minute read",
     view: "1k views",
     share: "400 shares",
-    image: "/citizen.jpg",
+    image: "/glimps/2.webp",
     excerpt: "Retirement is often considered a well-deserved phase of rest and reflection after decades of hard work. In India, senior citizens look forward to this stage as a time to spend with family, pursue hobbies, and enjoy peace of mind.",
     content1: `<p>Retirement is often considered a well-deserved phase of rest and reflection after decades of hard work. In India, senior citizens look forward to this stage as a time to spend with family, pursue hobbies, and enjoy peace of mind. However, the reality for many retirees is far from this ideal. With rising life expectancy, social changes, and economic uncertainty, senior citizens face numerous challenges after retirement. These problems are not just individual but also societal, as they reflect the nation’s preparedness to care for its ageing population. India currently has more than 140 million elderly people (above 60 years), and this number is expected to grow rapidly in the coming decades. Understanding the problems they face is therefore critical to ensuring dignity, security, and a better quality of life in their later years.</p>`,
     heading: "Problems faced by Senior Citizens",
@@ -135,7 +135,7 @@ Whether it’s the joy of a community gathering, the comfort of personalized car
     time: "2 minute read",
     view: "1.6K views",
     share: "1.2K shares",
-    image: "/blog/blog_latest01.jpg",
+    image: "/glimps/3.webp",
     excerpt:
       "A few days back, I came across a heart-wrenching story. Over 100 elderly citizens were rescued from an unregistered old age home in Noida",
     content1: `At Umang Living, we believe that the golden years of life deserve to be filled with joy, purpose, and companionship.
@@ -181,7 +181,7 @@ Whether it’s the joy of a community gathering, the comfort of personalized car
     time: "2 minute read",
     view: "1.6K views",
     share: "1.2K shares",
-    image: "/blog/blog1.jpg",
+    image: "/glimps/8.webp",
     excerpt:
       "A few days back, I came across a heart-wrenching story. Over 100 elderly citizens were rescued from an unregistered old age home in Noida",
     content1: `A few days back, I came across a heart-wrenching story. Over 100 elderly citizens were rescued from an unregistered old age home in Noida—crammed into just 13 rooms, surviving in unhygienic, unsafe conditions. Some were abandoned, others ill, and many simply had nowhere else to go. <br>As someone who works every day to create spaces where seniors can live with dignity, this story shook me. And it reminded me, once again, why Umang Living exists.
@@ -235,7 +235,7 @@ Whether it’s the joy of a community gathering, the comfort of personalized car
     time: "2 minute read",
     view: "1.6K views",
     share: "1.2K shares",
-    image: "/glimps/6.jpg",
+    image: "/glimps/6.webp",
     excerpt: "Aenean eleifend arcu nec massa pulvinar…",
     content1: `
 For many, life is a checklist—education, job, marriage, raising children, building a home, saving for the future. Decades are spent fulfilling responsibilities with discipline, sacrifice, and love. And then, one day, the list is complete. Children are settled, careers have peaked or ended, and financial stability has (hopefully) been achieved.<br><br>Now what?<br>Traditionally, this stage of life was considered “retirement”—a polite word for slowing down, fading into the background, and living a quieter, simpler existence. But does fulfilling your responsibilities mean you must now retreat from life itself? Absolutely not.
@@ -284,7 +284,7 @@ For many, life is a checklist—education, job, marriage, raising children, buil
     time: "2 minute read",
     view: "1.6K views",
     share: "1.2K shares",
-    image: "/blog/blog3.jpg",
+    image: "/glimps/7.webp",
     excerpt: "Aenean eleifend arcu nec massa pulvinar…",
     content1: `
 For years, your calendar may have revolved around meetings, responsibilities, school vacations, bills, and other people’s needs. You were the planner, the provider, the anchor. But now, as you step into retirement, a new kind of freedom awaits—a passport to places you once only dreamed of. <br><br>It’s time to ask yourself: If not now, when?<br><br>Travel after retirement isn’t just a luxury—it’s a gift to your soul, your health, and your sense of purpose. Here’s why you should pack your bags, chase horizons, and start your next great adventure.
