@@ -1,4 +1,4 @@
-import { Roboto, Montserrat } from "next/font/google";
+import { Roboto } from "next/font/google";
 import Script from "next/script"; // ✅ import Script from next/script
 import Header from "./components/Header";
 import "./globals.css";
@@ -14,13 +14,12 @@ const roboto = Roboto({
   display: "swap"
 });
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-  variable: "--font-inter",
-  display: "swap"
-});
-
+// const montserrat = Montserrat({
+//   subsets: ["latin"],
+//   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+//   variable: "--font-inter",
+//   display: "swap"
+// });
 
 export const metadata = {
   title: "Because every age deserves new beginnings",
@@ -112,7 +111,7 @@ export default function RootLayout({ children }) {
       </head>
       <body
         className={[
-          montserrat.variable,
+          roboto.variable,
           "antialiased",
         ].join(" ")}
       >
