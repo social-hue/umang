@@ -97,7 +97,7 @@ export default function FinancialServices() {
             </h3>
             <p className="text-zinc-800 mb-2 leading-relaxed">{srv.desc}</p>
             <motion.a
-              href="#contact"
+              href="tel:18002028704"
               className=" text-red-700 font-medium"
             >
               Enquire Now <span><ArrowRight className="text-red-700 w-4 h-4 inline-block"/></span>
