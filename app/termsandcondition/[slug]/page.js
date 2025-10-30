@@ -1,7 +1,6 @@
 import { privacyandTermData } from "@/app/StaticData/Privacy&Terms";
 import TermsPrivicy from "../../components/Terms&Privacy/TermsPrivicy";
 import Banner from "@/app/components/Banner";
-import Footer from "@/app/components/Footer";
 
 export default async function Privacy({ params }) {
   const { slug } = await params;   // ✅ await params
@@ -26,7 +25,6 @@ export default async function Privacy({ params }) {
           )}
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

@@ -7,7 +7,7 @@ const TermsPrivicy = ({ title1, title2, dis }) => {
         <span>{title1}</span> <span className="gradient_text"> {title2}</span>
       </h2> */}
       <div
-        className="text-[#535353] lg:text-[22px] md:text-[18px] pt-4"
+        className="text-[#535353] lg:text-[18px] pt-4"
         dangerouslySetInnerHTML={{ __html: dis }}
       ></div>
     </div>
