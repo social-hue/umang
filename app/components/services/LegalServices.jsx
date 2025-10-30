@@ -105,15 +105,6 @@ export default function LegalServices() {
           </motion.div>
         ))}
       </div>
-      {/* <div className="py-12">
-            <Timelinee />
-        </div> */}
-      {/* Disclaimer */}
-      {/* <div className="bg-zinc-800 p-6 rounded-2xl border-l-4 border-teal-800 text-zinc-100 mb-12">
-        <p className="text-md italic">
-          Important: <span className="text-white font-medium">Umang Living</span> provides concierge access and coordination with independent legal professionals. We are not a law firm and do not offer legal representation directly.
-        </p>
-      </div> */}
       <div className="py-8 md:py-14 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-zinc-800">
           Ready to file or plan ?

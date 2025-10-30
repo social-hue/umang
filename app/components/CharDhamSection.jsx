@@ -304,7 +304,6 @@ export default function CharDhamSection() {
                 <h3 className="text-xl font-semibold text-zinc-800 mb-2">{pkg.name}</h3>
                 <p className="font-medium text-zinc-700 mb-2">{pkg.duration}</p>
                 <p className="text-md text-zinc-600 mb-3">{pkg.route}</p>
-
                 <div className="text-md">
                   <h4 className="font-semibold text-zinc-800 text-md mb-2">Package Inclusions:</h4>
                   <ul className="list-disc list-inside space-y-0.5 text-zinc-600 text-md">

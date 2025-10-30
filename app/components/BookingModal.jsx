@@ -11,7 +11,6 @@ export default function BookingModal({ tourname, open, onClose }) {
     travellers: "",
     message: "",
   });
-
   const [loading, setLoading] = useState(false);
 
   if (!open) return null;
@@ -25,11 +24,17 @@ export default function BookingModal({ tourname, open, onClose }) {
     e.preventDefault();
     setLoading(true);
 
-    const bookingData = { ...form, tourName: tourname };
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 15000);
-
     try {
+      // 🧩 Execute reCAPTCHA v2 Invisible
+      const token = await grecaptcha.execute(
+        process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
+        { action: "booking_form" }
+      );
+
+      const bookingData = { ...form, tourName: tourname, recaptchaToken: token };
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 15000);
+
       const res = await fetch("/api/bookings", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -41,7 +46,7 @@ export default function BookingModal({ tourname, open, onClose }) {
       const result = await res.json();
 
       if (res.ok) {
-        toast.success("We'll get back to you shortly !");
+        toast.success("We'll get back to you shortly!");
         setForm({
           fullName: "",
           contact: "",
@@ -66,9 +71,6 @@ export default function BookingModal({ tourname, open, onClose }) {
 
   return (
     <div className="bg-black/50 fixed inset-0 flex justify-center items-center z-[500]">
-      {/* Toast Notifications */}
-      {/* <Toaster position="top-right" /> */}
-
       <div className="bg-white border-none w-[90%] max-w-lg p-6 relative rounded-sm text-zinc-800 shadow-xl animate-fadeIn">
         {/* Close Button */}
         <button
@@ -78,14 +80,12 @@ export default function BookingModal({ tourname, open, onClose }) {
           <X size={20} />
         </button>
 
-        {/* Heading */}
         <h3 className="text-2xl font-semibold text-zinc-800 mb-4 text-center">
           Book Your Trip
         </h3>
 
-        {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-4">
-          {/* Row 1: Name + Contact */}
+          {/* Row 1 */}
           <div className="flex flex-col sm:flex-row gap-3">
             <input
               name="fullName"
@@ -94,7 +94,7 @@ export default function BookingModal({ tourname, open, onClose }) {
               type="text"
               placeholder="Full Name"
               required
-              className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 focus:outline-none focus:border-zinc-600"
+              className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 focus:outline-none focus:border-zinc-600"
             />
             <input
               name="contact"
@@ -103,11 +103,11 @@ export default function BookingModal({ tourname, open, onClose }) {
               type="tel"
               placeholder="Contact"
               required
-              className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 focus:outline-none focus:border-zinc-600"
+              className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 focus:outline-none focus:border-zinc-600"
             />
           </div>
 
-          {/* Row 2: Date + Travellers */}
+          {/* Row 2 */}
           <div className="flex flex-col sm:flex-row gap-3">
             <input
               name="preferredDate"
@@ -116,14 +116,14 @@ export default function BookingModal({ tourname, open, onClose }) {
               type="text"
               placeholder="Preferred Date"
               required
-              className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 focus:outline-none focus:border-zinc-600"
+              className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 focus:outline-none focus:border-zinc-600"
             />
             <select
               name="travellers"
               value={form.travellers}
               onChange={handleChange}
               required
-              className="flex-1 border border-zinc-300 rounded-sm px-2 py-2 text-zinc-700 focus:outline-none focus:border-zinc-600 bg-white cursor-pointer"
+              className="flex-1 border border-zinc-300 rounded-sm px-2 py-2 bg-white cursor-pointer"
             >
               <option value="" disabled>
                 Number of Travellers
@@ -142,7 +142,7 @@ export default function BookingModal({ tourname, open, onClose }) {
             value={form.message}
             onChange={handleChange}
             placeholder="Message"
-            className="w-full border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 focus:outline-none focus:border-zinc-600 resize-none"
+            className="w-full border border-zinc-300 rounded-sm px-3 py-2 focus:outline-none focus:border-zinc-600 resize-none"
           ></textarea>
 
           {/* Buttons */}

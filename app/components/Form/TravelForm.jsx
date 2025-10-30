@@ -13,17 +13,16 @@ export default function TourForm() {
     description: "",
     destination: "",
   });
-
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => setForm((p) => ({ ...p, [e.target.name]: e.target.value }));
+  const handleChange = (e) =>
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
 
   const validate = () => {
     if (!form.fullName.trim()) return "Full Name is required.";
     if (!form.contact.trim()) return "Contact is required.";
     if (!form.destination.trim()) return "Please select a destination.";
     if (!form.travellers) return "Please select number of travellers.";
-    // optional: add phone format check
     return null;
   };
 
@@ -40,26 +39,34 @@ export default function TourForm() {
     const timeout = setTimeout(() => controller.abort(), 15000);
 
     try {
+      // 🧩 Execute reCAPTCHA v2 Invisible dynamically
+      const token = await grecaptcha.execute(
+        process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
+        { action: "tour_form" }
+      );
+
       const res = await fetch("/api/tour", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, recaptchaToken: token }),
         signal: controller.signal,
       });
-
+      
       clearTimeout(timeout);
 
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
         toast.error(data?.message || `Server error (${res.status})`);
       } else {
-        const data = await res.json();
-        toast.success("Thank you! We'll be in touch soon", { duration: 3000, position: "top-center" });
+        toast.success("Thank you! We'll be in touch soon", {
+          duration: 3000,
+          position: "top-center",
+        });
         setForm({
           fullName: "",
           contact: "",
           preferredDate: "",
-          travellers: "Number of Travellers",
+          travellers: "",
           description: "",
           destination: "",
         });
@@ -77,7 +84,6 @@ export default function TourForm() {
 
   return (
     <div>
-      {/* <Toaster position="top-right" /> */}
       <form onSubmit={handleSubmit} className="space-y-4 text-md">
         {/* Row 1 */}
         <div className="flex flex-col sm:flex-row gap-3">
@@ -87,7 +93,8 @@ export default function TourForm() {
             placeholder="Full Name"
             value={form.fullName}
             onChange={handleChange}
-            className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-500 focus:outline-none focus:border-zinc-600"
+            required
+            className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 focus:outline-none focus:border-zinc-600"
           />
           <input
             name="contact"
@@ -95,7 +102,8 @@ export default function TourForm() {
             placeholder="Contact"
             value={form.contact}
             onChange={handleChange}
-            className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-500 focus:outline-none focus:border-zinc-600"
+            required
+            className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 focus:outline-none focus:border-zinc-600"
           />
         </div>
 
@@ -107,14 +115,15 @@ export default function TourForm() {
             placeholder="Preferred Date"
             value={form.preferredDate}
             onChange={handleChange}
-            className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-500 focus:outline-none focus:border-zinc-600"
+            className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 focus:outline-none focus:border-zinc-600"
           />
 
           <select
             name="travellers"
             value={form.travellers}
             onChange={handleChange}
-            className="flex-1 border border-zinc-300 rounded-sm px-2 py-2 text-zinc-700 placeholder-zinc-500 focus:outline-none focus:border-zinc-600 bg-white cursor-pointer"
+            required
+            className="flex-1 border border-zinc-300 rounded-sm px-2 py-2 bg-white cursor-pointer focus:outline-none focus:border-zinc-600"
           >
             <option value="" disabled>
               Number of Travellers
@@ -126,25 +135,24 @@ export default function TourForm() {
           </select>
         </div>
 
-        {/* Row 3 */}
-        <div className="flex flex-col gap-3">
-          <textarea
-            name="description"
-            rows="3"
-            placeholder="Describe Your Tour"
-            value={form.description}
-            onChange={handleChange}
-            className="w-full border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 placeholder-zinc-500 focus:outline-none focus:border-zinc-600 resize-none"
-          ></textarea>
-        </div>
+        {/* Description */}
+        <textarea
+          name="description"
+          rows="3"
+          placeholder="Describe Your Tour"
+          value={form.description}
+          onChange={handleChange}
+          className="w-full border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 focus:outline-none focus:border-zinc-600 resize-none"
+        ></textarea>
 
-        {/* Row 4 */}
+        {/* Destination + Submit */}
         <div className="flex flex-col sm:flex-row gap-3">
           <select
             name="destination"
             value={form.destination}
             onChange={handleChange}
-            className="flex-1 border border-zinc-300 rounded-sm px-2 py-2 text-zinc-700 placeholder-zinc-500 focus:outline-none focus:border-zinc-600 bg-white cursor-pointer"
+            required
+            className="flex-1 border border-zinc-300 rounded-sm px-2 py-2 bg-white cursor-pointer focus:outline-none focus:border-zinc-600"
           >
             <option value="" disabled>
               Select Destination
