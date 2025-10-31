@@ -10,9 +10,6 @@ export default async function Privacy({ params }) {
     <div>
       <Banner title={content ? `${content.title1} ${content.title2}` : ""} />
       <div className="relative overflow-hidden">
-        <div className="absolute -top-[150px] -left-[180px] -z-9">
-          <img src="/rangoli.png" alt="rangoli" className="w-[70%]" loading="lazy" decoding="async" />
-        </div>
         <div className="py-10 main_width">
           {content ? (
             <TermsPrivicy

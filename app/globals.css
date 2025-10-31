@@ -34,6 +34,25 @@ body {
   width: 90%;
   margin: auto;
 }
+
+/* Global fix for <select> right padding and consistent arrow spacing */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,<svg fill='black' height='18' viewBox='0 0 24 24' width='18' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+  padding-right: 2rem; /* creates space between text and arrow */
+}
+
+/* Optional: consistent border, focus look */
+select:focus {
+  outline: none;
+  border-color: #484949; /* teal-700 */
+}
+
 .gradient_text {
   background: linear-gradient(
     0deg,

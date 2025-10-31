@@ -5,6 +5,7 @@ import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import BookingModal from "./BookingModal";
 import TourForm from "./Form/TravelForm";
+import TourPackages from "./TourPackages";
 
 export default function CharDhamSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -50,184 +51,179 @@ export default function CharDhamSection() {
       desc: "Our travel experts are always just a call away — before, during, and after your journey.",
     },
     {
-      icon: <Users className="w-10 h-10 text-teal-900" />,
-      title: "51,000+ Happy Customers",
-      desc: "Thousands of pilgrims have trusted us to guide their Char Dham yatra.",
-    },
-    {
       icon: <ShieldCheck className="w-10 h-10 text-teal-900" />,
-      title: "100% Money Safe",
+      title: "100% Travel Safe",
       desc: "Your trust and security matter most. We offer transparent bookings.",
     },
   ];
 
-  const dhamHighlights = [
-    {
-      name: "Char Dham",
-      image: "/travel/kedarnath.webp",
-      desc: "A journey through the Himalayas that blends faith & nature",
-    },
-    {
-      name: "Darjeeling",
-      image: "/travel/darjeeling.webp",
-      desc: "Wake up to misty mornings, rolling tea gardens, and the whisper of mountain air.",
-    },
-    {
-      name: "Kerala",
-      image: "/travel/kerala.webp",
-      desc: "Sail through serene back waters, palm-lined horizons where time flows slower",
-    },
-    {
-      name: "Goa",
-      image: "/travel/goa.webp",
-      desc: "Golden beaches, Portuguese charm, and nights that never lose their rhythm.",
-    },
-  ];
+  // const dhamHighlights = [
+  //   {
+  //     name: "Char Dham",
+  //     image: "/travel/kedarnath.webp",
+  //     desc: "A journey through the Himalayas that blends faith & nature",
+  //   },
+  //   {
+  //     name: "Darjeeling",
+  //     image: "/travel/darjeeling.webp",
+  //     desc: "Wake up to misty mornings, rolling tea gardens, and the whisper of mountain air.",
+  //   },
+  //   {
+  //     name: "Kerala",
+  //     image: "/travel/kerala.webp",
+  //     desc: "Sail through serene back waters, palm-lined horizons where time flows slower",
+  //   },
+  //   {
+  //     name: "Goa",
+  //     image: "/travel/goa.webp",
+  //     desc: "Golden beaches, Portuguese charm, and nights that never lose their rhythm.",
+  //   },
+  // ];
 
-  const tourPackages = [
-    {
-      name: "Kedarnath Tour Package (Ek Dham Tour From Haridwar)",
-      duration: "03 Nights / 04 Days",
-      route: "Haridwar – Guptkashi – Kedarnath – Guptkashi – Haridwar",
-      price: "Rs. 7500/- Per Person (Starting Price)",
-      inclusions: [
-        "02 Night Hotel Accommodation in Guptkashi",
-        "01 Night Stay in Kedarnath Camp",
-        "02 Breakfast & 02 Dinner",
-        "All Toll Parking Tax",
-      ],
-      image: "/facilities/travel.webp",
-    },
-    {
-      name: "Badrinath Tour Package (Ek Dham Tour From Haridwar)",
-      duration: "03 Nights / 04 Days",
-      route: "Haridwar – Rudraprayag – Badrinath – Haridwar",
-      price: "Rs. 7500/- Per Person (Starting Price)",
-      inclusions: [
-        "02 Night Hotel Accommodation in Rudraprayag",
-        "01 Night Stay in Badrinath Hotel",
-        "03 Breakfast & 03 Dinner",
-        "All Toll Parking Tax",
-      ],
-      image:
-        "/travel/badri2.webp",
-    },
-    {
-      name: "Kedarnath-Badrinath Tour (Do Dham Tour From Haridwar)",
-      duration: "05 Nights / 06 Days",
-      route: "Haridwar – Guptkashi – Kedarnath – Gouptkashi – Badrinath – Rudraprayag Haridwar",
-      price: "Rs. 12500/- Per Person (Starting Price)",
-      inclusions: [
-        "02 Night Hotel Accommodation in Rudraprayag",
-        "01 Night Stay in Badrinath Hotel",
-        "03 Breakfast & 03 Dinner",
-        "All Toll Parking Tax",
-      ],
-      image:
-        "/travel/do-dham.webp",
-    },
-    {
-      name: "Char Dham Tour Package",
-      duration: "09 Nights / 10 Days",
-      route: "Haridwar – Guptkashi – Kedarnath – Gouptkashi – Haridwar",
-      price: "Rs. 17500/- Per Person (Starting Price)",
-      inclusions: [
-        "02 Night Hotel Accommodation in Rudraprayag",
-        "01 Night Stay in Badrinath Hotel",
-        "03 Breakfast & 03 Dinner",
-        "All Toll Parking Tax",
-      ],
-      image:
-        "/travel/chardham.webp",
-    },
-    {
-      name: "Kedarnath Tour Package (Ek Dham Tour From Delhi)",
-      duration: "04 Nights / 05 Days",
-      route: "Haridwar – Guptkashi – Kedarnath – Guptkashi – Haridwar",
-      price: "Rs. 9500/- Per Person (Starting Price)",
-      inclusions: [
-        "01 Night Hotel Accommodation in Rudraprayag",
-        "02 Night Stay in Badrinath Hotel",
-        "01 Night Stay In Kedarnath Camp",
-        "03 Breakfast & 03 Dinner",
-        "All Toll Parking Tax",
-      ],
-      image:
-        "/travel/kedarnath.webp",
-    },
-    {
-      name: "Badrinath Tour Package (Ek Dham Tour From Delhi)",
-      duration: "04 Nights / 05 Days",
-      route: "Haridwar – Rudraprayag – Badrinath – Haridwar",
-      price: "Rs. 9500/- Per Person (Starting Price)",
-      inclusions: [
-        "02 Night Hotel Accommodation in Rudraprayag",
-        "01 Night Stay in Badrinath Hotel",
-        "03 Breakfast & 03 Dinner",
-        "All Toll Parking Tax",
-      ],
-      image:
-        "/travel/badri2.webp",
-    },
-    {
-      name: "Char Dham Tour Package From Delhi",
-      duration: "11 Nights / 12 Days",
-      route: "Haridwar – Yamounotri – Gangotri – Kedarnath – Badrinath – Haridwar",
-      price: "Rs. 19500/- Per Person (Starting Price)",
-      inclusions: [
-        "02 Night Hotel Accommodation in Haridwar",
-        "02 Night Hotel Accommodation in Barkot",
-        "02 Night Hotel Accommodation in Uttarkashi",
-        "02 Night Hotel Accommodation in Gouptkashi",
-      ],
-      image:
-        "/travel/chardham.webp",
-    },
-    {
-      name: "Do Dham From Dehradun By Helicopter",
-      duration: "03 Nights / 04 Days",
-      route: "Dehradun – Kedarnath - Badrinath - Gangotri - Yamunotri",
-      price: "Rs. 125000/- Per Person (Starting Price)",
-      inclusions: [
-        "Dehradun to Dehradun Helicopter",
-        "All Local Transfer",
-        "01 Night Hotel Accommadation",
-        "Including Hotel Meal",
-      ],
-      image:
-        "/travel/do-dham.webp",
-    },
-    {
-      name: "Char Dham From Dehradun By Helicopter",
-      duration: "04 Nights / 05 Days",
-      route: "Dehradun – Char Dham",
-      price: "Rs. 175000/- Per Person (Starting Price)",
-      inclusions: [
-        "Dehradun to Dehradun Helicopter",
-        "All Local Transfer",
-        "04 Night Hotel Accommadation",
-        "Including Hotel Meal",
-      ],
-      image:
-        "/travel/chardham.webp",
-    }
-    // ... (keep your tourPackages array same)
-  ];
+  // const tourPackages = [
+  //   {
+  //     name: "Kedarnath Tour Package (Ek Dham Tour From Haridwar)",
+  //     duration: "03 Nights / 04 Days",
+  //     route: "Haridwar – Guptkashi – Kedarnath – Guptkashi – Haridwar",
+  //     price: "Rs. 7500/- Per Person (Starting Price)",
+  //     inclusions: [
+  //       "02 Night Hotel Accommodation in Guptkashi",
+  //       "01 Night Stay in Kedarnath Camp",
+  //       "02 Breakfast & 02 Dinner",
+  //       "All Toll Parking Tax",
+  //     ],
+  //     image: "/facilities/travel.webp",
+  //   },
+  //   {
+  //     name: "Badrinath Tour Package (Ek Dham Tour From Haridwar)",
+  //     duration: "03 Nights / 04 Days",
+  //     route: "Haridwar – Rudraprayag – Badrinath – Haridwar",
+  //     price: "Rs. 7500/- Per Person (Starting Price)",
+  //     inclusions: [
+  //       "02 Night Hotel Accommodation in Rudraprayag",
+  //       "01 Night Stay in Badrinath Hotel",
+  //       "03 Breakfast & 03 Dinner",
+  //       "All Toll Parking Tax",
+  //     ],
+  //     image:
+  //       "/travel/badri2.webp",
+  //   },
+  //   {
+  //     name: "Kedarnath-Badrinath Tour (Do Dham Tour From Haridwar)",
+  //     duration: "05 Nights / 06 Days",
+  //     route: "Haridwar – Guptkashi – Kedarnath – Gouptkashi – Badrinath – Rudraprayag Haridwar",
+  //     price: "Rs. 12500/- Per Person (Starting Price)",
+  //     inclusions: [
+  //       "02 Night Hotel Accommodation in Rudraprayag",
+  //       "01 Night Stay in Badrinath Hotel",
+  //       "03 Breakfast & 03 Dinner",
+  //       "All Toll Parking Tax",
+  //     ],
+  //     image:
+  //       "/travel/do-dham.webp",
+  //   },
+  //   {
+  //     name: "Char Dham Tour Package",
+  //     duration: "09 Nights / 10 Days",
+  //     route: "Haridwar – Guptkashi – Kedarnath – Gouptkashi – Haridwar",
+  //     price: "Rs. 17500/- Per Person (Starting Price)",
+  //     inclusions: [
+  //       "02 Night Hotel Accommodation in Rudraprayag",
+  //       "01 Night Stay in Badrinath Hotel",
+  //       "03 Breakfast & 03 Dinner",
+  //       "All Toll Parking Tax",
+  //     ],
+  //     image:
+  //       "/travel/chardham.webp",
+  //   },
+  //   {
+  //     name: "Kedarnath Tour Package (Ek Dham Tour From Delhi)",
+  //     duration: "04 Nights / 05 Days",
+  //     route: "Haridwar – Guptkashi – Kedarnath – Guptkashi – Haridwar",
+  //     price: "Rs. 9500/- Per Person (Starting Price)",
+  //     inclusions: [
+  //       "01 Night Hotel Accommodation in Rudraprayag",
+  //       "02 Night Stay in Badrinath Hotel",
+  //       "01 Night Stay In Kedarnath Camp",
+  //       "03 Breakfast & 03 Dinner",
+  //       "All Toll Parking Tax",
+  //     ],
+  //     image:
+  //       "/travel/kedarnath.webp",
+  //   },
+  //   {
+  //     name: "Badrinath Tour Package (Ek Dham Tour From Delhi)",
+  //     duration: "04 Nights / 05 Days",
+  //     route: "Haridwar – Rudraprayag – Badrinath – Haridwar",
+  //     price: "Rs. 9500/- Per Person (Starting Price)",
+  //     inclusions: [
+  //       "02 Night Hotel Accommodation in Rudraprayag",
+  //       "01 Night Stay in Badrinath Hotel",
+  //       "03 Breakfast & 03 Dinner",
+  //       "All Toll Parking Tax",
+  //     ],
+  //     image:
+  //       "/travel/badri2.webp",
+  //   },
+  //   {
+  //     name: "Char Dham Tour Package From Delhi",
+  //     duration: "11 Nights / 12 Days",
+  //     route: "Haridwar – Yamounotri – Gangotri – Kedarnath – Badrinath – Haridwar",
+  //     price: "Rs. 19500/- Per Person (Starting Price)",
+  //     inclusions: [
+  //       "02 Night Hotel Accommodation in Haridwar",
+  //       "02 Night Hotel Accommodation in Barkot",
+  //       "02 Night Hotel Accommodation in Uttarkashi",
+  //       "02 Night Hotel Accommodation in Gouptkashi",
+  //     ],
+  //     image:
+  //       "/travel/chardham.webp",
+  //   },
+  //   {
+  //     name: "Do Dham From Dehradun By Helicopter",
+  //     duration: "03 Nights / 04 Days",
+  //     route: "Dehradun – Kedarnath - Badrinath - Gangotri - Yamunotri",
+  //     price: "Rs. 125000/- Per Person (Starting Price)",
+  //     inclusions: [
+  //       "Dehradun to Dehradun Helicopter",
+  //       "All Local Transfer",
+  //       "01 Night Hotel Accommadation",
+  //       "Including Hotel Meal",
+  //     ],
+  //     image:
+  //       "/travel/do-dham.webp",
+  //   },
+  //   {
+  //     name: "Char Dham From Dehradun By Helicopter",
+  //     duration: "04 Nights / 05 Days",
+  //     route: "Dehradun – Char Dham",
+  //     price: "Rs. 175000/- Per Person (Starting Price)",
+  //     inclusions: [
+  //       "Dehradun to Dehradun Helicopter",
+  //       "All Local Transfer",
+  //       "04 Night Hotel Accommadation",
+  //       "Including Hotel Meal",
+  //     ],
+  //     image:
+  //       "/travel/chardham.webp",
+  //   }
+  //   // ... (keep your tourPackages array same)
+  // ];
 
   return (
     <section className="text-zinc-800 overflow-hidden">
       {/* Heading */}
-      <div className="text-center mb-8">
+      {/* <div className="text-center mb-8">
         <h2 className="text-3xl md:text-4xl font-bold text-zinc-800 mb-3">
           Discover the many shades of India
         </h2>
         <p className="max-w-2xl mx-auto text-lg text-zinc-600">
           From misty mountains to golden beaches - explore destinations that capture the spirit, color & charm of India&apos;s incredible diversity.
         </p>
-      </div>
+      </div> */}
 
       {/* Dham Highlights */}
-      <motion.div
+      {/* <motion.div
         ref={dhamRef}
         variants={fadeUp}
         initial="hidden"
@@ -248,9 +244,9 @@ export default function CharDhamSection() {
             </div>
           </div>
         ))}
-      </motion.div>
+      </motion.div> */}
       <div className="text-center">
-        <h2 className="text-zinc-800 text-3xl md:text-4xl font-bold mb-3">
+        <h2 className="text-zinc-800 text-3xl md:text-[38px] font-bold mb-3">
           Tailored Journeys for Timeless Souls
         </h2>
         <p className="max-w-3xl mx-auto text-lg text-zinc-600">
@@ -269,18 +265,20 @@ export default function CharDhamSection() {
             </h3>
             {/* Form */}
             <TourForm />
-
           </div>
         </div>
       </div>
       {/* Packages */}
       <div className="mb-6 md:mb-10 text-center">
-        <h2 className="text-zinc-800 text-3xl md:text-4xl font-bold">
-          Explore Our Packages <ArrowRight className="inline-block" size={28} />
+        <h2 className="text-zinc-800 text-3xl mb-3 md:text-[38px] font-bold">
+          Explore Our Signature Tours <ArrowRight className="inline-block" size={28} />
         </h2>
+        <p className="max-w-3xl mx-auto text-lg text-zinc-600">
+          Discover journeys crafted around your comfort, interests, and dreams. Share your preferences, and we&apos;ll design a personalized travel experience made just for you.
+        </p>
       </div>
-
-      <motion.div
+      <TourPackages />
+      {/* <motion.div
         ref={pkgRef}
         variants={fadeUp}
         initial="hidden"
@@ -304,7 +302,6 @@ export default function CharDhamSection() {
                 <h3 className="text-xl font-semibold text-zinc-800 mb-2">{pkg.name}</h3>
                 <p className="font-medium text-zinc-700 mb-2">{pkg.duration}</p>
                 <p className="text-md text-zinc-600 mb-3">{pkg.route}</p>
-
                 <div className="text-md">
                   <h4 className="font-semibold text-zinc-800 text-md mb-2">Package Inclusions:</h4>
                   <ul className="list-disc list-inside space-y-0.5 text-zinc-600 text-md">
@@ -336,7 +333,7 @@ export default function CharDhamSection() {
         onClose={() => setIsModalOpen(false)}
         tourname={selectedTour}
       />
-      </motion.div>
+      </motion.div> */}
 
       {/* Why Choose Us */}
       <motion.div
@@ -346,10 +343,10 @@ export default function CharDhamSection() {
         animate={featuresInView ? "visible" : "hidden"}
         className="mt-12 md:mt-20"
       >
-        <h2 className="text-zinc-800 text-3xl md:text-4xl mb-6 text-center font-bold">
+        <h2 className="text-zinc-800 text-3xl md:text-[38px] mb-8 text-center font-bold">
           Why Choose Us?
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-8 max-w-7xl mx-auto px-6 md:px-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 max-w-7xl mx-auto px-6 md:px-10">
           {features.map((f, i) => (
             <div
               key={i}

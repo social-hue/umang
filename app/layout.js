@@ -1,7 +1,7 @@
 import { Roboto } from "next/font/google";
-import Script from "next/script"; // ✅ import Script from next/script
-import Header from "./components/Header";
 import "./globals.css";
+import Script from "next/script"; // ✅ import Script from next/Script
+import Header from "./components/Header";
 import { Toaster } from "react-hot-toast";
 import FloatingCTA from "./components/floatingButton/floatingButton";
 import Footer from "./components/Footer";
@@ -22,7 +22,7 @@ const roboto = Roboto({
 // });
 
 export const metadata = {
-  title: "Because every age deserves new beginnings",
+  title: "Umang Living : India's Largest Senior Living Community | Ek Duniya Alag Si...",
   description:
     "Umang Living is India’s first multi-city senior independent-living community, thoughtfully designed with love and respect. We believe that at 55, life doesn’t slow down -- it blossoms.",
   icons: {
@@ -30,7 +30,7 @@ export const metadata = {
   },
   metadataBase: new URL("https://www.umangliving.com/"),
   openGraph: {
-    title: "Because every age deserves new beginnings",
+    title: "Umang Living: India's Largest Senior Living Community | Ek Duniya Alag Si...",
     description:
       "Umang Living is India’s first multi-city senior independent-living community, thoughtfully designed with love and respect. We believe that at 55, life doesn’t slow down -- it blossoms.",
     url: "https://www.umangliving.com/",
@@ -77,7 +77,11 @@ export default function RootLayout({ children }) {
           src="https://www.googletagmanager.com/gtag/js?id=G-X8ZCDZN3QT"
           strategy="lazyOnload"
         />
-         <Script id="schema-org" type="application/ld+json" strategy="afterInteractive">
+        <Script
+          src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
+          strategy="afterInteractive"
+        />
+        <Script id="schema-org" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",

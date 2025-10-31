@@ -78,11 +78,7 @@ export default function LegalServices() {
           Legal & Documentation Services for Seniors and Families
         </h1>
         <p className="text-zinc-800  text-lg leading-relaxed max-w-3xl mx-auto">
-          At Umang Living, legal care is simple, respectful, and transparent.
-          From will & estate planning to property disputes and NRI documentation,
-          our curated legal network helps seniors and families resolve issues
-          quickly with fixed-fee quotes, clear timelines, and regular updates
-          through our concierge team.
+        At Umang Living, legal consultation is simplified and transparent. From will & estate planning to property disputes and NRI documentation, our curated legal network helps seniors and families resolve issues quickly with fixed-fee quotes, clear timelines, and regular updates through our team.
         </p>
       </div>
       {/* Services Grid */}
@@ -105,15 +101,6 @@ export default function LegalServices() {
           </motion.div>
         ))}
       </div>
-      {/* <div className="py-12">
-            <Timelinee />
-        </div> */}
-      {/* Disclaimer */}
-      {/* <div className="bg-zinc-800 p-6 rounded-2xl border-l-4 border-teal-800 text-zinc-100 mb-12">
-        <p className="text-md italic">
-          Important: <span className="text-white font-medium">Umang Living</span> provides concierge access and coordination with independent legal professionals. We are not a law firm and do not offer legal representation directly.
-        </p>
-      </div> */}
       <div className="py-8 md:py-14 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-zinc-800">
           Ready to file or plan ?

@@ -77,10 +77,10 @@ export default function FinancialServices() {
     <section className="main_width text-white py-10">
       <div className="max-w-7xl mx-auto text-center mb-10">
         <h1 className="text-3xl md:text-4xl font-bold mb-4 text-zinc-800">
-          Tax, Chartered & Investment Services for Seniors and NRIs
+          Tax, Accounting & Financial Services for Seniors and NRIs
         </h1>
         <p className="text-zinc-800 text-lg leading-relaxed max-w-3xl mx-auto">
-          Money decisions should be calm and clear - <span className="font-bold">Umang Living</span> brings ITR filing, chartered services, and retirement/investment planning together so seniors and families can protect income, optimise taxes, and plan confidently - without paperwork stress.
+        Money decisions should be clear & transparent - Umang Living brings ITR filing, chartered services, and retirement/investment planning together so that our seniors and families can protect their money, optimize taxes, and plan confidently - without the stress of getting into cumbersome paperwork.
         </p>
       </div>
       {/* Services Grid */}
