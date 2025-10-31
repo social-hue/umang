@@ -76,7 +76,7 @@ export default function Banner() {
       if (!isTransitioningRef.current) {
         setCurrentSlide((prev) => (prev + 1) % carouselData.length);
       }
-    }, 4000); // Reduced from 5000ms to 4000ms
+    }, 5000); // Reduced from 5000ms to 4000ms
   }, []);
 
   useEffect(() => {

@@ -1,6 +1,5 @@
 // app/components/TourForm.jsx
 "use client";
-
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 
@@ -13,10 +12,11 @@ export default function TourForm() {
     description: "",
     destination: "",
   });
+
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) =>
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
 
   const validate = () => {
     if (!form.fullName.trim()) return "Full Name is required.";
@@ -94,7 +94,7 @@ export default function TourForm() {
             value={form.fullName}
             onChange={handleChange}
             required
-            className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 focus:outline-none focus:border-zinc-600"
+            className="flex-1 border border-zinc-400 rounded-sm px-3 py-2 text-zinc-700 focus:outline-none focus:border-zinc-600"
           />
           <input
             name="contact"
@@ -103,7 +103,7 @@ export default function TourForm() {
             value={form.contact}
             onChange={handleChange}
             required
-            className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 focus:outline-none focus:border-zinc-600"
+            className="flex-1 border border-zinc-400 rounded-sm px-3 py-2 text-zinc-700 focus:outline-none focus:border-zinc-600"
           />
         </div>
 
@@ -115,7 +115,7 @@ export default function TourForm() {
             placeholder="Preferred Date"
             value={form.preferredDate}
             onChange={handleChange}
-            className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 focus:outline-none focus:border-zinc-600"
+            className="flex-1 border border-zinc-400 rounded-sm px-3 py-2 text-zinc-700 focus:outline-none focus:border-zinc-600"
           />
 
           <select
@@ -123,7 +123,7 @@ export default function TourForm() {
             value={form.travellers}
             onChange={handleChange}
             required
-            className="flex-1 border border-zinc-300 rounded-sm px-2 py-2 bg-white cursor-pointer focus:outline-none focus:border-zinc-600"
+            className="flex-1 border border-zinc-400 rounded-sm px-2 py-2 text-zinc-700 bg-white cursor-pointer focus:outline-none focus:border-zinc-600"
           >
             <option value="" disabled>
               Number of Travellers
@@ -142,7 +142,7 @@ export default function TourForm() {
           placeholder="Describe Your Tour"
           value={form.description}
           onChange={handleChange}
-          className="w-full border border-zinc-300 rounded-sm px-3 py-2 text-zinc-800 focus:outline-none focus:border-zinc-600 resize-none"
+          className="w-full border border-zinc-400 rounded-sm px-3 py-2 text-zinc-700 focus:outline-none focus:border-zinc-600 resize-none"
         ></textarea>
 
         {/* Destination + Submit */}
@@ -152,7 +152,7 @@ export default function TourForm() {
             value={form.destination}
             onChange={handleChange}
             required
-            className="flex-1 border border-zinc-300 rounded-sm px-2 py-2 bg-white cursor-pointer focus:outline-none focus:border-zinc-600"
+            className="flex-1 border border-zinc-400 rounded-sm px-2 py-2 bg-white text-zinc-700 cursor-pointer focus:outline-none focus:border-zinc-600"
           >
             <option value="" disabled>
               Select Destination

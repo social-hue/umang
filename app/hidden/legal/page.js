@@ -4,7 +4,7 @@ import { seoData } from "../../lib/seoMeta";
 import LegalServices from "@/app/components/services/LegalServices";
 
 export const generateMetadata = () => {
-  const meta = seoData.aboutUs;
+  const meta = seoData.legal;
   return {
     title: meta.title,
     description: meta.description,

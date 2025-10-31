@@ -78,11 +78,7 @@ export default function LegalServices() {
           Legal & Documentation Services for Seniors and Families
         </h1>
         <p className="text-zinc-800  text-lg leading-relaxed max-w-3xl mx-auto">
-          At Umang Living, legal care is simple, respectful, and transparent.
-          From will & estate planning to property disputes and NRI documentation,
-          our curated legal network helps seniors and families resolve issues
-          quickly with fixed-fee quotes, clear timelines, and regular updates
-          through our concierge team.
+        At Umang Living, legal consultation is simplified and transparent. From will & estate planning to property disputes and NRI documentation, our curated legal network helps seniors and families resolve issues quickly with fixed-fee quotes, clear timelines, and regular updates through our team.
         </p>
       </div>
       {/* Services Grid */}

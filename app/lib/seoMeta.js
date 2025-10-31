@@ -32,10 +32,34 @@ export const seoData = {
       "Discover curated travel experiences designed exclusively for seniors and retirees across India. Umang Living offers safe, comfortable, and companion-led holidays that combine relaxation, culture, and community - so every journey feels worry-free and enriching.",
     keywords:
       "Umang Living, senior travel India, travel for elderly, retirement travel packages, senior citizen tours India, senior living travel experiences, group tours for seniors, safe travel for elderly, assisted holidays for seniors, senior citizen vacation ideas, Umang Living travel, senior-friendly holidays India, senior tours with healthcare support, best travel options for seniors in India, elderly tour packages, senior travel community India, luxury travel for seniors, independent living with travel, senior leisure travel India, retirement lifestyle experiences, senior group trips India Char Dham Tour, Char Dham Yatra, Kedarnath, Travel Booking",
-    image: "https://www.umangliving.com/travel/travel-banner.webp",
+    image: "https://www.umangliving.com/travel-banner.webp",
     canonical: "https://www.umangliving.com/services/travel",
   },
 
+  finance: {
+    type: "website",
+    url: "https://www.umangliving.com/services/finance",
+    title: "Expert Financial Planning & Tax Solutions | Umang Living",
+    description:
+      "Get professional financial consultation, tax filing, and investment guidance with Umang Living. Simplify wealth management, secure your future, and make smarter money decisions today.",
+    keywords:
+      "financial advisory services, tax consultation, investment planning, wealth management, finance experts India, Umang Living finance, personal finance advisor, retirement planning, tax saving strategies, business finance consulting",
+    image: "https://www.umangliving.com/finance-banner.webp",
+    canonical: "https://www.umangliving.com/services/finance",
+  },
+
+  legal: {
+    type: "website",
+    url: "https://www.umangliving.com/services/legal",
+    title: "Trusted Legal Advisory & Documentation Services | Umang Living",
+    description:
+      "Protect your business and personal interests with Umang Living’s expert legal advisory. From contract drafting to compliance, trademarks, and dispute resolution—get full legal support you can rely on.",
+    keywords:
+      "legal advisory India, business compliance, trademark registration, contract drafting, IP protection, Umang Living legal services, startup legal consultation, legal documentation, corporate law experts, dispute resolution",
+    image: "https://www.umangliving.com/legal-banner.webp",
+    canonical: "https://www.umangliving.com/services/legal",
+  },
+  
   projects: {
     type: "website",
     url: "https://www.umangliving.com/projects",

@@ -36,7 +36,7 @@ export const generateMetadata = () => {
       creator: "@umangliving",
       images: [meta.image],
     },
-    keywords: meta.keywords.split(",").map((kw) => kw.trim()), // array of keywords
+    keywords: meta.keywords.split(",").map((kw) => kw.trim()),
   };
 };
 

@@ -4,7 +4,7 @@ import Community from "../../components/Community";
 import { seoData } from "../../lib/seoMeta";
 
 export const generateMetadata = () => {
-  const meta = seoData.aboutUs;
+  const meta = seoData.finance;
 
   return {
     title: meta.title,
@@ -43,7 +43,7 @@ export const generateMetadata = () => {
 export default function FinancialConsulting() {
   return (
     <>
-      <Banner title={"Financial Consulting"} bgImage={"/banner/finance-banner.jpg"}  />
+      <Banner title={"Financial Consulting"} bgImage={"/banner/finance-banner.webp"}  />
       <div className="relative overflow-hidden">
       <FinancialServices />
       </div>

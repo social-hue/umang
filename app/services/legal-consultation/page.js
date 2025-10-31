@@ -59,7 +59,7 @@ import Community from "../../components/Community";
 import { seoData } from "../../lib/seoMeta";
 
 export const generateMetadata = () => {
-  const meta = seoData.aboutUs;
+  const meta = seoData.legal;
 
   return {
     title: meta.title,
