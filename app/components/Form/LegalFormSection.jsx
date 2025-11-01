@@ -95,7 +95,7 @@ function LegalForm() {
         toast.success("Thank you! We'll be in touch soon", { duration: 3000, position: "top-center" });
         setForm({ fullName: "", email: "", phone: "", message: "", honeypot: "" });
       } else {
-        toast.error(data.message || "Failed to book appointment.");
+        toast.error("You already submitted once, Please try again later" || data.message);
       }
     } catch (err) {
       console.error("Legal form submission error:", err);

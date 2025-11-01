@@ -30,11 +30,15 @@ export default function TourForm() {
     // 🧩 Contact validation
     if (!contact.trim()) return "Contact number is required.";
     if (!/^\d{10,14}$/.test(contact.trim()))
-      return "Contact number must contain 10–14 digits.";
+      return "Please enter a valid number";
 
     // 🧩 Destination validation
     if (!destination.trim()) return "Please select a destination.";
 
+    if (isNaN(Date.parse(preferredDate))) {
+      toast.error("Please select a valid date.");
+      return;
+    }
     // 🧩 Travellers validation
     // if (!travellers || !/^\d+$/.test(travellers) || Number(travellers) < 1)
     //   return "Please enter a valid number of travellers.";
@@ -69,10 +73,10 @@ export default function TourForm() {
       const payload = {
         fullName: form.fullName.trim(),
         contact: form.contact.trim(),
-        preferredDate,
+        preferredDate: form.preferredDate.trim(),
         travellers: form.travellers.trim(),
         description: form.description.trim(),
-        destination,
+        destination: form.destination.trim(),
         recaptchaToken: token,
       };
 
@@ -87,7 +91,7 @@ export default function TourForm() {
 
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
-        toast.error(data?.error || `Server error (${res.status})`);
+        toast.error(data?.error || `Your already submitted once, Please try again later.`);
       } else {
         toast.success("Thank you! We'll be in touch soon.", {
           duration: 3000,
@@ -113,7 +117,6 @@ export default function TourForm() {
       setLoading(false);
     }
   };
-
 
   return (
     <div>
