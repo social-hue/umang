@@ -64,7 +64,7 @@ export async function POST(req) {
       );
     }
 
-    const safeId = validator.escape(cleaned);
+    const safeId = cleaned;
 
     await MemberRequest.create({
       membershipId: safeId,

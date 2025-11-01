@@ -1,6 +1,5 @@
 import Banner from "../../components/Banner";
 import Community from "../../components/Community";
-// import Footer from "../../components/Footer";
 import { seoData } from "../../lib/seoMeta";
 import Image from "next/image";
 
