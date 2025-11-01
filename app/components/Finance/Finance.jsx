@@ -8,7 +8,7 @@ export default function ITRSection() {
   const [membershipId, setMembershipId] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const allowedRegex = /^[A-Za-z0-9\-_/\\]+$/;
+  const allowedRegex = /^[A-Za-z0-9/\\]+$/;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,13 +24,13 @@ export default function ITRSection() {
       return;
     }
     if (!allowedRegex.test(trimmed)) {
-      toast.error("Only letters, numbers, hyphen and underscore are allowed.");
+      toast.error("Only letters, number & slash are allowed.");
       return;
     }
 
     setLoading(true);
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 15000); // 15s timeout
+    const timeout = setTimeout(() => controller.abort(), 20000); // 15s timeout
 
     try {
       const res = await fetch("/api/itr", {
@@ -105,3 +105,4 @@ export default function ITRSection() {
     </section>
   );
 }
+

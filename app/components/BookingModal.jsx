@@ -22,6 +22,48 @@ export default function BookingModal({ tourname, open, onClose }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // 🧩 Extract form values
+    const { fullName, contact, preferredDate, travellers, message } = form;
+
+    // ==============================
+    // 🧠 Client-side Validation
+    // ==============================
+
+    // 1️⃣ Empty field check
+    if (!fullName.trim() || !contact.trim() || !preferredDate.trim() || !travellers.trim() || !message.trim()) {
+      toast.error("All fields are required, including your message.");
+      return;
+    }
+
+    // 2️⃣ Name validation — alphabets and spaces only
+    const nameRegex = /^[A-Za-z\s]+$/;
+    if (!nameRegex.test(fullName.trim())) {
+      toast.error("Name can only contain alphabets and spaces.");
+      return;
+    }
+
+    // 3️⃣ Contact validation — numbers only, 10–14 digits
+    const contactRegex = /^[0-9]{10,14}$/;
+    if (!contactRegex.test(contact.trim())) {
+      toast.error("Please enter a valid contact number");
+      return;
+    }
+
+    // 4️⃣ Optional: simple date check
+    if (isNaN(Date.parse(preferredDate))) {
+      toast.error("Please select a valid date.");
+      return;
+    }
+
+    // 5️⃣ Travellers validation (must be numeric)
+    // const travellersCount = parseInt(travellers, 10);
+    // if (isNaN(travellersCount) || travellersCount <= 0) {
+    //   toast.error("Please enter a valid number of travellers.");
+    //   return;
+    // }
+
+    // Passed validation ✅
     setLoading(true);
 
     try {
@@ -31,9 +73,18 @@ export default function BookingModal({ tourname, open, onClose }) {
         { action: "booking_form" }
       );
 
-      const bookingData = { ...form, tourName: tourname, recaptchaToken: token };
+      const bookingData = {
+        fullName: fullName.trim(),
+        contact: contact.trim(),
+        preferredDate: preferredDate.trim(),
+        travellers,
+        message: message.trim(),
+        tourName: tourname,
+        recaptchaToken: token,
+      };
+
       const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 15000);
+      const timeout = setTimeout(() => controller.abort(), 15000); // 15s timeout
 
       const res = await fetch("/api/bookings", {
         method: "POST",
@@ -59,8 +110,9 @@ export default function BookingModal({ tourname, open, onClose }) {
         toast.error(result.error || "Failed to submit booking.");
       }
     } catch (err) {
-      if (err.name === "AbortError") toast.error("Request timed out. Try again.");
-      else {
+      if (err.name === "AbortError") {
+        toast.error("Request timed out. Try again.");
+      } else {
         console.error("Error submitting booking:", err);
         toast.error("Network error. Please try again.");
       }
@@ -140,6 +192,7 @@ export default function BookingModal({ tourname, open, onClose }) {
             name="message"
             rows="3"
             value={form.message}
+            required
             onChange={handleChange}
             placeholder="Message"
             className="w-full border border-zinc-300 rounded-sm px-3 py-2 focus:outline-none focus:border-zinc-600 resize-none"

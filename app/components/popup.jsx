@@ -39,7 +39,7 @@ export default function PromoCard() {
             </button>
           </div>
           <Image
-            src="/pop-up.png"
+            src="/pop-up.webp"
             alt="Promo"
             width={800}
             height={400}

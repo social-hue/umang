@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import { Toaster } from "react-hot-toast";
 import FloatingCTA from "./components/floatingButton/floatingButton";
 import Footer from "./components/Footer";
-// import PromoCard from "./components/popup";
+import PromoCard from "./components/popup";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -134,7 +134,7 @@ export default function RootLayout({ children }) {
         />
         <Footer />
         <FloatingCTA />
-        {/* <PromoCard /> */}
+        <PromoCard />
       </body>
     </html>
   );

@@ -12,25 +12,46 @@ export default function TourForm() {
     description: "",
     destination: "",
   });
-
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) =>
-  setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
 
   const validate = () => {
-    if (!form.fullName.trim()) return "Full Name is required.";
-    if (!form.contact.trim()) return "Contact is required.";
-    if (!form.destination.trim()) return "Please select a destination.";
-    if (!form.travellers) return "Please select number of travellers.";
+    const { fullName, contact, preferredDate, travellers, description, destination } = form;
+
+    // 🧩 Full Name validation
+    if (!fullName.trim()) return "Full Name is required.";
+    if (fullName.trim().length < 2 || fullName.trim().length > 50)
+      return "Full Name must be 2–50 characters long.";
+    if (!/^[A-Za-z\s]+$/.test(fullName.trim()))
+      return "Full Name can only contain letters and spaces.";
+
+    // 🧩 Contact validation
+    if (!contact.trim()) return "Contact number is required.";
+    if (!/^\d{10,14}$/.test(contact.trim()))
+      return "Contact number must contain 10–14 digits.";
+
+    // 🧩 Destination validation
+    if (!destination.trim()) return "Please select a destination.";
+
+    // 🧩 Travellers validation
+    // if (!travellers || !/^\d+$/.test(travellers) || Number(travellers) < 1)
+    //   return "Please enter a valid number of travellers.";
+
+    // 🧩 Description validation
+    // if (!description.trim()) return "Description is required.";
+    // if (description.trim().length > 300)
+    //   return "Description too long (max 300 characters).";
+
     return null;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const err = validate();
-    if (err) {
-      toast.error(err);
+    const error = validate();
+    if (error) {
+      toast.error(error);
       return;
     }
 
@@ -45,20 +66,30 @@ export default function TourForm() {
         { action: "tour_form" }
       );
 
+      const payload = {
+        fullName: form.fullName.trim(),
+        contact: form.contact.trim(),
+        preferredDate,
+        travellers: form.travellers.trim(),
+        description: form.description.trim(),
+        destination,
+        recaptchaToken: token,
+      };
+
       const res = await fetch("/api/tour", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, recaptchaToken: token }),
+        body: JSON.stringify(payload),
         signal: controller.signal,
       });
-      
+
       clearTimeout(timeout);
 
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
-        toast.error(data?.message || `Server error (${res.status})`);
+        toast.error(data?.error || `Server error (${res.status})`);
       } else {
-        toast.success("Thank you! We'll be in touch soon", {
+        toast.success("Thank you! We'll be in touch soon.", {
           duration: 3000,
           position: "top-center",
         });
@@ -72,8 +103,9 @@ export default function TourForm() {
         });
       }
     } catch (err) {
-      if (err.name === "AbortError") toast.error("Request timed out. Try again.");
-      else {
+      if (err.name === "AbortError") {
+        toast.error("Request timed out. Please try again.");
+      } else {
         console.error("Fetch error:", err);
         toast.error("Network error. Please try again.");
       }
@@ -81,6 +113,7 @@ export default function TourForm() {
       setLoading(false);
     }
   };
+
 
   return (
     <div>
