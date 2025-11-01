@@ -46,7 +46,7 @@ export default function BookingModal({ tourname, open, onClose }) {
       const result = await res.json();
 
       if (res.ok) {
-        toast.success("We'll get back to you shortly!");
+        toast.success("Thank you! We'll get back to you shortly.");
         setForm({
           fullName: "",
           contact: "",

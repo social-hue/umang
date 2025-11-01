@@ -274,7 +274,7 @@ export default function CharDhamSection() {
           Explore Our Signature Tours <ArrowRight className="inline-block" size={28} />
         </h2>
         <p className="max-w-3xl mx-auto text-lg text-zinc-600">
-          Discover journeys crafted around your comfort, interests, and dreams. Share your preferences, and we&apos;ll design a personalized travel experience made just for you.
+          From misty mountains to golden beaches - explore destinations that capture the spirit, color & charm of India's incredible diversity
         </p>
       </div>
       <TourPackages />
