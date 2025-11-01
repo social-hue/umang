@@ -40,7 +40,7 @@ export default function Grid() {
     }
 
     if (!numberPattern.test(formData.number)) {
-      toast.error("Please enter a valid 10-digit number.");
+      toast.error("Please enter a valid phone number.");
       return false;
     }
 

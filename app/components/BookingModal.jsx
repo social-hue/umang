@@ -107,7 +107,7 @@ export default function BookingModal({ tourname, open, onClose }) {
         });
         onClose();
       } else {
-        toast.error(result.error || "Failed to submit booking.");
+        toast.error("Your already submitted once, Please try again later." || "Failed to submit booking.");
       }
     } catch (err) {
       if (err.name === "AbortError") {
