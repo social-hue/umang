@@ -153,7 +153,7 @@ const Footer = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="w-full border border-zinc-600/50 rounded-lg text-white px-4 py-3 text-[14px] sm:text-[15px] placeholder-zinc-500 focus:outline-none focus:border-zinc-300 transition-all duration-300 backdrop-blur-sm"
+                    className="w-full border border-zinc-600/50 rounded-lg text-zinc-900 px-4 py-3 text-[14px] sm:text-[15px] placeholder-zinc-500 focus:outline-none focus:border-zinc-300 transition-all duration-300 backdrop-blur-sm"
                   />
                 </div>
                 <button
