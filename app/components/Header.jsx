@@ -89,7 +89,8 @@ export default function Header() {
                   <ul className="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                     {[{ name: "Township", link: "/services/townships" },
                       { name: "Stay", link: "/services/stay" },
-                      { name: "Travel", link: "/services/travel" }].map((s) => (
+                      { name: "Travel", link: "/services/travel" },
+                      { name:"Health & Wellness", link: "/services/health-services" }].map((s) => (
                       <li key={s.link}>
                         <Link
                           href={s.link}
@@ -105,7 +106,7 @@ export default function Header() {
                     ))}
 
                     {/* Health & Wellness */}
-                    <li className="relative group/health">
+                    {/* <li className="relative group/health">
                       <div className="flex items-center justify-between px-4 py-2 hover:bg-gray-100 cursor-pointer">
                         <span
                           className={`${
@@ -132,7 +133,7 @@ export default function Header() {
                           </Link>
                         </li>
                       </ul>
-                    </li>
+                    </li> */}
 
                     {/* Consultation */}
                     <li className="relative group/consultation">
@@ -314,9 +315,20 @@ export default function Header() {
                       >
                         Travel
                       </Link>
+                      <Link
+                        href="/services/health-services"
+                        onClick={() => setOpen(false)}
+                        className={`block text-lg py-1 ${
+                          pathname === "/services/health-services"
+                            ? "text-[#FCEF44]"
+                            : "text-white hover:text-[#E7216A]"
+                        }`}
+                      >
+                        Health & Wellness
+                      </Link>
 
                       {/* Health & Wellness */}
-                      <div>
+                      {/* <div>
                         <button
                           onClick={() => setHealthOpen(!healthOpen)}
                           className="w-full flex items-center justify-between text-lg py-1 text-white hover:text-[#E7216A]"
@@ -340,7 +352,7 @@ export default function Header() {
                             </Link>
                           </div>
                         )}
-                      </div>
+                      </div> */}
 
                       {/* Consultation */}
                       <div>

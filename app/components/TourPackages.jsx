@@ -19,9 +19,9 @@ export default function TourPackages() {
       image: "/travel/rajasthan.jpg",
     },
     {
-      route: "Nepal – Delhi",
-      title: "Buddhist Circuit India Nepal Tour Package",
-      duration: "10D/9N",
+      route: "Delhi – Goa",
+      title: "Delhi - Goa Tour Package",
+      duration: "4D/5N",
       image: "/travel/budh.jpg",
     },
     {
@@ -31,9 +31,9 @@ export default function TourPackages() {
       image: "/travel/kashmir.jpg",
     },
     {
-      route: "Sri Lanka",
-      title: "Ramayana Trail India to Sri Lanka Experience",
-      duration: "22D/21N",
+      route: "Kerala",
+      title: "Enchanting Kerala Escape",
+      duration: "4D/5N",
       image: "/travel/other.jpg",
     },
     {

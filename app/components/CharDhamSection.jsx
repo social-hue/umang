@@ -1,26 +1,18 @@
 "use client";
-import Image from "next/image";
-import { Phone, ArrowRight, Award, Globe2, Headphones, Users, ShieldCheck } from "lucide-react";
+import { ArrowRight, Award, Globe2, Headphones, ShieldCheck } from "lucide-react";
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import BookingModal from "./BookingModal";
+// import BookingModal from "./BookingModal";
 import TourForm from "./Form/TravelForm";
 import TourPackages from "./TourPackages";
 
 export default function CharDhamSection() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedTour, setSelectedTour] = useState(null); // store clicked package name
 
-  const handleEnquireClick = (pkg) => {
-    setSelectedTour(pkg.name);
-    setIsModalOpen(true);
-  };
+  // const dhamRef = useRef(null);
+  // const dhamInView = useInView(dhamRef, { once: true, margin: "-60px" });
 
-  const dhamRef = useRef(null);
-  const dhamInView = useInView(dhamRef, { once: true, margin: "-60px" });
-
-  const pkgRef = useRef(null);
-  const pkgInView = useInView(pkgRef, { once: true, margin: "-60px" });
+  // const pkgRef = useRef(null);
+  // const pkgInView = useInView(pkgRef, { once: true, margin: "-60px" });
 
   const featuresRef = useRef(null);
   const featuresInView = useInView(featuresRef, { once: true, margin: "-60px" });
@@ -253,14 +245,14 @@ export default function CharDhamSection() {
           Discover journeys crafted around your comfort, interests, and dreams. Share your preferences, and we&apos;ll design a personalized travel experience made just for you.
         </p>
       </div>
-      <div className="py-8 md:mb-8 md:py-12 grid md:grid-cols-[40%_1fr] lg:grid-cols-[45%_1fr] xl:grid-cols-[50%_1fr] gap-8 md:gap-2">
+      <div className="py-8 md:mb-12 grid md:grid-cols-[40%_1fr] xl:grid-cols-[50%_1fr] gap-8 md:gap-0">
         <div className="flex items-center justify-center">
           <img src="/mapp.png" alt="map" loading="lazy" decoding="async" width={340} height={420} />
         </div>
         <div className="flex flex-col justify-center items-center md:justify-start md:items-start">
           <div className="bg-white border-none w-[92%] md:w-full max-w-lg p-2 md:p-6 relative rounded-sm text-zinc-800">
             {/* Heading */}
-            <h3 className="text-3xl md:text-2xl font-semibold text-zinc-800 mb-4 text-center">
+            <h3 className="text-3xl md:text-2xl font-bold text-zinc-800 mb-4 text-center">
               Plan Your Trip !
             </h3>
             {/* Form */}
