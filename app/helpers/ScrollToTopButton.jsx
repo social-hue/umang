@@ -19,7 +19,7 @@ export default function ScrollToTopButton() {
       aria-label="Back to top"
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       className="cursor-pointer right-6 z-10 h-12 w-12 rounded-full
-                 bg-white text-slate-700 shadow-lg ring-4 ring-gray-800/60
+                 bg-white text-slate-700 shadow-lg ring-2 ring-gray-900/60
                  flex items-center justify-center transition-opacity duration-300
                  opacity-0"
       initial={{ opacity: 0 }}

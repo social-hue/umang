@@ -97,10 +97,18 @@ export const generateMetadata = () => {
 export default function Travel() {
   return (
     <>
-      <Banner title={"Travel"} bgImage={"/citizen.jpg"}   />
-      <div className="relative overflow-hidden">
+      <Banner title={"Travel"} bgImage={"/banner/travel-banner.webp"} />
+      <div className="relative flex justify-center">
+      <Image
+          src="/coming-soon1.png" // replace with your image
+          alt="Rangoli"
+          width={140}
+          height={80}
+        />
+      </div>
+      <div className="main_width relative overflow-hidden">
       {/* <div className="p-2 bg-red-700 text-center text-white text-xl md:text-2xl font-semibold">Our Travel Services are launching on 10 November, 2025 </div> */}
-        <section className="p-6 md:p-10 md:mx-10 flex flex-col md:flex-row items-center gap-6">
+        <section className="mb-16 md:mx-10 flex flex-col md:flex-row items-center gap-6">
       {/* Left: Image */}
       <div className="w-full md:w-1/2 relative h-64 md:h-80">
         <Image
@@ -118,8 +126,8 @@ export default function Travel() {
         </p>
       </div>
     </section>             
-        <Community />
       </div>
+      <Community />
       {/* <Footer /> */}
     </>
   );

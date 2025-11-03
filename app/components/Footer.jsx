@@ -82,7 +82,7 @@ const Footer = () => {
                 <img
                   src="/logo.png"
                   alt="Umang Living"
-                  className="rounded-md sm:max-w-[220px] lg:max-w-[200px] w-full h-auto"
+                  className="rounded-md sm:max-w-[180px] lg:max-w-[200px] w-full h-auto"
                   loading="lazy"
                   decoding="async"
                   width={240}

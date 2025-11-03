@@ -4,7 +4,7 @@ import { NumberCounter } from "../helpers/NumberCounter";
 
 const Community = () => {
   return (
-    <div className="relative lg:py-8 md:py-8 py-8 bg-[url(/blog/blogbanner2.jpg)] bg-cover md:h-[400px] xl:h-[400px] flex items-center">
+    <div className="relative lg:py-8 md:py-8 py-8 bg-[url(/blog/blogbanner2.jpg)] bg-cover h-[420px] md:h-[400px] flex items-center">
       <div className="absolute inset-0 bg-gradient-to-r from-black/85 to-black/45"></div>
       <div className="main_width z-10">
         <div>
@@ -27,7 +27,7 @@ const Community = () => {
           </div>
           <div className="mt-6 ml-2">
            <a href="https://docs.google.com/forms/d/e/1FAIpQLScQlwi7hkmU9fp7aGSOLfUXPIvQmADduVyPQvVC5PKhcbFyDQ/viewform?usp=header" target="_main">
-          <button className= "gap-2 bg-white px-4 py-3 uppercase text-[#222] rounded-md font-semibold cursor-pointer text-[15px] transition-colors duration-500 ease-in-out hover:text-white hover:bg-black">
+          <button className= "gap-2 bg-white px-4 py-3 uppercase text-[#222] rounded-md font-semibold cursor-pointer text-[15px] transition-colors duration-500 ease-in-out hover:bg-slate-300">
             Join Us Today
             </button> 
           </a> 
