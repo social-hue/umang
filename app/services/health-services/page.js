@@ -43,10 +43,18 @@ export const generateMetadata = () => {
 export default function HealingServices() {
   return (
     <>
-      <Banner title={"Health & Wellness"} bgImage={"/banner/healing-banner.webp"}   />
-      <div className="relative overflow-hidden ">
+      <Banner title={"Health & Wellness"} bgImage={"/banner/healing-banner.webp"} />
+      <div className="relative flex justify-center">
+      <Image
+          src="/coming-soon1.png" // replace with your image
+          alt="Rangoli"
+          width={140}
+          height={80}
+        />
+      </div>
+      <div className="main_width relative overflow-hidden ">
       {/* <div className="p-2 bg-red-700 text-center text-white text-xl md:text-[22px] font-semibold">Our Healing Services are launching on 1 November, 2025 </div> */}
-      <section className="p-6 md:p-10 md:mx-10 flex flex-col md:flex-row items-center gap-6">
+      <section className="mb-16 md:p-10 md:mx-10 flex flex-col md:flex-row items-center gap-6">
       {/* Left: Image */}
       <div className="w-full md:w-1/2 relative h-64 md:h-80">
         <Image
@@ -64,8 +72,8 @@ export default function HealingServices() {
         </p>
       </div>
     </section>             
-        <Community />
       </div>
+      <Community />
     </>
   );
 }
