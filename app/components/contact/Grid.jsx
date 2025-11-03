@@ -9,7 +9,6 @@ export default function Grid() {
   const [formData, setFormData] = useState({ name: "", email: "", number: "", message: "", honeypot: "" });
   const [loading, setLoading] = useState(false);
   const [csrfToken, setCsrfToken] = useState("");
-
   // Fetch CSRF token
   useEffect(() => {
     const fetchCsrf = async () => {

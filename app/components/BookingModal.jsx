@@ -51,17 +51,9 @@ export default function BookingModal({ tourname, open, onClose }) {
     }
 
     // 4️⃣ Optional: simple date check
-    if (isNaN(Date.parse(preferredDate))) {
-      toast.error("Please select a valid date.");
-      return;
-    }
-
-    // 5️⃣ Travellers validation (must be numeric)
-    // const travellersCount = parseInt(travellers, 10);
-    // if (isNaN(travellersCount) || travellersCount <= 0) {
-    //   toast.error("Please enter a valid number of travellers.");
-    //   return;
-    // }
+    if (!preferredDate.trim()) return "Preferred date is required.";
+    if (isNaN(Date.parse(preferredDate)))
+      return "Please select a valid preferred date.";
 
     // Passed validation ✅
     setLoading(true);
@@ -84,7 +76,7 @@ export default function BookingModal({ tourname, open, onClose }) {
       };
 
       const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 15000); // 15s timeout
+      const timeout = setTimeout(() => controller.abort(), 20000); // 15s timeout
 
       const res = await fetch("/api/bookings", {
         method: "POST",
@@ -165,7 +157,7 @@ export default function BookingModal({ tourname, open, onClose }) {
               name="preferredDate"
               value={form.preferredDate}
               onChange={handleChange}
-              type="text"
+              type="date"
               placeholder="Preferred Date"
               required
               className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 focus:outline-none focus:border-zinc-600"
