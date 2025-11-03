@@ -173,7 +173,7 @@ const Footer = () => {
                 <p className="text-zinc-900 text-[13px] sm:text-[14px] mb-4 px-3 py-2">{message}</p>
               )}
 
-              {/* Social Media Icons */}``
+              {/* Social Media Icons */}
               <div className="flex justify-center md:justify-start gap-3 flex-wrap">
                 <a
                   aria-label="Facebook"
