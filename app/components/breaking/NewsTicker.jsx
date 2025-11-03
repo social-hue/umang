@@ -3,7 +3,6 @@ import React from "react";
 export default function NewsTicker() {
   const newsItems = [
     "🚀 Coming Soon in 75+ Cities Across India",
-    "📆 Mark your calendars - Travel, Legal & Finance services are launching on 10 November !",
     "📢 India's largest senior living community is now coming to Jalandhar, Punjab !",
     "📈 More than 100000+ memberships",
     "🎉 Sign up for our newsletter to receive exclusive offers, event updates, and wellness tips tailored for seniors and their families",

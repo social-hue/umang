@@ -100,7 +100,7 @@ export default function LegalConsultation() {
     <>
       <Banner title={"Legal Consultation"} bgImage={"/banner/legal-banner.webp"}   />
       <div className="relative overflow-hidden ">
-      <div className="p-2 bg-red-700 text-center text-white text-xl md:text-[22px] font-semibold">Our Legal Consultation Services are launching on 10 November, 2025 </div>
+      {/* <div className="p-2 bg-red-700 text-center text-white text-xl md:text-[22px] font-semibold">Our Legal Consultation Services are launching on 10 November, 2025 </div> */}
         <section className="p-6 md:p-10 md:mx-10 flex flex-col md:flex-row items-center gap-6">
       {/* Left: Image */}
       <div className="w-full md:w-1/2 relative h-64 md:h-80">
@@ -121,7 +121,6 @@ export default function LegalConsultation() {
     </section>          
         <Community />
       </div>
-      {/* <Footer /> */}
     </>
   );
 }
