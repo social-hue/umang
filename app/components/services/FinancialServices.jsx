@@ -146,11 +146,11 @@ export default function FinancialServices() {
       <FAQFinance />
       </div>
       
-      <div className="bg-zinc-800 p-6 rounded-2xl border-l-4 border-teal-800 text-white mb-6">
+      {/* <div className="bg-zinc-800 p-6 rounded-2xl border-l-4 border-teal-800 text-white mb-6">
         <p className="text-lg italic">
           Important: <span className="text-zinc-100 font-medium">Umang Living</span> provides concierge access and coordination with independent legal professionals. We are not a law firm and do not offer legal representation directly.
         </p>
-      </div>
+      </div> */}
     </section>
   );
 }

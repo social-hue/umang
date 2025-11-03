@@ -58,60 +58,73 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[url(/footer.webp)] bg-cover text-white text-sm relative">
-      <div className="absolute w-full -top-6">
+    <footer className="relative">
+      {/* Subtle top border accent */}
+      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-zinc-600 to-transparent"></div>
+      
+      {/* Scroll to top button */}
+      <div className="absolute w-full -top-4 sm:-top-6">
         <div className="flex items-center justify-center">
           <ScrollToTopButton />
         </div>
       </div>
 
       <div className="overflow-hidden w-full h-full relative">
-        <div className="pt-8">
-          <div className="mx-auto main_width px-4 py-4 grid grid-cols-1 lg:grid-cols-[30%_auto_auto_auto] md:grid-cols-2 gap-10 relative z-[9]">
+        {/* Subtle gradient overlay */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-zinc-700/20 via-transparent to-transparent pointer-events-none"></div>
+        
+        <div className="pt-8 relative z-10">
+          <div className="mx-auto main_width px-4 sm:px-6 lg:px-8 py-6 sm:py-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12">
+            
             {/* Left Logo + Description */}
-            <div className="md:-mt-3">
-              <div className="flex items-start mb-2 mr-2">
+            <div className="lg:pr-4">
+              <div className="flex items-start mb-5">
                 <img
                   src="/logo.png"
                   alt="Umang Living"
-                  className="rounded"
+                  className="rounded-md sm:max-w-[220px] lg:max-w-[200px] w-full h-auto"
                   loading="lazy"
                   decoding="async"
                   width={240}
                   height={120}
                 />
               </div>
-              <p className="text-[#ccc] leading-relaxed text-[16px] max-w-xs">
-                Umang Living is India’s first multi-city senior independent-living
+              <p className="text-zinc-900 leading-relaxed text-[15px] sm:text-[16px] max-w-xs -">
+                Umang Living is India's first multi-city senior independent-living
                 community, thoughtfully designed with love and respect.
               </p>
             </div>
+
             {/* Quick Links */}
             <div>
-              <h6 className="yellow text-[18px] font-semibold mb-4 uppercase">
+              <h6 className="text-zinc-900 text-[16px] sm:text-[17px]  mb-5 tracking-wider uppercase border-b border-zinc-700/50 pb-3">
                 Quick Links
               </h6>
-              <ul className="space-y-3 text-[#ccc] text-[16px]">
+              <ul className="space-y-3">
                 {filteredNavItems.map(({ label, href }) => (
                   <li key={href}>
-                    <Link href={href} className="hover:text-white transition">
+                    <Link 
+                      href={href} 
+                      className="text-zinc-900 hover:text-zinc-900 transition-colors duration-300 text-[15px] sm:text-[16px]  inline-block hover:tranzinc-x-1 transform"
+                    >
                       {label}
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
+
             {/* Support Links */}
             <div>
-              <p className="yellow text-[18px] font-semibold mb-4 uppercase">
-                Support Links
-              </p>
-              <ul className="space-y-3 text-[#ccc] text-[16px]">
+              <h6 className="text-zinc-900 text-[16px] sm:text-[17px]  mb-5 tracking-wider uppercase border-b border-zinc-700/50 pb-3">
+                Support
+              </h6>
+              <ul className="space-y-3">
                 {supportLinks.map((txt, idx) => (
                   <li key={idx}>
                     <Link
                       href={txt.link}
-                      className="hover:text-white transition"
+                      className="text-zinc-900 hover:text-zinc-900 transition-colors duration-300 text-[15px] sm:text-[16px]  inline-block hover:tranzinc-x-1 transform"
                     >
                       {txt.lable}
                     </Link>
@@ -122,50 +135,52 @@ const Footer = () => {
 
             {/* Newsletter */}
             <div>
-              <p className="yellow text-[18px] font-semibold mb-4 uppercase">
-                Join a Newsletter
-              </p>
+              <h6 className="text-zinc-900 text-[16px] sm:text-[17px]  mb-5 tracking-wider uppercase border-b border-zinc-700/50 pb-3">
+                Stay Connected
+              </h6>
 
               {/* Newsletter Form */}
               <form
                 onSubmit={handleSubmit}
-                className="flex items-center space-x-1 mb-3 lg:mb-4 2xl:mb-2"
+                className="mb-5"
               >
-                <input
-                  id="email"
-                  type="email"
-                  autoComplete="true"
-                  placeholder="Enter your email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="bg-[#4F5A68] rounded-tl-[10px] rounded-bl-[10px] text-white px-4 py-3 w-full text-sm placeholder-[#888] focus:outline-none"
-                />
+                <div className="relative">
+                  <input
+                    id="email"
+                    type="email"
+                    autoComplete="true"
+                    placeholder="Enter your email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    className="w-full border border-zinc-600/50 rounded-lg text-zinc-900 px-4 py-3 text-[14px] sm:text-[15px] placeholder-zinc-500 focus:outline-none focus:border-zinc-300 transition-all duration-300 backdrop-blur-sm"
+                  />
+                </div>
                 <button
                   type="submit"
                   disabled={loading}
-                  className="bg-[#057366] text-[#fff] font-semibold px-4 py-3 rounded-tr-[11px] rounded-br-[11px] text-sm hover:opacity-90 flex items-center justify-center min-w-[110px]"
+                  className="w-full mt-3 bg-gradient-to-r from-zinc-800 to-zinc-700 hover:from-zinc-600 hover:to-zinc-500 text-white -medium px-5 py-3 rounded-lg text-[14px] sm:text-[15px] transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-tranzinc-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {loading ? (
-                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                    <div className="w-5 h-5 border-2 border-zinc-100 border-t-transparent rounded-full animate-spin"></div>
                   ) : (
-                    "SUBSCRIBE"
+                    "Subscribe"
                   )}
                 </button>
               </form>
 
               {message && (
-                <p className="text-[#ccc] text-md mb-3">{message}</p>
+                <p className="text-zinc-900 text-[13px] sm:text-[14px] mb-4 px-3 py-2">{message}</p>
               )}
 
               {/* Social Media Icons */}
-              <div className="flex 2xl:mt-4 justify-center sm:justify-start gap-3">
+              <div className="flex justify-center md:justify-start gap-3 flex-wrap">
                 <a
                   aria-label="Facebook"
                   href="https://www.facebook.com/people/Umang-Living-Senior-Citizens-Community/61579702657707/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-[#4F5A68] text-white hover:bg-[#00A79C] transition"
+                  className="p-2.5 rounded-lg border border-zinc-800/50 text-zinc-900 hover:text-zinc-900 hover:bg-zinc-700/50 hover:border-zinc-600 transition-all duration-300 backdrop-blur-sm transform hover:-tranzinc-y-0.5"
                 >
                   <FaFacebookF className="w-4 h-4" />
                 </a>
@@ -174,7 +189,7 @@ const Footer = () => {
                   href="https://www.linkedin.com/company/umang-living/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-[#4F5A68] text-white hover:bg-[#00A79C] transition"
+                  className="p-2.5 rounded-lg border border-zinc-800/50 text-zinc-900 hover:text-zinc-900 hover:bg-zinc-700/50 hover:border-zinc-600 transition-all duration-300 backdrop-blur-sm transform hover:-tranzinc-y-0.5"
                 >
                   <FaLinkedinIn className="w-4 h-4" />
                 </a>
@@ -183,7 +198,7 @@ const Footer = () => {
                   href="https://www.instagram.com/umangliving/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-[#4F5A68] text-white hover:bg-[#00A79C] transition"
+                  className="p-2.5 rounded-lg border border-zinc-800/50 text-zinc-900 hover:text-zinc-900 hover:bg-zinc-700/50 hover:border-zinc-600 transition-all duration-300 backdrop-blur-sm transform hover:-tranzinc-y-0.5"
                 >
                   <FaInstagram className="w-4 h-4" />
                 </a>
@@ -192,16 +207,16 @@ const Footer = () => {
                   href="https://www.youtube.com/@UmangLiving"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-[#4F5A68] text-white hover:bg-[#00A79C] transition"
+                  className="p-2.5 rounded-lg border border-zinc-800/50 text-zinc-900 hover:text-zinc-900 hover:bg-zinc-700/50 hover:border-zinc-600 transition-all duration-300 backdrop-blur-sm transform hover:-tranzinc-y-0.5"
                 >
                   <FaYoutube className="w-4 h-4" />
                 </a>
                 <a
-                  aria-label="YouTube"
+                  aria-label="Twitter"
                   href="https://x.com/MarketingU82252"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-[#4F5A68] text-white hover:bg-[#00A79C] transition"
+                  className="p-2.5 rounded-lg border border-zinc-800/50 text-zinc-900 hover:text-zinc-900 hover:bg-zinc-700/50 hover:border-zinc-600 transition-all duration-300 backdrop-blur-sm transform hover:-tranzinc-y-0.5"
                 >
                   <FaXTwitter className="w-4 h-4" />
                 </a>
@@ -210,17 +225,22 @@ const Footer = () => {
           </div>
 
           {/* Bottom Bar */}
-          <div className="text-[#999] flex justify-center lg:justify-between main_width py-4 text-center border-t border-dashed border-[#333] md:text-[17px] items-center">
-            <p>
-              <span className="text-[#f04f67] text-[14px] md:text-[16px] font-semibold tracking-wide">
-                &#169; 2025 UMANG LIVING SCL Pvt Ltd.
-              </span>
-            </p>
-            {/* stays hidden on small; appears at lg and pushes layout to two columns */}
-            <p className="hidden lg:flex mt-1 items-center gap-2 text-md">
-              <FaLocationDot />
-              2319, Gold Wing, Wave one Tower, Sector-18, Noida, UP-201301
-            </p>
+          <div className="border-t border-zinc-700/50">
+            <div className="main_width px-4 sm:px-6 lg:px-8 py-6 sm:py-7">
+              <div className="flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-6 text-zinc-900">
+                <p className="text-[13px] sm:text-[14px] md:text-[15px] - text-center lg:text-left">
+                  <span className="text-zinc-900 tracking-wide">
+                    © 2025 UMANG LIVING SCL Pvt Ltd.
+                  </span>
+                </p>
+                <p className="flex items-center gap-2 text-[13px] sm:text-[14px] md:text-[15px] - text-center lg:text-right">
+                  <FaLocationDot className="flex-shrink-0 text-zinc-400" />
+                  <span className="leading-relaxed">
+                    2319, Gold Wing, Wave one Tower, Sector-18, Noida, UP-201301
+                  </span>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
