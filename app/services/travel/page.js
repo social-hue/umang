@@ -44,7 +44,7 @@ export const generateMetadata = () => {
 export default function Travel() {
   return (
     <>
-      <Banner title={"Travel"} bgImage={"/banner/travel-banner.webp"} />
+      <Banner title={"Travel"} bgImage={"/banner/travel-banner3.webp"} />
       <div className="p-6">
       <Announcement />
       </div>
