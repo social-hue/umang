@@ -65,11 +65,11 @@ export default function ContactPage() {
           <div className="mb-6">
             <div className="flex items-center gap-3 mb-2">
               <Mail className="text-teal-700 w-6 h-6 stroke-[2.5]" />
-              <h3 className="text-xl font-semibold text-zinc-800">
+              <h3 className="text-md font-semibold text-zinc-800">
                 Email Us
               </h3>
             </div>
-            <p className="text-lg text-zinc-800 ml-9">
+            <p className="text-md text-zinc-800 ml-9">
               <a
                 href="mailto:connect@umangliving.com"
                 className="hover:text-teal-900 text-teal-700"
@@ -83,11 +83,11 @@ export default function ContactPage() {
           <div className="mb-6">
             <div className="flex items-center gap-3 mb-2">
               <MapPin className="text-teal-700 w-6 h-6 stroke-[2.5]" />
-              <h3 className="text-xl font-semibold text-zinc-800">
-                Our Office | <span className="text-zinc-800 text-lg">10:00 AM - 6:00 PM (Mon - Sat)</span>
+              <h3 className="text-md font-semibold text-zinc-800">
+                Our Office | <span className="text-zinc-800 text-md">10:00 AM - 6:00 PM (Mon - Sat)</span>
               </h3>
             </div>
-            <p className="text-lg text-zinc-800 ml-9 leading-relaxed">
+            <p className="text-md text-zinc-800 ml-9 leading-relaxed">
               2319, Gold Wing, Wave One Tower, <br />
               Sector-18, Noida, UP-201301
             </p>
@@ -97,11 +97,11 @@ export default function ContactPage() {
           <div>
             <div className="flex items-center gap-3 mb-2">
               <Phone className="text-teal-700 w-6 h-6 stroke-[2.5]" />
-              <h3 className="text-xl font-semibold text-zinc-800">
-                Call Us | <span className="text-zinc-800 text-lg">10:00 AM - 6:00 PM (IST) | Mon - Sat</span>
+              <h3 className="text-md font-semibold text-zinc-800">
+                Call Us | <span className="text-zinc-800 text-md">10:00 AM - 6:00 PM (IST) | Mon - Sat</span>
               </h3>
             </div>
-            <p className="text-lg text-zinc-800 ml-9 leading-relaxed">
+            <p className="text-md text-zinc-800 ml-9 leading-relaxed">
               <a href="tel:01205109189" className="text-teal-700 hover:text-teal-900">
                 0120-510-9189
               </a>

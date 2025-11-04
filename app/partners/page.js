@@ -1,4 +1,5 @@
 import Banner from "../components/Banner";
+import Community from "../components/Community";
 // import Footer from "../components/Footer";
 import PartnerPage from "../components/partner/about";
 import { seoData } from "../lib/seoMeta";
@@ -45,8 +46,9 @@ export default function Partners() {
     <>
       <Banner title={"Partner with Us"} bgImage={"/banner/partner-banner2.jpg"} />
       <div className="relative overflow-hidden">
-        <PartnerPage />
+      <PartnerPage />
       </div>
+      <Community />
     </>
   );
 }

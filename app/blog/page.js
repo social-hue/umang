@@ -1,5 +1,6 @@
 import Banner from "../components/Banner";
 import { BlogGrid } from "../components/blog/BlogGrid";
+import Community from "../components/Community";
 import { seoData } from "../lib/seoMeta";
 
 export const generateMetadata = () => {
@@ -46,6 +47,7 @@ export default function Blog() {
       <div className="relative overflow-hidden py-6">
         <BlogGrid />
       </div>
+      <Community />
     </>
   );
 }
