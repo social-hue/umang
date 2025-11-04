@@ -4,8 +4,8 @@ import { NumberCounter } from "../helpers/NumberCounter";
 
 const Community = () => {
   return (
-    <div className="relative lg:py-8 md:py-8 py-8 bg-[url(/blog/blogbanner2.jpg)] bg-cover h-[420px] md:h-[400px] flex items-center">
-      <div className="absolute inset-0 bg-gradient-to-r from-black/85 to-black/45"></div>
+    <div className="relative lg:py-8 md:py-8 py-8 bg-[url(/blog/blogbanner1.webp)] bg-cover h-[420px] md:h-[400px] flex items-center">
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/20"></div>
       <div className="main_width z-10">
         <div>
           <p className="mb-2 lg:text-[40px] md:text-[30px] text-[24px] md:leading-[58px] font-semibold text-white">

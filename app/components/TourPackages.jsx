@@ -1,60 +1,37 @@
 "use client";
 import { motion } from "framer-motion";
 import { Plane, Building2, MapPin, Compass } from "lucide-react";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import BookingModal from "./BookingModal";
 
 export default function TourPackages() {
   const tours = [
     {
-      route: "Agra – Jaipur – Delhi",
-      title: "Golden Triangle Tour Package",
-      duration: "8D/7N",
-      image: "/travel/agra.jpeg",
-    },
-    {
-      route: "Delhi → Jaipur → Jaisalmer",
-      title: "Majestic Rajasthan with Delhi Tour Package",
-      duration: "18D/17N",
-      image: "/travel/rajasthan.jpg",
-    },
-    {
-      route: "Delhi – Goa",
-      title: "Delhi - Goa Tour Package",
-      duration: "4D/5N",
-      image: "/travel/budh.jpg",
-    },
-    {
-      route: "Delhi – Leh – Srinagar",
-      title: "Mystical North Kashmir Ladakh Experience",
-      duration: "8D/7N",
-      image: "/travel/kashmir.jpg",
-    },
-    {
-      route: "Kerala",
-      title: "Enchanting Kerala Escape",
-      duration: "4D/5N",
-      image: "/travel/other.jpg",
-    },
-    {
-      route: "Chennai – Mahabalipuram",
-      title: "South India Tour Package",
-      duration: "8D/7N",
-      image: "/travel/south.jpg",
-    },
-    {
-      route: "Delhi – Ayodhya – Prayagraj",
-      title: "Ramayana Trail A Sacred Journey Through India",
+      route: "Delhi - Ayodhya - Prayagraj - Banaras",
+      title: "Ramayana Trail",
       duration: "14D/13N",
       image: "/travel/ganga.jfif",
     },
     {
-      route: "Ayodhya → Nandigram → Prayagraj",
-      title: "The Sacred Circuit From Ganga to Yamuna",
-      duration: "12D/11N",
-      image: "/travel/ayodhya.png",
+      route: "Delhi → Jaipur → Jaisalmer",
+      title: "Majestic Rajasthan",
+      duration: "18D/17N",
+      image: "/travel/rajasthan.jpg",
+    },
+    {
+      route: "Delhi → Goa",
+      title: "Delhi - Goa Tour Package",
+      duration: "4D/5N",
+      image: "/travel/goa.webp",
+    },
+    {
+      route: "Chennai / Kerala",
+      title: "South India Tour Package",
+      duration: "8D/7N",
+      image: "/travel/south.jpg",
     },
   ];
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedTour, setSelectedTour] = useState(null);
 
@@ -72,7 +49,12 @@ export default function TourPackages() {
             transition={{ type: "spring", stiffness: 300 }}
             className="bg-white shadow-md rounded-lg overflow-hidden border border-zinc-200 flex flex-col hover:shadow-lg transition"
           >
-            <div className="h-48 overflow-hidden">
+            <div className="relative h-48 overflow-hidden">
+              {/* 🏷️ Special Offer Tag */}
+              <span className="absolute top-2 left-0 bg-red-600 text-white text-[11px] sm:text-xs font-semibold px-3 py-2 rounded-r-full shadow-md">
+                Special Offer
+              </span>
+
               <img
                 src={tour.image}
                 alt={tour.title}
@@ -88,7 +70,6 @@ export default function TourPackages() {
                 <h3 className="text-lg font-semibold text-zinc-800 leading-snug mb-2">
                   {tour.title}
                 </h3>
-                <p className="text-sm text-zinc-600 mb-4">{tour.duration}</p>
 
                 {/* Icons Row */}
                 <div className="flex items-center justify-start gap-5 border-t border-zinc-200 pt-4 pb-2">
@@ -118,6 +99,7 @@ export default function TourPackages() {
           </motion.div>
         ))}
       </div>
+
       <BookingModal
         open={isModalOpen}
         onClose={() => setIsModalOpen(false)}

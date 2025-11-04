@@ -16,11 +16,10 @@ const carouselData = [
   },
   {
     id: 2,
-    image: "/banner/home-banner-3.webp",
-    headline: "Active Lifestyle",
-    subheadline: "Stay engaged, stay happy",
-    description:
-      "Fitness centers, recreational activities, and social events for an active lifestyle",
+    image: "/banner/travel-banner1.webp",
+    headline: "Plan Your Tour",
+    subheadline: "Our Travel Services are live now",
+    description: "Discover journeys crafted around your comfort, interests & dreams.",
   },
   {
     id: 3,
@@ -139,7 +138,7 @@ export default function Banner() {
               priority={currentSlide === 0}
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-black/40" />
+            <div className="absolute inset-0 bg-black/20" />
           </motion.div>
         </AnimatePresence>
 
@@ -157,7 +156,7 @@ export default function Banner() {
               <div className="text-white">
                 <motion.h1
                   variants={itemVariants}
-                  className="text-[#f48f1c] 2xl:text-[100px] xl:text-[70px] lg:text-[60px] md:text-[50px] text-[34px]"
+                  className="text-[#f4b01c] 2xl:text-[100px] xl:text-[70px] lg:text-[60px] md:text-[50px] text-[34px]"
                 >
                   {carouselData[currentSlide].headline}
                 </motion.h1>
