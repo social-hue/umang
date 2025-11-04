@@ -2,6 +2,8 @@
 "use client";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 export default function TourForm() {
   const [form, setForm] = useState({
@@ -214,17 +216,19 @@ export default function TourForm() {
 
       {/* Row 3 — Preferred Date + Duration */}
       <div className="flex flex-col sm:flex-row gap-3">
-        <input
-          name="preferredDate"
-          type="date"
-          value={form.preferredDate}
-          onChange={handleChange}
-          required
-          className={`flex-1 appearance-none border border-zinc-400 rounded-sm px-3 py-2 text-zinc-700 
-    focus:outline-none focus:border-zinc-600 w-full 
-    ${!form.preferredDate ? "text-gray-400" : "text-zinc-700"}`}
-          placeholder="Preferred Date"
+        <DatePicker
+          selected={form.preferredDate ? new Date(form.preferredDate) : null}
+          onChange={(date) =>
+            setForm((prev) => ({
+              ...prev,
+              preferredDate: date ? date.toISOString().split("T")[0] : "",
+            }))
+          }
+          placeholderText="Preferred Date"
+          dateFormat="yyyy-MM-dd"
+          className="flex-1 w-full border border-zinc-400 rounded-sm px-3 py-2 text-zinc-700 focus:outline-none focus:border-zinc-600"
         />
+
         <input
           name="duration"
           type="number"

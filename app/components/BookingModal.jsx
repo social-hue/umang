@@ -2,6 +2,8 @@
 import { useState } from "react";
 import { X } from "lucide-react";
 import toast from "react-hot-toast";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 export default function BookingModal({ tourname, open, onClose }) {
   const [form, setForm] = useState({
@@ -153,15 +155,18 @@ export default function BookingModal({ tourname, open, onClose }) {
 
           {/* Row 2 */}
           <div className="flex flex-col sm:flex-row gap-3">
-            <input
-              name="preferredDate"
-              value={form.preferredDate}
-              onChange={handleChange}
-              type="date"
-              placeholder="Preferred Date"
-              required
-              className="flex-1 border border-zinc-300 rounded-sm px-3 py-2 focus:outline-none focus:border-zinc-600"
-            />
+          <DatePicker
+          selected={form.preferredDate ? new Date(form.preferredDate) : null}
+          onChange={(date) =>
+            setForm((prev) => ({
+              ...prev,
+              preferredDate: date ? date.toISOString().split("T")[0] : "",
+            }))
+          }
+          placeholderText="Preferred Date"
+          dateFormat="yyyy-MM-dd"
+          className="flex-1 w-full border border-zinc-400 rounded-sm px-3 py-2 text-zinc-700 focus:outline-none focus:border-zinc-600"
+        />
             <select
               name="travellers"
               value={form.travellers}

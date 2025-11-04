@@ -5,7 +5,6 @@ import { motion, useInView } from "framer-motion";
 // import BookingModal from "./BookingModal";
 import TourForm from "./Form/TravelForm";
 import TourPackages from "./TourPackages";
-import Announcement from "./Announcement";
 
 export default function CharDhamSection() {
 
@@ -205,8 +204,6 @@ export default function CharDhamSection() {
 
   return (
     <>
-          <Announcement />
-       
     <section className="text-zinc-800 overflow-hidden">
       {/* Heading */}
       {/* <div className="text-center mb-8">

@@ -4,7 +4,7 @@ import { Megaphone } from "lucide-react";
 
 export default function Announcement() {
   return (
-    <div className="relative mx-auto max-w-5xl bg-gradient-to-br from-slate-50 via-white to-slate-200 border border-slate-200 rounded-2xl p-4 md:mb-10 
+    <div className="relative mx-auto max-w-5xl bg-gradient-to-br from-slate-50 via-white to-slate-200 border border-slate-200 rounded-2xl p-4 
     shadow-[0_10px_25px_rgba(0,0,0,0.15)] hover:shadow-[0_15px_35px_rgba(0,0,0,0.25)] transition-all duration-500 transform hover:-translate-y-1 hover:scale-[1.01] backdrop-blur-md">
       
       {/* Speaker Icon */}
