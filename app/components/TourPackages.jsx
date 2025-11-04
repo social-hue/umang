@@ -6,54 +6,60 @@ import BookingModal from "./BookingModal";
 
 export default function TourPackages() {
   const tours = [
+    // {
+    //   route: "Agra – Jaipur – Delhi",
+    //   title: "Golden Triangle Tour Package",
+    //   duration: "8D/7N",
+    //   image: "/travel/agra.jpeg",
+    // },
     {
-      route: "Agra – Jaipur – Delhi",
-      title: "Golden Triangle Tour Package",
-      duration: "8D/7N",
-      image: "/travel/agra.jpeg",
-    },
-    {
-      route: "Delhi → Jaipur → Jaisalmer",
-      title: "Majestic Rajasthan with Delhi Tour Package",
-      duration: "18D/17N",
-      image: "/travel/rajasthan.jpg",
-    },
-    {
-      route: "Delhi – Goa",
-      title: "Delhi - Goa Tour Package",
-      duration: "4D/5N",
-      image: "/travel/budh.jpg",
-    },
-    {
-      route: "Delhi – Leh – Srinagar",
-      title: "Mystical North Kashmir Ladakh Experience",
-      duration: "8D/7N",
-      image: "/travel/kashmir.jpg",
-    },
-    {
-      route: "Kerala",
-      title: "Enchanting Kerala Escape",
-      duration: "4D/5N",
-      image: "/travel/other.jpg",
-    },
-    {
-      route: "Chennai – Mahabalipuram",
-      title: "South India Tour Package",
-      duration: "8D/7N",
-      image: "/travel/south.jpg",
-    },
-    {
-      route: "Delhi – Ayodhya – Prayagraj",
-      title: "Ramayana Trail A Sacred Journey Through India",
+      route: "Delhi - Ayodhya - Prayagraj - Banaras",
+      title: "Ramayana Trail",
       duration: "14D/13N",
       image: "/travel/ganga.jfif",
     },
     {
-      route: "Ayodhya → Nandigram → Prayagraj",
-      title: "The Sacred Circuit From Ganga to Yamuna",
-      duration: "12D/11N",
-      image: "/travel/ayodhya.png",
+      route: "Delhi → Jaipur → Jaisalmer",
+      title: "Majestic Rajasthan",
+      duration: "18D/17N",
+      image: "/travel/rajasthan.jpg",
     },
+    {
+      route: "Delhi → Goa",
+      title: "Delhi - Goa Tour Package",
+      duration: "4D/5N",
+      image: "/travel/goa.webp",
+    },
+    // {
+    //   route: "Delhi – Leh – Srinagar",
+    //   title: "Mystical North Kashmir Ladakh Experience",
+    //   duration: "8D/7N",
+    //   image: "/travel/kashmir.jpg",
+    // },
+    // {
+    //   route: "Kerala",
+    //   title: "Enchanting Kerala Escape",
+    //   duration: "4D/5N",
+    //   image: "/travel/other.jpg",
+    // },
+    {
+      route: "Chennai / Kerala",
+      title: "South India Tour Package",
+      duration: "8D/7N",
+      image: "/travel/south.jpg",
+    },
+    // {
+    //   route: "Delhi – Ayodhya – Prayagraj",
+    //   title: "Ramayana Trail A Sacred Journey Through India",
+    //   duration: "14D/13N",
+    //   image: "/travel/ganga.jfif",
+    // },
+    // {
+    //   route: "Ayodhya → Nandigram → Prayagraj",
+    //   title: "The Sacred Circuit From Ganga to Yamuna",
+    //   duration: "12D/11N",
+    //   image: "/travel/ayodhya.png",
+    // },
   ];
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedTour, setSelectedTour] = useState(null);
@@ -88,7 +94,7 @@ export default function TourPackages() {
                 <h3 className="text-lg font-semibold text-zinc-800 leading-snug mb-2">
                   {tour.title}
                 </h3>
-                <p className="text-sm text-zinc-600 mb-4">{tour.duration}</p>
+                {/* <p className="text-sm text-zinc-600 mb-4">{tour.duration}</p> */}
 
                 {/* Icons Row */}
                 <div className="flex items-center justify-start gap-5 border-t border-zinc-200 pt-4 pb-2">

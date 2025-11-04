@@ -5,6 +5,7 @@ import { motion, useInView } from "framer-motion";
 // import BookingModal from "./BookingModal";
 import TourForm from "./Form/TravelForm";
 import TourPackages from "./TourPackages";
+import Announcement from "./Announcement";
 
 export default function CharDhamSection() {
 
@@ -203,6 +204,9 @@ export default function CharDhamSection() {
   // ];
 
   return (
+    <>
+          <Announcement />
+       
     <section className="text-zinc-800 overflow-hidden">
       {/* Heading */}
       {/* <div className="text-center mb-8">
@@ -253,7 +257,7 @@ export default function CharDhamSection() {
           <div className="bg-white border-none w-[92%] md:w-full max-w-lg p-2 md:p-6 relative rounded-sm text-zinc-800">
             {/* Heading */}
             <h3 className="text-3xl md:text-2xl font-bold text-zinc-800 mb-4 text-center">
-              Plan Your Trip !
+              Customize Your Trip !
             </h3>
             {/* Form */}
             <TourForm />
@@ -263,7 +267,7 @@ export default function CharDhamSection() {
       {/* Packages */}
       <div className="mb-6 md:mb-10 text-center">
         <h2 className="text-zinc-800 text-3xl mb-3 md:text-[38px] font-bold">
-          Explore Our Signature Tours <ArrowRight className="inline-block" size={28} />
+          Explore Our Curated Tours <ArrowRight className="inline-block" size={28} />
         </h2>
         <p className="max-w-3xl mx-auto text-lg text-zinc-600">
           From misty mountains to golden beaches - explore destinations that capture the spirit, color & charm of India's incredible diversity
@@ -333,9 +337,9 @@ export default function CharDhamSection() {
         variants={fadeUp}
         initial="hidden"
         animate={featuresInView ? "visible" : "hidden"}
-        className="mt-12 md:mt-20"
+        className="mt-16 md:mt-20"
       >
-        <h2 className="text-zinc-800 text-3xl md:text-[38px] mb-8 text-center font-bold">
+        <h2 className="text-zinc-800 text-3xl md:text-[38px] mb-6 md:mb-8 text-center font-bold">
           Why Choose Us?
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 max-w-7xl mx-auto px-6 md:px-10">
@@ -352,5 +356,6 @@ export default function CharDhamSection() {
         </div>
       </motion.div>
     </section>
+    </>
   );
 }

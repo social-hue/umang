@@ -135,6 +135,23 @@ select:focus {
   backdrop-filter: blur(5.434091091156006px);
 }
 
+/* app/globals.css */
+input[type="date"] {
+  width: 100%;
+  min-height: 42px;
+  color-scheme: light;
+}
+
+/* Placeholder hack: show placeholder text when empty */
+input[type="date"]:not(:focus):invalid::before {
+  content: attr(placeholder);
+  color: #9ca3af; /* Tailwind gray-400 */
+}
+input[type="date"]:focus::before,
+input[type="date"]:valid::before {
+  content: "";
+}
+
 /* .swiper-pagination-bullet {
   width: 24px !important;
   height: 12px !important;

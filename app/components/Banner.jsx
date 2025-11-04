@@ -5,7 +5,7 @@ import { FaAngleRight } from "react-icons/fa6";
 const Banner = ({ title, bgImage = "/greenBg.jpg" }) => {
   return (
     <div
-      className={`relative flex items-center justify-center text-center bg-cover bg-center min-h-[45vh] lg:min-h-[60vh]`}
+      className={`relative flex items-center justify-center text-center bg-cover bg-center min-h-[25vh] md:min-h-[45vh] lg:min-h-[55vh]`}
       style={{
         backgroundImage: `url(${bgImage})`,
       }}
@@ -15,7 +15,7 @@ const Banner = ({ title, bgImage = "/greenBg.jpg" }) => {
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl w-full px-4 md:px-8">
-        <h2 className="text-white text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-2 md:mb-3 drop-shadow-lg">
+        <h2 className="text-white text-3xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-2 md:mb-3 drop-shadow-lg">
           {title}
         </h2>
 
