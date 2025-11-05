@@ -98,7 +98,7 @@ export const generateMetadata = () => {
 export default function LegalConsultation() {
   return (
     <>
-      <Banner title={"Legal Consultation"} bgImage={"/banner/legal-banner.webp"}   />
+      <Banner title={"Legal Consultation"} bgImage={"/banner/legal-banner-1.jpg"}   />
       <div className="relative flex justify-center">
       <Image
           src="/coming-soon1.png" // replace with your image

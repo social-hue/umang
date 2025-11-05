@@ -5,7 +5,7 @@ import Button from "./Button";
 
 export default function PartnerPage() {
   return (
-    <section className="main_width py-8 overflow-hidden">
+    <section className="py-8">
       {/* Entire section wrapped in one motion container */}
       <motion.div
         initial={{ opacity: 0.6 }}

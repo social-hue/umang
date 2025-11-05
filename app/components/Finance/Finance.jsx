@@ -64,7 +64,7 @@ export default function ITRSection() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
         {/* Left Heading Section */}
         <div className="space-y-4 text-center md:text-left px-2 sm:px-4">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-zinc-800 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-bold text-zinc-800 leading-tight">
             <span className="text-red-700">Free*</span> ITR Filing for Members
           </h2>
           <p className="text-zinc-600 text-base sm:text-lg max-w-md mx-auto md:mx-0">

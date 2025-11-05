@@ -42,8 +42,8 @@ export const generateMetadata = () => {
 export default function LegalConsultation() {
   return (
     <>
-      <Banner title={"Legal Consultation"} bgImage={"/banner/legal-banner.webp"}   />
-      <div className="main_width relative overflow-hidden ">
+      <Banner title={"Legal Consultation"} bgImage={"/banner/legal-banner-1.jpg"}   />
+      <div className="relative overflow-hidden ">
       <LegalServices />
       </div>
       <Community />
