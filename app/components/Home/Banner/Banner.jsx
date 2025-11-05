@@ -8,7 +8,7 @@ import NewsTicker from "../../breaking/NewsTicker";
 const carouselData = [
   {
     id: 1,
-    image: "/banner/home-banner-2.webp",
+    image: "/banner/home-banner-4.webp",
     headline: "Ek Duniya Alag Si...",
     subheadline: "Because every age deserves new beginnings",
     description:
@@ -16,18 +16,10 @@ const carouselData = [
   },
   {
     id: 2,
-    image: "/banner/travel-banner1.webp",
+    image: "/banner/summer-adventure.webp",
     headline: "Plan Your Tour",
     subheadline: "Our Travel Services are live now",
     description: "Discover journeys crafted around your comfort, interests & dreams.",
-  },
-  {
-    id: 3,
-    image: "/banner/home-banner-4.webp",
-    headline: "Peace of Mind",
-    subheadline: "Security and care you can trust",
-    description:
-      "24/7 security, emergency response, and comprehensive care services",
   },
 ];
 
@@ -207,3 +199,8 @@ export default function Banner() {
     </section>
   );
 }
+
+
+
+
+

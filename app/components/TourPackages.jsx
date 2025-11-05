@@ -83,7 +83,7 @@ export default function TourPackages() {
               {/* Buttons */}
               <div className="flex gap-3 mt-auto pt-2">
                 <button
-                  className="flex-1 bg-orange-800 text-white text-sm py-2 rounded-sm hover:bg-orange-700 transition"
+                  className="flex-1 bg-red-700 text-white text-sm py-2 rounded-sm hover:bg-orange-700 transition"
                   onClick={() => handleEnquireClick(tour)}
                 >
                   Enquire Now

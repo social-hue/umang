@@ -50,7 +50,7 @@ export default function FacilitiesSection() {
   return (
     <motion.section
       ref={sectionRef}
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="px-4 md:px-8 relative w-full flex flex-col items-center py-6 md:py-12 bg-white overflow-hidden">
