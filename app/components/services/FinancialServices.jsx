@@ -9,7 +9,7 @@ import ServicesSection from "../FinanceServices";
 export default function FinancialServices() {
   return (
     <section className="main_width text-white py-10">
-      <div className="max-w-7xl mx-auto text-center mb-10">
+      <div className="max-w-7xl mx-auto text-center mb-8">
         <h1 className="text-3xl md:text-4xl font-bold mb-4 text-zinc-800">
           Tax, Accounting & Financial Services for Seniors and NRIs
         </h1>

@@ -1,7 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://www.umangliving.com", // ✅ your live site URL
-  generateRobotsTxt: true, // ✅ auto-generates robots.txt
+  siteUrl: "https://www.umangliving.com",
+  generateRobotsTxt: true,
   sitemapSize: 5000,
   changefreq: "weekly",
   priority: 0.8,
@@ -9,9 +9,7 @@ module.exports = {
 
   robotsTxtOptions: {
     policies: [
-      // General rule for all crawlers
       { userAgent: "*", disallow: ["/_next/"], allow: ["/"] },
-      // Block known AI and non-essential bots
       { userAgent: "Amazonbot", disallow: ["/"] },
       { userAgent: "Applebot-Extended", disallow: ["/"] },
       { userAgent: "Bytespider", disallow: ["/"] },
@@ -21,9 +19,9 @@ module.exports = {
       { userAgent: "GPTBot", disallow: ["/"] },
       { userAgent: "meta-externalagent", disallow: ["/"] },
     ],
-    //  The sitemap URL will be auto-generated, no need to add it manually.
     additionalSitemaps: [
-      "https://www.umangliving.com/sitemap-0.xml", // optional explicit reference
+      "https://www.umangliving.com/sitemap-0.xml",
     ],
+    // remove or omit the "Host" directive entirely
   },
 };

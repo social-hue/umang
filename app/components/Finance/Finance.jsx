@@ -60,14 +60,14 @@ export default function ITRSection() {
   };
 
   return (
-    <section className="bg-gradient-to-br from-zinc-100 to-zinc-200 py-12 px-4 sm:px-6 md:py-14 md:px-12 lg:px-16">
+    <section className="bg-[url(/id-banner.webp)] bg-cover py-12 px-4 sm:px-6 md:py-14 md:px-12 lg:px-16">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
         {/* Left Heading Section */}
         <div className="space-y-4 text-center md:text-left px-2 sm:px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-zinc-800 leading-tight">
             <span className="text-red-700">Free*</span> ITR Filing for Members
           </h2>
-          <p className="text-zinc-600 text-base sm:text-lg max-w-md mx-auto md:mx-0">
+          <p className="text-zinc-800 text-base sm:text-lg max-w-md mx-auto md:mx-0">
             Enter your Membership ID, We'll reach out to you! <br className="hidden sm:block" />Become <a href="https://docs.google.com/forms/d/e/1FAIpQLScQlwi7hkmU9fp7aGSOLfUXPIvQmADduVyPQvVC5PKhcbFyDQ/viewform?usp=header" target="_main"><span className="cursor-pointer font-bold">Our Member</span></a> Today{" "}
             <ArrowRight className="inline-block w-5 h-5 text-teal-700 ml-1 align-middle" />
           </p>
@@ -75,7 +75,10 @@ export default function ITRSection() {
 
         {/* Right Form Section */}
         <div className="p-4 sm:p-6 w-full">
-          <form onSubmit={handleSubmit} className="relative flex items-center justify-between bg-[#f0f0f3] rounded-full p-2 shadow-[8px_8px_16px_#c5c5c5,-8px_-8px_16px_#ffffff] transition-all duration-300 hover:shadow-[6px_6px_12px_#c5c5c5,-6px_-6px_12px_#ffffff]">
+          <form
+            onSubmit={handleSubmit}
+            className="relative flex items-center justify-between backdrop-blur-xl bg-white/10 border border-white/20 rounded-full p-2 shadow-[0_8px_20px_rgba(0,0,0,0.25)] transition-all duration-300 hover:shadow-[0_6px_15px_rgba(0,0,0,0.3)]"
+          >
             <label htmlFor="membershipId" className="sr-only">Membership ID</label>
             <input
               id="membershipId"
@@ -84,7 +87,7 @@ export default function ITRSection() {
               onChange={(e) => setMembershipId(e.target.value)}
               type="text"
               placeholder="Enter Membership ID"
-              className="flex-1 min-w-0 bg-[#f0f0f3] rounded-full pl-4 sm:pl-6 pr-24 sm:pr-36 py-3 sm:py-4 text-zinc-800 placeholder-zinc-400 focus:outline-none transition-all duration-300 text-sm sm:text-base"
+              className="flex-1 min-w-0 bg-transparent rounded-full pl-4 sm:pl-6 pr-24 sm:pr-36 py-3 sm:py-4 text-white placeholder-white/80 focus:outline-none transition-all duration-300 text-sm sm:text-base backdrop-blur-lg"
               inputMode="text"
               autoComplete="off"
               aria-invalid={false}
@@ -94,12 +97,13 @@ export default function ITRSection() {
             <button
               type="submit"
               disabled={loading}
-              className={`absolute right-1 sm:right-2 top-1/2 -translate-y-1/2 bg-teal-700 text-white px-5 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold flex items-center justify-center gap-2 shadow-[3px_3px_6px_#c5c5c5,-3px_-3px_6px_#ffffff] hover:shadow-[inset_3px_3px_6px_rgba(0,0,0,0.2)] hover:bg-teal-800 transition-all duration-300 whitespace-nowrap text-sm sm:text-base ${loading ? "opacity-70 cursor-wait" : ""}`}
+              className={`absolute right-1 sm:right-2 top-1/2 -translate-y-1/2 bg-teal-600/70 hover:bg-teal-700/60 text-white px-5 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold flex items-center justify-center gap-2 shadow-[0_4px_10px_rgba(0,0,0,0.3)] hover:shadow-[inset_0_0_10px_rgba(255,255,255,0.2)] transition-all duration-300 whitespace-nowrap text-sm sm:text-base ${loading ? "opacity-70 cursor-wait" : ""}`}
             >
               {loading ? "Sending..." : "Send"}
               <ArrowRight className="w-4 h-4" />
             </button>
           </form>
+
         </div>
       </div>
     </section>

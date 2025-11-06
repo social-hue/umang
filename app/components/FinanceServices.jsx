@@ -131,7 +131,7 @@ export default function ServicesSection() {
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="group relative flex flex-col justify-between bg-white border border-slate-200 rounded-xl p-6 shadow-md hover:shadow-sm transition-all duration-300"
+              className="group relative flex flex-col justify-between bg-white border border-slate-200 rounded-md p-6 shadow-md hover:shadow-sm transition-all duration-300"
             >
               <div>
                 <h3 className="text-lg font-semibold text-slate-800 mb-2 transition-colors">
