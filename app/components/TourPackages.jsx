@@ -11,25 +11,29 @@ export default function TourPackages() {
       title: "Ramayana Trail",
       duration: "14D/13N",
       image: "/travel/ganga.jfif",
-    },
-    {
-      route: "Delhi → Jaipur → Jaisalmer",
-      title: "Majestic Rajasthan",
-      duration: "18D/17N",
-      image: "/travel/rajasthan.jpg",
-    },
-    {
-      route: "Delhi → Goa",
-      title: "Delhi - Goa Tour Package",
-      duration: "4D/5N",
-      image: "/travel/goa.webp",
+      offer: "Limited seats available, Book now !"
     },
     {
       route: "Chennai / Kerala",
       title: "South India Tour Package",
       duration: "8D/7N",
       image: "/travel/south.jpg",
+      offer: "Booking Open !"
     },
+    {
+      route: "Delhi → Jaipur → Jaisalmer",
+      title: "Majestic Rajasthan",
+      duration: "18D/17N",
+      image: "/travel/rajasthan.jpg",
+      offer: "Special Offer"
+    },
+    {
+      route: "Delhi → Goa",
+      title: "Delhi - Goa Tour Package",
+      duration: "4D/5N",
+      image: "/travel/goa.webp",
+      offer: "Special Offer"
+    }
   ];
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -51,8 +55,8 @@ export default function TourPackages() {
           >
             <div className="relative h-48 overflow-hidden">
               {/* 🏷️ Special Offer Tag */}
-              <span className="absolute top-2 left-0 bg-red-600 text-white text-[11px] sm:text-xs font-semibold px-3 py-2 rounded-r-full shadow-md">
-                Special Offer
+              <span className="absolute top-3 left-0 bg-zinc-800 text-white text-[12px] font-semibold px-3 py-2 border-1 border-white rounded-r-full shadow-md">
+                {tour.offer}
               </span>
 
               <img

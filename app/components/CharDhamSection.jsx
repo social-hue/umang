@@ -1,18 +1,11 @@
 "use client";
 import { ArrowRight, Award, Globe2, Headphones, ShieldCheck } from "lucide-react";
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-// import BookingModal from "./BookingModal";
 import TourForm from "./Form/TravelForm";
 import TourPackages from "./TourPackages";
 
 export default function CharDhamSection() {
-
-  // const dhamRef = useRef(null);
-  // const dhamInView = useInView(dhamRef, { once: true, margin: "-60px" });
-
-  // const pkgRef = useRef(null);
-  // const pkgInView = useInView(pkgRef, { once: true, margin: "-60px" });
 
   const featuresRef = useRef(null);
   const featuresInView = useInView(featuresRef, { once: true, margin: "-60px" });

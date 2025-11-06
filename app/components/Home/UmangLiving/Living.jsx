@@ -97,7 +97,7 @@ export default function FacilitiesSection() {
           {displayedCards.map((item, index) => (
             <motion.div
               key={`${currentIndex}-${index}-${item.id}`}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.05 }}
               className="flex flex-col bg-white border border-zinc-200 rounded-sm shadow-sm hover:shadow-md cursor-pointer transition-shadow overflow-hidden"
