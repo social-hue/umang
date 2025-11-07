@@ -44,10 +44,10 @@ export const generateMetadata = () => {
 export default function Travel() {
   return (
     <>
-      <Banner title={"Travel"} bgImage={"/banner/travel-banner3.webp"} />
-      <div className="p-6">
+      <Banner title={"Travel"} bgImage={"/banner/travel-banner-2.webp"} />
+      {/* <div className="p-6">
       <Announcement />
-      </div>
+      </div> */}
       <div className="main_width py-8 relative">
       <CharDhamSection />
       </div>

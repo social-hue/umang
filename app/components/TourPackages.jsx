@@ -1,8 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
 import { Plane, Building2, MapPin, Compass } from "lucide-react";
-import { useState } from "react";
-import BookingModal from "./BookingModal";
+// import { useState } from "react";
+// import BookingModal from "./BookingModal";
+import Link from "next/link";
 
 export default function TourPackages() {
   const tours = [
@@ -11,38 +12,42 @@ export default function TourPackages() {
       title: "Ramayana Trail",
       duration: "14D/13N",
       image: "/travel/ganga.jfif",
-      offer: "Limited seats available, Book now !"
+      offer: "Limited seats available, Book now !",
+      slug: "delhi-ayodhya-varanasi-tour"
     },
     {
       route: "Chennai / Kerala",
       title: "South India Tour Package",
       duration: "8D/7N",
       image: "/travel/south.jpg",
-      offer: "Booking Open !"
+      offer: "Call For Booking",
+      slug: "south-india-tour"
     },
     {
       route: "Delhi → Jaipur → Jaisalmer",
       title: "Majestic Rajasthan",
       duration: "18D/17N",
       image: "/travel/rajasthan.jpg",
-      offer: "Special Offer"
+      offer: "Booking Closed",
+      slug: "rajasthan-tour"
     },
     {
       route: "Delhi → Goa",
       title: "Delhi - Goa Tour Package",
       duration: "4D/5N",
       image: "/travel/goa.webp",
-      offer: "Special Offer"
+      offer: "Booking Closed",
+      slug: "goa-tour"
     }
   ];
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedTour, setSelectedTour] = useState(null);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [selectedTour, setSelectedTour] = useState(null);
 
-  const handleEnquireClick = (tour) => {
-    setSelectedTour(tour.route);
-    setIsModalOpen(true);
-  };
+  // const handleEnquireClick = (tour) => {
+  //   setSelectedTour(tour.route);
+  //   setIsModalOpen(true);
+  // };
 
   return (
     <section className="px-6">
@@ -55,7 +60,7 @@ export default function TourPackages() {
           >
             <div className="relative h-48 overflow-hidden">
               {/* 🏷️ Special Offer Tag */}
-              <span className="absolute top-3 left-0 bg-zinc-800 text-white text-[12px] font-semibold px-3 py-2 border-1 border-white rounded-r-full shadow-md">
+              <span className="absolute top-3 left-0 bg-zinc-700 text-white text-[12px] font-semibold px-3 py-2 border-1 border-white rounded-r-full shadow-md">
                 {tour.offer}
               </span>
 
@@ -86,12 +91,16 @@ export default function TourPackages() {
 
               {/* Buttons */}
               <div className="flex gap-3 mt-auto pt-2">
-                <button
-                  className="flex-1 bg-red-700 text-white text-sm py-2 rounded-sm hover:bg-orange-700 transition"
-                  onClick={() => handleEnquireClick(tour)}
+                <Link
+                  href={tour.offer === "Booking Closed" || tour.offer === "Call For Booking" ? "#" : `/services/travel/${tour.slug}`}
+                  className={`flex-1 text-sm py-2 rounded-sm text-center transition
+    ${tour.offer === "Booking Closed" || tour.offer === "Call For Booking"
+                      ? "bg-red-700 text-white cursor-not-allowed pointer-events-none"
+                      : "bg-red-700 text-white hover:bg-orange-700"
+                    }`}
                 >
-                  Enquire Now
-                </button>
+                  Get Details
+                </Link>
                 <a
                   href="tel:18002028704"
                   className="flex-1 text-sm py-2 rounded-sm text-zinc-800 border border-zinc-800 transition text-center"
@@ -103,12 +112,12 @@ export default function TourPackages() {
           </motion.div>
         ))}
       </div>
-
+      {/* 
       <BookingModal
         open={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         tourname={selectedTour}
-      />
+      /> */}
     </section>
   );
 }
