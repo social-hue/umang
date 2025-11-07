@@ -197,9 +197,9 @@ export default function CharDhamSection() {
 
   return (
     <>
-    <section className="text-zinc-800 overflow-hidden">
-      {/* Heading */}
-      {/* <div className="text-center mb-8">
+      <section className="text-zinc-800 overflow-hidden">
+        {/* Heading */}
+        {/* <div className="text-center mb-8">
         <h2 className="text-3xl md:text-4xl font-bold text-zinc-800 mb-3">
           Discover the many shades of India
         </h2>
@@ -208,8 +208,8 @@ export default function CharDhamSection() {
         </p>
       </div> */}
 
-      {/* Dham Highlights */}
-      {/* <motion.div
+        {/* Dham Highlights */}
+        {/* <motion.div
         ref={dhamRef}
         variants={fadeUp}
         initial="hidden"
@@ -231,40 +231,19 @@ export default function CharDhamSection() {
           </div>
         ))}
       </motion.div> */}
-      <div className="text-center">
-        <h2 className="text-zinc-800 text-3xl md:text-[38px] font-bold mb-3">
-          Tailored Journeys for Timeless Souls
-        </h2>
-        <p className="max-w-3xl mx-auto text-lg text-zinc-600">
-          Discover journeys crafted around your comfort, interests, and dreams. Share your preferences, and we&apos;ll design a personalized travel experience made just for you.
-        </p>
-      </div>
-      <div className="py-8 md:mb-12 grid md:grid-cols-[40%_1fr] xl:grid-cols-[50%_1fr] gap-8 md:gap-0">
-        <div className="flex items-center justify-center">
-          <img src="/mapp.png" alt="map" loading="lazy" decoding="async" width={340} height={420} />
+
+        {/* Packages */}
+        <div className="mb-12 md:mb-18 text-center">
+          <h2 className="text-zinc-800 text-3xl mb-3 md:text-[38px] font-bold">
+            Explore Our Curated Tours <ArrowRight className="inline-block" size={28} />
+          </h2>
+          <p className="max-w-3xl mb-7 mx-auto text-lg text-zinc-600">
+            From misty mountains to golden beaches - explore destinations that capture the spirit, color & charm of India's incredible diversity
+          </p>
+          <TourPackages />
         </div>
-        <div className="flex flex-col justify-center items-center md:justify-start md:items-start">
-          <div className="bg-white border-none w-[92%] md:w-full max-w-lg p-2 md:p-6 relative rounded-sm text-zinc-800">
-            {/* Heading */}
-            <h3 className="text-3xl md:text-2xl font-bold text-zinc-800 mb-4 text-center">
-              Customize Your Trip !
-            </h3>
-            {/* Form */}
-            <TourForm />
-          </div>
-        </div>
-      </div>
-      {/* Packages */}
-      <div className="mb-6 md:mb-10 text-center">
-        <h2 className="text-zinc-800 text-3xl mb-3 md:text-[38px] font-bold">
-          Explore Our Curated Tours <ArrowRight className="inline-block" size={28} />
-        </h2>
-        <p className="max-w-3xl mx-auto text-lg text-zinc-600">
-          From misty mountains to golden beaches - explore destinations that capture the spirit, color & charm of India's incredible diversity
-        </p>
-      </div>
-      <TourPackages />
-      {/* <motion.div
+       
+        {/* <motion.div
         ref={pkgRef}
         variants={fadeUp}
         initial="hidden"
@@ -321,31 +300,54 @@ export default function CharDhamSection() {
       />
       </motion.div> */}
 
-      {/* Why Choose Us */}
-      <motion.div
-        ref={featuresRef}
-        variants={fadeUp}
-        initial="hidden"
-        animate={featuresInView ? "visible" : "hidden"}
-        className="mt-16 md:mt-20"
-      >
-        <h2 className="text-zinc-800 text-3xl md:text-[38px] mb-6 md:mb-8 text-center font-bold">
-          Why Choose Us?
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 max-w-7xl mx-auto px-6 md:px-10">
-          {features.map((f, i) => (
-            <div
-              key={i}
-              className="flex flex-col items-center text-center p-6 bg-white"
-            >
-              <div className="mb-4">{f.icon}</div>
-              <h3 className="text-[20px] font-semibold text-zinc-800 mb-2">{f.title}</h3>
-              <p className="text-md text-zinc-600 leading-relaxed">{f.desc}</p>
-            </div>
-          ))}
+        <div className="text-center">
+          <h2 className="text-zinc-800 text-3xl md:text-[38px] font-bold mb-3">
+            Tailored Journeys for Timeless Souls
+          </h2>
+          <p className="max-w-3xl mx-auto text-lg text-zinc-600">
+            Discover journeys crafted around your comfort, interests, and dreams. Share your preferences, and we&apos;ll design a personalized travel experience made just for you.
+          </p>
         </div>
-      </motion.div>
-    </section>
+        <div className="py-8 md:mb-12 grid md:grid-cols-[40%_1fr] xl:grid-cols-[50%_1fr] gap-8 md:gap-0">
+          <div className="flex items-center justify-center">
+            <img src="/mapp.png" alt="map" loading="lazy" decoding="async" width={340} height={420} />
+          </div>
+          <div className="flex flex-col justify-center items-center md:justify-start md:items-start">
+            <div className="bg-white border-none w-[92%] md:w-full max-w-lg p-2 md:p-6 relative rounded-sm text-zinc-800">
+              {/* Heading */}
+              <h3 className="text-3xl md:text-2xl font-bold text-zinc-800 mb-4 text-center">
+                Customize Your Trip !
+              </h3>
+              {/* Form */}
+              <TourForm />
+            </div>
+          </div>
+        </div>
+        {/* Why Choose Us */}
+        <motion.div
+          ref={featuresRef}
+          variants={fadeUp}
+          initial="hidden"
+          animate={featuresInView ? "visible" : "hidden"}
+          className="mt-8"
+        >
+          <h2 className="text-zinc-800 text-3xl md:text-[38px] mb-6 md:mb-8 text-center font-bold">
+            Why Choose Us?
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 max-w-7xl mx-auto px-6 md:px-10">
+            {features.map((f, i) => (
+              <div
+                key={i}
+                className="flex flex-col items-center text-center p-6 bg-white"
+              >
+                <div className="mb-4">{f.icon}</div>
+                <h3 className="text-[20px] font-semibold text-zinc-800 mb-2">{f.title}</h3>
+                <p className="text-md text-zinc-600 leading-relaxed">{f.desc}</p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      </section>
     </>
   );
 }
