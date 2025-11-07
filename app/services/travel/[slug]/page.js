@@ -21,7 +21,6 @@ export default function ItinerarySlugPage() {
     return (
         <>
             <div className="main_width min-h-screen py-3 md:py-5 font-sans text-slate-800">
-                <div className="mx-auto">
                     {/* HEADER */}
                     <header>
                         <h1 className="text-2xl md:text-4xl font-bold tracking-tight">
@@ -42,7 +41,7 @@ export default function ItinerarySlugPage() {
                             </span>
                         </div>
                     </header>
-                    <section className="max-w-7xl mx-auto mt-6 mb-6 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-6 rounded-2xl overflow-hidden md:shadow-[0_4px_12px_rgba(0,0,0,0.05)] bg-white/60 md:backdrop-blur-lg md:border md:border-slate-200">
+                    <section className="mx-auto mt-6 mb-6 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-6 rounded-2xl overflow-hidden md:shadow-[0_4px_12px_rgba(0,0,0,0.05)] bg-white/60 md:backdrop-blur-lg md:border md:border-slate-200">
                         {/* Left Image Section */}
                         <div className="relative h-[280px] md:h-auto w-full rounded-2xl overflow-hidden">
                             <Image
@@ -185,7 +184,6 @@ export default function ItinerarySlugPage() {
 
 
                     </main>
-                </div>
             </div>
             <Community />
         </>

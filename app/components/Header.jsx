@@ -53,7 +53,7 @@ export default function Header() {
           : "relative py-3"
       }`}
     >
-      <div className="max-w-[1300px] mx-auto px-4 sm:px-6 flex items-center justify-between">
+      <div className="max-w-[1300px] 2xl:max-w-[1800px] mx-auto px-4 sm:px-6 flex items-center justify-between">
         {/* Left: Logo */}
         <Link href="/" className="flex-shrink-0">
           <Image
