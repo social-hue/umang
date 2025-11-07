@@ -49,13 +49,13 @@ export default function ItinerarySlugPage() {
                                 alt="Delhi to Ayodhya Varanasi Road Trip"
                                 fill
                                 className="object-cover hover:scale-105 transition-transform duration-700 ease-in-out"
-                            />
+                            /> 
                         </div>
 
                         {/* Right Section */}
                         <div className="flex flex-col justify-between gap-6">
                             {/* Tour Schedule Card */}
-                            <div className="bg-gradient-to-br from-sky-50 to-white p-6 rounded-2xl border border-sky-100 shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
+                            <div className="bg-gradient-to-br from-slate-50 to-white p-6 rounded-2xl border border-sky-100 shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
                                 <div className="flex items-center justify-between mb-3">
                                     <h2 className="text-xl md:text-2xl font-semibold text-slate-800">Tour Schedule</h2>
                                     <span className="text-xs md:text-sm bg-emerald-500 text-white px-3 py-1 rounded-full shadow-sm">Booking Open !</span>
@@ -87,7 +87,7 @@ export default function ItinerarySlugPage() {
 
 
                             {/* Inclusion & Exclusion Section */}
-                            <div className="grid md:grid-cols-2 gap-4 bg-gradient-to-br from-white to-slate-50 p-6 rounded-2xl border border-slate-100 shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
+                            <div className="grid md:grid-cols-2 gap-4 bg-gradient-to-br from-white to-slate-50 p-6 rounded-2xl border border-sky-100 shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
                                 <div>
                                     <h4 className="font-semibold text-lg text-emerald-700 mb-2">Inclusions</h4>
                                     <ul className="space-y-1 text-slate-700 text-sm">
@@ -103,7 +103,6 @@ export default function ItinerarySlugPage() {
                                     <ul className="space-y-1 text-slate-600 text-sm">
                                         <li>Activities</li>
                                         <li>Lunch</li>
-                                        <li>Entry Ticket</li>
                                     </ul>
                                 </div>
                             </div>
