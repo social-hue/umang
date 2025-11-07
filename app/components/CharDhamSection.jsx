@@ -11,7 +11,7 @@ export default function CharDhamSection() {
   const featuresInView = useInView(featuresRef, { once: true, margin: "-60px" });
 
   const fadeUp = {
-    hidden: { opacity: 0, y: 60 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
