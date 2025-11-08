@@ -47,10 +47,10 @@ export default function Header() {
 
   return (
     <header
-      className={`w-full z-[1000] border-b border-slate-100 transition-all duration-100 ease-in-out ${
+      className={`w-full z-[1000] transition-all duration-100 ease-in-out ${
         isSticky
           ? "fixed top-0 left-0 right-0 bg-white shadow-md py-3"
-          : "relative py-3"
+          : "relative py-3 shadow-md"
       }`}
     >
       <div className="max-w-[1300px] 2xl:max-w-[1800px] mx-auto px-4 sm:px-6 flex items-center justify-between">
