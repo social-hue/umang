@@ -1,15 +1,13 @@
 "use client";
 import { useState } from "react";
-import { useParams, notFound } from "next/navigation";
 import { itineraries } from "@/app/StaticData/itineraries";
 import { MapPin, Clock } from "lucide-react";
 import Image from "next/image";
 import { CalendarDays, Sun, Moon } from "lucide-react";
 import Link from "next/link";
 
-export default function AyodhyaTour() {
-    const { slug } = useParams();
-    const data = itineraries[slug];
+export default function AyodhyaBanarasTour() {
+    const data = itineraries["delhi-ayodhya-varanasi-tour"];
     console.log(data);
     const [active, setActive] = useState(1);
 
@@ -77,10 +75,10 @@ export default function AyodhyaTour() {
                                 <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between">
                                     <div>
                                         <h3 className="text-lg md:text-xl font-semibold text-slate-800">Tour Cost</h3>
-                                        <p className="text-sm text-slate-600">Contact us for exclusive offers and prices</p>
+                                        <p className="text-sm text-slate-600">Exclusive of GST</p>
                                     </div>
-                                    {/* <p className="text-3xl font-bold text-zinc-800 mt-2 sm:mt-0">INR 32,000</p>
-                                    <p className="text-sm text-slate-600 sm:ml-1">Per Person</p> */}
+                                    <p className="text-3xl font-bold text-zinc-800 mt-2 sm:mt-0">INR 32,000</p>
+                                    <p className="text-sm text-slate-600 sm:ml-1">Per Person</p>
                                 </div>
                             </div>
                             {/* Inclusion & Exclusion Section */}
