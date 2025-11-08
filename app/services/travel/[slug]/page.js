@@ -1,7 +1,6 @@
-// import { notFound } from "next/navigation";
 import { seoData } from "@/app/lib/seoMeta";
 import Community from "@/app/components/Community";
-import AyodhyaTour from "@/app/components/tour/ayodhyaTour";
+import AyodhyaTour from "@/app/components/tour/AyodhyaTour";
 
 
 export async function generateMetadata ({ params }) {
