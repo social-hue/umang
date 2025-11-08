@@ -135,7 +135,7 @@ export default function FacilitiesSection() {
           className="w-full md:w-auto"
         >
           <button className="w-full md:w-auto px-8 py-3 bg-red-800 text-white rounded-sm font-semibold hover:bg-red-700 transition">
-            Join Our Membership
+            Get Free Membership
           </button>
         </a>
 

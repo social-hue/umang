@@ -62,7 +62,7 @@ export default function Banner() {
       subtitle: "Because every age deserves new beginnings",
       description: "A Unique Senior Independent Living Community for the 55+ Generation",
       href: "https://docs.google.com/forms/d/e/1FAIpQLScQlwi7hkmU9fp7aGSOLfUXPIvQmADduVyPQvVC5PKhcbFyDQ/viewform?usp=header",
-      button: "Join Us"
+      button: "Get Free Membership"
     },
     {
       image: "/banner/travel-banner-2.webp",
