@@ -1,8 +1,4 @@
 "use client";
-
-// import React, { useState, useEffect, useRef, useCallback } from "react";
-// import Image from "next/image";
-// import { motion, AnimatePresence } from "framer-motion";
 import NewsTicker from "../../breaking/NewsTicker";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Autoplay } from "swiper/modules";
@@ -118,13 +114,13 @@ export default function Banner() {
                       {slide.title}
                     </h1>
                     <h2
-                      className="text-base text-lg md:text-xl opacity-95 mb-2 transition-all duration-700 ease-in-out"
+                      className="text-lg md:text-xl xl:text-2xl opacity-95 mb-2 xl:mb-3 transition-all duration-700 ease-in-out"
                       key={slide.subtitle}
                     >
                       {slide.subtitle}
                     </h2>
                     <p
-                      className="hidden md:block text-base md:text-lg opacity-95 mb-2 transition-all duration-700 ease-in-out"
+                      className="hidden md:block text-base md:text-lg xl:text-[20px] opacity-95 mb-2 xl:mb-3 transition-all duration-700 ease-in-out"
                       key={slide.description}
                     >
                       {slide.description}

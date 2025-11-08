@@ -60,10 +60,12 @@ export default function TourPackages() {
           >
             <div className="relative h-48 overflow-hidden">
               {/* 🏷️ Special Offer Tag */}
-              <span className="absolute top-3 left-0 bg-zinc-700 text-white text-[12px] font-semibold px-3 py-2 border-1 border-white rounded-r-full shadow-md">
+              <span
+                className={`absolute top-3 left-0 ${tour.offer === "Limited seats available, Book now !" ? "bg-green-700" : "bg-zinc-700"
+                  } text-white text-[12px] font-semibold px-3 py-2 border border-white rounded-r-full shadow-md`}
+              >
                 {tour.offer}
               </span>
-
               <img
                 src={tour.image}
                 alt={tour.title}

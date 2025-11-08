@@ -28,7 +28,7 @@ export default function CharDhamSection() {
     {
       icon: <Globe2 className="w-10 h-10 text-teal-900" />,
       title: "50+ Destinations",
-      desc: "From the holy peaks of Kedarnath to the tranquil banks of Badrinath.",
+      desc: "Let us take you beyond destinations - to stories, culture, and moments that define the real India.",
     },
     {
       icon: <Headphones className="w-10 h-10 text-teal-900" />,
@@ -207,7 +207,6 @@ export default function CharDhamSection() {
           From misty mountains to golden beaches - explore destinations that capture the spirit, color & charm of India&apos;s incredible diversity.
         </p>
       </div> */}
-
         {/* Dham Highlights */}
         {/* <motion.div
         ref={dhamRef}
@@ -231,7 +230,6 @@ export default function CharDhamSection() {
           </div>
         ))}
       </motion.div> */}
-
         {/* Packages */}
         <div className="mb-12 md:mb-18 text-center">
           <h2 className="text-zinc-800 text-3xl mb-3 md:text-[38px] font-bold">
@@ -242,7 +240,7 @@ export default function CharDhamSection() {
           </p>
           <TourPackages />
         </div>
-       
+
         {/* <motion.div
         ref={pkgRef}
         variants={fadeUp}
@@ -308,7 +306,7 @@ export default function CharDhamSection() {
             Discover journeys crafted around your comfort, interests, and dreams. Share your preferences, and we&apos;ll design a personalized travel experience made just for you.
           </p>
         </div>
-        <div className="py-8 md:mb-12 grid md:grid-cols-[40%_1fr] xl:grid-cols-[50%_1fr] gap-8 md:gap-0">
+        <div className="py-8 md:mb-8 grid md:grid-cols-[40%_1fr] xl:grid-cols-[50%_1fr] gap-8 md:gap-0">
           <div className="flex items-center justify-center">
             <img src="/mapp.png" alt="map" loading="lazy" decoding="async" width={340} height={420} />
           </div>

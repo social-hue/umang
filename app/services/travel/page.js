@@ -1,4 +1,3 @@
-import Announcement from "@/app/components/Announcement";
 import Banner from "../../components/Banner";
 import Community from "../../components/Community";
 import { seoData } from "../../lib/seoMeta";
@@ -45,9 +44,6 @@ export default function Travel() {
   return (
     <>
       <Banner title={"Travel"} bgImage={"/banner/travel-banner-2.webp"} />
-      {/* <div className="p-6">
-      <Announcement />
-      </div> */}
       <div className="main_width py-8 relative">
       <CharDhamSection />
       </div>
