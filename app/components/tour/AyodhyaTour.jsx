@@ -62,7 +62,7 @@ export default function AyodhyaTour() {
                                 <div className="flex items-center gap-6 text-slate-600 text-sm md:text-base mb-3">
                                     <div className="flex items-center gap-2">
                                         <CalendarDays size={18} className="text-sky-500" />
-                                        <span>This November</span>
+                                        <span>30th November</span>
                                     </div>
                                     <div className="flex items-center gap-2">
                                         <Sun size={18} className="text-yellow-500" />

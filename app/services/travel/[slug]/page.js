@@ -2,7 +2,6 @@ import { seoData } from "@/app/lib/seoMeta";
 import Community from "@/app/components/Community";
 import AyodhyaTour from "@/app/components/tour/AyodhyaTour";
 
-
 export async function generateMetadata ({ params }) {
     // Await params to fix Next.js 15 warning
     const { slug } = params;
@@ -13,7 +12,6 @@ export async function generateMetadata ({ params }) {
         description: "Explore Our Tour Packages for Senior Living.",
       };
     }
-  
     return {
       title: meta.title ? meta.title : "",
       description: meta.description ? meta.description : "",
@@ -47,8 +45,8 @@ export async function generateMetadata ({ params }) {
       keywords: meta.keywords ? meta.keywords.split(",").map((kw) => kw.trim()) : "",
     };
   };
-  
-export default function ItinerarySlugPage() {
+                                  
+export  default function  ItinerarySlugPage() {
     return (
         <>
             <AyodhyaTour />
