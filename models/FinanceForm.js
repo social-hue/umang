@@ -29,12 +29,12 @@ const FinanceFormSchema = new mongoose.Schema(
     },
     ip: { type: String, required: true },
     userAgent: { type: String },
-    createdAt: { type: Date, default: Date.now },
     status: {
       type: String,
       enum: ["pending", "confirmed", "cancelled"],
       default: "pending",
     },
+    createdAt: { type: Date, default: Date.now },
   },
   { strict: true }
 );

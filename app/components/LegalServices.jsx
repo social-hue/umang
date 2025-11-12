@@ -115,8 +115,8 @@ export default function LegalServiceSection() {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="relative w-full flex flex-col items-center py-2 via-white overflow-hidden"
     >
-      <div className="flex justify-between items-center w-[90%] max-w-7xl mb-5">
-        <h2 className="text-3xl md:text-4xl font-bold text-zinc-800">
+      <div className="flex justify-between items-center w-[100%] mb-3">
+        <h2 className="text-3xl font-bold text-zinc-800">
           Our Services
         </h2>
         <div className="flex gap-3">
@@ -137,7 +137,7 @@ export default function LegalServiceSection() {
         </div>
       </div>
 
-      <div className="relative w-[90%] max-w-7xl flex justify-center">
+      <div className="relative w-[100%] flex justify-center">
         <div
           className={`grid gap-4 w-full`}
           style={{
@@ -151,17 +151,17 @@ export default function LegalServiceSection() {
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="group relative flex flex-col justify-between bg-white border border-slate-200 rounded-md p-6 shadow-md hover:shadow-sm transition-all duration-300"
+              className="group relative flex flex-col justify-between bg-white border border-slate-200 rounded-md p-4 shadow-sm transition-all duration-300"
             >
               <div>
-                <h3 className="text-lg font-semibold text-slate-800 mb-2 transition-colors">
+                <h3 className="text-md font-semibold text-slate-800 mb-2 transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-slate-600 leading-relaxed text-[15px]">
+                <p className="text-slate-600 text-md">
                   {item.desc}
                 </p>
               </div>
-              <div className="mt-4">
+              <div className="mt-2">
                 <Link
                   href="#contact"
                   className="inline-block text-red-700 text-md font-medium transition"

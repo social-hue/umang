@@ -12,7 +12,7 @@ export default function LegalServices() {
   return (
     <section className="main_width text-zinc-800 py-10">
       <div className="max-w-6xl mx-auto text-center mb-8">
-        <h1 className="text-3xl md:text-4xl font-bold text-zinc-800 mb-6">
+        <h1 className="text-3xl md:text-4xl font-bold text-zinc-800 mb-4">
           Legal & Documentation Services for Seniors and Families
         </h1>
         <p className="text-zinc-800  text-lg leading-relaxed max-w-3xl mx-auto">

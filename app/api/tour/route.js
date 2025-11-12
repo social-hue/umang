@@ -133,16 +133,4 @@ export async function POST(req) {
   }
 }
 
-// export async function GET() {
-//   try {
-//     await dbConnect();
-//     const bookings = await TourRequest.find().sort({ createdAt: -1 });
-//     return new Response(JSON.stringify(bookings), { status: 200 });
-//   } catch (err) {
-//     console.error("Error fetching bookings:", err);
-//     return new Response(
-//       JSON.stringify({ error: "Failed to fetch bookings." }),
-//       { status: 500 }
-//     );
-//   }
-// }
+

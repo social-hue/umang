@@ -8,7 +8,7 @@ const MAX_REQUESTS = 3;
 
 function isRateLimited(ip) {
   const now = Date.now();
-  const entry = rateLimit.get(ip) || { count: 0, last: now };
+  const entry = rateLimit.get(ip) || { count: 0, last: now };  
   if (now - entry.last > WINDOW_TIME) {
     rateLimit.set(ip, { count: 1, last: now });
     return false;
@@ -24,12 +24,10 @@ export async function POST(req) {
   if (isRateLimited(ip)) {
     return new Response(JSON.stringify({ error: "Too many requests, please try again later." }), { status: 429 });
   }
-
   try {
     await dbConnect();
     const body = await req.json();
     const { fullName, contact, preferredDate, travellers, message, tourName, recaptchaToken } = body;
-
     // ✅ reCAPTCHA verification
     const verification = await fetch("https://www.google.com/recaptcha/api/siteverify", {
       method: "POST",

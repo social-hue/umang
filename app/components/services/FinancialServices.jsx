@@ -1,5 +1,4 @@
 "use client";
-import { motion } from "framer-motion";
 import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import AppointmentSection from "../Form/AppointmentSection";
 import FAQFinance from "../faq/FAQFinance";
