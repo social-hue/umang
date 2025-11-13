@@ -1,4 +1,5 @@
 import { Roboto } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next"
 import "./globals.css";
 import Script from "next/script"; // ✅ import Script from next/Script
 import Header from "./components/Header";
@@ -134,6 +135,7 @@ export default function RootLayout({ children }) {
         />
         <Footer />
         <FloatingCTA />
+        <Analytics/>
         {/* <PromoCard /> */}
       </body>
     </html>
