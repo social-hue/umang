@@ -49,8 +49,7 @@ export default function AyodhyaTour() {
                                 fill
                                 className="object-cover hover:scale-105 transition-transform duration-700 ease-in-out"
                             /> 
-                        </div>
-
+                        </div>           
                         {/* Right Section */}
                         <div className="flex flex-col justify-between gap-6">
                             {/* Tour Schedule Card */}

@@ -15,26 +15,26 @@ const Community = () => {
             </span>{" "}
             Members already !
           </p>
-        </div> 
-        <div className="py-2"> 
-          <div className="lg:text-[18px] text-[16px] text-white"> 
-            <ul className="space-y-1"> 
+        </div>
+        <div className="py-2">
+          <div className="lg:text-[18px] text-[16px] text-white">
+            <ul className="space-y-1">
               <li><span className="text-white">&#10004;</span> A safe and welcoming environment</li>
               <li><span className="text-white">&#10004;</span> Professional healthcare and wellness support</li>
               <li><span className="text-white">&#10004;</span> Transparent communication & personalized care plans</li>
               <li><span className="text-white">&#10004;</span> Activities that foster social connections</li>
-            </ul> 
+            </ul>
           </div>
           <div className="mt-6 ml-2">
-           <a href="https://docs.google.com/forms/d/e/1FAIpQLScQlwi7hkmU9fp7aGSOLfUXPIvQmADduVyPQvVC5PKhcbFyDQ/viewform?usp=header" target="_main">
-          <button className= "gap-2 bg-white px-4 py-3 uppercase text-[#222] rounded-md font-semibold cursor-pointer text-[15px] transition-colors duration-500 ease-in-out hover:bg-slate-300">
-            Join Us Today
-            </button> 
-          </a> 
-            </div>
-        </div> 
-       </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScQlwi7hkmU9fp7aGSOLfUXPIvQmADduVyPQvVC5PKhcbFyDQ/viewform?usp=header" target="_main">
+              <button className="gap-2 bg-white px-4 py-3 uppercase text-[#222] rounded-md font-semibold cursor-pointer text-[15px] transition-colors duration-500 ease-in-out hover:bg-slate-300">
+                Join Us Today
+              </button>
+            </a>
+          </div>
+        </div>
       </div>
+    </div>
   );
 };
 export default Community;
