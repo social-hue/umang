@@ -137,7 +137,7 @@ export default function ServicesSection() {
                 <h3 className="text-md font-semibold text-slate-800 mb-2 transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-slate-600 text-[12px]">
+                <p className="text-slate-600 text-md">
                   {item.desc}
                 </p>
               </div>
