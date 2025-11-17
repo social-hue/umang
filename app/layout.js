@@ -1,12 +1,13 @@
 import { Roboto } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
-import Script from "next/script"; // ✅ import Script from next/Script
+import Script from "next/script"; //✅import Script from next/Script
 import Header from "./components/Header";
 import { Toaster } from "react-hot-toast";
 import FloatingCTA from "./components/floatingButton/floatingButton";
 import Footer from "./components/Footer";
-// import PromoCard from "./components/popup";
+//import PromoCard from "./components/popup";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -62,7 +63,7 @@ export const metadata = {
     "google-site-verification": "googleddd1afab57f5951d.html",
   },
 };
-             
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -135,7 +136,8 @@ export default function RootLayout({ children }) {
         />
         <Footer />
         <FloatingCTA />
-        <Analytics/>
+        <SpeedInsights/>
+        <Analytics />
         {/* <PromoCard /> */}
       </body>
     </html>

@@ -11,10 +11,10 @@ const Community = () => {
           <p className="mb-2 lg:text-[40px] md:text-[30px] text-[24px] md:leading-[58px] font-semibold text-white">
             Be a part of our growing family, {""}
             <span className="yellow">
-              <NumberCounter target={102598} duration={3000} />+
+              <NumberCounter target={104398} duration={3000} />+
             </span>{" "}
             Members already !
-          </p>
+          </p>    
         </div>
         <div className="py-2">
           <div className="lg:text-[18px] text-[16px] text-white">

@@ -2,13 +2,15 @@
 import { Building2, HeartHandshake, Network, Star } from "lucide-react";
 import { motion } from "framer-motion";
 import Button from "./Button";
+// import FranchisePage from "../franchise";
 
 export default function PartnerPage() {
   return (
     <section className="py-8">
       {/* Entire section wrapped in one motion container */}
+      {/* <FranchisePage /> */}
       <motion.div
-        initial={{ opacity: 0.6 }}
+        initial={{ opacity: 1 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.2 }}
@@ -25,7 +27,7 @@ export default function PartnerPage() {
             <strong>property management</strong> for trusted retirement homes.
           </p>
         </div>
-
+        
         {/* WHY PARTNER WITH US */}
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-6 md:gap-10 mb-12">
           {/* Text section */}
@@ -33,7 +35,7 @@ export default function PartnerPage() {
             <h2 className="text-2xl font-semibold text-zinc-800 mb-3">
               Why Partner with Us?
             </h2>
-            <p className="text-zinc-700 text-lg leading-relaxed mb-6">
+            <p className="text-zinc-700 text-md leading-relaxed mb-6">
               <strong>Umang Living</strong> partners with developers and serves
               seniors/families with one promise: we sell faster and run Gold
               Standard communities. We bring a ready demand funnel,
@@ -45,7 +47,7 @@ export default function PartnerPage() {
               Our Unique Strengths (USP)
             </h2>
 
-            <ol className="list-decimal space-y-1 text-zinc-700 text-lg leading-relaxed">
+            <ol className="list-decimal space-y-1 text-zinc-700 text-md leading-relaxed">
               {[
                 "Largest senior living community network in India with in-house expertise in Operations, Sales, Marketing & Property Management.",
                 "Professionally trained staff dedicated to senior care excellence.",
@@ -90,8 +92,8 @@ export default function PartnerPage() {
                   key={i}
                   className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition duration-300"
                 >
-                  <Icon className="text-yellow-500 w-10 h-10 mb-3" />
-                  <h3 className="text-lg font-semibold text-zinc-800 mb-2">
+                  <Icon className="text-yellow-500 w-8 h-8 mb-2" />
+                  <h3 className="text-md font-semibold text-zinc-800 mb-2">
                     {card.title}
                   </h3>
                   <p className="text-zinc-800 text-md">{card.desc}</p>
@@ -106,7 +108,7 @@ export default function PartnerPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-zinc-800 mb-4">
             Join Hands with Umang Living
           </h2>
-          <p className="text-zinc-800 text-lg max-w-2xl mx-auto mb-6">
+          <p className="text-zinc-800 text-md max-w-2xl mx-auto mb-6">
             Partnering with Umang Living means joining a movement redefining
             retirement living in India. Let's collaborate to create vibrant,
             emotionally fulfilling, and professionally managed senior living

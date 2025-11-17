@@ -19,23 +19,23 @@ export default function AyodhyaTour() {
 
     return (
         <>
-            <div className="main_width min-h-screen py-3 md:py-5 font-sans text-slate-800">
+            <div className="main_width py-3 md:py-8 text-slate-800">
                     {/* HEADER */}
                     <header>
                         <h1 className="text-2xl md:text-4xl font-bold tracking-tight">
                             {data.title}
                         </h1>
-                        <p className="mt-2 text-sm md:text-base text-slate-600">
+                        <p className="mt-2 text-md md:text-base text-slate-600">
                             {data.description}
                         </p>
                         <div className="mt-4 flex flex-wrap gap-3">
-                            <span className="bg-slate-800 text-white text-xs px-3 py-1 rounded-full">
+                            <span className="bg-slate-800 text-white text-sm px-3 py-1 rounded-full">
                                 {data.duration}
                             </span>
-                            <span className="bg-white border border-slate-200 text-xs px-3 py-1 rounded-full flex items-center gap-1">
+                            <span className="bg-white border border-slate-200 text-sm px-3 py-1 rounded-full flex items-center gap-1">
                                 <MapPin size={14} /> {data.location}
                             </span>
-                            <span className="bg-white border border-slate-200 text-xs px-3 py-1 rounded-full flex items-center gap-1">
+                            <span className="bg-white border border-slate-200 text-sm px-3 py-1 rounded-full flex items-center gap-1">
                                 <Clock size={14} /> {data.pace}
                             </span>
                         </div>
@@ -56,12 +56,12 @@ export default function AyodhyaTour() {
                             <div className="bg-gradient-to-br from-slate-50 to-white p-6 rounded-2xl border border-sky-100 shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
                                 <div className="flex items-center justify-between mb-3">
                                     <h2 className="text-xl md:text-2xl font-semibold text-slate-800">Tour Schedule</h2>
-                                    <span className="text-xs md:text-sm bg-emerald-500 text-white px-3 py-1 rounded-full shadow-sm">Booking Open !</span>
+                                    <span className="text-sm md:text-md bg-emerald-600 text-white px-3 py-1 rounded-full shadow-sm">Booking Open !</span>
                                 </div>
-                                <div className="flex items-center gap-6 text-slate-600 text-sm md:text-base mb-3">
+                                <div className="flex items-center gap-6 text-slate-600 text-md md:text-base mb-3">
                                     <div className="flex items-center gap-2">
                                         <CalendarDays size={18} className="text-sky-500" />
-                                        <span>30th November</span>
+                                        <span>This December</span>
                                     </div>
                                     <div className="flex items-center gap-2">
                                         <Sun size={18} className="text-yellow-500" />
@@ -76,17 +76,17 @@ export default function AyodhyaTour() {
                                 <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between">
                                     <div>
                                         <h3 className="text-lg md:text-xl font-semibold text-slate-800">Tour Cost</h3>
-                                        <p className="text-sm text-slate-600">Contact us for exclusive offers and prices</p>
+                                        <p className="text-md text-slate-600">Contact us for exclusive offers and pricing</p>
                                     </div>
-                                    {/* <p className="text-3xl font-bold text-zinc-800 mt-2 sm:mt-0">INR 32,000</p>
-                                    <p className="text-sm text-slate-600 sm:ml-1">Per Person</p> */}
+                                    {/* <p className="text-3xl font-bold text-zinc-800 mt-2 sm:mt-0">INR 34,999</p>
+                                    <p className="text-md text-slate-600 sm:ml-1">Per Person</p> */}
                                 </div>
                             </div>
                             {/* Inclusion & Exclusion Section */}
                             <div className="grid md:grid-cols-2 gap-4 bg-gradient-to-br from-white to-slate-50 p-6 rounded-2xl border border-sky-100 shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
                                 <div>
                                     <h4 className="font-semibold text-lg text-emerald-700 mb-2">Inclusions</h4>
-                                    <ul className="space-y-1 text-slate-700 text-sm">
+                                    <ul className="space-y-1 text-slate-700 text-md">
                                         <li>6 Breakfast</li>
                                         <li>6 Dinner</li>
                                         <li>Transport</li>
@@ -96,7 +96,7 @@ export default function AyodhyaTour() {
                                 </div>
                                 <div>
                                     <h4 className="font-semibold text-lg text-rose-600 mb-2">Exclusions</h4>
-                                    <ul className="space-y-1 text-slate-600 text-sm">
+                                    <ul className="space-y-1 text-slate-600 text-md">
                                         <li>Activities</li>
                                         <li>Lunch</li>
                                     </ul>
@@ -105,9 +105,9 @@ export default function AyodhyaTour() {
                         </div>
                     </section>
                     {/* DAYS LIST */}
-                    <main className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <main className="grid grid-cols-1 mb-12 lg:grid-cols-3 gap-6">
                         <aside className="lg:col-span-1 bg-white border border-slate-200 rounded-2xl p-4">
-                            <h3 className="text-sm text-slate-600 mb-3">Day-By-Day</h3>
+                            <h3 className="text-md text-slate-600 mb-3">Day-By-Day</h3>
                             <ol className="space-y-3">
                                 {data.days.map((d) => (
                                     <li
@@ -119,7 +119,7 @@ export default function AyodhyaTour() {
                                         onClick={() => setActive(d.day)}
                                     >
                                         <div className="font-medium">{d.title}</div>
-                                        <div className="text-xs text-slate-600">
+                                        <div className="text-sm text-slate-600">
                                             Night: {d.night}
                                         </div>
                                     </li>
@@ -132,7 +132,7 @@ export default function AyodhyaTour() {
                             {/* Dynamic Content */}
                             <div>
                                 <h3 className="text-lg font-semibold text-slate-800">{activeDay.title}</h3>
-                                <ul className="mt-4 space-y-2 text-sm text-slate-700 leading-relaxed">
+                                <ul className="mt-4 space-y-2 text-md text-slate-700 leading-relaxed">
                                     {activeDay.bullets.map((b, i) => (
                                         <li key={i}>• {b}</li>
                                     ))}
@@ -140,8 +140,8 @@ export default function AyodhyaTour() {
 
                                 {/* How to Book Section */}
                                 <div className="mt-4 border-t pt-3 border-zinc-300">
-                                    <h4 className="text-base font-semibold text-orange-700 mb-3">How to Book?</h4>
-                                    <ul className="space-y-2 text-sm text-slate-700 leading-relaxed">
+                                    <h4 className="text-md font-semibold text-orange-700 mb-3">How to Book?</h4>
+                                    <ul className="space-y-2 text-md text-slate-700 leading-relaxed">
                                         <li>
                                             📞 Call / WhatsApp us on <span className="font-medium text-slate-900">1800 202 8704</span>,{" "}
                                             <span className="font-medium text-slate-900">+91 95609 86669</span> or email us at{" "}
@@ -170,7 +170,7 @@ export default function AyodhyaTour() {
                                 <Link
                                     href="https://docs.google.com/forms/d/e/1FAIpQLSfIQ8Es5VM963znGpu11ADPhyQVC_8HjY7IRjbqBjF9AEHptw/viewform"
                                     target="_main"
-                                    className="text-center flex-1 bg-gradient-to-r from-orange-600 to-red-700 text-white py-2.5 rounded-lg font-medium text-sm shadow-md hover:shadow-lg hover:opacity-95 transition-all"
+                                    className="text-center flex-1 bg-gradient-to-r from-orange-600 to-red-700 text-white py-2.5 rounded-lg font-medium text-md shadow-md hover:shadow-lg hover:opacity-95 transition-all"
                                 >
                                     Book Today
                                 </Link>
