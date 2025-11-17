@@ -42,11 +42,11 @@ export const generateMetadata = () => {
 export default function LegalConsultation() {
   return (
     <>
-      <Banner title={"Legal Consultation"} bgImage={"/banner/legal-banner-1.jpg"}   />
+      <Banner title={"Legal Consultation"} bgImage={"/banner/legal-banner-2.jpg"}   />
       <div className="relative overflow-hidden ">
       <LegalServices />
       </div>
       <Community />
     </>
-  );
+  );    
 }

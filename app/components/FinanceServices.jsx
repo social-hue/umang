@@ -1,158 +1,97 @@
 "use client";
-
-import Link from "next/link";
-import { useState, useEffect, useRef } from "react";
-import { motion, useInView } from "framer-motion";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { ArrowRight } from "lucide-react";
-
-const services = [
-  {
-    title: "PAN & Aadhaar Linkage Services",
-    desc: "Link your PAN and Aadhaar quickly to avoid penalties and return rejections. End-to-end support—from verification to successful confirmation.",
-  },
-  {
-    title: "Income Tax Return (ITR) Filing",
-    desc: "Accurate, on-time ITRs for seniors, NRIs, and families. We optimize deductions and ensure smooth refunds with zero paperwork stress.",
-  },
-  {
-    title: "PAN Corrections",
-    desc: "Fix name/DOB/address or update father’s name on PAN without hassle. We prepare documents and file corrections till approval.",
-  },
-  {
-    title: "Aadhaar Corrections",
-    desc: "Update mobile, address, or biometrics for seamless KYC and e-verification. Secure documentation and tracking until changes reflect.",
-  },
-  {
-    title: "Tax Planning Consultancy",
-    desc: "Pay only what’s fair—nothing extra. Year-round guidance on exemptions, investments, and senior-citizen benefits to reduce tax outgo.",
-  },
-  {
-    title: "Investment Consultancy",
-    desc: "Goal-based advice focused on safety, liquidity, and steady income. We design low-risk portfolios suitable for retirees and family needs.",
-  },
-  {
-    title: "NRI Consultancy to Repatriate Funds to India",
-    desc: "Bring money to India legally and efficiently. Guidance on NRE/NRO/FCNR routes, taxability, and documentation.",
-  },
-  {
-    title: "Management of Foreign Remittances",
-    desc: "Clean, compliant cross-border transfers. We handle FEMA/Form 15CA-CB, bank liaison, and proof for your auditors or tax filing.",
-  },
-  {
-    title: "Audit for Your Business",
-    desc: "Statutory, internal, or tax audits delivered on schedule. Clear reports that satisfy regulators and help you fix gaps early.",
-  },
-  {
-    title: "Budgeting & Strategy",
-    desc: "Create a simple, trackable money plan for your family or business. Cash-flow forecasts, savings targets, and quarterly reviews to stay on course.",
-  },
-];
+import React, { useState } from "react";
 
 export default function ServicesSection() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [cardsPerPage, setCardsPerPage] = useState(3);
-  const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: true, margin: "-50px" });
-
-  useEffect(() => {
-    const updateCardsPerPage = () => {
-      if (window.innerWidth < 640) setCardsPerPage(1);
-      else if (window.innerWidth < 1024) setCardsPerPage(2);
-      else setCardsPerPage(4);
-    };
-    updateCardsPerPage();
-    window.addEventListener("resize", updateCardsPerPage);
-    return () => window.removeEventListener("resize", updateCardsPerPage);
-  }, []);
-
-  const total = services.length;
-
-  const next = () => {
-    setCurrentIndex((prev) =>
-      prev + cardsPerPage >= total ? 0 : prev + cardsPerPage
-    );
+  const data = {
+    "Legal Assistance & Advisory": [
+      "UMANG Living shall provide every senior citizen a free first legal consultation, either online or in person, to discuss and understand their legal issues.",
+      "Assistance shall be provided in understanding the rights, benefits, and procedures available under the Maintenance and Welfare of Parents and Senior Act 2007, including claiming maintenance and protection from neglect.",
+      "Legal experts will assist in drafting and registering Wills, Powers of Attorney, and other personal legal documents.",
+      "Legal support shall be provided in resolving property disputes, ownership issues, and safeguarding assets against fraud or encroachment.",
+      "UMANG Living shall offer legal advice and coordination with authorities in cases involving financial fraud, cheating, or coercion affecting senior citizens’ assets or pensions.",
+      "Legal guidance shall be given on inheritance, succession planning, gift deeds, and property transfers in accordance with applicable personal and civil laws.",
+      "UMANG Living shall help senior citizens reclaim property wrongfully occupied by relatives, tenants, or outsiders.",
+      "Legal support shall be provided to senior citizens in consumer-related disputes, including issues with healthcare services, insurance, housing, and retirement investments.",
+      "UMANG Living shall assist in preparing applications, documents, and representation before Maintenance Tribunals for claiming maintenance or protection.",
+      "Legal help shall be provided for resolving issues related to pension delays, gratuity payments, or provident fund disputes.",
+      "Assistance shall be offered to senior citizens in preparing Advance Medical Directives or Living Wills for future healthcare decisions.",
+      "UMANG Living shall organize periodic workshops on senior citizens’ legal rights, government schemes, and preventive legal practices for legal awareness.",
+      "All legal consultations, records, and personal information shall be kept strictly confidential and protected under applicable data protection laws.",
+    ],
+    "Elder Rights Protection": [
+      "Legal support shall be provided to senior citizens facing any kind of abuse, neglect, harassment, or exploitation from family members, caretakers, or others.",
+      "UMANG Living shall assist senior citizens in filing police complaints, FIRs, and coordinating with authorities for their safety and justice.",
+      "Mediation and family counselling services shall be offered to resolve domestic or inheritance disputes peacefully.",
+      "Regular workshops shall be organized to educate senior citizens about their legal rights, entitlements, and available welfare schemes.",
+      "UMANG Living shall support senior citizens, particularly elderly women, facing domestic violence, harassment, or intimidation within their households.",
+      "Legal help shall be provided to senior citizens facing issues of medical negligence, overcharging, or denial of healthcare services.",
+      "Help shall be provided in applying for and obtaining government welfare benefits, subsidies, and legal aid services available to senior citizens.",
+      "UMANG Living shall organize guidance sessions and provide legal assistance to protect senior citizens from cybercrimes, online scams, and data misuse.",
+      "Legal guidance shall be provided to senior citizens for drafting and registering agreements with caregivers, attendants, or service providers to ensure legal clarity and accountability.",
+    ],
+    "Documentation & Legal Paperwork": [
+      "UMANG Living shall assist senior citizens in drafting, reviewing, and notarizing Wills, rent agreements, sale deeds, gift deeds, and other property-related legal documents.",
+      "Assistance shall be provided in preparing and executing healthcare paperwork, medical consent forms, and legal guardianship or caregiving documents.",
+      "Help shall be provided in preparing, filing, and completing registration and mutation processes for property ownership changes or inheritance transfers.",
+      "UMANG Living shall assist in preparing affidavits, declarations, indemnity bonds, and self-attested statements for administrative and legal purposes.",
+      "Support shall be provided in updating Wills, property deeds, nominee details, and other legal records after significant life events such as marriage, or relocation.",
+      "UMANG Living shall facilitate document verification and attestation services from authorized officers or notaries to ensure authenticity and legal validity.",
+      "Legal assistance shall be offered to draft and register Powers of Attorney granting trusted representatives the authority to manage financial or legal matters.",
+    ],
+    "Support & Access": [
+      "UMANG Living shall provide online consultations and arrange home visits by legal professionals for senior citizens who are immobile, bedridden, or unable to travel.",
+      "Every senior citizen’s case shall be handled with full confidentiality and assigned a dedicated relationship manager for personalized legal support and follow-up.",
+      "UMANG Living shall provide priority legal assistance and faster coordination for cases involving urgent threats to safety, property, or health.",
+      "Support shall be provided in connecting senior citizens with government legal aid authorities, senior citizen helplines, and welfare departments.",
+      "UMANG Living shall offer translation and interpretation support for senior citizens to help them understand legal documents and proceedings in their preferred language.",
+      "UMANG Living can collaborate with State’s Legal Services Authorities, local police, and welfare departments to provide comprehensive support and on-ground legal help to senior citizens.",
+    ],
+    "Optional Add-Ons": [
+      "UMANG Living shall organize legal sessions and workshops to educate senior citizens about property laws, retirement benefits, digital safety, and protection from fraud.",
+      "Professional family counselling and mediation shall be offered to help resolve family disagreements regarding property, care responsibilities, or inheritance.",
+      "Optional legal insurance coverage to be made available for residents seeking ongoing legal advice and representation at a fixed annual fee.",
+      "UMANG Living shall offer optional assistance through partner legal experts in creating and managing family trusts, charitable endowments, or estate planning instruments.",
+    ],
   };
 
-  const prev = () => {
-    setCurrentIndex((prev) =>
-      prev - cardsPerPage < 0 ? total - cardsPerPage : prev - cardsPerPage
-    );
-  };
-
-  const visible = services.slice(currentIndex, currentIndex + cardsPerPage);
-
-  const displayedCards =
-    visible.length < cardsPerPage
-      ? [...visible, ...services.slice(0, cardsPerPage - visible.length)]
-      : visible;
+  const tabs = Object.keys(data);
+  const [activeTab, setActiveTab] = useState(tabs[0]);
 
   return (
-    <motion.section
-      ref={sectionRef}
-      initial={{ opacity: 0, y: 20 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      className="relative w-full flex flex-col items-center py-2 via-white overflow-hidden"
-    >
-      <div className="flex justify-between items-center w-[100%] mb-3">
-        <h2 className="text-3xl font-bold text-zinc-800">
-          Our Services
-        </h2>
-        <div className="flex gap-3">
+    <div>
+    <h2 className="text-zinc-800 text-3xl font-bold mb-3">Our Services</h2>
+    <section className="flex flex-col md:flex-row bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+      {/* Left Tabs */}
+      <aside className="md:w-1/4 border-r border-gray-200 bg-gray-50">
+        {tabs.map((tab) => (
           <button
-            aria-label="prev"
-            onClick={prev}
-            className="p-2 rounded-full border border-slate-300 shadow-sm hover:bg-slate-200 transition"
+            key={tab}
+            onClick={() => setActiveTab(tab)}
+            className={`w-full text-left px-5 py-4 text-sm md:text-base transition-all ${
+              activeTab === tab
+                ? "bg-white border-l-4 border-blue-500 text-gray-900 font-semibold"
+                : "text-gray-600 hover:bg-gray-100"
+            }`}
           >
-            <FaChevronLeft className="text-slate-600" />
+            {tab}
           </button>
-          <button
-            aria-label="next"
-            onClick={next}
-            className="p-2 rounded-full border border-slate-300 shadow-sm hover:bg-slate-200 transition"
-          >
-            <FaChevronRight className="text-slate-600" />
-          </button>
-        </div>
-      </div>
+        ))}
+      </aside>
 
-      <div className="relative w-[100%] flex justify-center">
-        <div
-          className={`grid gap-4 w-full`}
-          style={{
-            gridTemplateColumns: `repeat(${cardsPerPage}, minmax(0, 1fr))`,
-            transition: "all 0.3s ease",
-          }}
-        >
-          {displayedCards.map((item, index) => (
-            <motion.div
-              key={`${currentIndex}-${index}-${item.title}`}
-              initial={{ opacity: 0 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="group relative flex flex-col justify-between bg-white border border-slate-200 rounded-md p-6 shadow-sm transition-all duration-300"
-            >
-              <div> 
-                <h3 className="text-md font-semibold text-slate-800 mb-2 transition-colors">
-                  {item.title}
-                </h3>
-                <p className="text-slate-600 text-md">
-                  {item.desc}
-                </p>
-              </div>
-              <div className="mt-4">
-                <Link
-                  href="#contact"
-                  className="inline-block text-red-700 text-md font-medium transition"
-                >
-                  Enquire Now  <ArrowRight className="inline-block mb-1 w-4 h-4 text-red-700" />
-                </Link>
-              </div>
-            </motion.div>
+      {/* Right Content */}
+      <div className="flex-1 p-6 md:p-4 overflow-y-auto">
+        <h2 className="text-xl font-semibold text-gray-800 mb-4">
+          {activeTab}
+        </h2>
+        <ul className="space-y-3 text-gray-700 leading-relaxed list-decimal pl-5">
+          {data[activeTab].map((item, idx) => (
+            <li key={idx} className="text-sm md:text-base">
+              {item}
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
-    </motion.section>
+    </section>
+    </div>
   );
 }

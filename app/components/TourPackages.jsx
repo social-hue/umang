@@ -12,7 +12,7 @@ export default function TourPackages() {
       title: "Ramayana Trail",
       duration: "14D/13N",
       image: "/travel/ganga.jfif",
-      offer: "Limited seats available, Book now !",
+      offer: "Booking Open !",
       slug: "delhi-ayodhya-varanasi-tour"
     },
     {
@@ -61,7 +61,7 @@ export default function TourPackages() {
             <div className="relative h-48 overflow-hidden">
               {/* 🏷️ Special Offer Tag */}
               <span
-                className={`absolute top-3 left-0 ${tour.offer === "Limited seats available, Book now !" ? "bg-green-700" : "bg-zinc-700"
+                className={`absolute top-3 left-0 ${tour.offer === "Booking Open !" ? "bg-green-700" : "bg-zinc-500"
                   } text-white text-[12px] font-semibold px-3 py-2 border border-white rounded-r-full shadow-md`}
               >
                 {tour.offer}
@@ -97,8 +97,8 @@ export default function TourPackages() {
                   href={tour.offer === "Booking Closed" || tour.offer === "Call For Booking" ? "#" : `/services/travel/${tour.slug}`}
                   className={`flex-1 text-sm py-2 rounded-sm text-center transition
     ${tour.offer === "Booking Closed" || tour.offer === "Call For Booking"
-                      ? "bg-red-700 text-white cursor-not-allowed pointer-events-none"
-                      : "bg-red-700 text-white hover:bg-orange-700"
+                      ? "bg-red-600 text-white cursor-not-allowed pointer-events-none"
+                      : "bg-red-600 text-white hover:bg-orange-700"
                     }`}
                 >
                   Get Details
