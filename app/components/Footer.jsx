@@ -80,7 +80,7 @@ const Footer = () => {
             <div className="lg:pr-4">
               <div className="flex items-start mb-5">
                 <img
-                  src="/logo.png"
+                  src="/compressed_logo.webp"
                   alt="Umang Living"
                   className="rounded-md max-w-[200px] w-full h-auto"
                   loading="lazy"

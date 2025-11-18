@@ -8,7 +8,7 @@ import "swiper/css/effect-fade";
 export default function Banner() {
   const slides = [
     {
-      image: "/banner/blog-banner.webp",
+      image: "/banner/compressed_blog-banner.webp",
       title: "Ek Duniya Alag Si",
       subtitle: "Because every age deserves new beginnings",
       description: "A Unique Senior Independent Living Community for the 55+ Generation",
@@ -16,7 +16,7 @@ export default function Banner() {
       button: "Get Free Membership"
     },
     {
-      image: "/banner/travel-banner-2.webp",
+      image: "/banner/compressed_travel-banner-2.webp",
       title: "Plan Your Next Getaway",
       subtitle: "Seamless tours, unforgettable memories",
       description: "We design travel experiences that blend comfort, culture, and discovery",
