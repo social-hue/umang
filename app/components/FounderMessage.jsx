@@ -8,7 +8,7 @@ export default function AboutFounder() {
         {/* Right Side - Content */}
         <motion.div
           className="mt-4 w-full flex flex-col justify-center"
-          initial={{ opacity: 0, x: 20 }}
+          initial={{ opacity: 0, x: 10 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true, amount: 0.3 }}

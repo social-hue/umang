@@ -62,7 +62,7 @@ export default function GeneralConsultation() {
       {/* Right: Text */}
       <div className="w-full md:w-1/2 text-gray-700">
         <h2 className="text-2xl font-bold mb-4">Personalized Support for Senior Living</h2>
-        <p className="text-lg leading-relaxed">
+        <p className="text-md leading-relaxed">
         Sometimes, what seniors need most is simple, personalized guidance to make life easier and more fulfilling. Our general consultation services are designed to provide clear advice on everyday challenges—whether it’s choosing the right healthcare options, exploring lifestyle planning, or accessing community resources. We take the time to understand your personal circumstances, listen with empathy, and provide practical solutions that bring confidence and clarity. These sessions are not only informative but also reassuring, giving you the support you need to make decisions for a healthier, happier, and more independent life after 55.
         </p>
       </div>

@@ -112,7 +112,7 @@ export default function FinancialConsulting() {
       <section className="mb-16 md:mx-10 flex flex-col md:flex-row items-center gap-6">
       <div className="w-full md:w-1/2 relative h-64 md:h-80">
         <Image
-          src="/services/Financial.webp" // replace with your image
+          src="/facilities/Financial.webp" // replace with your image
           alt="Finance"
           fill
           className="object-cover rounded-xl"
@@ -121,7 +121,7 @@ export default function FinancialConsulting() {
       {/* Right: Text */}
       <div className="w-full md:w-1/2 text-zinc-800">
         <h2 className="text-2xl md:text-3xl font-bold mb-4">Financial Consulting for a Secure Tomorrow</h2>
-        <p className="text-lg leading-relaxed">
+        <p className="text-md leading-relaxed">
         Our financial consulting service is designed to help senior citizens plan, protect, and grow their wealth with confidence. We offer personalized guidance on managing savings, investments, pensions, and estate planning, ensuring financial independence and peace of mind in every stage of life. With expert advisors who understand the unique needs of seniors, we help you make informed decisions for a stable and worry-free future.
         </p>
       </div>

@@ -235,7 +235,7 @@ export default function CharDhamSection() {
           <h2 className="text-zinc-800 text-3xl mb-3 md:text-[38px] font-bold">
             Explore Our Curated Tours <ArrowRight className="inline-block" size={28} />
           </h2>
-          <p className="max-w-3xl mb-7 mx-auto text-lg text-zinc-600">
+          <p className="max-w-3xl mb-8 mx-auto text-lg text-zinc-600">
             From misty mountains to golden beaches - explore destinations that capture the spirit, color & charm of India's incredible diversity
           </p>
           <TourPackages />

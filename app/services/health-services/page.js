@@ -67,7 +67,7 @@ export default function HealingServices() {
       {/* Right: Text */}
       <div className="w-full md:w-1/2 text-gray-700">
         <h2 className="text-2xl md:text-3xl font-bold mb-4">Holistic Wellness for Mind and Body</h2>
-        <p className="text-lg leading-relaxed">
+        <p className="text-md leading-relaxed">
         True well-being goes beyond medical care—it includes nurturing your body, mind, and spirit. Our health & wellness services combine traditional and modern approaches to support holistic senior health. From yoga and meditation sessions that bring calmness and balance, to physiotherapy that enhances mobility and relieves pain, we offer a wide range of programs designed to meet your unique needs. We also include alternative therapies, relaxation practices, and group wellness activities that build resilience and positivity. These services are thoughtfully structured to reduce stress, promote active living, and enhance the overall quality of life, ensuring you enjoy your golden years with renewed energy and vitality.
         </p>
       </div>

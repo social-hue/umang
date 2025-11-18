@@ -10,7 +10,7 @@ export default function Founder() {
         {/* Left Side - Responsive YouTube Embed */}
         <motion.div
           className="w-full md:w-1/3"
-          initial={{ opacity: 0, x: -20 }}
+          initial={{ opacity: 0, x: -10 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.3 }}

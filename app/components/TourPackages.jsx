@@ -53,7 +53,7 @@ export default function TourPackages() {
               <span
                 className={`absolute top-0 right-0 z-10 
               ${tour.offer === "Booking Open !"
-                    ? "bg-blue-600/90 text-white" // Primary/Active Color
+                    ? "bg-green-600/90 text-white" // Primary/Active Color
                     : tour.offer === "Booking Closed"
                       ? "bg-red-700/90 text-white" // Warning/Closed Color
                       : "bg-zinc-700/90 text-zinc-200" // Default/Call Color
