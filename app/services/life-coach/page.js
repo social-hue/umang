@@ -53,7 +53,7 @@ export default function LifeCoach() {
                     {/* Left: Image */}
                     <div className="w-full md:w-1/2 relative h-64 md:h-80">
                         <Image
-                            src="/services/life-coach.png" // replace with your image
+                            src="/services/life-coach.webp" // replace with your image
                             alt="Rangoli"
                             fill
                             className="object-cover rounded-xl"

@@ -51,7 +51,7 @@ export default function TeamSection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
         viewport={{ once: true }}
-        className="text-center text-lg text-[#667085] max-w-xl mx-12 md:mx-auto mb-6"
+        className="text-center text-md text-[#667085] max-w-xl mx-12 md:mx-auto mb-6"
       >
         Our philosophy is simple - hire a team of diverse, passionate people and foster a culture
         that empowers you to do your best work.

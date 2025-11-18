@@ -16,7 +16,7 @@ export default function AboutFounder() {
           <h1 className="text-3xl md:text-[40px] font-bold text-zinc-800 mb-4 text-left">
             About Umang Living
           </h1>
-          <p className="text-gray-700 text-lg leading-relaxed mb-3">
+          <p className="text-gray-700 text-md leading-relaxed mb-3">
             At Umang Living, we are committed to redefining aging by
             creating spaces where the 55+ generation can live with
             dignity, joy, and a sense of belonging. Specializing in

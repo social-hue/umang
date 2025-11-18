@@ -1,8 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 import { Plane, Building2, MapPin, Compass } from "lucide-react";
-// import { useState } from "react";
-// import BookingModal from "./BookingModal";
 import Link from "next/link";
 
 export default function TourPackages() {
@@ -41,14 +39,6 @@ export default function TourPackages() {
     }
   ];
 
-  // const [isModalOpen, setIsModalOpen] = useState(false);
-  // const [selectedTour, setSelectedTour] = useState(null);
-
-  // const handleEnquireClick = (tour) => {
-  //   setSelectedTour(tour.route);
-  //   setIsModalOpen(true);
-  // };
-
   return (
     <section className="px-6">
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
@@ -61,8 +51,16 @@ export default function TourPackages() {
             <div className="relative h-48 overflow-hidden">
               {/* 🏷️ Special Offer Tag */}
               <span
-                className={`absolute top-3 left-0 ${tour.offer === "Booking Open !" ? "bg-green-700" : "bg-zinc-500"
-                  } text-white text-[12px] font-semibold px-3 py-2 border border-white rounded-r-full shadow-md`}
+                className={`absolute top-0 right-0 z-10 
+              ${tour.offer === "Booking Open !"
+                    ? "bg-blue-600/90 text-white" // Primary/Active Color
+                    : tour.offer === "Booking Closed"
+                      ? "bg-red-700/90 text-white" // Warning/Closed Color
+                      : "bg-zinc-700/90 text-zinc-200" // Default/Call Color
+                  } 
+              text-[13px] font-bold uppercase px-4 py-1.5 
+              rounded-bl-xl shadow-lg transform translate-y-0
+            `}
               >
                 {tour.offer}
               </span>
@@ -97,8 +95,8 @@ export default function TourPackages() {
                   href={tour.offer === "Booking Closed" || tour.offer === "Call For Booking" ? "#" : `/services/travel/${tour.slug}`}
                   className={`flex-1 text-sm py-2 rounded-sm text-center transition
     ${tour.offer === "Booking Closed" || tour.offer === "Call For Booking"
-                      ? "bg-red-600 text-white cursor-not-allowed pointer-events-none"
-                      : "bg-red-600 text-white hover:bg-orange-700"
+                      ? "bg-red-700/90 text-white cursor-not-allowed pointer-events-none"
+                      : "bg-red-700/90 text-white hover:bg-orange-700"
                     }`}
                 >
                   Get Details
@@ -114,12 +112,6 @@ export default function TourPackages() {
           </motion.div>
         ))}
       </div>
-      {/* 
-      <BookingModal
-        open={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        tourname={selectedTour}
-      /> */}
     </section>
   );
 }

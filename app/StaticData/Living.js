@@ -1,7 +1,7 @@
 export const facilities = [
   {
     id: 1,
-    icon: "/facilities/townships.jpg",
+    icon: "/facilities/townships.webp",
     title: "Townships",
     tagline: "Discover senior communities across 75+ cities. A safe and connected place to truly belong.",
     accent: "text-zinc-800",
@@ -25,7 +25,7 @@ export const facilities = [
   },
   {
     id: 4,
-    icon: "/facilities/Financial.jpg",
+    icon: "/facilities/Financial.webp",
     title: "Financial Consulting",
     tagline: "Empowering seniors with expert financial guidance for a secure, & worry-free future",
     accent: "text-zinc-800",
@@ -33,7 +33,7 @@ export const facilities = [
   },
   {
     id: 5,
-    icon: "/facilities/life-coach.png",
+    icon: "/facilities/life-coach.webp",
     title: "Life Coach",
     tagline: "Guiding seniors toward purpose, balance, and emotional fulfillment in every stage of life.",
     accent: "text-zinc-800",
@@ -65,7 +65,7 @@ export const facilities = [
   },
   {
     id: 8,
-    icon: "/facilities/Financial.jpg",
+    icon: "/facilities/Financial.webp",
     title: "Financial Consulting",
     tagline: "Empowering seniors with expert financial guidance for a secure, independent and worry-free future",
     accent: "text-zinc-800",

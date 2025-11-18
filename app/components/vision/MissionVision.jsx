@@ -28,7 +28,7 @@ export default function MissionVision() {
   }, [hasPlayed]);
 
   return (
-    <section className="main_width bg-white py-4 mb-8 overflow-hidden">
+    <section className="main_width bg-white py-3 mb-8 overflow-hidden">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
         {/* Right - Text Content */}
         <motion.div
@@ -42,12 +42,12 @@ export default function MissionVision() {
             Our Mission & Vision
           </h2>
           <div className="space-y-5 leading-relaxed text-gray-700">
-            <p className="text-lg">
+            <p className="text-md">
               <span className="font-semibold text-[#e60076]">Mission :</span>{" "}
               Set the gold standard for senior living in India - where every
               elder lives with dignity, safety and joy.
             </p>
-            <p className="text-lg">
+            <p className="text-md">
               <span className="font-semibold text-[#e60076]">Vision :</span>{" "}
               Build purpose-designed communities that integrate healthcare,
               culture, and everyday convenience; enable family peace of mind

@@ -112,7 +112,7 @@ export default function FinancialConsulting() {
       <section className="mb-16 md:mx-10 flex flex-col md:flex-row items-center gap-6">
       <div className="w-full md:w-1/2 relative h-64 md:h-80">
         <Image
-          src="/services/Financial.jpg" // replace with your image
+          src="/services/Financial.webp" // replace with your image
           alt="Finance"
           fill
           className="object-cover rounded-xl"
