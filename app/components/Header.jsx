@@ -57,7 +57,7 @@ export default function Header() {
         {/* Left: Logo */}
         <Link href="/" className="flex-shrink-0">
           <Image
-            src="/logo.png"
+            src="/compressed_logo.webp"
             alt="Umang Living"
             width={200}
             height={50}
@@ -251,7 +251,7 @@ export default function Header() {
       >
         <div className="flex items-center justify-between bg-white px-4 sm:px-6 py-3">
           <Image
-            src="/logo.png"
+            src="/compressed_logo.webp"
             alt="Umang_logo"
             width={125}
             height={45}

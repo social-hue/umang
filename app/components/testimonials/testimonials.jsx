@@ -5,7 +5,7 @@ import { FaStar } from "react-icons/fa";
 const testimonials = [
   {
     text: "Since joining Umang Living, I feel more active and engaged than ever. The staff truly cares about our well being.  A truly talented and dedicated team, highly recommend them for anyone.",
-    img: "/boy.png",
+    img: "/boy.webp",
     name: "Mr. Suresh Jha",
     rating: 5,
   },
