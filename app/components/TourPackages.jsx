@@ -5,12 +5,12 @@ import Link from "next/link";
 
 export default function TourPackages() {
   const tours = [
-    {
+    {   
       route: "Delhi - Ayodhya - Prayagraj - Banaras",
-      title: "Ramayana Trail",
+      title: "Ramayana Trail (Live)",
       duration: "14D/13N",
-      image: "/travel/ganga.jfif",
-      offer: "Booking Open !",
+      image: "/travel/ganga.webp",
+      offer: "Booking Open!",
       slug: "delhi-ayodhya-varanasi-tour"
     },
     {
@@ -52,13 +52,13 @@ export default function TourPackages() {
               {/* 🏷️ Special Offer Tag */}
               <span
                 className={`absolute top-0 right-0 z-10 
-              ${tour.offer === "Booking Open !"
+              ${tour.offer === "Booking Open!"
                     ? "bg-green-600/90 text-white" // Primary/Active Color
                     : tour.offer === "Booking Closed"
-                      ? "bg-red-700/90 text-white" // Warning/Closed Color
+                      ? "bg-zinc-700/90 text-white" // Warning/Closed Color
                       : "bg-zinc-700/90 text-zinc-200" // Default/Call Color
                   } 
-              text-[13px] font-bold uppercase px-4 py-1.5 
+              text-[13px] font-semibold uppercase px-3 py-1 
               rounded-bl-xl shadow-lg transform translate-y-0
             `}
               >
