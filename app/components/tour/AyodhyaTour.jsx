@@ -61,7 +61,7 @@ export default function AyodhyaTour() {
                                 <div className="flex items-center gap-6 text-slate-600 text-md md:text-base mb-3">
                                     <div className="flex items-center gap-2">
                                         <CalendarDays size={18} className="text-sky-500" />
-                                        <span>This December</span>
+                                        <span>6th December, 2025</span>
                                     </div>
                                     <div className="flex items-center gap-2">
                                         <Sun size={18} className="text-yellow-500" />
