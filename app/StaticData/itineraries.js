@@ -4,7 +4,7 @@ export const itineraries = {
       duration: "6 Nights / 7 Days",
       location: "Uttar Pradesh",
       pace: "Moderate",
-      image: "/travel/ganga.jfif",
+      image: "/travel/ganga.webp",
       description:
         "Soulful temples, river aartis, heritage lanes and serene boat rides. Smartly paced for comfortable travel and deep local experiences.",
   
