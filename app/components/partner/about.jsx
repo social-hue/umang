@@ -2,13 +2,13 @@
 import { Building2, HeartHandshake, Network, Star } from "lucide-react";
 import { motion } from "framer-motion";
 import Button from "./Button";
-import FranchisePage from "../franchise";
+// import FranchisePage from "../franchise";
 
 export default function PartnerPage() {
   return (
     <section className="py-8">
       {/* Entire section wrapped in one motion container */}
-      <FranchisePage />
+      {/* <FranchisePage /> */}
       <motion.div
         initial={{ opacity: 1 }}
         whileInView={{ opacity: 1 }}
@@ -17,7 +17,7 @@ export default function PartnerPage() {
         className="space-y-12"
       >
         {/* HERO SECTION */}
-        {/* <div className="max-w-6xl mx-auto text-center mb-4 md:mb-10">
+        <div className="max-w-6xl mx-auto text-center mb-4 md:mb-10">
           <h1 className="text-3xl md:text-4xl font-bold text-zinc-800 mb-3">
             Partner with Umang Living - You Build, We Run & Manage
           </h1>
@@ -26,7 +26,7 @@ export default function PartnerPage() {
             end-to-end <strong>operations, sales, marketing,</strong> and{" "}
             <strong>property management</strong> for trusted retirement homes.
           </p>
-        </div> */}
+        </div>
         
         {/* WHY PARTNER WITH US */}
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-6 md:gap-10 mb-12">
