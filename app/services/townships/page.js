@@ -62,7 +62,7 @@ export default function Townships() {
       {/* Right: Text */}
       <div className="w-full md:w-1/2 text-gray-700">
         <h2 className="text-2xl font-bold mb-4">Communities Designed for Senior Living</h2>
-        <p className="text-lg leading-relaxed">
+        <p className="text-md leading-relaxed">
         Our senior living townships are carefully designed to create a safe, vibrant, and inclusive environment where every resident feels at home. These communities go beyond just housing—they are thoughtfully planned with landscaped gardens, walking paths, recreation areas, wellness centers, and dining facilities, all tailored to the needs of those over 55. Here, you can enjoy your independence while knowing that round-the-clock assistance is always available if needed. Surrounded by like-minded neighbors and a warm, caring atmosphere, our townships make it easier to build friendships, share experiences, and truly celebrate this new chapter of life.
         </p>
       </div>

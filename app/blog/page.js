@@ -43,7 +43,7 @@ export const generateMetadata = () => {
 export default function Blog() {
   return (
     <>
-      <Banner title={"Blog"} bgImage={"/banner/blog-banner.webp"}  />
+      <Banner title={"Blog"} bgImage={"/banner/home-banner-4.webp"}  />
       <div className="relative overflow-hidden py-6">
         <BlogGrid />
       </div>

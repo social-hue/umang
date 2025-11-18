@@ -58,7 +58,7 @@ export default function Stay() {
           {/* Right: Text */}
           <div className="w-full md:w-1/2 text-gray-700">
             <h2 className="text-2xl font-bold mb-4">Comfortable and Secure Senior Stays</h2>
-            <p className="text-lg leading-relaxed">
+            <p className="text-md leading-relaxed">
               Whether you are looking for a short-term stay, a seasonal break, or a long-term home, our senior stays are designed to provide maximum comfort, security, and peace of mind. Each accommodation blends modern convenience with homelike warmth, offering fully furnished rooms, nutritious meals, and attentive housekeeping. For those who require additional assistance, we also provide personalized care and support while ensuring dignity and independence are respected at all times. Our goal is to make every stay worry-free for both residents and their families, so you can focus on living joyfully without the stress of managing daily routines.
             </p>
           </div>

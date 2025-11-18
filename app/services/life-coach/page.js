@@ -53,7 +53,7 @@ export default function LifeCoach() {
                     {/* Left: Image */}
                     <div className="w-full md:w-1/2 relative h-64 md:h-80">
                         <Image
-                            src="/services/life-coach.png" // replace with your image
+                            src="/services/life-coach.webp" // replace with your image
                             alt="Rangoli"
                             fill
                             className="object-cover rounded-xl"
@@ -62,7 +62,7 @@ export default function LifeCoach() {
                     {/* Right: Text */}
                     <div className="w-full md:w-1/2 text-gray-700">
                         <h2 className="text-2xl font-bold mb-4">Empowering Seniors to Live with Purpose and Joy</h2>
-                        <p className="text-lg leading-relaxed">
+                        <p className="text-md leading-relaxed">
                             Our Life Coach for Senior Citizens service is designed to help elders rediscover purpose, joy, and emotional balance in their golden years. Through thoughtful one-on-one sessions, our certified life coaches guide seniors in setting meaningful goals, nurturing self-confidence, and embracing change with positivity. Whether it’s adjusting to retirement, coping with loneliness, or reigniting old passions, we provide a safe, compassionate space for reflection and growth. It’s not just about counseling - it’s about empowering seniors to lead happier, more fulfilling lives every single day.
                         </p>
                     </div>

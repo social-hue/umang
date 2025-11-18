@@ -98,7 +98,7 @@ export const generateMetadata = () => {
 export default function LegalConsultation() {
   return (
     <>
-      <Banner title={"Legal Consultation"} bgImage={"/banner/legal-banner-1.jpg"}   />
+      <Banner title={"Legal Consultation"} bgImage={"/banner/legal-banner-2.webp"}   />
       <div className="relative flex justify-center">
       <Image
           src="/coming-soon1.png" // replace with your image
@@ -122,7 +122,7 @@ export default function LegalConsultation() {
       {/* Right: Text */}
       <div className="w-full md:w-1/2 text-zinc-800">
         <h2 className="text-2xl md:text-3xl font-bold mb-4">Trusted Legal Guidance for Seniors</h2>
-        <p className="text-lg leading-relaxed">
+        <p className="text-md leading-relaxed">
         Legal matters can often feel overwhelming, especially when it comes to property, inheritance, or retirement-related documentation. Our trusted legal advisors specialize in assisting seniors with clarity and compassion. Whether you are preparing a will, managing property transfers, or navigating complex paperwork, we ensure the process is transparent, secure, and stress-free. Our consultations are designed to empower you with knowledge and peace of mind, helping you make informed decisions to protect your rights and secure your legacy. With professional guidance just a step away, you can rest assured knowing your legal affairs are in safe hands.
         </p>
       </div>

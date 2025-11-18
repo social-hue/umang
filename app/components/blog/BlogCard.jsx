@@ -35,7 +35,7 @@ export const BlogCard = ({
           {categories.map((cat) => (
             <span
               key={cat}
-              className="uppercase text-md font-semibold text-white bg-teal-700/70 px-3 py-0.5 rounded-sm tracking-wide"
+              className="uppercase text-sm text-white bg-teal-700/70 px-3 py-0.5 rounded-sm tracking-wide"
             >
               {cat}
             </span>

@@ -8,10 +8,10 @@ import TourPackages from "./TourPackages";
 export default function CharDhamSection() {
 
   const featuresRef = useRef(null);
-  const featuresInView = useInView(featuresRef, { once: true, margin: "-60px" });
+  const featuresInView = useInView(featuresRef, { once: true, margin: "-20px" });
 
   const fadeUp = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 10 },
     visible: {
       opacity: 1,
       y: 0,
@@ -235,7 +235,7 @@ export default function CharDhamSection() {
           <h2 className="text-zinc-800 text-3xl mb-3 md:text-[38px] font-bold">
             Explore Our Curated Tours <ArrowRight className="inline-block" size={28} />
           </h2>
-          <p className="max-w-3xl mb-7 mx-auto text-lg text-zinc-600">
+          <p className="max-w-3xl mb-8 mx-auto text-lg text-zinc-600">
             From misty mountains to golden beaches - explore destinations that capture the spirit, color & charm of India's incredible diversity
           </p>
           <TourPackages />
@@ -308,7 +308,7 @@ export default function CharDhamSection() {
         </div>
         <div className="py-8 md:mb-8 grid md:grid-cols-[40%_1fr] xl:grid-cols-[50%_1fr] gap-8 md:gap-0">
           <div className="flex items-center justify-center">
-            <img src="/mapp.png" alt="map" loading="lazy" decoding="async" width={340} height={420} />
+            <img src="/mappp.webp" alt="map" loading="lazy" decoding="async" width={340} height={420} />
           </div>
           <div className="flex flex-col justify-center items-center md:justify-start md:items-start">
             <div className="bg-white border-none w-[92%] md:w-full max-w-lg p-2 md:p-6 relative rounded-sm text-zinc-800">

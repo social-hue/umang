@@ -39,7 +39,7 @@ export default function FranchisePage() {
   return (
     <>
       {/* HERO */}
-      <header className="py-4 relative bg-white/60 backdrop-blur-sm md:mb-14">
+      <header className="py-4 relative bg-white/60 backdrop-blur-sm md:mb-10">
         <div className="mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="space-y-6">
             <h1 className="text-3xl md:text-4xl lg:text-[44px] font-extrabold leading-tight text-slate-900">Make a Difference – Become a Franchise Partner with <span className="text-amber-600">Umang Living</span></h1>
@@ -47,7 +47,7 @@ export default function FranchisePage() {
 
             <div className="mt-4 flex items-start gap-4">
               <a href="#franchise-form" className="inline-flex items-center px-5 py-3 rounded-2xl bg-amber-600 text-white font-medium shadow-lg hover:shadow-xl transition">Enquire Now</a>
-              <a href="/umang-franchise-brochure.pdf" download className="inline-flex items-center px-5 py-3 rounded-2xl border border-slate-200 text-slate-800 bg-white hover:bg-slate-50 transition">Download Franchise Brochure</a>
+              <a href="/umang-franchise-brochure.pdf" download className="inline-flex items-center px-5 py-3 rounded-2xl border border-slate-300 text-slate-800 bg-white hover:bg-slate-50 transition">Download Franchise Brochure</a>
             </div>
             {/* Key numbers */}
             <div className="mt-6 flex flex-wrap gap-4">
@@ -115,7 +115,7 @@ export default function FranchisePage() {
         </section>
 
         {/* Why Partner */}
-        <section className="bg-white rounded-2xl md:mb-12">
+        <section className="bg-white rounded-2xl mb-12">
           <h2 className="text-2xl font-semibold mb-4">Why Become an Umang Living Franchise Partner?</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <Benefit title="Strong Brand Credibility" desc="Stand out with a trusted name known for innovation and excellence in senior living and elder care." />
@@ -177,7 +177,7 @@ export default function FranchisePage() {
 
         {/* Final CTA & Form */}
         <section className="rounded-2xl p-8 bg-gradient-to-r from-white to-amber-50 shadow-md md:mb-16" id="franchise-form">
-          <div className="max-w-3xl mx-auto">
+          <div className="mx-auto">
             <h2 className="text-2xl font-semibold mb-2">Begin Your Franchise Journey with Umang Living</h2>
             <p className="text-slate-700 mb-6">A meaningful business opportunity with strong demand, high profitability, and social impact.</p>
 
@@ -225,7 +225,7 @@ export default function FranchisePage() {
             </form>
           </div>
         </section>
-      </main>
+      </main>  
     </>          
   );
 }
@@ -276,7 +276,7 @@ function Step({ num, title, items }){
         <div className="w-9 h-9 rounded-full bg-amber-600 text-white flex items-center justify-center font-bold">{num}</div>
         <div className="text-md font-semibold">{title}</div>
       </div>
-      <ul className="text-slate-600 text-sm space-y-1">
+      <ul className="text-slate-600 text-md space-y-1">
         {items.map((it, idx) => <li key={idx}>• {it}</li>)}
       </ul>
     </div>

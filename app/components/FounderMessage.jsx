@@ -8,7 +8,7 @@ export default function AboutFounder() {
         {/* Right Side - Content */}
         <motion.div
           className="mt-4 w-full flex flex-col justify-center"
-          initial={{ opacity: 0, x: 20 }}
+          initial={{ opacity: 0, x: 10 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -16,7 +16,7 @@ export default function AboutFounder() {
           <h1 className="text-3xl md:text-[40px] font-bold text-zinc-800 mb-4 text-left">
             About Umang Living
           </h1>
-          <p className="text-gray-700 text-lg leading-relaxed mb-3">
+          <p className="text-gray-700 text-md leading-relaxed mb-3">
             At Umang Living, we are committed to redefining aging by
             creating spaces where the 55+ generation can live with
             dignity, joy, and a sense of belonging. Specializing in
