@@ -273,7 +273,7 @@ technological hurdles" />
                   name="name"
                   value={form.name}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-lg border border-slate-200 p-3"
+                  className="mt-1 block w-full text-slate-700 rounded-lg border border-slate-300 p-3"
                   placeholder="Your full name"
                 />
               </div>
@@ -284,7 +284,7 @@ technological hurdles" />
                   name="mobile"
                   value={form.mobile}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-lg border border-slate-200 p-3"
+                  className="mt-1 block w-full text-slate-700 rounded-lg border border-slate-300 p-3"
                   placeholder="+91 98XXXXXXX"
                 />
               </div>
@@ -295,7 +295,7 @@ technological hurdles" />
                   name="email"
                   value={form.email}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-lg border border-slate-200 p-3"
+                  className="mt-1 block w-full text-slate-700 rounded-lg border border-slate-300 p-3"
                   placeholder="name@example.com"
                 />
               </div>
@@ -306,7 +306,7 @@ technological hurdles" />
                   name="city"
                   value={form.city}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-lg border border-slate-200 p-3"
+                  className="mt-1 block w-full  text-slate-700 rounded-lg border border-slate-300 p-3"
                   placeholder="City"
                 />
               </div>
@@ -316,13 +316,13 @@ technological hurdles" />
                   Would you like to invest ₹4 lakh in a high-impact senior care opportunity?
                 </label>
                 <div className="mt-2 flex items-center gap-2">
-                  <label className={`px-4 py-2 rounded-lg border cursor-pointer 
+                  <label className={`px-4 py-2 text-slate-700 rounded-lg border cursor-pointer 
             ${form.investL === "yes" ? "bg-amber-600 text-slate-700" : "bg-white"}`}>
                     <input type="radio" name="investL" value="yes" className="hidden"
                       checked={form.investL === "yes"} onChange={handleChange} /> Yes
                   </label>
 
-                  <label className={`px-4 py-2 rounded-lg border cursor-pointer 
+                  <label className={`px-4 py-2 text-slate-700 rounded-lg border cursor-pointer 
             ${form.investL === "no" ? "bg-amber-600 text-slate-700" : "bg-white"}`}>
                     <input type="radio" name="investL" value="no" className="hidden"
                       checked={form.investL === "no"} onChange={handleChange} /> No
