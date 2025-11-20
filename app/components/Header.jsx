@@ -67,7 +67,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <ul className="hidden lg:flex items-center space-x-6 xl:space-x-8 text-[16px] 2xl:text-[18px]">
+        <ul className="hide-below-1160 lg:flex items-center space-x-6 xl:space-x-8 text-[16px] 2xl:text-[18px]">
           {navItems.map(({ label, href }) => {
             if (label === "Services") {
               return (
@@ -219,7 +219,7 @@ export default function Header() {
         </ul>
 
         {/* Mobile Buttons */}
-        <div className="flex items-center gap-2 lg:hidden">
+        <div className="flex items-center gap-2 hide-above-1160">
           <a
             href="tel:18002028704"
             className="flex items-center gap-2 px-3 py-1 bg-red-700 text-white text-sm font-semibold rounded-md border-2 border-transparent hover:bg-white hover:text-red-700 hover:border-red-700 transition"

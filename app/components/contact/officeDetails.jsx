@@ -26,8 +26,8 @@ export default function ContactPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-zinc-800 mb-2">
           Get in touch with us
         </h1>
-        <p className="text-lg text-zinc-800 max-w-2xl mx-auto">
-          We're here to help you connect, collaborate, and grow with Umang Living.
+        <p className="text-lg text-zinc-800 max-w-3xl mx-auto">
+          We're here to help you connect, collaborate, and grow with Umang SCL Private Ltd.
         </p>
       </motion.div>
 
@@ -68,7 +68,7 @@ export default function ContactPage() {
           <div className="flex items-center gap-3 mb-2">
             <MapPin className="text-teal-700 w-6 h-6 stroke-[2.5]" />
             <h3 className="text-md font-semibold text-zinc-800">
-              Our Office{" "}
+              Corporate Office{" "}
               <span className="text-zinc-800 text-md">
                 | 10:00 AM - 6:00 PM (Mon - Sat)
               </span>

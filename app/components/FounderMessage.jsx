@@ -7,7 +7,7 @@ export default function AboutFounder() {
       <div className="container mx-auto flex flex-col xl:flex-row md:flex-row items-center md:items-start gap-10">
         {/* Right Side - Content */}
         <motion.div
-          className="mt-4 w-full flex flex-col justify-center"
+          className="w-full flex flex-col justify-center"
           initial={{ opacity: 0, x: 10 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}

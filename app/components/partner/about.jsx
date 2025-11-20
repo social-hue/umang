@@ -2,13 +2,12 @@
 import { Building2, HeartHandshake, Network, Star } from "lucide-react";
 import { motion } from "framer-motion";
 import Button from "./Button";
-// import FranchisePage from "../franchise";
+import FranchisePage from "../franchise";
 
 export default function PartnerPage() {
   return (
     <section className="py-8">
-      {/* Entire section wrapped in one motion container */}
-      {/* <FranchisePage /> */}
+      <FranchisePage />
       <motion.div
         initial={{ opacity: 1 }}
         whileInView={{ opacity: 1 }}
