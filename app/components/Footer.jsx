@@ -230,7 +230,7 @@ const Footer = () => {
               <div className="flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-6 text-zinc-900">
                 <p className="text-[13px] sm:text-[14px] md:text-[15px] text-center lg:text-left">
                   <span className="text-zinc-900 tracking-wide">
-                    © 2025 UMANG LIVING SCL Pvt Ltd.
+                    © 2025 UMANG SCL Pvt Ltd.
                   </span>
                 </p>
                 <p className="hidden md:flex items-center gap-2 text-[13px] sm:text-[14px] md:text-[15px] text-center lg:text-right">

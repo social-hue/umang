@@ -47,7 +47,7 @@ export default function MissionVision() {
               Set the gold standard for senior living in India - where every
               elder lives with dignity, safety and joy.
             </p>
-            <p className="text-md">
+            <p className="text-lg">
               <span className="font-semibold text-[#e60076]">Vision :</span>{" "}
               Build purpose-designed communities that integrate healthcare,
               culture, and everyday convenience; enable family peace of mind

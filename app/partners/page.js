@@ -1,6 +1,6 @@
-import Banner from "../components/Banner";
+// import Banner from "../components/Banner";
 import Community from "../components/Community";
-import PartnerPage from "../components/partner/about";
+import FranchisePage from "../components/franchise";
 import { seoData } from "../lib/seoMeta";
 
 export const generateMetadata = () => {
@@ -43,9 +43,9 @@ export const generateMetadata = () => {
 export default function Partners() {
   return (
     <>
-      <Banner title={"Partner with Us"} bgImage={"/banner/partner-banner-3.webp"} />
+      {/* <Banner title={"Partner with Us"} bgImage={"/banner/partner-banner-3.webp"} /> */}
       <div className="main_width relative overflow-hidden">
-      <PartnerPage />
+      <FranchisePage />
       </div>
       <Community />
     </>

@@ -152,6 +152,18 @@ input[type="date"]:valid::before {
   content: "";
 }
 
+@media (min-width: 1060px) {
+  .hide-above-1160 {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1059px) {
+  .hide-below-1160 {
+    display: none !important;
+  }
+}
+
 /* .swiper-pagination-bullet {
   width: 24px !important;
   height: 12px !important;
