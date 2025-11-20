@@ -181,7 +181,7 @@ export default function FranchisePage() {
         {/* Story Section */}
         <section className="grid lg:grid-cols-2 gap-8 items-center mb-12">
           <div className="space-y-4">
-            <h2 className="text-2xl font-semibold">Our Story – India’s First Multi-City Senior Care Community</h2>
+            <h2 className="text-2xl text-slate-800 font-semibold">Our Story – India’s First Multi-City Senior Care Community</h2>
             <p className="text-slate-700 leading-relaxed">Umang Living was created with a simple belief - life after 55 should be joyful, independent, and meaningful. We saw how scattered India’s senior care ecosystem was and decided to build a comprehensive, respectful, and love-driven support system for elders.</p>
 
             <ul className="mt-3 text-slate-700 space-y-2">
@@ -199,7 +199,7 @@ export default function FranchisePage() {
 
         {/* Why Partner */}
         <section className="bg-white rounded-2xl mb-12">
-          <h2 className="text-2xl font-semibold mb-4">Why Become an Umang Living Franchise Partner ?</h2>
+          <h2 className="text-2xl text-slate-900 font-semibold mb-4">Why Become an Umang Living Franchise Partner ?</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <Benefit title="Fast Growing Brand" desc="With Umang Living, you instantly establish a distinguished brand
 presence." />
@@ -218,7 +218,7 @@ technological hurdles" />
 
         {/* Steps to Start */}
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">How to Start Your Franchise Journey with Umang Living ?</h2>
+          <h2 className="text-2xl text-slate-900 font-semibold mb-4">How to Start Your Franchise Journey with Umang Living ?</h2>
           <div className="grid lg:grid-cols-5 gap-4 items-start">
             <Step num={1} title="Initial Application" items={["Submit an Application", "Introduction and Alignment", "Business Model Evaluation"]} />
             <Step num={2} title="Document Submit" items={["Provide Important Documents", "All the documents will be reviewed"]} />
@@ -242,7 +242,7 @@ technological hurdles" />
 
         {/* Testimonials & Media */}
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold mb-4">What Our Franchise Partners Say ?</h2>
+          <h2 className="text-2xl text-slate-900 font-semibold mb-4">What Our Franchise Partners Say ?</h2>
           <div className="grid md:grid-cols-3 gap-4">
             <Testimonial quote="Partnering with Umang Living gave us a credible brand and steady leads from day one." author="— Ankit, Franchise Partner" />
             <Testimonial quote="The training and SOPs made operations so much easier; support is top class." author="— Priya, Franchise Partner" />
@@ -251,7 +251,7 @@ technological hurdles" />
 
         {/* FAQ */}
         <section className="bg-white mt-8 mb-12">
-          <h2 className="text-2xl font-semibold mb-4">Need More Information ?</h2>
+          <h2 className="text-2xl text-slate-900 font-semibold mb-4">Need More Information ?</h2>
           <div className="grid md:grid-cols-2 gap-4">
             <FAQ q="What is the minimum investment?" a="Typically a starting investment of ₹4 Lakhs is expected for franchise onboarding. Exact figures depend on location and model." />
             <FAQ q="How quickly will I see returns?" a="Our model is designed to help you start earning from day one. With a robust, transparent system built on trust and operational security" />
@@ -263,7 +263,7 @@ technological hurdles" />
         {/* Final CTA & Form */}
         <section className="rounded-2xl border-0 border-slate-200 p-6 bg-gradient-to-r from-amber-50 to-amber-50 shadow-md mb-10 md:mb-16 scroll-mt-28" id="franchise-form">
           <div className="mx-auto">
-            <h2 className="text-2xl font-semibold mb-2">Begin Your Franchise Journey with Umang Living</h2>
+            <h2 className="text-2xl text-slate-900 font-semibold mb-2">Begin Your Franchise Journey with Umang Living</h2>
             <p className="text-slate-700 mb-6">A meaningful business opportunity with strong demand, high profitability, and social impact.</p>
             <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <input type="text" name="honeypot" className="hidden" value={form.honeypot} onChange={handleChange} />
@@ -317,13 +317,13 @@ technological hurdles" />
                 </label>
                 <div className="mt-2 flex items-center gap-2">
                   <label className={`px-4 py-2 rounded-lg border cursor-pointer 
-            ${form.investL === "yes" ? "bg-amber-600 text-white" : "bg-white"}`}>
+            ${form.investL === "yes" ? "bg-amber-600 text-slate-700" : "bg-white"}`}>
                     <input type="radio" name="investL" value="yes" className="hidden"
                       checked={form.investL === "yes"} onChange={handleChange} /> Yes
                   </label>
 
                   <label className={`px-4 py-2 rounded-lg border cursor-pointer 
-            ${form.investL === "no" ? "bg-amber-600 text-white" : "bg-white"}`}>
+            ${form.investL === "no" ? "bg-amber-600 text-slate-700" : "bg-white"}`}>
                     <input type="radio" name="investL" value="no" className="hidden"
                       checked={form.investL === "no"} onChange={handleChange} /> No
                   </label>
@@ -341,7 +341,7 @@ technological hurdles" />
                   {loading ? "Sending..." : "Submit Enquiry"}
                 </button>
 
-                <a href="/Franchise_Brochure.pdf" download className="cursor-pointer px-4 py-2 rounded-lg border border-slate-200">
+                <a href="/Franchise_Brochure.pdf" download className="cursor-pointer text-slate-800 px-4 py-2 rounded-lg border border-slate-200">
                   Download Brochure
                 </a>
               </div>
@@ -427,7 +427,7 @@ function ServiceCard({ title }) {
 function Benefit({ title, desc }) {
   return (
     <div className="p-4 rounded-xl border border-slate-100 bg-white shadow-sm">
-      <h4 className="font-semibold mb-2">{title}</h4>
+      <h4 className="font-semibold text-slate-800 mb-2">{title}</h4>
       <p className="text-md text-slate-600">{desc}</p>
     </div>
   );
@@ -438,7 +438,7 @@ function Step({ num, title, items }) {
     <div className="p-4 md:p-3 md:min-h-[200px] rounded-xl bg-white border border-slate-100 shadow-sm">
       <div className="flex items-center gap-2 mb-2">
         <div className="w-8 h-8 rounded-full bg-amber-600 text-white flex items-center justify-center font-semibold">{num}</div>
-        <div className="text-md font-semibold">{title}</div>
+        <div className="text-md text-slate-800 font-semibold">{title}</div>
       </div>
       <ul className="text-slate-600 text-md space-y-1">
         {items.map((it, idx) => <li key={idx}>• {it}</li>)}
@@ -471,7 +471,7 @@ function Testimonial({ quote, author }) {
 function FAQ({ q, a }) {
   return (
     <div className="p-4 rounded-xl border shadow-sm border-slate-100 bg-white">
-      <h4 className="font-medium mb-1">{q}</h4>
+      <h4 className="font-medium text-slate-800 mb-1">{q}</h4>
       <p className="text-md text-slate-600">{a}</p>
     </div>
   );
