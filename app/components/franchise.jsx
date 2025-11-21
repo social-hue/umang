@@ -20,7 +20,6 @@ export default function FranchisePage() {
     mobile: "",
     email: "",
     city: "",
-    investL: "",
     honeypot: ""
   });
 
@@ -83,7 +82,6 @@ export default function FranchisePage() {
           mobile: "",
           email: "",
           city: "",
-          investL: "",
           honeypot: "",
         });
       } else {
@@ -261,7 +259,7 @@ technological hurdles" />
         </section>
 
         {/* Final CTA & Form */}
-        <section className="rounded-2xl border-0 border-slate-200 p-6 bg-gradient-to-r from-amber-50 to-amber-50 shadow-md mb-10 md:mb-16 scroll-mt-28" id="franchise-form">
+        <section className="rounded-2xl border-1 border-amber-200/60 p-6 bg-gradient-to-r from-amber-50 to-amber-50 shadow-md mb-10 md:mb-16 scroll-mt-28" id="franchise-form">
           <div className="mx-auto">
             <h2 className="text-2xl text-slate-900 font-semibold mb-2">Begin Your Franchise Journey with Umang Living</h2>
             <p className="text-slate-700 mb-6">A meaningful business opportunity with strong demand, high profitability, and social impact.</p>
@@ -311,7 +309,7 @@ technological hurdles" />
                 />
               </div>
 
-              <div className="sm:col-span-2">
+              {/* <div className="sm:col-span-2">
                 <label className="text-sm font-medium text-slate-700">
                   Would you like to invest ₹4 lakh in a high-impact senior care opportunity?
                 </label>
@@ -328,7 +326,7 @@ technological hurdles" />
                       checked={form.investL === "no"} onChange={handleChange} /> No
                   </label>
                 </div>
-              </div>
+              </div> */}
 
               <div className="sm:col-span-2 flex items-center justify-between gap-4 mt-2">
                 <button
@@ -371,7 +369,7 @@ technological hurdles" />
               {/* Buttons */}
               <div className="mt-5 flex flex-col gap-3">
                 <a
-                  href="/umang-franchise-form.pdf"
+                  href="/Franchise_Form.pdf"
                   download
                   className="block w-full text-center px-4 py-3 bg-amber-600 text-white rounded-lg font-medium hover:bg-amber-700 transition"
                 >
@@ -379,7 +377,7 @@ technological hurdles" />
                 </a>
 
                 <a
-                  href="/umang-sop.pdf"
+                  href="/SOP_SLA.pdf"
                   download
                   className="block w-full text-center px-4 py-3 bg-slate-800 text-white rounded-lg font-medium hover:bg-slate-900 transition"
                 >

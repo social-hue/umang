@@ -23,7 +23,6 @@ const PartnerFormSchema = new Schema(
     mobile: String,
     email: String,
     city: String,
-    investL: String,
     ip: String,
     userAgent: String,
   },
