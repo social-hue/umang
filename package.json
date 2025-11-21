@@ -4,14 +4,14 @@
   "private": true,
   "scripts": {
     "lint": "next lint",
-    "dev": "node server.js",
+    "dev": "next dev",
     "postbuild": "next-sitemap",
     "build": "next build --no-lint",
-    "start": "NODE_ENV=production node server.js"
+    "start": "next start"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.4",
-    "@heroicons/react": "^2.2.0",
+    "@heroicons/react": "^2.2.0",  
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
     "d3": "^7.9.0",

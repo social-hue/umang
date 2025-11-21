@@ -1,4 +1,4 @@
-import Banner from "../components/Banner";
+// import Banner from "../components/Banner";
 import { BlogGrid } from "../components/blog/BlogGrid";
 import Community from "../components/Community";
 import { seoData } from "../lib/seoMeta";
@@ -43,7 +43,7 @@ export const generateMetadata = () => {
 export default function Blog() {
   return (
     <>
-      <Banner title={"Blog"} bgImage={"/blog/blogbanner2.webp"}  />
+      {/* <Banner title={"Blog"} bgImage={"/blog/blogbanner2.webp"}  /> */}
       <div className="relative overflow-hidden py-6">
         <BlogGrid />
       </div>
