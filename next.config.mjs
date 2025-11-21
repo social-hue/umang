@@ -39,9 +39,6 @@ const nextConfig = {
 
   // Enable compression for faster load
   compress: true,
-
-  // Bundle optimizations
-  swcMinify: true,
 };
 
 export default nextConfig;
