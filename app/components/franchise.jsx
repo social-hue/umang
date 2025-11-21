@@ -106,7 +106,7 @@ export default function FranchisePage() {
             <p className="text-md leading-relaxed text-slate-700 max-w-xl">Join India&apos;s most trusted senior care brand with minimum investment and be part of a purpose-driven business improving lives across India. We offer Health, Lifestyle, Travel, Legal & Finance with a complete ecosystem for modern senior living.</p>
             <div className="mt-4 flex items-start gap-4">
               <a href="#franchise-form" className="inline-flex items-center px-5 py-3 rounded-2xl bg-amber-600 text-white font-medium shadow-lg hover:shadow-xl transition">Enquire Now</a>
-              <a href="/Franchise_Brochure.pdf" download className="inline-flex items-center px-5 py-3 rounded-2xl border border-slate-300 text-slate-800 bg-white hover:bg-slate-50 transition">Download Franchise Brochure</a>
+              <a href="/Franchise_Brochure.pdf" download className="inline-flex items-center px-5 py-3 rounded-2xl border border-slate-300 text-slate-800 bg-white hover:bg-slate-50 transition">Download Brochure</a>
             </div>
             {/* Key numbers */}
             <div className="mt-6 flex flex-wrap gap-4">
@@ -118,7 +118,7 @@ export default function FranchisePage() {
           <Link href="tel:18002028704">
             <div className="relative h-72 sm:h-96 lg:h-80 rounded-2xl overflow-hidden shadow-2xl cursor-pointer">
               <Image
-                src="/business-meet.webp"
+                src="/Scan_here.png"
                 alt="elderly community"
                 fill
                 className="object-cover"
@@ -332,14 +332,14 @@ technological hurdles" />
                 <button
                   type="submit"
                   disabled={loading}
-                  className={`cursor-pointer px-4 md:px-6  py-2 md:py-3 rounded-2xl bg-amber-600 text-white font-medium shadow 
+                  className={`cursor-pointer px-4 md:px-6  py-2 md:py-3 rounded-xl bg-amber-600 text-white font-medium shadow 
     transition-all duration-300 ${loading ? "opacity-70 cursor-not-allowed" : "hover:bg-amber-700"
                     }`}
                 >
                   {loading ? "Sending..." : "Submit Enquiry"}
                 </button>
 
-                <a href="/Franchise_Brochure.pdf" download className="cursor-pointer text-slate-800 px-4 py-2 rounded-lg border border-slate-200">
+                <a href="/Franchise_Brochure.pdf" download className="cursor-pointer text-slate-800 px-4 py-2 rounded-xl border border-slate-200">
                   Download Brochure
                 </a>
               </div>
