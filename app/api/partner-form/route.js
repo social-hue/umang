@@ -80,7 +80,6 @@ export async function POST(req) {
       mobile,
       email,
       city,
-      investL,
       honeypot,
       recaptchaToken
     } = body;
@@ -151,7 +150,6 @@ export async function POST(req) {
       mobile: sanitizeString(cleanedMobile),
       email: validator.normalizeEmail(email),
       city: sanitizeString(city),
-      investL: investL === "yes" ? "yes" : "no",
       ip,
       userAgent: req.headers.get("user-agent") || "Unknown",
     });
