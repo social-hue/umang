@@ -232,10 +232,10 @@ export default function CharDhamSection() {
       </motion.div> */}
         {/* Packages */}
         <div className="mb-12 md:mb-18 text-center">
-          <h2 className="text-zinc-800 text-3xl mb-3 md:text-[38px] font-bold">
+          <h2 className="text-zinc-800 text-3xl mb-3 md:text-[32px] font-bold">
             Explore Our Curated Tours <ArrowRight className="inline-block" size={28} />
           </h2>
-          <p className="max-w-3xl mb-8 mx-auto text-lg text-zinc-600">
+          <p className="max-w-3xl mb-8 mx-auto text-md text-zinc-600">
             From misty mountains to golden beaches - explore destinations that capture the spirit, color & charm of India's incredible diversity
           </p>
           <TourPackages />
@@ -299,10 +299,10 @@ export default function CharDhamSection() {
       </motion.div> */}
 
         <div className="text-center">
-          <h2 className="text-zinc-800 text-3xl md:text-[38px] font-bold mb-3">
+          <h2 className="text-zinc-800 text-3xl md:text-[32px] font-bold mb-3">
             Tailored Journeys for Timeless Souls
           </h2>
-          <p className="max-w-3xl mx-auto text-lg text-zinc-600">
+          <p className="max-w-3xl mx-auto text-md text-zinc-600">
             Discover journeys crafted around your comfort, interests, and dreams. Share your preferences, and we&apos;ll design a personalized travel experience made just for you.
           </p>
         </div>
