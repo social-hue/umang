@@ -45,7 +45,7 @@ export const generateMetadata = () => {
 export default function Contact() {
   return (
     <>
-      <Banner title={"Connect with Us"} bgImage={"/banner/contact-banner.webp"} />
+      {/* <Banner title={"Connect with Us"} bgImage={"/banner/contact-banner.webp"} /> */}
       <div className="relative overflow-hidden">
         <Grid />
         <ContactGrid />
