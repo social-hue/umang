@@ -4,13 +4,13 @@ import toast from "react-hot-toast";
 
 export default function AppointmentSection() {
   return (
-    <section className="bg-gradient-to-br from-zinc-100 to-zinc-200 py-16 px-6 md:px-12 lg:px-20">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <section className="bg-gradient-to-br from-zinc-100 to-zinc-200 py-14 px-6 md:px-12 lg:px-20">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 md:gap-12 items-center">
         <div className="space-y-6 text-center md:text-left">
           <h2 className="text-4xl md:text-5xl font-bold text-zinc-800 leading-tight">
             Book Your <span className="text-teal-700">Consultation</span> Today
           </h2>
-          <p className="text-zinc-600 text-lg max-w-md mx-auto md:mx-0">
+          <p className="text-zinc-700 text-lg max-w-md mx-auto md:mx-0">
             Get expert financial guidance and stress-free tax or investment planning with Umang Living’s trusted professionals.
           </p>
         </div>

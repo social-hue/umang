@@ -60,8 +60,8 @@ export default function ITRSection() {
   };
 
   return (
-    <section className="bg-[url(/id-banner.webp)] bg-cover py-12 px-4 sm:px-6 md:py-14 md:px-12 lg:px-16">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
+    <section className="bg-[url(/id-banner-1.jpg)] bg-cover py-12 px-4 sm:px-6 md:py-14 md:px-12 lg:px-16">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center">
         {/* Left Heading Section */}
         <div className="space-y-4 text-center md:text-left px-2 sm:px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-zinc-800 leading-tight">
@@ -87,7 +87,7 @@ export default function ITRSection() {
               onChange={(e) => setMembershipId(e.target.value)}
               type="text"
               placeholder="Enter Membership ID"
-              className="flex-1 min-w-0 bg-transparent rounded-full pl-4 sm:pl-6 pr-24 sm:pr-36 py-3 sm:py-4 text-white placeholder-white/80 focus:outline-none transition-all duration-300 text-sm sm:text-base backdrop-blur-lg"
+              className="flex-1 min-w-0 bg-transparent rounded-full pl-4 sm:pl-6 pr-24 sm:pr-36 py-3 sm:py-4 text-white placeholder-white/90 focus:outline-none transition-all duration-300 text-sm sm:text-base backdrop-blur-lg"
               inputMode="text"
               autoComplete="off"
               aria-invalid={false}
