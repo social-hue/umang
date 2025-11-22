@@ -115,18 +115,16 @@ export default function FranchisePage() {
               <Stat label="Care Network" value="Pan-India" />
             </div>
           </div>
-          <Link href="tel:18002028704">
-            <div className="relative h-72 sm:h-96 lg:h-80 rounded-2xl overflow-hidden shadow-2xl cursor-pointer">
+          <div className="relative h-72 sm:h-96 lg:h-80 rounded-2xl overflow-hidden shadow-2xl cursor-pointer">
               <Image
-                src="/Scan_here.png"
+                src="/Scan_here.webp"
                 alt="elderly community"
                 fill
                 className="object-cover"
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
-            </div>
-          </Link>
+          </div>
         </div>
       </header>
       <main className="mx-auto lg:px-8">
@@ -202,7 +200,7 @@ export default function FranchisePage() {
             <Benefit title="Fast Growing Brand" desc="With Umang Living, you instantly establish a distinguished brand
 presence." />
             <Benefit title="Profits" desc="We've done the groundwork,
-so you will see a faster return onyour investment. " />
+so you will see a faster return on your investment. " />
             <Benefit title="Expert Training" desc="We provide expert training to ensure you succeed from day one.
 " />
             <Benefit title="Marketing Support" desc="We provide successful marketing
@@ -259,7 +257,7 @@ technological hurdles" />
         </section>
 
         {/* Final CTA & Form */}
-        <section className="rounded-2xl border-1 border-amber-200/60 p-6 bg-gradient-to-r from-amber-50 to-amber-50 shadow-md mb-10 md:mb-16 scroll-mt-28" id="franchise-form">
+        <section className="rounded-2xl border-1 border-amber-200/60 p-6 bg-gradient-to-r from-amber-50 to-amber-50 shadow-md mb-10 md:mb-16 scroll-mt-32" id="franchise-form">
           <div className="mx-auto">
             <h2 className="text-2xl text-slate-900 font-semibold mb-2">Begin Your Franchise Journey with Umang Living</h2>
             <p className="text-slate-700 mb-6">A meaningful business opportunity with strong demand, high profitability, and social impact.</p>
