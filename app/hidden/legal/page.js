@@ -1,4 +1,3 @@
-import Banner from "../../components/Banner";
 import Community from "../../components/Community";
 import { seoData } from "../../lib/seoMeta";
 import LegalServices from "@/app/components/services/LegalServices";
@@ -42,7 +41,6 @@ export const generateMetadata = () => {
 export default function LegalConsultation() {
   return (
     <>
-      <Banner title={"Legal Consultation"} bgImage={"/banner/legal-banner-2.jpg"}   />
       <div className="relative overflow-hidden ">
       <LegalServices />
       </div>
