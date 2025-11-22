@@ -1,5 +1,5 @@
 import FinancialServices from "@/app/components/services/FinancialServices";
-import Banner from "../../components/Banner";
+// import Banner from "../../components/Banner";
 import Community from "../../components/Community";
 import { seoData } from "../../lib/seoMeta";
 
@@ -43,7 +43,7 @@ export const generateMetadata = () => {
 export default function FinancialConsulting() {
   return (
     <>
-      <Banner title={"Financial Consulting"} bgImage={"/banner/finance-banner.webp"}  />
+      {/* <Banner title={"Financial Consulting"} bgImage={"/banner/finance-banner.webp"}  /> */}
       <div className="relative overflow-hidden">
       <FinancialServices />
       </div>

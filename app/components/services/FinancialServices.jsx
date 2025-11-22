@@ -21,7 +21,7 @@ export default function FinancialServices() {
       <div className="py-6 md:py-12">
         <ITRSection />
       </div>
-      <div className="py-4 text-center">
+      {/* <div className="py-4 text-center">
       <h2 className="text-3xl md:text-4xl font-bold mb-4 text-zinc-800">
         Ready to file or plan ?
       </h2>
@@ -48,12 +48,10 @@ export default function FinancialServices() {
           Book a free 30-min review today.
         </span>
       </p>
-    </div>
-    <div className="py-10">
-        <AppointmentSection />
-    </div>
+    </div> */}
+      <AppointmentSection />
       {/* FAQs */}
-      <div className="mt-8 md:mt-10 mb-8 max-w-5xl mx-4 md:mx-auto">
+      <div className="mt-8 md:mt-10 mb-4 max-w-5xl mx-4 md:mx-auto">
       <FAQFinance />
       </div>
     </section>

@@ -5,19 +5,19 @@ import toast from "react-hot-toast";
 // LegalFormSection renders the layout and uses LegalForm for the actual form
 export default function LegalFormSection() {
   return (
-    <section className="bg-gradient-to-br from-zinc-100 to-zinc-200 py-16 px-6 md:px-12 lg:px-20">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <section className="bg-[url(/banner/booking-banner-3.jpg)] bg-cover py-16 px-6 md:px-12 lg:px-20">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 md:gap-12 items-center">
         {/* Left Heading Section */}
         <div className="space-y-6 text-center md:text-left">
           <h2 className="text-4xl md:text-5xl font-bold text-zinc-800 leading-tight">
             Book Your <span className="text-teal-700">Consultation</span> Today
           </h2>
-          <p className="text-zinc-600 text-lg max-w-md mx-auto md:mx-0">
+          <p className="text-zinc-800 text-lg max-w-md mx-auto md:mx-0">
             Get expert legal guidance and clear, practical advice from our experienced team.
           </p>
         </div>
         {/* Right Form Section */}
-        <div className="bg-white shadow-lg rounded-md p-6 sm:p-8">
+        <div className="bg-white shadow-lg rounded-md p-6">
           <LegalForm />
         </div>
       </div>

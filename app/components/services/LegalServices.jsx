@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import FAQLegal from "../faq/FAQLegal";
-import { ArrowRight } from "lucide-react";
+// import { ArrowRight } from "lucide-react";
 import LegalFormSection from "../Form/LegalFormSection";
 import LegalServiceSection from "../LegalServices";
 
