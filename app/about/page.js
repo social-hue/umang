@@ -2,7 +2,7 @@ import Founder from "../components/about/Founder";
 // import Banner from "../components/Banner";
 import Community from "../components/Community";
 import FounderMessage from "../components/FounderMessage";
-import TeamSection from "../components/team/TeamSection";
+// import TeamSection from "../components/team/TeamSection";
 import MissionVision from "../components/vision/MissionVision";
 import { seoData } from "../lib/seoMeta";
 
@@ -50,7 +50,7 @@ export default function About() {
       <FounderMessage/>
       <Founder />
       <MissionVision />
-      <TeamSection />
+      {/* <TeamSection /> */}
       <Community />
     </>
   );

@@ -63,7 +63,7 @@ export default function ServicesSection() {
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`w-full text-left px-5 py-4 text-sm md:text-base transition-all ${
+            className={`w-full text-left px-5 py-4 text-md md:text-base transition-all ${
               activeTab === tab
                 ? "bg-white border-l-4 border-blue-500 text-gray-900 font-semibold"
                 : "text-gray-600 hover:bg-gray-100"

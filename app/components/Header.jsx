@@ -250,6 +250,7 @@ export default function Header() {
         }`}
       >
         <div className="flex items-center justify-between bg-white px-4 sm:px-6 py-3">
+          <Link href="/">
           <Image
             src="/compressed_logo.webp"
             alt="Umang_logo"
@@ -257,6 +258,7 @@ export default function Header() {
             height={45}
             className="object-contain"
           />
+          </Link>
           <button
             onClick={() => setOpen(false)}
             className="p-2 rounded-md bg-green-100 text-green-700"
