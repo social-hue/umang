@@ -50,7 +50,7 @@ export default function About() {
       <FounderMessage/>
       <Founder />
       <MissionVision />
-      <TeamSection />
+      {/* <TeamSection /> */}
       <Community />
     </>
   );
