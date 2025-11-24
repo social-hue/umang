@@ -97,7 +97,7 @@ const Footer = () => {
 
             {/* Quick Links */}
             <div>
-              <h6 className="text-zinc-900 text-[16px] sm:text-[17px]  mb-5 tracking-wider uppercase border-b border-zinc-700/50 pb-3">
+              <h6 className="text-zinc-900 text-[16px] sm:text-[17px] font-semibold mb-3 tracking-wider uppercase">
                 Quick Links
               </h6>
               <ul className="space-y-3">
@@ -116,7 +116,7 @@ const Footer = () => {
 
             {/* Support Links */}
             <div>
-              <h6 className="text-zinc-900 text-[16px] sm:text-[17px]  mb-5 tracking-wider uppercase border-b border-zinc-700/50 pb-3">
+              <h6 className="text-zinc-900 text-[16px] sm:text-[17px] font-semibold  mb-3 tracking-wider uppercase">
                 Support
               </h6>
               <ul className="space-y-3">
@@ -124,7 +124,7 @@ const Footer = () => {
                   <li key={idx}>
                     <Link
                       href={txt.link}
-                      className="text-zinc-900 hover:text-zinc-900 transition-colors duration-300 text-[15px] sm:text-[16px]  inline-block hover:tranzinc-x-1 transform"
+                      className="text-zinc-900 hover:text-zinc-900 transition-colors duration-300 text-[15px] sm:text-[16px] inline-block hover:tranzinc-x-1 transform"
                     >
                       {txt.lable}
                     </Link>
@@ -135,7 +135,7 @@ const Footer = () => {
 
             {/* Newsletter */}
             <div>
-              <h6 className="text-zinc-900 text-[16px] sm:text-[17px]  mb-5 tracking-wider uppercase border-b border-zinc-700/50 pb-3">
+              <h6 className="text-zinc-900 text-[16px] sm:text-[17px] font-semibold mb-3 tracking-wider uppercase">
                 Stay Connected
               </h6>
 
@@ -230,7 +230,7 @@ const Footer = () => {
               <div className="flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-6 text-zinc-900">
                 <p className="text-[13px] sm:text-[14px] md:text-[15px] text-center lg:text-left">
                   <span className="text-zinc-900 tracking-wide">
-                    © 2025 UMANG SCL Pvt Ltd.
+                    © 2025 UMANG SCL Private Ltd.
                   </span>
                 </p>
                 <p className="hidden md:flex items-center gap-2 text-[13px] sm:text-[14px] md:text-[15px] text-center lg:text-right">
