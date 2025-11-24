@@ -18,7 +18,7 @@ const supportLinks = [
 const Footer = () => {
   // ✅ Filter Nav
   const filteredNavItems = navItems.filter((item) =>
-    ["Home", "About us", "Partners", "Contact"].includes(item.label)
+    ["About", "Franchise", "Projects", "Contact"].includes(item.label)
   );
 
   // ✅ Newsletter State
