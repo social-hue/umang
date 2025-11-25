@@ -73,7 +73,7 @@ export default function FAQSection() {
                 onClick={() => toggleFAQ(index)}
                 className="w-full text-left px-6 sm:px-8 py-6 flex items-start justify-between gap-4 transition-colors duration-200"
               >
-                <span className="text-lg font-semibold text-zinc-800 pr-4 flex-1">
+                <span className="text-lg text-zinc-800 pr-4 flex-1">
                   {faq.question}
                 </span>
                 <ChevronDown
