@@ -2,8 +2,10 @@
 import { useState } from "react";
 import Image from "next/image";
 import toast from "react-hot-toast";
+import { AlertTriangle, IndianRupee } from "lucide-react";
+import { motion } from "framer-motion";
 import { Plane, Wallet, Gavel, HeartPulse, Sparkles, ArrowRight } from "lucide-react";
-import Link from "next/link";
+// import Link from "next/link";
 
 export default function FranchisePage() {
   const services = [
@@ -116,14 +118,14 @@ export default function FranchisePage() {
             </div>
           </div>
           <div className="relative h-72 sm:h-96 lg:h-80 rounded-2xl overflow-hidden shadow-2xl cursor-pointer">
-              <Image
-                src="/Scan_here.webp"
-                alt="elderly community"
-                fill
-                className="object-cover"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
+            <Image
+              src="/Scan_here.webp"
+              alt="elderly community"
+              fill
+              className="object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
           </div>
         </div>
       </header>
@@ -213,7 +215,7 @@ technological hurdles" />
         </section>
 
         {/* Steps to Start */}
-        <section className="mb-12">
+        <section className="mb-10">
           <h2 className="text-2xl text-slate-900 font-semibold mb-4">How to Start Your Franchise Journey with Umang Living ?</h2>
           <div className="grid lg:grid-cols-5 gap-4 items-start">
             <Step num={1} title="Initial Application" items={["Submit an Application", "Introduction and Alignment", "Business Model Evaluation"]} />
@@ -223,6 +225,54 @@ technological hurdles" />
             <Step num={5} title="GTM Training & Launch" items={["Attend Training Smooth", "Onboarding Process", "Continuous Support"]} />
           </div>
         </section>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-10 rounded-2xl bg-slate-100/20 p-6 border border-gray-200 shadow-md relative overflow-hidden"
+        >
+          {/* Floating Accent */}
+          <div className="absolute -top-10 -right-10 h-32 w-32 bg-amber-200/30 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-10 -left-10 h-32 w-32 bg-amber-300/20 rounded-full blur-3xl"></div>
+
+          {/* Header */}
+          <div className="flex items-center gap-3 mb-3">
+            <AlertTriangle className="w-6 h-6 text-amber-600" />
+            <h2 className="text-xl font-semibold text-gray-800">Important Notice</h2>
+          </div>
+
+          {/* Content */}
+          <p className="text-gray-700 leading-relaxed mb-3">
+            A refundable application deposit of
+            <span className="font-semibold text-gray-900"> ₹10,000 </span>
+            is required to register your application.
+          </p>
+
+          <ul className="text-gray-700 mb-3">
+            <li className="flex gap-2">
+              <span className="text-amber-600 mt-1">•</span>
+              <span>The amount will be refunded soon, if your application is not approved.</span>
+            </li>
+            <li className="flex gap-2">
+              <span className="text-amber-600 mt-1">•</span>
+              <span>If approved, the deposit will be adjusted towards your processing fee.</span>
+            </li>
+          </ul>
+
+          <p className="text-gray-700">
+            Please share the{" "}
+            <span className="font-semibold text-gray-900">payment proof</span> and the{" "}
+            <span className="font-semibold text-gray-900">filled application form </span> to <span className="font-semibold text-gray-900">info@umangliving.com</span> for
+            verification.
+          </p>
+
+          {/* Footer Badge */}
+          <div className="mt-5 flex items-center gap-2 text-sm text-gray-600 font-medium">
+            <IndianRupee className="w-4 h-4" />
+            Refundable Deposit Policy
+          </div>
+        </motion.div>
 
         {/* Leadership / Champions */}
         {/* <section className="rounded-2xl mb-12">

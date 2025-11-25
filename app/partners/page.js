@@ -3,6 +3,7 @@ import Community from "../components/Community";
 import FranchisePage from "../components/franchise";
 import { seoData } from "../lib/seoMeta";
 
+
 export const generateMetadata = () => {
   const meta = seoData.partners;
 

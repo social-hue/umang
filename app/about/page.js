@@ -1,14 +1,12 @@
 import Founder from "../components/about/Founder";
-// import Banner from "../components/Banner";
 import Community from "../components/Community";
 import FounderMessage from "../components/FounderMessage";
-// import TeamSection from "../components/team/TeamSection";
-import MissionVision from "../components/vision/MissionVision";
+import MissionVision from "../components/vision/MissionVision";  
 import { seoData } from "../lib/seoMeta";
+
 
 export const generateMetadata = () => {
   const meta = seoData.aboutUs;
-
   return {
     title: meta.title,
     description: meta.description,
@@ -54,4 +52,4 @@ export default function About() {
       <Community />
     </>
   );
-}
+}   
