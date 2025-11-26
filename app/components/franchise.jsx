@@ -58,9 +58,7 @@ export default function FranchisePage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validate()) return;
-
     setLoading(true);
-
     try {
       const token = await window.grecaptcha.execute(SITE_KEY, { action: "submit" });
       const payload = { ...form, recaptchaToken: token };
@@ -69,9 +67,7 @@ export default function FranchisePage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
-
-      const data = await res.json();
-
+      const data = await res.json();   
       if (res.ok && data.success) {
         // NO TOAST on success — show modal instead
         setShowModal(true);
