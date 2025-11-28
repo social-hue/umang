@@ -67,7 +67,7 @@ export default function FranchisePage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
-      const data = await res.json();   
+      const data = await res.json();
       if (res.ok && data.success) {
         // NO TOAST on success — show modal instead
         setShowModal(true);
@@ -223,50 +223,64 @@ technological hurdles" />
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="mb-10 rounded-2xl bg-slate-100/20 p-6 border border-gray-200 shadow-md relative overflow-hidden"
+          className="mb-10 rounded-2xl bg-slate-100/20 p-6 border border-gray-200 shadow-md relative overflow-hidden grid grid-cols-1 md:grid-cols-[70%_30%] gap-6 md:gap-2 "
         >
           {/* Floating Accent */}
-          <div className="absolute -top-10 -right-10 h-32 w-32 bg-amber-200/30 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-10 -left-10 h-32 w-32 bg-amber-300/20 rounded-full blur-3xl"></div>
+          {/* <div className="absolute -top-10 -right-10 h-32 w-32 bg-amber-200/30 rounded-full blur-3xl"></div> */}
+          {/* <div className="absolute -bottom-10 -left-10 h-32 w-32 bg-amber-300/20 rounded-full blur-3xl"></div> */}
 
-          {/* Header */}
-          <div className="flex items-center gap-3 mb-3">
-            <AlertTriangle className="w-6 h-6 text-amber-600" />
-            <h2 className="text-xl font-semibold text-gray-800">Important Notice</h2>
+          {/* LEFT SECTION — IMPORTANT NOTICE */}
+          <div>
+            <div className="flex items-center gap-3 mb-3">
+              <AlertTriangle className="w-6 h-6 text-amber-600" />
+              <h2 className="text-xl font-semibold text-gray-800">Important Notice</h2>
+            </div>
+            <p className="text-gray-700 leading-relaxed mb-3">
+              A refundable application deposit of
+              <span className="font-semibold text-gray-900"> ₹10,000 </span>
+              is required to register your application.
+            </p>
+
+            <ul className="text-gray-700 mb-3">
+              <li className="flex gap-2">
+                <span className="text-amber-600 mt-1">•</span>
+                <span>The amount will be refunded soon, if your application is not approved.</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-amber-600 mt-1">•</span>
+                <span>If approved, the deposit will be adjusted towards your processing fee.</span>
+              </li>
+            </ul>
+
+            <p className="text-gray-700">
+              Please share the{" "}
+              <span className="font-semibold text-gray-900">payment proof</span> and the{" "}
+              <span className="font-semibold text-gray-900">filled application form </span> to <span className="font-semibold text-gray-900">info@umangliving.com</span> for
+              verification.
+            </p>
+
+            <div className="mt-5 flex items-center gap-2 text-sm text-gray-600 font-medium">
+              <IndianRupee className="w-4 h-4" />
+              Refundable Deposit Policy
+            </div>
           </div>
 
-          {/* Content */}
-          <p className="text-gray-700 leading-relaxed mb-3">
-            A refundable application deposit of
-            <span className="font-semibold text-gray-900"> ₹10,000 </span>
-            is required to register your application.
-          </p>
-
-          <ul className="text-gray-700 mb-3">
-            <li className="flex gap-2">
-              <span className="text-amber-600 mt-1">•</span>
-              <span>The amount will be refunded soon, if your application is not approved.</span>
-            </li>
-            <li className="flex gap-2">
-              <span className="text-amber-600 mt-1">•</span>
-              <span>If approved, the deposit will be adjusted towards your processing fee.</span>
-            </li>
-          </ul>
-
-          <p className="text-gray-700">
-            Please share the{" "}
-            <span className="font-semibold text-gray-900">payment proof</span> and the{" "}
-            <span className="font-semibold text-gray-900">filled application form </span> to <span className="font-semibold text-gray-900">info@umangliving.com</span> for
-            verification.
-          </p>
-
-          {/* Footer Badge */}
-          <div className="mt-5 flex items-center gap-2 text-sm text-gray-600 font-medium">
-            <IndianRupee className="w-4 h-4" />
-            Refundable Deposit Policy
+          {/* RIGHT SECTION — DOWNLOAD BUTTONS */}
+          <div className="flex flex-col gap-3 justify-center text-sm">
+            <a href="/Franchise_Brochure.pdf" download className="bg-amber-600/90 hover:bg-amber-600 text-white font-medium py-2 px-3 rounded-lg text-center transition">
+              Franchise Brochure
+            </a>
+            <a href="/Franchise_Form.pdf" download className="bg-amber-600/90 hover:bg-amber-600 text-white font-medium py-2 px-3 rounded-lg text-center transition">
+              Franchise Form
+            </a>
+            <a href="/SOP_SLA.pdf" download className="bg-amber-600/90 hover:bg-amber-600 text-white font-medium py-2 px-3 rounded-lg text-center transition">
+              Download SOP
+            </a>
+            <a href="/FAQ.pdf" download className="bg-amber-600/90 hover:bg-amber-600 text-white font-medium py-2 px-3 rounded-lg text-center transition">
+              Download FAQs
+            </a>
           </div>
         </motion.div>
-
         {/* Leadership / Champions */}
         {/* <section className="rounded-2xl mb-12">
           <h2 className="text-2xl font-semibold mb-2">The Umang Champions: Leaders of Senior Well-Being</h2>
@@ -454,14 +468,14 @@ function IconDot() {
   );
 }
 
-function ServiceCard({ title }) {
-  return (
-    <div className="p-3 bg-white rounded-lg border border-slate-100 flex items-center gap-3">
-      <div className="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center text-amber-700 font-semibold">{title.split(' ')[0].slice(0, 1)}</div>
-      <div className="text-sm text-slate-700">{title}</div>
-    </div>
-  );
-}
+// function ServiceCard({ title }) {
+//   return (
+//     <div className="p-3 bg-white rounded-lg border border-slate-100 flex items-center gap-3">
+//       <div className="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center text-amber-700 font-semibold">{title.split(' ')[0].slice(0, 1)}</div>
+//       <div className="text-sm text-slate-700">{title}</div>
+//     </div>
+//   );
+// }
 
 function Benefit({ title, desc }) {
   return (
@@ -476,7 +490,7 @@ function Step({ num, title, items }) {
   return (
     <div className="p-4 md:p-3 md:min-h-[200px] rounded-xl bg-white border border-slate-100 shadow-sm">
       <div className="flex items-center gap-2 mb-2">
-        <div className="w-8 h-8 rounded-full bg-amber-600 text-white flex items-center justify-center font-semibold">{num}</div>
+        <div className="w-7 h-7 rounded-full bg-amber-600 text-white text-md flex items-center justify-center font-semibold">{num}</div>
         <div className="text-md text-slate-800 font-semibold">{title}</div>
       </div>
       <ul className="text-slate-600 text-md space-y-1">

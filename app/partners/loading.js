@@ -3,7 +3,6 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-
 export default function Loading() {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
