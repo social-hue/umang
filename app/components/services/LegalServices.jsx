@@ -1,56 +1,27 @@
 "use client";
 import React from "react";
-// import { motion } from "framer-motion";
-import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
+// import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import FAQLegal from "../faq/FAQLegal";
-// import { ArrowRight } from "lucide-react";
 import LegalFormSection from "../Form/LegalFormSection";
 import LegalServiceSection from "../LegalServices";
 
 export default function LegalServices() {
-
   return (
     <section className="main_width text-zinc-800 py-10">
       <div className="max-w-6xl mx-auto text-center mb-8">
         <h1 className="text-3xl md:text-4xl font-bold text-zinc-800 mb-4">
           Legal & Documentation Services for Seniors and Families
         </h1>
-        <p className="text-zinc-800  text-lg leading-relaxed max-w-3xl mx-auto">
-        At Umang Living, legal consultation is simplified and transparent. From will & estate planning to property disputes and NRI documentation, our curated legal network helps seniors and families resolve issues quickly with fixed-fee quotes, clear timelines, and regular updates through our team.
+        <p className="text-zinc-800 text-md leading-relaxed max-w-3xl mx-auto">
+          At Umang Living, legal consultation is simplified and transparent. From will & estate planning to property disputes and NRI documentation, our curated legal network helps seniors and families resolve issues quickly with fixed-fee quotes, clear timelines, and regular updates through our team.
         </p>
       </div>
       {/* Services Grid */}
       <LegalServiceSection />
-      <div className="py-8 md:py-14 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-zinc-800">
-          Ready to file or plan ?
-        </h2>
-        <p className="text-zinc-800 text-lg flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4">
-          <a
-            href="tel:18002028704"
-            className="flex items-center gap-2 text-orange-800 font-semibold hover:scale-105 transition-transform"
-          >
-            <FaPhoneAlt className="text-orange-800 text-xl" />
-            <span>Call Us</span>
-          </a>
-          <span className="hidden md:inline text-zinc-600">|</span>
-          <a
-            href="https://wa.me/919560986669"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-teal-700 font-semibold hover:scale-105 transition-transform"
-          >
-            <FaWhatsapp className="text-teal-700 text-2xl" />
-            <span>Chat on WhatsApp</span>
-          </a>
-          <span className="hidden md:inline text-zinc-600">|</span>
-          <span className="text-zinc-800 font-medium">
-            Book a free 30-min review today.
-          </span>
-        </p>
+      <div className="py-10">
+        <LegalFormSection />
       </div>
-      <LegalFormSection />
-      <div className="mt-8 md:mt-16 max-w-5xl mx-4 md:mx-auto">
+      <div className="md:mt-6 mb-10 max-w-5xl mx-4 md:mx-auto">
         <FAQLegal />
       </div>
     </section>

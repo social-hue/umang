@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 // LegalFormSection renders the layout and uses LegalForm for the actual form
 export default function LegalFormSection() {
   return (
-    <section className="bg-[url(/banner/booking-banner-3.jpg)] bg-cover py-16 px-6 md:px-12 lg:px-20">
+    <section className="py-10 md:py-16 bg-[url(/banner/booking-banner-3.jpg)] bg-cover px-6 md:px-12 lg:px-20">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 md:gap-12 items-center">
         {/* Left Heading Section */}
         <div className="space-y-6 text-center md:text-left">

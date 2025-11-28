@@ -35,7 +35,7 @@ export default function FAQFinance() {
 
   return (
     <div>
-    <h2 className="text-3xl md:text-[38px] text-center font-bold text-zinc-800 mb-2">Frequently Asked Questions</h2>    
+    <h2 className="text-3xl text-center font-bold text-zinc-800 mb-2">Frequently Asked Questions</h2>    
     <div className="flex flex-col md:flex-row items-center justify-center w-full mx-auto md:gap-14">
       {/* Left Image Section */}
       <div className="w-full md:w-[45%] flex justify-center md:justify-start">
@@ -44,7 +44,7 @@ export default function FAQFinance() {
             src="/two-people.png" // replace with your actual image path
             alt="FAQ illustration"
             width={400}
-            height={700}
+            height={600}
             className="object-cover drop-shadow-lg"
           />
         </div>
@@ -60,12 +60,12 @@ export default function FAQFinance() {
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full text-left flex justify-between items-center py-3 text-lg font-medium text-zinc-900 hover:text-teal-800 transition-colors"
+                className="w-full text-left flex justify-between items-center py-3 text-md text-zinc-900 hover:text-teal-800 transition-colors"
               >
                 <span
                   className={
                     openIndex === index
-                      ? "text-teal-800 font-semibold"
+                      ? "text-teal-800"
                       : "text-zinc-900"
                   }
                 >
@@ -84,7 +84,7 @@ export default function FAQFinance() {
                   openIndex === index ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
-                <p className="text-gray-600 mt-2 text-base leading-relaxed">
+                <p className="text-gray-600 mt-2 text-md leading-relaxed">
                   {faq.answer}
                 </p>
               </div>

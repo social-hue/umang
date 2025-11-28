@@ -1,5 +1,4 @@
 "use client";
-import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import AppointmentSection from "../Form/AppointmentSection";
 import FAQFinance from "../faq/FAQFinance";
 import ITRSection from "../Finance/Finance";
@@ -12,7 +11,7 @@ export default function FinancialServices() {
         <h1 className="text-3xl md:text-4xl font-bold mb-4 text-zinc-800">
           Tax, Accounting & Financial Services for Seniors and NRIs
         </h1>
-        <p className="text-zinc-800 text-lg leading-relaxed max-w-3xl mx-auto">
+        <p className="text-zinc-800 text-md leading-relaxed max-w-3xl mx-auto">
         Money decisions should be clear & transparent - Umang Living brings ITR filing, chartered services, and retirement/investment planning together so that our seniors and families can protect their money, optimize taxes, and plan confidently - without the stress of getting into cumbersome paperwork.
         </p>
       </div>
