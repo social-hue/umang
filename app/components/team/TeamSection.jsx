@@ -1,94 +1,54 @@
 "use client";
-import { motion } from "framer-motion";
 
-export default function TeamSection() {
-  const team = [
-    {
-      name: "Varsha Jaiswal",
-      title: "Associate Director",
-      img: "/people/varsha.webp",
-      desc: "Strategic operations expert ensuring efficient project execution and excellence.",
-      linkedin: "https://www.linkedin.com/in/varsha-jaiswal-509191202/",
-    },
-    {
-      name: "Anuupam Kinshuk",
-      title: "Principal Consultant",
-      img: "/people/anupam.webp",
-      desc: "Growth strategist, partnerships, operations, services & technology excellence",
-      linkedin: "https://www.linkedin.com/in/anuupam",
-    },
-    {
-      name: "Priti Pathak",
-      title: "Vice President",
-      img: "/people/priti.webp",
-      desc: "Driving business growth through impactful partnerships and engagement.",
-      linkedin: "https://www.linkedin.com/in/priti-pathak-88a0b45",
-    },
-    {
-      name: "Ankit Rathi",
-      title: "Principal Architect",
-      img: "/people/ankit.jpeg",
-      desc: "Architect focused on designing senior-friendly & community-oriented living spaces",
-      linkedin: "https://in.linkedin.com/in/",
-    },
+import { useState } from "react";
+import Lightbox from "yet-another-react-lightbox";
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+
+import "yet-another-react-lightbox/styles.css";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
+
+export default function ImageGallery() {
+  const [index, setIndex] = useState(-1);
+
+  const photos = [
+    "/award.jpeg",
+    "/award3.jpeg",
+    "/Certificate.png",
+    "/award2.jpeg",
   ];
 
+
   return (
-    <main className="max-w-6xl mx-auto py-4 md:py-12 mb-6 bg-white">
-      {/* Heading */}
-      <motion.h2
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, ease: "easeOut" }}
-        viewport={{ once: true }}
-        className="text-center text-zinc-800 text-3xl md:text-[40px] leading-light font-bold mb-3"
-      >
-        Meet our team
-      </motion.h2>
+    <div className="main_width">
+    <h2 className="text-3xl md:text-[36px] font-bold mb-3 leading-tight text-center md:text-left">
+      Achievements & Certificates
+    </h2>
 
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-        viewport={{ once: true }}
-        className="text-center text-md text-[#667085] max-w-xl mx-12 md:mx-auto mb-6"
-      >
-        Our philosophy is simple - hire a team of diverse, passionate people and foster a culture
-        that empowers you to do your best work.
-      </motion.p>
+    <div className="flex flex-col md:flex-row justify-center md:justify-start gap-6 py-2 items-center">
+      {photos.map((img, i) => (
+        <div
+          key={i}
+          className="w-[80%] sm:w-[300px] bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer hover:scale-[1.04] transition"
+          onClick={() => setIndex(i)}
+        >
+          <img
+            src={img}
+            alt=""
+            className="w-full h-48 object-cover"
+          />
+        </div>
+      ))}
+    </div>
 
-      {/* Team Cards */}
-      <div className="px-14 md:px-0 flex flex-wrap justify-center gap-4 md:gap-3">
-        {team.map((member, index) => (
-          <motion.a
-            key={index}
-            href={member.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            initial={{ opacity: 0, y: 0 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.2,
-              ease: "easeOut",
-              delay: index * 0.1,
-            }}
-            viewport={{ once: true }}
-            whileHover={{ scale: 1.01 }}
-            className="bg-[#F9FAFB] border border-[#98A2B3] rounded-sm p-4 text-center 
-                       transition-all duration-300 hover:bg-[#bbb9bd67] hover:text-white cursor-pointer
-                       w-full sm:w-[80%] md:w-[45%] lg:w-[20%] max-w-sm block"
-          >
-            <img
-              src={member.img}
-              alt={member.name}
-              className="w-30 h-30 object-cover rounded-full mx-auto mb-3"
-            />
-            <span className="block text-lg text-zinc-800 font-semibold">{member.name}</span>
-            <span className="block text-md text-zinc-800 font-medium mb-2">{member.title}</span>
-            <p className="text-sm text-zinc-800 max-w-[90%] mx-auto mb-2">{member.desc}</p>
-          </motion.a>
-        ))}
-      </div>
-    </main>
+    <Lightbox
+      open={index >= 0}
+      index={index}
+      close={() => setIndex(-1)}
+      slides={photos.map((src) => ({ src }))}
+      plugins={[Thumbnails]}
+    />
+  </div>
   );
 }
+
+
