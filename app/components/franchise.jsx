@@ -303,7 +303,7 @@ technological hurdles" />
         </section>
 
         {/* FAQ */}
-        <section className="bg-white mt-8 mb-12">
+        {/* <section className="bg-white mt-8 mb-12">
           <h2 className="text-2xl text-slate-900 font-semibold mb-4">Need More Information ?</h2>
           <div className="grid md:grid-cols-2 gap-4">
             <FAQ q="What is the minimum investment?" a="Typically a starting investment of ₹4 Lakhs is expected for franchise onboarding. Exact figures depend on location and model." />
@@ -311,7 +311,7 @@ technological hurdles" />
             <FAQ q="Do you provide training?" a="Yes - complete operational training including Go-To-Marketing, CRM onboarding, and SOPs." />
             <FAQ q="How do I get leads?" a="We provide digital marketing support, lead-gen campaigns, and brand assets to help you start strong." />
           </div>
-        </section>
+        </section> */}
 
         {/* Final CTA & Form */}
         <section className="rounded-2xl border-1 border-amber-200/60 p-6 bg-gradient-to-r from-amber-50 to-amber-50 shadow-md mb-10 md:mb-16 scroll-mt-32" id="franchise-form">

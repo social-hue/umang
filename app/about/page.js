@@ -1,9 +1,9 @@
 import Founder from "../components/about/Founder";
 import Community from "../components/Community";
 import FounderMessage from "../components/FounderMessage";
+import TeamSection from "../components/team/TeamSection";
 import MissionVision from "../components/vision/MissionVision";  
 import { seoData } from "../lib/seoMeta";
-
 
 export const generateMetadata = () => {
   const meta = seoData.aboutUs;
@@ -46,9 +46,11 @@ export default function About() {
     <>
       {/* <Banner title={"About us"} bgImage={"/banner/about-banner2.webp"} /> */}
       <FounderMessage/>
-      <Founder />
       <MissionVision />
-      {/* <TeamSection /> */}
+      <Founder />
+      <div className="py-10 md:py-0 md:mb-16">
+      <TeamSection />
+      </div>
       <Community />
     </>
   );

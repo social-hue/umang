@@ -1,11 +1,9 @@
-// import Banner from "../components/Banner";
 import { BlogGrid } from "../components/blog/BlogGrid";
 import Community from "../components/Community";
 import { seoData } from "../lib/seoMeta";
 
 export const generateMetadata = () => {
   const meta = seoData.blog;
-
   return {
     title: meta.title,
     description: meta.description,

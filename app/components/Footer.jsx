@@ -71,7 +71,7 @@ const Footer = () => {
       <div className="overflow-hidden w-full h-full relative">
         {/* Subtle gradient overlay */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-zinc-700/20 via-transparent to-transparent pointer-events-none"></div>
-        <div className="pt-8 relative z-10">
+        <div className="pt-4j relative z-10">
           <div className="mx-auto main_width px-4 sm:px-6 lg:px-8 py-6 sm:py-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12">
 
             {/* Left Logo + Description */}
