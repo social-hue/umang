@@ -20,7 +20,7 @@ export default function ImageGallery() {
 
   return (
     <div className="main_width">
-    <h2 className="text-3xl md:text-[36px] font-bold mb-3 leading-tight text-center md:text-left">
+    <h2 className="text-3xl md:text-[36px] text-zinc-800 font-bold mb-3 leading-tight text-center md:text-left">
       Achievements & Certificates
     </h2>
 
