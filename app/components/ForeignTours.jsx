@@ -2,56 +2,40 @@
 import { motion } from "framer-motion";
 import { Plane, Building2, MapPin, Compass, Clock, Phone } from "lucide-react";
 
-export default function TourPackages() {
+export default function ForeignTours() {
   const tours = [
-    // {
-    //   route: "Delhi - Ayodhya - Prayagraj - Banaras",
-    //   title: "Ramayana Trail (Live)",
-    //   duration: "14D/13N",
-    //   image: "/travel/ganga.webp",
-    //   offer: "Booking Open!",
-    //   slug: "delhi-ayodhya-varanasi-tour"
-    // },
     {
-      route: "Chennai / Kerala",
-      title: "South India Tour Package",
-      duration: "7D/6N",
-      image: "/travel/south.jpg",
+      route: "Delhi - Nepal",
+      title: "Nepal Tour Package",
+      duration: "5D/4N",
+      image: "/travel/nepal.webp",
       offer: "Call For Booking",
-      slug: "soul-calming-encounters-in-kerala"
+      slug: "nepal-3days-4nights"
     },
     {
-      route: "Delhi → Jaipur → Jaisalmer",
-      title: "Majestic Rajasthan",
+      route: "Delhi - Thailand",
+      title: "Thailand Tour Package",
       duration: "4D/3N",
-      image: "/travel/rajasthan.jpg",
+      image: "/travel/thailand.webp",
       offer: "Booking Closed",
-      slug: "delhi-jaipur-jaisalmer-heritage-tour"
+      slug: "delhi-to-thailand-3n-4d"
     },
     {
-      route: "Delhi → Pondicherry",
-      title: "Pondicherry Tour",
-      duration: "4D/5N",
-      image: "/travel/Pondicherry.webp",
+      route: "Delhi - Dubai",
+      title: "Dubai Tour Package",
+      duration: "6D/5N",
+      image: "/travel/dubai.webp",
       offer: "Booking Closed",
-      slug: "pondicherry-itinerary"
+      slug: "delhi-to-dubai-international-tour"
     },
     {
-      route: "Delhi → Goa",
-      title: "Magical Goa Tour",
-      duration: "4N/5D",
-      image: "/travel/goa.webp",
+      route: "Delhi - Bali",
+      title: "Bali Tour Package",
+      duration: "6D/5N",
+      image: "/travel/bali.webp",
       offer: "Booking Closed",
-      slug: "magical-goa"
+      slug: "delhi-to-bali-itinerary"
     },
-    // {
-    //   route: "Delhi → Meghalaya",
-    //   title: "Meghalaya Tour",
-    //   duration: "5D/4N",
-    //   image: "/travel/meghalaya.jfif",
-    //   offer: "Booking Closed",
-    //   slug: "meghalaya-4-days-5-nights"
-    // },
   ];
 
   return (

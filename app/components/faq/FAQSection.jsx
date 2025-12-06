@@ -57,10 +57,10 @@ export default function FAQSection() {
       <div className="max-w-4xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
-          <p className="text-3xl md:text-[40px] font-bold text-zinc-800 mb-4">
+          <p className="text-3xl md:text-[36px] font-bold text-zinc-800 mb-4">
             Frequently Asked <span className="text-teal-700">Questions</span>
           </p>
-          <p className="text-lg text-zinc-600 max-w-2xl mx-auto">
+          <p className="text-md text-zinc-600 max-w-2xl mx-auto">
             Everything you need to know about Umang Living. Can't find the answer you're looking for? Feel free to reach out to our team.
           </p>
         </div>

@@ -38,7 +38,7 @@ export const generateMetadata = () => {
   };
 };
 
-export default function Blog() {
+export default function Blog() {   
   return (
     <>
       <div className="relative overflow-hidden">

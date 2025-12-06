@@ -55,10 +55,10 @@ export default function FacilitiesSection() {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="px-4 md:px-8 relative w-full flex flex-col items-center py-6 md:py-12 bg-white overflow-hidden">
       <div className="max-w-4xl text-center mb-8 md:mb-6">
-        <h2 className="text-3xl md:text-[40px] font-bold text-zinc-800 mb-4">
+        <h2 className="text-3xl md:text-[36px] font-bold text-zinc-800 mb-4">
           What does <span className="text-teal-700">Umang</span> Offer?
         </h2>
-        <p className="text-zinc-700 text-lg leading-relaxed max-w-3xl mx-auto">
+        <p className="text-zinc-700 text-md leading-relaxed max-w-3xl mx-auto">
           Umang Living offers India&apos;s largest comprehensive ecosystem for modern senior living,
           with townships in 75+ cities, lifestyle experiences, healthcare, and curated travel,
           we are your partner for a secure and enriching lifestyle.
@@ -115,7 +115,7 @@ export default function FacilitiesSection() {
                 </div>
                 <div className="flex flex-col p-4 flex-grow">
                   <h3
-                    className={`text-lg font-semibold mb-1 ${item.accent}`}
+                    className={` text-md font-semibold mb-1 ${item.accent}`}
                   >
                     {item.title}
                   </h3>

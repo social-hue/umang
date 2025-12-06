@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useRouter } from "next/navigation";
+import { ArrowRight } from "lucide-react";
 
 const jobs = [
   {
@@ -13,7 +14,7 @@ const jobs = [
     level: "Mid-level",
     salary: "₹28L – ₹40L",
     description:
-      "Own end-to-end product experiences, from discovery to polished interactions, collaborating closely with Product and Engineering.",
+      "Drives business growth by identifying opportunities, building client relationships, and securing partnerships that expand the company’s reach.",
   },
   {
     id: 2,
@@ -24,7 +25,7 @@ const jobs = [
     level: "Mid-level",
     salary: "₹18L – ₹28L",
     description:
-      "Build sophisticated, performant interfaces using React and modern tooling, with a strong focus on UX and accessibility.",
+      "Handles incoming and outgoing calls, provides information to customers, and converts inquiries into qualified leads while maintaining accurate records.",
   },
   {
     id: 3,
@@ -35,7 +36,7 @@ const jobs = [
     level: "Mid–Senior",
     salary: "₹16L – ₹24L",
     description:
-      "Shape our culture, improve processes, and craft exceptional experiences across the entire employee journey.",
+      "Oversees recruitment, onboarding, and employee support while ensuring smooth workplace operations and adherence to company policies.",
   },
 ];
 
@@ -50,7 +51,7 @@ export default function CareersPage() {
           className="absolute inset-0 bg-cover bg-center opacity-100"
           style={{
             backgroundImage:
-              "url('/job-banner-12.jpg')",
+              "url('/job-banner-12.webp')",
           }}
         />
 
@@ -131,7 +132,7 @@ export default function CareersPage() {
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-2 text-xs">
+          {/* <div className="flex flex-wrap items-center gap-2 text-xs">
             <span className="rounded-full border border-orange-200 bg-orange-100/80 px-3 py-1 text-orange-700">
               Product
             </span>
@@ -141,7 +142,7 @@ export default function CareersPage() {
             <span className="rounded-full border border-teal-300 bg-teal-100/20 px-3 py-1 text-teal-700">
               People & Ops
             </span>
-          </div>
+          </div> */}
         </div>
 
         {/* Cards */}
@@ -149,7 +150,7 @@ export default function CareersPage() {
           {jobs.map((job) => (
             <article
               key={job.id}
-              className="group flex flex-col rounded-md border border-gray-200 bg-white shadow-md px-5 py-6 transition-transform duration-200 hover:shadow-lg"
+              className="group flex flex-col rounded-md border border-gray-200 bg-white shadow-md px-5 py-6"
             >
               {/* Top */}
               <div className="space-y-1">
@@ -193,9 +194,9 @@ export default function CareersPage() {
                   onClick={() =>
                     router.push(`/careers/${job.title.toLowerCase().replace(/ /g, "-")}`)
                   }
-                  className="cursor-pointer inline-flex items-center justify-center rounded-full bg-gradient-to-r from-orange-600 via-orange-500 to-red-500 px-4 py-2 text-xs font-semibold text-white shadow-md transition-transform duration-150 hover:scale-105"
+                  className="cursor-pointer inline-flex items-center justify-center px-4 py-2 text-xs font-semibold text-slate-700 transition-transform duration-150 hover:scale-105"
                 >
-                  Apply now
+                  Apply now <ArrowRight className="inline-block ml-1 h-4 w-4" />
                 </button>
               </div>
             </article>

@@ -78,7 +78,7 @@ export default async function Page({ params }) {
       <div className="relative overflow-hidden">
           <div className="py-12 main_width">
             <div
-              className="text-[#535353] text-[18px]"
+              className="text-[#535353] text-md"
               dangerouslySetInnerHTML={{ __html: content?.content1 || "" }}
             ></div>
             <div className="grid grid-cols-[20px_1fr] gap-4 py-6">
@@ -87,19 +87,19 @@ export default async function Page({ params }) {
               </div>
               <div>
                 <div
-                  className="text-[#B41F56] lg:text-[30px] text-[26px] font-semibold"
+                  className="text-[#B41F56] text-md font-semibold"
                   dangerouslySetInnerHTML={{ __html: content?.heading || "" }}
                 ></div>
               </div>
             </div>
             <div
-              className="text-[#535353] text-[18px]"
+              className="text-[#535353] text-md"
               dangerouslySetInnerHTML={{ __html: content?.content2 || "" }}
             ></div>
           </div>
         <div className="mb-0">
           <div className="main_width pt-4">
-            <h4 className="text-[28px] md:text-[36px] font-semibold">
+            <h4 className="text-[28px] font-semibold">
               <span className="green">You May</span>
               <span className="gradient_text"> Also Like :</span>
             </h4>

@@ -164,6 +164,14 @@ input[type="date"]:valid::before {
   }
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease-out;
+}
+
 /* .swiper-pagination-bullet {
   width: 24px !important;
   height: 12px !important;

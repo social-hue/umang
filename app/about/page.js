@@ -4,7 +4,7 @@ import FounderMessage from "../components/FounderMessage";
 import TeamSection from "../components/team/TeamSection";
 import MissionVision from "../components/vision/MissionVision";  
 import { seoData } from "../lib/seoMeta";
-
+    
 export const generateMetadata = () => {
   const meta = seoData.aboutUs;
   return {
