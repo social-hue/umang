@@ -11,7 +11,7 @@ export default function AyodhyaTour() {
     const data = itineraries[slug];
     const [active, setActive] = useState(1);
 
-    if (!data) return null;
+    if (!data) return notFound();
     const activeDay = data.days.find((d) => d.day === active) || data.days[0];
 
     return (
