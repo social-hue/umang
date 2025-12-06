@@ -4,7 +4,7 @@ import AyodhyaTour from "@/app/components/tour/AyodhyaTour";
 
 export async function generateMetadata ({ params }) {
     // Await params to fix Next.js 15 warning
-    const { slug } = params;
+    const { slug } = await params;
     const meta = seoData.tour.find((item) => item.slug === slug);
     if (!meta) {
       return {

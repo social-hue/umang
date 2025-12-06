@@ -1,22 +1,11 @@
 "use client";
 import { ArrowRight, Award, Globe2, Headphones, ShieldCheck } from "lucide-react";
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
 import TourForm from "./Form/TravelForm";
 import TourPackages from "./TourPackages";
 import ForeignTours from "./ForeignTours";
 import SpiritualTours from "./SpiritualTours";
 
 export default function CharDhamSection() {
-
-  const fadeUp = {
-    hidden: { opacity: 0, y: 10 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
-    },
-  };
 
   const features = [
     {

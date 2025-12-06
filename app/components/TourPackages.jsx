@@ -32,7 +32,7 @@ export default function TourPackages() {
       route: "Delhi → Pondicherry",
       title: "Pondicherry Tour",
       duration: "4D/5N",
-      image: "/travel/Pondicherry.jfif",
+      image: "/travel/Pondicherry.webp",
       offer: "Booking Closed",
       slug: "pondicherry-itinerary"
     },

@@ -7,10 +7,10 @@ import { Sun, Moon, MapPin, Clock, Phone, CreditCard, FileText, Plane, Calendar,
 import Link from "next/link";
 
 export default function AyodhyaTour() {
+    
     const { slug } = useParams();
     const data = itineraries[slug];
     const [active, setActive] = useState(1);
-
     if (!data) return notFound();
     const activeDay = data.days.find((d) => d.day === active) || data.days[0];
 

@@ -106,7 +106,7 @@ export const itineraries = {
     country: "India Expedition",
     pace: "Moderate",
     vibe: "Spirituality",
-    image: "/travel/jyotirling-mp-vertical.jfif",
+    image: "/travel/jyotirling-mp-vertical.webp",
     description:
       "A comfort-centric devotional pilgrimage tailored for seniors visiting Omkareshwar, Mandu (Kalbharav), Mahakaleshwar (Ujjain) with senior-friendly travel, darshan assistance and guided visits.",
     days: [
@@ -166,7 +166,7 @@ export const itineraries = {
     country: "India Expedition",
     pace: "Moderate",
     vibe: "Spirituality",
-    image: "/travel/jyotirling-mh.jfif",
+    image: "/travel/jyotirling-mh.webp",
     description:
       "A senior-friendly pilgrimage across key Maharashtra Jyotirlingas — Trimbakeshwar, Bhimashankar, Aundha Nagnath, Grishneshwar (Ellora) and Parli Vaijnath — with comfortable travel and assisted darshans.",
     days: [
@@ -247,7 +247,7 @@ export const itineraries = {
     country: "India Expedition",
     pace: "Relaxed",
     vibe: "Leisure",
-    image: "/travel/goa-vertical.jfif",
+    image: "/travel/goa-vertical.webp",
     description:
       "A relaxed, senior-friendly Goa escape with accessible beaches, heritage sites in Old Goa, river cruise, light sightseeing and leisure time for wellness and gentle discovery.",
     days: [
@@ -403,7 +403,7 @@ export const itineraries = {
     country: "India Expedition",
     pace: "Leisurely",
     vibe: "Spirituality",
-    image: "/travel/khatu-shyam.jfif",
+    image: "/travel/khatu-shyam.webp",
     description:
       "A short, senior-friendly spiritual visit to Khatu Shyam Ji temple with darshan, local storytelling sessions and gentle local sightseeing.",
     days: [
@@ -452,7 +452,7 @@ export const itineraries = {
     country: "India Expedition",
     pace: "Moderate",
     vibe: "Leisure",
-    image: "/travel/Pondicherry.jfif",
+    image: "/travel/Pondicherry.webp",
     description:
       "A heritage and spiritual itinerary around Pondicherry and Auroville with accessible sightseeing, cultural spots, beaches and relaxed local experiences.",
     days: [
@@ -515,7 +515,7 @@ export const itineraries = {
     country: "India Expedition",
     pace: "Challenging",
     vibe: "Spirituality",
-    image: "/travel/mansarovar.jfif",
+    image: "/travel/mansarovar.webp",
     description:
       "A sacred, helicopter-supported Kailash Mansarovar pilgrimage covering Nepalgunj, Simikot, Hilsa, Purang, Mansarovar and Darchen with optional Parikrama and acclimatization.",
     days: [
@@ -645,7 +645,7 @@ export const itineraries = {
     country: "India Expedition",
     pace: "Leisurely",
     vibe: "Spirituality",
-    image: "/travel/rishikesh-vertical.jfif",
+    image: "/travel/rishikesh-vertical.webp",
     description:
       "A spiritual short break ideal for seniors covering Har Ki Pauri Ganga Aarti, Rishikesh landmarks and Neelkanth Mahadev with minimal walking and ample rest stops.",
     days: [
@@ -692,7 +692,7 @@ export const itineraries = {
     country: "India Expedition",
     pace: "Moderate",
     vibe: "Spirituality",
-    image: "/travel/amritsar.jfif",
+    image: "/travel/amritsar.webp",
     description:
       "A combined spiritual trip visiting the Golden Temple in Amritsar and Vaishno Devi (Katra) with accessible transport, overnight stays and options for assisted darshan.",
     days: [
@@ -757,7 +757,7 @@ export const itineraries = {
     pace: "Relaxed",
     country: "Bali Expedition",
     vibe: "Luxury",
-    image: "/travel/bali-vertical.jfif",
+    image: "/travel/bali-vertical.webp",
     description:
       "A relaxed Bali itinerary for seniors including temple visits, cultural performances, rice terrace viewpoints, beach time in Sanur/Nusa Dua and wellness options.",
     days: [
@@ -829,7 +829,7 @@ export const itineraries = {
     country: "Dubai Expedition",
     pace: "Comfortable",
     vibe: "Luxury",
-    image: "/travel/dubai-vertical.jfif",
+    image: "/travel/dubai-vertical.webp",
     description:
       "A senior-friendly Dubai itinerary combining iconic landmarks (Burj Khalifa, Dubai Mall), a dhow cruise, desert safari, Abu Dhabi day trip and a luxury yacht farewell.",
     days: [
@@ -905,7 +905,7 @@ export const itineraries = {
     country: "Thailand Expedition",
     pace: "Moderate",
     vibe: "Leisure",
-    image: "/travel/thailand-vertical.jfif",
+    image: "/travel/thailand-vertical.webp",
     description:
       "A short Thailand package for seniors including Pattaya, Coral Island, Nong Nooch Garden, Bangkok city tour and a Chao Phraya river dinner cruise with minimal walking.",
     days: [
@@ -960,7 +960,7 @@ export const itineraries = {
     pace: "Moderate",
     vibe: "Nature",
     country: "Nepal Expedition",
-    image: "/travel/nepal-vertical.jfif",
+    image: "/travel/nepal-vertical.webp",
     description:
       "A cultural Nepal package for seniors covering Kathmandu, Pokhara and scenic attractions with assisted transfers, gentle sightseeing and domestic flights.",
     days: [

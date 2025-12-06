@@ -8,7 +8,7 @@ export default function ForeignTours() {
       route: "Delhi - Nepal",
       title: "Nepal Tour Package",
       duration: "5D/4N",
-      image: "/travel/nepal.jfif",
+      image: "/travel/nepal.webp",
       offer: "Call For Booking",
       slug: "nepal-3days-4nights"
     },
@@ -16,7 +16,7 @@ export default function ForeignTours() {
       route: "Delhi - Thailand",
       title: "Thailand Tour Package",
       duration: "4D/3N",
-      image: "/travel/thailand.jfif",
+      image: "/travel/thailand.webp",
       offer: "Booking Closed",
       slug: "delhi-to-thailand-3n-4d"
     },
@@ -24,7 +24,7 @@ export default function ForeignTours() {
       route: "Delhi - Dubai",
       title: "Dubai Tour Package",
       duration: "6D/5N",
-      image: "/travel/dubai.jfif",
+      image: "/travel/dubai.webp",
       offer: "Booking Closed",
       slug: "delhi-to-dubai-international-tour"
     },
@@ -32,7 +32,7 @@ export default function ForeignTours() {
       route: "Delhi - Bali",
       title: "Bali Tour Package",
       duration: "6D/5N",
-      image: "/travel/bali.jfif",
+      image: "/travel/bali.webp",
       offer: "Booking Closed",
       slug: "delhi-to-bali-itinerary"
     },

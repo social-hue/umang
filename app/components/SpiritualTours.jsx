@@ -5,53 +5,53 @@ import { Plane, Building2, MapPin, Compass, Clock, Phone } from "lucide-react";
 export default function SpiritualTours() {
   const tours = [
     {
-        route: "Delhi - MP - Jyotirlinga",
-        title: "Madhya Pradesh Jyotirlinga",
-        duration: "4D/5N",
-        image: "/travel/jyotirling-mp.jfif",
-        offer: "Booking Closed",
-        slug: "madhya-pradesh-jyotirlinga-spiritual-yatra-with-kalbharav-darshan"
-      },
-      {
-        route: "Delhi - Maharashtra",
-        title: "Maharashtra Jyotirlinga",
-        duration: "6D/5N",
-        image: "/travel/jyotirling-mh.jfif",
-        offer: "Booking Closed",
-        slug: "maharashtra-jyotirlinga-spiritual-pilgrimage-for-seniors"
-      },
-      {
-        route: "Haridwar - Rishikesh - Neelkanth",
-        title: "Haridwar, Rishikesh, Neelkanth",
-        duration: "3D/2N",
-        image: "/travel/rishikesh.jfif",
-        offer: "Booking Closed",
-        slug: "haridwar-rishikesh-and-neelkanth-mahadev"
-      },
-      {
-        route: "Delhi → Rajasthan",
-        title: "Khatu Shyam Ji",
-        duration: "4D/5N",
-        image: "/travel/khatu-shyam.jfif",
-        offer: "Booking Closed",
-        slug: "khatu-shyam-ji-mandir-itinerary"
-      },
-      {
-        route: "Kailash Mansarovar",
-        title: "Kailash Mansarovar - Helicopter",
-        duration: "6D/5N",
-        image: "/travel/kailash.jfif",
-        offer: "Booking Closed",
-        slug: "kailash-mansarovar-yatra-by-helicopter"
-      },
-      {
-        route: "Delhi-Amritsar-Vaishno Devi",
-        title: "Amritsar - Vaishno Devi",
-        duration: "5D/4N",
-        image: "/travel/amritsar.jfif",
-        offer: "Booking Closed",
-        slug: "golden-temple-amritsar-and-vaishno-devi-katra"
-      }
+      route: "Delhi - MP - Jyotirlinga",
+      title: "Madhya Pradesh Jyotirlinga",
+      duration: "4D/5N",
+      image: "/travel/jyotirling-mp.webp",
+      offer: "Booking Closed",
+      slug: "madhya-pradesh-jyotirlinga-spiritual-yatra-with-kalbharav-darshan"
+    },
+    {
+      route: "Delhi - Maharashtra",
+      title: "Maharashtra Jyotirlinga",
+      duration: "6D/5N",
+      image: "/travel/jyotirling-mh.webp",
+      offer: "Booking Closed",
+      slug: "maharashtra-jyotirlinga-spiritual-pilgrimage-for-seniors"
+    },
+    {
+      route: "Haridwar - Rishikesh - Neelkanth",
+      title: "Haridwar, Rishikesh, Neelkanth",
+      duration: "3D/2N",
+      image: "/travel/rishikesh.jfif",
+      offer: "Booking Closed",
+      slug: "haridwar-rishikesh-and-neelkanth-mahadev"
+    },
+    {
+      route: "Delhi → Rajasthan",
+      title: "Khatu Shyam Ji",
+      duration: "4D/5N",
+      image: "/travel/khatu-shyam.webp",
+      offer: "Booking Closed",
+      slug: "khatu-shyam-ji-mandir-itinerary"
+    },
+    {
+      route: "Kailash Mansarovar",
+      title: "Kailash Mansarovar - Helicopter",
+      duration: "6D/5N",
+      image: "/travel/kailash.webp",
+      offer: "Booking Closed",
+      slug: "kailash-mansarovar-yatra-by-helicopter"
+    },
+    {
+      route: "Delhi-Amritsar-Vaishno Devi",
+      title: "Amritsar - Vaishno Devi",
+      duration: "5D/4N",
+      image: "/travel/amritsar.webp",
+      offer: "Booking Closed",
+      slug: "golden-temple-amritsar-and-vaishno-devi-katra"
+    }
   ];
 
   return (
