@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { useParams, notFound } from "next/navigation";
+import { useParams } from "next/navigation";
 import { itineraries } from "@/app/StaticData/itineraries";
 import Image from "next/image";
 import { Sun, Moon, MapPin, Clock, Phone, CreditCard, FileText, Plane, Calendar, CheckCircle2, XCircle, ArrowRight } from "lucide-react";
@@ -10,9 +10,6 @@ export default function AyodhyaTour() {
     const { slug } = useParams();
     const data = itineraries[slug];
     const [active, setActive] = useState(1);
-
-    if (!data) return notFound();
-    const activeDay = data.days.find((d) => d.day === active) || data.days[0];
 
     return (
         <>

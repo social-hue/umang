@@ -11,8 +11,6 @@ export default function AyodhyaBanarasTour() {
     console.log(data);
     const [active, setActive] = useState(1);
 
-    if (!data) return notFound();
-
     const activeDay = data.days.find((d) => d.day === active) || data.days[0];
 
     return (
