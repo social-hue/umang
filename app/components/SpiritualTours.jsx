@@ -2,56 +2,56 @@
 import { motion } from "framer-motion";
 import { Plane, Building2, MapPin, Compass, Clock, Phone } from "lucide-react";
 
-export default function TourPackages() {
+export default function SpiritualTours() {
   const tours = [
-    // {
-    //   route: "Delhi - Ayodhya - Prayagraj - Banaras",
-    //   title: "Ramayana Trail (Live)",
-    //   duration: "14D/13N",
-    //   image: "/travel/ganga.webp",
-    //   offer: "Booking Open!",
-    //   slug: "delhi-ayodhya-varanasi-tour"
-    // },
     {
-      route: "Chennai / Kerala",
-      title: "South India Tour Package",
-      duration: "7D/6N",
-      image: "/travel/south.jpg",
-      offer: "Call For Booking",
-      slug: "soul-calming-encounters-in-kerala"
-    },
-    {
-      route: "Delhi → Jaipur → Jaisalmer",
-      title: "Majestic Rajasthan",
-      duration: "4D/3N",
-      image: "/travel/rajasthan.jpg",
-      offer: "Booking Closed",
-      slug: "delhi-jaipur-jaisalmer-heritage-tour"
-    },
-    {
-      route: "Delhi → Pondicherry",
-      title: "Pondicherry Tour",
-      duration: "4D/5N",
-      image: "/travel/Pondicherry.jfif",
-      offer: "Booking Closed",
-      slug: "pondicherry-itinerary"
-    },
-    {
-      route: "Delhi → Goa",
-      title: "Magical Goa Tour",
-      duration: "4N/5D",
-      image: "/travel/goa.webp",
-      offer: "Booking Closed",
-      slug: "magical-goa"
-    },
-    // {
-    //   route: "Delhi → Meghalaya",
-    //   title: "Meghalaya Tour",
-    //   duration: "5D/4N",
-    //   image: "/travel/meghalaya.jfif",
-    //   offer: "Booking Closed",
-    //   slug: "meghalaya-4-days-5-nights"
-    // },
+        route: "Delhi - MP - Jyotirlinga",
+        title: "Madhya Pradesh Jyotirlinga",
+        duration: "4D/5N",
+        image: "/travel/jyotirling-mp.jfif",
+        offer: "Booking Closed",
+        slug: "madhya-pradesh-jyotirlinga-spiritual-yatra-with-kalbharav-darshan"
+      },
+      {
+        route: "Delhi - Maharashtra",
+        title: "Maharashtra Jyotirlinga",
+        duration: "6D/5N",
+        image: "/travel/jyotirling-mh.jfif",
+        offer: "Booking Closed",
+        slug: "maharashtra-jyotirlinga-spiritual-pilgrimage-for-seniors"
+      },
+      {
+        route: "Haridwar - Rishikesh - Neelkanth",
+        title: "Haridwar, Rishikesh, Neelkanth",
+        duration: "3D/2N",
+        image: "/travel/rishikesh.jfif",
+        offer: "Booking Closed",
+        slug: "haridwar-rishikesh-and-neelkanth-mahadev"
+      },
+      {
+        route: "Delhi → Rajasthan",
+        title: "Khatu Shyam Ji",
+        duration: "4D/5N",
+        image: "/travel/khatu-shyam.jfif",
+        offer: "Booking Closed",
+        slug: "khatu-shyam-ji-mandir-itinerary"
+      },
+      {
+        route: "Kailash Mansarovar",
+        title: "Kailash Mansarovar - Helicopter",
+        duration: "6D/5N",
+        image: "/travel/kailash.jfif",
+        offer: "Booking Closed",
+        slug: "kailash-mansarovar-yatra-by-helicopter"
+      },
+      {
+        route: "Delhi-Amritsar-Vaishno Devi",
+        title: "Amritsar - Vaishno Devi",
+        duration: "5D/4N",
+        image: "/travel/amritsar.jfif",
+        offer: "Booking Closed",
+        slug: "golden-temple-amritsar-and-vaishno-devi-katra"
+      }
   ];
 
   return (

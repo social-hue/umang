@@ -2,249 +2,281 @@
 
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { MapPin, Briefcase, Clock, TrendingUp, DollarSign, CheckCircle, ArrowRight, Building2, Sparkles } from "lucide-react";
+import Link from "next/link";
+import {
+  MapPin,
+  Briefcase,
+  Clock,
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Building2,
+  Sparkles,
+  Globe
+} from "lucide-react";
 import Community from "@/app/components/Community";
+// import ApplyFormModal from "@/app/components/ApplyFormModal";
+
+const JOBS_DATA = [
+  {
+    slug: "business-development-manager",
+    title: "Business Development Manager",
+    department: "Business",
+    location: "On-site • Noida",
+    type: "Full-time",
+    level: "Senior",
+    salary: "₹28L – ₹40L",
+    description: "The Business Development Manager will lead franchise expansion, identify potential partners, manage sales pipelines, conduct meetings, and ensure smooth onboarding. The role requires strong communication skills, ownership mindset, and the ability to convert leads into franchise partners.",
+    requirements: [
+      "Minimum 2–4 years of experience in sales/business development",
+      "Strong negotiation and presentation skills",
+      "Ability to manage targets and handle high-value conversions",
+      "Confidence to lead franchise meetings (online/offline)",
+      "Self-driven, disciplined, and result-oriented",
+      "Experience in franchise sales is an added advantage"
+    ],
+    perks: [
+      "Fast career growth.",
+      "High ownership of work.",
+      "Dynamic, innovative environment.",
+      "Strong performance incentives."
+    ]
+  },
+  {
+    slug: "telecaller",
+    title: "Telecaller",
+    department: "Sales",
+    location: "On-site • Noida",
+    type: "Full-time",
+    level: "Entry-Mid",
+    salary: "₹3L – ₹6L",
+    description: "Telecallers will handle incoming and outgoing calls, explain franchise opportunities to leads, qualify them, maintain CRM data, and schedule meetings with the BDM team. This role is the backbone of franchise lead conversion.",
+    requirements: [
+      "Good communication skills in Hindi & basic English",
+      "Confident on calls; able to explain information clearly",
+      "Ability to handle high-volume calling & follow-ups",
+      "Prior telecalling/telesales experience preferred (not mandatory)",
+      "Target-driven, positive attitude, and good at maintaining records"
+    ],
+    perks: [
+      "Quick learning and skill growth.",
+      "Supportive team setup.",
+      "Opportunities to move into sales/operations."
+    ]
+  },
+  {
+    slug: "hr-manager",
+    title: "HR Manager",
+    department: "People & Culture",
+    location: "On-site • Noida",
+    type: "Full-time",
+    level: "Mid-Senior",
+    salary: "₹16L – ₹24L",
+    description: "The HR professional will manage hiring, onboarding, payroll coordination, employee engagement, and maintain smooth HR operations across all franchise locations. They will act as a bridge between management and team members.",
+    requirements: [
+      "1–3 years of HR experience (Fresher with good skills can also apply)",
+      "Strong communication, coordination, and documentation skills",
+      "Ability to manage recruitment pipelines and onboarding",
+      "Basic knowledge of HR policies, salary structure, and compliance",
+      "Organized, dependable, and people-friendly personality"
+    ],
+    perks: [
+      "Hands-on hiring experience.",
+      "Influence on company culture.",
+      "Fast growth in people management.",
+      "Leadership development programs"
+    ]
+  }
+];
 
 export default function JobSlugPage() {
-  const { slug } = useParams();
+  const params = useParams();
   const router = useRouter();
- 
-  const jobs = [
-    {
-      slug: "business-development-manager",
-      title: "Business Development Manager",
-      department: "Design",
-      location: "Remote • India",
-      type: "Full-time",
-      level: "Senior",
-      salary: "₹28L – ₹40L",
-      description:
-        "As a Senior Product Designer, you will craft beautiful and functional user experiences across our core products. You will collaborate deeply with Engineering and Product teams, taking ownership from ideation to final UI polish. If you have strong leadership skills and would like to work closely with people every day, you should consider a role as a business manager. These professionals oversee the productivity of employees and develop innovative strategies and goals to improve the company's overall performance. There are certain skills and abilities business managers should have to excel in the role. In this article, we review what a business manager is, the different types of managers in business, the skills business managers should have and the environment they typically work in.",
-      requirements: [
-        "5+ years of product design experience",
-        "Strong portfolio demonstrating UI/UX depth",
-        "Experience building design systems",
-        "Proficiency in Figma",
-        "Ability to collaborate cross-functionally",
-      ],
-      perks: [
-        "Remote-friendly environment",
-        "Learning & development budget",
-        "Comprehensive health insurance",
-        "Annual retreats & off-sites",
-      ],
-    },
-    {
-      slug: "telecaller",
-      title: "Telecaller",
-      department: "Engineering",
-      location: "Hybrid • Bengaluru",
-      type: "Full-time",
-      level: "Mid-level",
-      salary: "₹18L – ₹28L",
-      description:
-        "As a Frontend Engineer, you will develop high-quality user interfaces using React and modern tooling. You will work closely with UI/UX designers and backend engineers to bring features to life.",
-      requirements: [
-        "3+ years of experience with React",
-        "Strong JavaScript fundamentals",
-        "Experience with TailwindCSS",
-        "Understanding of performance optimization",
-        "Experience with Next.js is a plus",
-      ],
-      perks: [
-        "Hybrid-friendly work culture",
-        "Top-tier hardware (MacBook)",
-        "Wellness reimbursements",
-        "Paid certifications",
-      ],
-    },
-    {
-      slug: "hr-manager",
-      title: "HR Manager",
-      department: "People & Culture",
-      location: "On-site • Mumbai",
-      type: "Full-time",
-      level: "Mid–Senior",
-      salary: "₹16L – ₹24L",
-      description:
-        "Lead People Operations with a focus on culture, employee experience, and process improvements. Work closely with leadership to strengthen team engagement.",
-      requirements: [
-        "4+ years in HR/People Operations",
-        "Excellent communication skills",
-        "Experience managing employee lifecycle",
-        "Understanding HR compliance",
-        "Empathetic & people-first mindset",
-      ],
-      perks: [
-        "On-site meals",
-        "Health and dental insurance",
-        "Annual off-sites",
-        "Growth opportunities",
-      ],
-    },
-  ];
-
+  // const [showModal, setShowModal] = useState(false);
   const [job, setJob] = useState(null);
 
+  const slug = params?.slug;
+
   useEffect(() => {
-    const foundJob = jobs.find((j) => j.slug === slug);
-    setJob(foundJob);
+    if (slug) {
+      const foundJob = JOBS_DATA.find((j) => j.slug === slug);
+      setJob(foundJob);
+    }
   }, [slug]);
 
   if (!job) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-slate-50">
-        <div className="text-center">
-          <h2 className="text-2xl font-semibold text-slate-800">Job Not Found</h2>
-          <p className="text-slate-600 mt-2">The position you're looking for doesn't exist.</p>
+        <div className="text-center space-y-4">
+          <h2 className="text-3xl font-bold text-slate-900">Position Not Found</h2>
+          <p className="text-slate-900">The job you're looking for doesn't exist or may have been filled.</p>
+          <button
+            onClick={() => router.push("/careers")}
+            className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white rounded-lg hover:bg-slate-700 transition-colors"
+          >
+            View All Openings
+            <ArrowRight className="w-4 h-4" />
+          </button>
         </div>
       </div>
     );
   }
 
-  return (<>
-    <main className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/20">
-     <div className="relative max-w-7xl mx-auto px-6 py-10">
-        {/* Header Section */}
-        <div className="mb-12 space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 bg-white/60 backdrop-blur-sm rounded-full border border-slate-200/60 shadow-sm">
-            <Sparkles className="w-4 h-4 text-orange-600" />
-            <span className="text-sm font-medium text-slate-700">Now Hiring</span>
-          </div>
-          
-          <div className="space-y-4">
-            <h1 className="text-5xl font-bold text-slate-900 leading-tight">
+  return (
+    <>
+      <main className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/20 to-slate-100/30">
+        {/* Container with proper padding */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+          {/* Header Section */}
+          <header className="mb-10">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-50 rounded-full border border-slate-300 mb-6">
+              <Sparkles className="w-4 h-4 text-slate-900" />
+              <span className="text-sm font-medium text-slate-900">Now Hiring</span>
+            </div>
+
+            <h1 className="text-4xl font-bold text-slate-900 mb-3 leading-tight">
               {job.title}
             </h1>
-            <p className="text-md text-slate-600 max-w-2xl leading-relaxed">
-              Join our mission-driven team and contribute to meaningful work that impacts thousands every day. Be part of something extraordinary.
+
+            <p className="text-md text-slate-900 max-w-3xl mb-3 leading-relaxed">
+              Join our mission-driven team and contribute to meaningful work that impacts thousands every day.
             </p>
+
+            {/* Job Meta Info */}
+            <div className="flex flex-wrap gap-3">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-lg border border-slate-200 shadow-sm">
+                <Building2 className="w-4 h-4 text-slate-900" />
+                <span className="text-sm font-medium text-slate-700">{job.department}</span>
+              </div>
+
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-lg border border-slate-200 shadow-sm">
+                <MapPin className="w-4 h-4 text-slate-900" />
+                <span className="text-sm font-medium text-slate-700">{job.location}</span>
+              </div>
+
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-lg border border-slate-200 shadow-sm">
+                <Clock className="w-4 h-4 text-slate-900" />
+                <span className="text-sm font-medium text-slate-700">{job.type}</span>
+              </div>
+
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-lg border border-slate-200 shadow-sm">
+                <TrendingUp className="w-4 h-4 text-slate-900" />
+                <span className="text-sm font-medium text-slate-700">{job.level}</span>
+              </div>
+
+              {/* <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-slate-500 to-slate-900 rounded-lg shadow-md">
+                <DollarSign className="w-4 h-4 text-white" />
+                <span className="text-sm font-semibold text-white">{job.salary}</span>
+              </div> */}
+            </div>
+          </header>
+
+          {/* Two Column Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+
+            {/* Main Content - Left Column */}
+            <div className="lg:col-span-2 space-y-10">
+
+              {/* About the Role */}
+              <section>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-8 h-8 bg-gradient-to-br from-teal-800 to-teal-900 rounded-lg flex items-center justify-center shadow-lg">
+                    <Briefcase className="w-4 h-4 text-white" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-teal-900">About the Role</h2>
+                </div>
+                <p className="text-slate-700 leading-relaxed text-base">
+                  {job.description}
+                </p>
+              </section>
+
+              {/* Requirements */}
+              <section>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-8 h-8 bg-gradient-to-br from-teal-800 to-teal-900 rounded-lg flex items-center justify-center shadow-lg">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-teal-900">What We're Looking For</h2>
+                </div>
+                <ul className="space-y-1">
+                  {job.requirements.map((item, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <span className="inline-block w-1.5 h-1.5 rounded-full bg-slate-900 mt-2 flex-shrink-0" />
+                      <span className="text-slate-700 leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+
+              {/* Apply CTA */}
+              <Link href="https://wa.me/919560986669"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="whatsapp">
+              <button
+                className="cursor-pointer inline-flex items-center gap-2 px-4 py-2 border-slate-800 hover:text-white hover:bg-slate-800 border-2 rounded-lg text-slate-800 font-semibold text-base shadow-lg hover:shadow-xl hover:from-slate-700 hover:to-slate-900 transition-all duration-200"
+              >
+                Send Your CV
+                <ArrowRight className="w-5 h-5" />
+              </button>
+              </Link>
+            </div>
+
+            {/* Sidebar - Right Column */}
+            <aside className="lg:col-span-1 space-y-6">
+
+              {/* Perks & Benefits */}
+              <div className="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
+                <h3 className="text-lg font-bold text-slate-900 mb-4">Perks & Benefits</h3>
+                <ul className="space-y-3">
+                  {job.perks.map((perk, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-900 flex-shrink-0 mt-0.5" />
+                      <span className="text-slate-700 text-sm leading-relaxed">{perk}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Company Info Card */}
+              <div className="bg-gradient-to-br from-slate-50 to-slate-100/50 rounded-xl p-6 border border-slate-200">
+                <h3 className="text-lg font-bold text-slate-900 mb-3">Why Join Us?</h3>
+                <p className="text-slate-700 text-sm leading-relaxed mb-4">
+                  We're building the future of work with a team of passionate individuals who care deeply about making an impact.
+                </p>
+                <div className="space-y-2 text-sm text-slate-900">
+                  <div className="flex items-center gap-2">
+                    <Globe className="w-4 h-4 text-slate-900" />
+                    <span>On-site culture</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <TrendingUp className="w-4 h-4 text-slate-900" />
+                    <span>Fast-growing startup</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Sparkles className="w-4 h-4 text-slate-900" />
+                    <span>Innovative projects</span>
+                  </div>
+                </div>
+              </div>
+            </aside>
           </div>
 
-          {/* Quick Info Pills */}
-          <div className="flex flex-wrap gap-3 pt-2">
-            <div className="flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full border border-slate-200/60 shadow-sm">
-              <Building2 className="w-4 h-4 text-slate-600" />
-              <span className="text-sm font-medium text-slate-700">{job.department}</span>
-            </div>
-            <div className="flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full border border-slate-200/60 shadow-sm">
-              <MapPin className="w-4 h-4 text-slate-600" />
-              <span className="text-sm font-medium text-slate-700">{job.location}</span>
-            </div>
-            <div className="flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full border border-slate-200/60 shadow-sm">
-              <TrendingUp className="w-4 h-4 text-slate-600" />
-              <span className="text-sm font-medium text-slate-700">{job.level}</span>
-            </div>
-            <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-orange-500 to-orange-500 rounded-full shadow-md">
-              <DollarSign className="w-4 h-4 text-white" />
-              <span className="text-sm font-semibold text-white">{job.salary}</span>
-            </div>
-          </div>
+          {/* Bottom Spacing */}
+          <div className="h-12" />
         </div>
 
-        {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Left Column - Main Content */}
-          <div className="lg:col-span-2 space-y-6">
-            {/* Description Card */}
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center">
-                  <Briefcase className="w-5 h-5 text-white" />
-                </div>
-                <h2 className="text-2xl font-bold text-slate-900">About the Role</h2>
-              </div>
-              <p className="text-slate-700 leading-relaxed text-md">{job.description}</p>
-            
+        {/* {showModal && (
+          <ApplyFormModal 
+            jobTitle={job.title} 
+            onClose={() => setShowModal(false)} 
+          />
+        )} */}
+      </main>
 
-            {/* Requirements Card */}
-              <div className="mt-4 flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center">
-                  <CheckCircle className="w-5 h-5 text-white" />
-                </div>
-                <h2 className="text-2xl font-bold text-slate-900">What We're Looking For</h2>
-              </div>
-              <div className="space-y-2">
-                {job.requirements.map((item, i) => (
-                  <div key={i} className="flex items-start gap-3 group/item">
-                    <div className="mt-2 w-2 h-2 rounded-full bg-gradient-to-br from-orange-500 to-orange-600"></div>
-                    <p className="text-slate-700 leading-relaxed">{item}</p>
-                  </div>
-                ))}
-              </div>
-            
-
-            {/* CTA Button */}
-            <button
-              onClick={() => router.push(`/apply/${job.slug}`)}
-              className="group w-full lg:w-auto inline-flex items-center justify-center gap-3 px-6 py-3 bg-gradient-to-r from-orange-600 via-orange-600 to-orange-500 rounded-md text-white font-semibold text-md shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
-            >
-              <span>Apply Now</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-          </div>
-
-          {/* Right Column - Sidebar */}
-          <div className="space-y-5">
-            {/* Role Details Card */}
-            <div className="bg-white/80 backdrop-blur-sm rounded-md border border-slate-200/60 shadow-lg shadow-slate-200/50 p-6">
-              <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-                <div className="w-1 h-6 bg-gradient-to-b from-orange-500 to-orange-600 rounded-full"></div>
-                Role Details
-              </h3>
-              <div className="space-y-3">
-                <div className="group/detail">
-                  <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Department</div>
-                  <div className="text-slate-900 font-medium">{job.department}</div>
-                </div>
-                <div className="h-px bg-gradient-to-r from-slate-200 via-slate-300 to-slate-200"></div>
-                
-                <div className="group/detail">
-                  <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Location</div>
-                  <div className="text-slate-900 font-medium">{job.location}</div>
-                </div>
-                <div className="h-px bg-gradient-to-r from-slate-200 via-slate-300 to-slate-200"></div>
-                
-                <div className="group/detail">
-                  <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Employment Type</div>
-                  <div className="text-slate-900 font-medium">{job.type}</div>
-                </div>
-                <div className="h-px bg-gradient-to-r from-slate-200 via-slate-300 to-slate-200"></div>
-                
-                <div className="group/detail">
-                  <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Experience Level</div>
-                  <div className="text-slate-900 font-medium">{job.level}</div>
-                </div>
-                <div className="h-px bg-gradient-to-r from-slate-200 via-slate-300 to-slate-200"></div>
-                
-                <div className="group/detail">
-                  <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Salary Range</div>
-                  <div className="text-transparent bg-gradient-to-r from-orange-600 to-orange-600 bg-clip-text font-bold text-md">{job.salary}</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Perks Card */}
-            {/* <div className="bg-gradient-to-br from-orange-50 to-orange-50 rounded-3xl border border-orange-200/60 shadow-lg shadow-orange-200/30 p-8">
-              <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-                <div className="w-1 h-6 bg-gradient-to-b from-orange-500 to-orange-600 rounded-full"></div>
-                Perks & Benefits
-              </h3>
-              <div className="space-y-4">
-                {job.perks.map((perk, i) => (
-                  <div key={i} className="flex items-start gap-3 group/perk">
-                    <div className="mt-0.5 w-5 h-5 rounded-lg bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center flex-shrink-0 group-hover/perk:scale-110 transition-transform">
-                      <CheckCircle className="w-3.5 h-3.5 text-white" />
-                    </div>
-                    <span className="text-slate-700 leading-relaxed">{perk}</span>
-                  </div>
-                ))}
-              </div>
-            </div> */}
-          </div>
-        </div>
-      </div>
-    </main>
-    <Community />
+      {/* Community Section */}
+      <Community />
     </>
   );
 }

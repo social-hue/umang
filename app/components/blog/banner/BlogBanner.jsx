@@ -53,13 +53,13 @@ export default function BlogBanner({ data }) {
               <div>
                 <motion.h1
                   variants={itemVariants}
-                  className="text-zinc-800 font-semibold 2xl:text-[70px] xl:text-[50px] lg:text-[40px] md:text-[35px] text-[28px]"
+                  className="text-zinc-800 font-semibold 2xl:text-[70px] lg:text-[42px] md:text-[34px] text-[28px]"
                   dangerouslySetInnerHTML={{ __html: data.title }}
                 ></motion.h1>
 
                 <motion.h2
                   variants={itemVariants}
-                  className=" gradient_text lg:text-[25px] md:text-[20px] text-[18px] pt-4"
+                  className=" gradient_text text-lg pt-4"
                   dangerouslySetInnerHTML={{ __html: data.subTitle }}
                 ></motion.h2>
                 <motion.div

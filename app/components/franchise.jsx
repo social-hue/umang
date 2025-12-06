@@ -5,7 +5,8 @@ import toast from "react-hot-toast";
 import { AlertTriangle, IndianRupee } from "lucide-react";
 import { motion } from "framer-motion";
 import { Plane, Wallet, Gavel, HeartPulse, Sparkles, ArrowRight } from "lucide-react";
-// import Link from "next/link";
+import { TrendingUp, DollarSign, MapPin, Target, Headphones, Megaphone, GraduationCap, Settings, Users, LineChart, Monitor, Globe } from 'lucide-react';
+import Link from "next/link";
 
 export default function FranchisePage() {
   const services = [
@@ -15,6 +16,71 @@ export default function FranchisePage() {
     { title: "Health & Wellness", icon: HeartPulse },
     // { title: "Lifestyle", icon: Sparkles },
   ];
+
+
+  const benefits = [
+    {
+      icon: <TrendingUp className="w-9 h-9" />,
+      title: "Earn From Day 1",
+      description: "Start earning immediately from the very first day of onboarding. No long waiting period - income begins as operations start."
+    },
+    {
+      icon: <DollarSign className="w-9 h-9" />,
+      title: "Low Investment, High Returns",
+      description: "The franchise model is designed for fast ROI with minimal setup cost. Your initial investment can be recovered in a short period."
+    },
+    {
+      icon: <MapPin className="w-9 h-9" />,
+      title: "Exclusive Territory Rights",
+      description: "Your area is fully protected. Once your city/zone is assigned to you, no other franchise partner will operate in your territory."
+    },
+    {
+      icon: <Target className="w-9 h-9" />,
+      title: "Proven Scalable Business Model",
+      description: "Umang Living runs on a tested system that eliminates guesswork. You get a ready-to-run operational playbook with full clarity."
+    },
+    {
+      icon: <Headphones className="w-9 h-9" />,
+      title: "Centralized Support System",
+      description: "24×7 support from our central management team - including operations guidance, marketing support, HR, and business development."
+    },
+    {
+      icon: <Megaphone className="w-9 h-9" />,
+      title: "Marketing & Branding Done For You",
+      description: "You get access to professional marketing creatives, ads, and promotions handled by the Umang Living digital team, making business growth easier and faster."
+    },
+    {
+      icon: <GraduationCap className="w-9 h-9" />,
+      title: "Complete Training & Onboarding",
+      description: "From product knowledge to sales training to operations setup - we train you thoroughly so you can run your franchise smoothly."
+    },
+    {
+      icon: <Settings className="w-9 h-9" />,
+      title: "Zero Operational Hassle",
+      description: "All backend operations, systems, documentation, and service frameworks are managed by Umang Living. You only focus on customer onboarding & revenue."
+    },
+    {
+      icon: <Users className="w-9 h-9" />,
+      title: "Minimal Staff Requirement",
+      description: "You can run the franchise with a small team or even individually in the beginning, reducing monthly expenses and maximizing your profit."
+    },
+    {
+      icon: <LineChart className="w-9 h-9" />,
+      title: "Long-Term Stability & Growth",
+      description: "This business provides steady monthly income, predictable growth, and multiple opportunities to scale in nearby areas as you grow."
+    },
+    {
+      icon: <Monitor className="w-9 h-9" />,
+      title: "Tech & CRM Support",
+      description: "Manage leads, customers, reports, and performance through our integrated CRM dashboard — transparent and easy to use."
+    },
+    {
+      icon: <Globe className="w-9 h-9" />,
+      title: "Strong Community & Network Access",
+      description: "Join a growing community of franchise partners across India. Learn, collaborate, and grow with a strong support ecosystem."
+    }
+  ];
+
   const [showModal, setShowModal] = useState(false);
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
@@ -94,37 +160,88 @@ export default function FranchisePage() {
   return (
     <>
       {/* HERO */}
-      <header className="py-4 md:mt-4 relative bg-white/60 backdrop-blur-sm mb-8 md:mb-10">
+      <header className="py-16 flex justify-center relative bg-white/60 backdrop-blur-sm">
         <div className="mx-auto lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          <div className="space-y-5 md:space-y-6">
+          <div className="space-y-5">
             <h1 className="text-3xl md:text-4xl lg:text-[44px] font-extrabold leading-tight text-slate-900">Become Our Franchise Partner & <span className="text-amber-600">Earn From Day One !</span></h1>
             <p className="text-md leading-relaxed text-slate-700 max-w-xl">Join India&apos;s most trusted senior care brand with minimum investment and be part of a purpose-driven business improving lives across India. We offer Health, Travel, Legal & Finance with a complete ecosystem for modern senior living.</p>
             <div className="mt-4 flex items-start gap-4">
-              <a href="#franchise-form" className="inline-flex items-center px-5 py-3 rounded-2xl bg-amber-600 text-white font-medium shadow-lg hover:shadow-xl transition">Enquire Now</a>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxn7A3szNNTyelrqs30B9ZbdDC2JFrk1PvIM83owNvYzW9zA/viewform" target="_blank" className="inline-flex items-center px-5 py-3 rounded-2xl bg-amber-600 text-white font-medium shadow-lg hover:shadow-xl transition">Enquire Now</a>
               <a href="/Franchise_Brochure.pdf" download className="inline-flex items-center px-5 py-3 rounded-2xl border border-slate-300 text-slate-800 bg-white hover:bg-slate-50 transition">Download Brochure</a>
             </div>
-            {/* Key numbers */}
             <div className="mt-6 flex flex-wrap gap-4">
               <Stat label="Cities" value="15+" />
               <Stat label="Happy Seniors" value="3000+" />
               <Stat label="Care Network" value="Pan-India" />
             </div>
           </div>
-          <div className="relative h-72 sm:h-96 lg:h-80 rounded-2xl overflow-hidden shadow-2xl cursor-pointer">
-            <Image
-              src="/Scan_here.webp"
-              alt="elderly community"
-              fill
-              className="object-cover"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
-          </div>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfxn7A3szNNTyelrqs30B9ZbdDC2JFrk1PvIM83owNvYzW9zA/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="relative h-72 sm:h-96 lg:h-80 rounded-2xl overflow-hidden shadow-2xl cursor-pointer">
+              <Image
+                src="/Scan_here.webp"
+                alt="elderly community"
+                fill
+                className="object-cover"
+                priority
+              />
+
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
+            </div>
+          </a>
+
         </div>
       </header>
+      {/* <section className="mb-10">
+        <div className="w-full py-8 text-center bg-amber-600">
+          <h2 className="text-2xl md:text-3xl font-bold text-white">
+            Become Our Franchise Member
+          </h2>
+
+          <p className="text-white mt-2 max-w-xl mx-auto text-sm md:text-base">
+            Start your journey with a trusted, fast-growing brand and unlock a stable earning opportunity.
+          </p>
+
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxn7A3szNNTyelrqs30B9ZbdDC2JFrk1PvIM83owNvYzW9zA/viewform" target="_blank"
+            className="inline-block mt-4 px-5 py-2 bg-white text-slate-800 border-1 border-white rounded-md text-md hover:bg-transparent hover:text-white transition-all shadow-sm"
+          >
+            Get Details
+          </a>
+        </div>
+      </section> */}
       <main className="mx-auto lg:px-8">
+        <section className="mb-8">
+          <div className="space-y-6">
+            <h2 className="text-2xl text-slate-800 font-semibold">Benefits of Becoming an Umang Living Franchise Partner <span className="inline-block -mb-1 text-zinc-900 w-6 h-6"><ArrowRight /></span></h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              {benefits.map((benefit, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-sm p-4 shadow-sm hover:shadow-md transition-shadow duration-300 border border-slate-200"
+                >
+                  <div className="flex flex-col h-full">
+                    <div className="text-amber-600 mb-3">
+                      {benefit.icon}
+                    </div>
+                    <h3 className="text-xl font-semibold text-slate-800 mb-3">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-slate-600 leading-relaxed text-sm">
+                      {benefit.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <h2 className="py-3 text-2xl text-slate-900 font-bold">Services at a glance <span className="inline-block -mb-1 text-zinc-900 w-6 h-6"><ArrowRight /></span></h2>
-        <div className="py-4 mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 md:gap-2">
+        <div className="py-4 max-w-3xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {services.map((s, i) => {
             const Icon = s.icon;
             return (
@@ -138,7 +255,7 @@ export default function FranchisePage() {
         {/* Opportunity Section */}
         <section className="bg-white mt-8 mb-12">
           <div className="grid items-start">
-            <div className="">
+            <div>
               <h2 className="text-2xl font-semibold text-slate-900 mb-3">A Massive Opportunity in India’s Fast-Growing Senior Care Market</h2>
               <p className="text-slate-700 leading-relaxed">India's urban senior citizen population is flourishing. Currently, there are
                 about 1.4 crore urban senior citizens, and this number is expected to
@@ -156,16 +273,6 @@ export default function FranchisePage() {
                 <li className="flex items-start gap-3"><IconCheck /> Daily Convenience Services</li>
               </ul>
             </div>
-            {/* <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
-              <h3 className="font-semibold text-lg mb-2">Services at a Glance</h3>
-              <div className="grid grid-cols-2 gap-3">
-                <ServiceCard title="Financial" />
-                <ServiceCard title="Health & Wellness" />
-                <ServiceCard title="Travel" />
-                <ServiceCard title="Legal" />
-                <ServiceCard title="Lifestyle" />
-              </div>
-            </div> */}
           </div>
         </section>
 
@@ -471,7 +578,7 @@ function IconDot() {
 // function ServiceCard({ title }) {
 //   return (
 //     <div className="p-3 bg-white rounded-lg border border-slate-100 flex items-center gap-3">
-//       <div className="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center text-amber-700 font-semibold">{title.split(' ')[0].slice(0, 1)}</div>
+//       <div className="w-9 h-9 rounded-lg bg-amber-100 flex items-center justify-center text-amber-700 font-semibold">{title.split(' ')[0].slice(0, 1)}</div>
 //       <div className="text-sm text-slate-700">{title}</div>
 //     </div>
 //   );

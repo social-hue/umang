@@ -76,7 +76,7 @@ export default function Header() {
                     <h3
                       className={`transition-all duration-300 hover:scale-[1.04] ${
                         pathname.startsWith("/services")
-                          ? "text-[#E7216A] font-semibold"
+                          ? "text-red-700 font-semibold"
                           : "text-[#0B0B0B]"
                       }`}
                     >
@@ -96,7 +96,7 @@ export default function Header() {
                           href={s.link}
                           className={`block px-4 py-2 hover:bg-gray-100 transition ${
                             pathname === s.link
-                              ? "text-[#E7216A]"
+                              ? "text-red-700"
                               : "text-[#0B0B0B]"
                           }`}
                         >
@@ -111,7 +111,7 @@ export default function Header() {
                         <span
                           className={`${
                             pathname.startsWith("/services/healing")
-                              ? "text-[#E7216A]"
+                              ? "text-red-700"
                               : "text-[#0B0B0B]"
                           }`}
                         >
@@ -125,7 +125,7 @@ export default function Header() {
                             href="/services/healing-services"
                             className={`block px-4 py-2 hover:bg-gray-100 transition ${
                               pathname === "/services/healing-services"
-                                ? "text-[#E7216A]"
+                                ? "text-red-700"
                                 : "text-[#0B0B0B]"
                             }`}
                           >
@@ -142,7 +142,7 @@ export default function Header() {
                           className={`${
                             pathname.startsWith("/services/financial") ||
                             pathname.startsWith("/services/legal")
-                              ? "text-[#E7216A]"
+                              ? "text-red-700"
                               : "text-[#0B0B0B]"
                           }`}
                         >
@@ -156,7 +156,7 @@ export default function Header() {
                             href="/services/general-consultation"
                             className={`block px-4 py-2 hover:bg-gray-100 transition ${
                               pathname === "/services/general-consultation"
-                                ? "text-[#E7216A]"
+                                ? "text-red-700"
                                 : "text-[#0B0B0B]"
                             }`}
                           >
@@ -168,7 +168,7 @@ export default function Header() {
                             href="/services/legal-consultation"
                             className={`block px-4 py-2 hover:bg-gray-100 transition ${
                               pathname === "/services/legal-consultation"
-                                ? "text-[#E7216A]"
+                                ? "text-red-700"
                                 : "text-[#0B0B0B]"
                             }`}
                           >
@@ -180,7 +180,7 @@ export default function Header() {
                             href="/services/financial-consulting"
                             className={`block px-4 py-2 hover:bg-gray-100 transition ${
                               pathname === "/services/financial-consulting"
-                                ? "text-[#E7216A]"
+                                ? "text-red-700"
                                 : "text-[#0B0B0B]"
                             }`}
                           >
@@ -199,7 +199,7 @@ export default function Header() {
                 key={href}
                 className={`transition-all duration-300 hover:scale-[1.04] ${
                   pathname === href
-                    ? "text-[#E7216A] font-semibold"
+                    ? "text-red-700 font-semibold"
                     : "text-[#0B0B0B]"
                 }`}
               >
@@ -211,7 +211,7 @@ export default function Header() {
           {/* Desktop Dialer */}
           <a
             href="tel:18002028704"
-            className="inline-flex items-center gap-2 bg-red-700 text-white px-4 py-2 rounded-md font-semibold border-2 border-transparent hover:bg-white hover:text-red-700 hover:border-red-700 transition"
+            className="inline-flex items-center gap-2 bg-red-700 hover:text-red-700 px-4 py-2 rounded-md font-semibold border-2 hover:border-red-700 text-white hover:bg-white border-red-700 transition"
           >
             <FaPhoneAlt className="w-5 h-5" />
             <span className="hidden-below-320">1800-202-8704</span>
@@ -290,7 +290,7 @@ export default function Header() {
                         className={`block text-lg py-1 ${
                           pathname === "/services/townships"
                             ? "text-[#FCEF44]"
-                            : "text-white hover:text-[#E7216A]"
+                            : "text-white hover:text-red-700"
                         }`}
                       >
                         Township
@@ -301,7 +301,7 @@ export default function Header() {
                         className={`block text-lg py-1 ${
                           pathname === "/services/stay"
                             ? "text-[#FCEF44]"
-                            : "text-white hover:text-[#E7216A]"
+                            : "text-white hover:text-red-700"
                         }`}
                       >
                         Stay
@@ -312,7 +312,7 @@ export default function Header() {
                         className={`block text-lg py-1 ${
                           pathname === "/services/travel"
                             ? "text-[#FCEF44]"
-                            : "text-white hover:text-[#E7216A]"
+                            : "text-white hover:text-red-700"
                         }`}
                       >
                         Travel
@@ -323,7 +323,7 @@ export default function Header() {
                         className={`block text-lg py-1 ${
                           pathname === "/services/health-services"
                             ? "text-[#FCEF44]"
-                            : "text-white hover:text-[#E7216A]"
+                            : "text-white hover:text-red-700"
                         }`}
                       >
                         Health & Wellness
@@ -333,7 +333,7 @@ export default function Header() {
                       {/* <div>
                         <button
                           onClick={() => setHealthOpen(!healthOpen)}
-                          className="w-full flex items-center justify-between text-lg py-1 text-white hover:text-[#E7216A]"
+                          className="w-full flex items-center justify-between text-lg py-1 text-white hover:text-red-700"
                         >
                           <span>Health &amp; Wellness</span>
                           {healthOpen ? <FaChevronUp /> : <FaChevronDown />}
@@ -347,7 +347,7 @@ export default function Header() {
                               className={`block text-lg py-1 ${
                                 pathname === "/services/healing-services"
                                   ? "text-[#FCEF44]"
-                                  : "text-white hover:text-[#E7216A]"
+                                  : "text-white hover:text-red-700"
                               }`}
                             >
                               Healing Services
@@ -360,7 +360,7 @@ export default function Header() {
                       <div>
                         <button
                           onClick={() => setGeneralOpen(!generalOpen)}
-                          className="w-full flex items-center justify-between text-lg py-1 text-white hover:text-[#E7216A]"
+                          className="w-full flex items-center justify-between text-lg py-1 text-white hover:text-red-700"
                         >
                           <span>Consultation</span>
                           {generalOpen ? <FaChevronUp /> : <FaChevronDown />}
@@ -374,7 +374,7 @@ export default function Header() {
                               className={`block text-lg py-1 ${
                                 pathname === "/services/general-consultation"
                                   ? "text-[#FCEF44]"
-                                  : "text-white hover:text-[#E7216A]"
+                                  : "text-white hover:text-red-700"
                               }`}
                             >
                               General Consultation
@@ -385,7 +385,7 @@ export default function Header() {
                               className={`block text-lg py-1 ${
                                 pathname === "/services/legal-consultation"
                                   ? "text-[#FCEF44]"
-                                  : "text-white hover:text-[#E7216A]"
+                                  : "text-white hover:text-red-700"
                               }`}
                             >
                               Legal Consultation
@@ -396,7 +396,7 @@ export default function Header() {
                               className={`block text-lg py-1 ${
                                 pathname === "/services/financial-consulting"
                                   ? "text-[#FCEF44]"
-                                  : "text-white hover:text-[#E7216A]"
+                                  : "text-white hover:text-red-700"
                               }`}
                             >
                               Financial Consulting
@@ -418,7 +418,7 @@ export default function Header() {
                 className={`block text-lg border-b pb-2 border-white/60 ${
                   pathname === href
                     ? "text-[#FCEF44]"
-                    : "text-white hover:text-[#E7216A]"
+                    : "text-white hover:text-red-700"
                 }`}
               >
                 {label}
