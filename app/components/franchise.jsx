@@ -160,7 +160,7 @@ export default function FranchisePage() {
   return (
     <>
       {/* HERO */}
-      <header className="py-16 flex justify-center relative bg-white/60 backdrop-blur-sm">
+      <header className="py-6 md:py-16 flex justify-center relative bg-white/60 backdrop-blur-sm">
         <div className="mx-auto lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="space-y-5">
             <h1 className="text-3xl md:text-4xl lg:text-[44px] font-extrabold leading-tight text-slate-900">Become Our Franchise Partner & <span className="text-amber-600">Earn From Day One !</span></h1>
