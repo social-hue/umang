@@ -87,7 +87,7 @@ export default function Grid() {
   };
 
   return (
-    <section className="w-full bg-[#f9f9f9] py-8 px-6 md:px-12">
+    <section className="w-full bg-[#f9f9f9] py-8 px-6 md:px-12 relative overflow-hidden">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:gap-10">
         {/* Left */}
         <motion.div

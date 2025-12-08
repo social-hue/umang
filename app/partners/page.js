@@ -1,5 +1,3 @@
-// import Banner from "../components/Banner";
-import Community from "../components/Community";
 import FranchisePage from "../components/franchise";
 import { seoData } from "../lib/seoMeta";
 
@@ -37,18 +35,14 @@ export const generateMetadata = () => {
       creator: "@umangliving",
       images: [meta.image],
     },
-    keywords: meta.keywords.split(",").map((kw) => kw.trim()), // array of keywords
+    keywords: meta.keywords.split(",").map((kw) => kw.trim()), 
   };
 };
 
 export default function Partners() {
   return (
     <>
-      {/* <Banner title={"Partner with Us"} bgImage={"/banner/partner-banner-3.webp"} /> */}
-      <div className="main_width relative overflow-hidden">
       <FranchisePage />
-      </div>
-      <Community />
     </>
   );
 }

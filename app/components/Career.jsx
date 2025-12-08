@@ -43,7 +43,7 @@ const jobs = [
 export default function CareersPage() {
   const router = useRouter();
   return (
-    <main className="min-h-screen text-white">
+    <main className="relative overflow-hidden">
       {/* Top Banner / Hero */}
       <section className="relative overflow-hidden">
         {/* Background image */}

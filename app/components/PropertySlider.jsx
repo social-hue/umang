@@ -32,7 +32,7 @@ const PropertySlider = ({ listings = [] }) => {
   });
 
   return (
-    <div className="relative w-full overflow-hidden mb-6 select-none">
+    <div className="relative w-full py-6 overflow-hidden mb-6 select-none">
       <motion.div
         ref={containerRef}
         className="flex cursor-grab active:cursor-grabbing"

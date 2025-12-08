@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Banner from "../../components/Banner";
-import Community from "../../components/Community";
 import { seoData } from "../../lib/seoMeta";
 
 export const generateMetadata = () => {
@@ -67,9 +66,7 @@ export default function Townships() {
         </p>
       </div>
     </section>              
-        <Community />
       </div>
-      {/* <Footer /> */}
     </>
   );
 }

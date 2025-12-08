@@ -1,5 +1,4 @@
 import Banner from "../../components/Banner";
-import Community from "../../components/Community";
 import { seoData } from "../../lib/seoMeta";
 import Image from "next/image";
 
@@ -67,7 +66,6 @@ export default function GeneralConsultation() {
         </p>
       </div>
     </section>       
-        <Community />
       </div>
       {/* <Footer /> */}
     </>

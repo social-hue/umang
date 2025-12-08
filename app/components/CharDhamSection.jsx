@@ -32,7 +32,7 @@ export default function CharDhamSection() {
 
   return (
     <>
-      <section className="overflow-hidden">
+      <section className="main_width py-8 relative overflow-hidden">
         <div className="mb-12 text-center">
           <h2 className="text-zinc-800 text-3xl mb-3 md:text-[32px] font-bold">
             Explore Our Curated Tours <ArrowRight className="inline-block" size={28} />

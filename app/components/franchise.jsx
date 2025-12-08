@@ -4,7 +4,7 @@ import Image from "next/image";
 import toast from "react-hot-toast";
 import { AlertTriangle, IndianRupee } from "lucide-react";
 import { motion } from "framer-motion";
-import { Plane, Wallet, Gavel, HeartPulse, Sparkles, ArrowRight } from "lucide-react";
+import { Plane, Wallet, Gavel, HeartPulse, ArrowRight } from "lucide-react";
 import { TrendingUp, DollarSign, MapPin, Target, Headphones, Megaphone, GraduationCap, Settings, Users, LineChart, Monitor, Globe } from 'lucide-react';
 import Link from "next/link";
 
@@ -16,7 +16,6 @@ export default function FranchisePage() {
     { title: "Health & Wellness", icon: HeartPulse },
     // { title: "Lifestyle", icon: Sparkles },
   ];
-
 
   const benefits = [
     {
@@ -160,7 +159,7 @@ export default function FranchisePage() {
   return (
     <>
       {/* HERO */}
-      <header className="py-6 md:py-16 flex justify-center relative bg-white/60 backdrop-blur-sm">
+      <header className="py-6 md:py-16 flex justify-center relative overflow-hidden bg-white/60 backdrop-blur-sm">
         <div className="mx-auto lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="space-y-5">
             <h1 className="text-3xl md:text-4xl lg:text-[44px] font-extrabold leading-tight text-slate-900">Become Our Franchise Partner & <span className="text-amber-600">Earn From Day One !</span></h1>

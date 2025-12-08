@@ -1,6 +1,5 @@
 import Banner from "../components/Home/Banner/Banner";
 import Living from "../components/Home/UmangLiving/Living";
-import Community from "../components/Community";
 import { seoData } from "../lib/seoMeta";
 import FAQSection from "../components/faq/FAQSection";
 import Testimonial from "../components/testimonials/testimonials";
@@ -48,7 +47,6 @@ export default function Home() {
       <Living />
       <Testimonial />
       <FAQSection />
-      <Community />
     </>
   );
 }

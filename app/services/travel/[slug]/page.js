@@ -1,5 +1,4 @@
 import { seoData } from "@/app/lib/seoMeta";
-import Community from "@/app/components/Community";
 import AyodhyaTour from "@/app/components/tour/AyodhyaTour";
 
 export async function generateMetadata ({ params }) {
@@ -50,7 +49,6 @@ export  default function  ItinerarySlugPage() {
     return (
         <>
             <AyodhyaTour />
-            <Community />
         </>
     );
 }

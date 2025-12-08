@@ -1,5 +1,4 @@
 import Founder from "../components/about/Founder";
-import Community from "../components/Community";
 import FounderMessage from "../components/FounderMessage";
 import TeamSection from "../components/team/TeamSection";
 import MissionVision from "../components/vision/MissionVision";  
@@ -44,14 +43,10 @@ export const generateMetadata = () => {
 export default function About() {
   return (
     <>
-      {/* <Banner title={"About us"} bgImage={"/banner/about-banner2.webp"} /> */}
       <FounderMessage/>
       <MissionVision />
       <Founder />
-      <div className="py-10 md:py-0 md:mb-16">
       <TeamSection />
-      </div>
-      <Community />
     </>
   );
 }   

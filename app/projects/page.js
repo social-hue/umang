@@ -47,10 +47,7 @@ export default function Projects() {
       <Banner title={"Projects"} bgImage={"/banner/projects-banner.webp"} />
       <div className="relative overflow-hidden">
         <Map />
-        <div className="py-6">
-          <PropertySlider listings={data} />
-        </div>
-        <Community />
+        <PropertySlider listings={data} />
       </div>
     </>
   );

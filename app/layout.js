@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import { Toaster } from "react-hot-toast";
 import FloatingCTA from "./components/floatingButton/floatingButton";
 import Footer from "./components/Footer";
+import Community from "./components/Community";
 //import PromoCard from "./components/popup";
 
 const roboto = Roboto({
@@ -134,6 +135,7 @@ export default function RootLayout({ children }) {
             },
           }}
         />
+         <Community />
         <Footer />
         <FloatingCTA />
         <SpeedInsights/>

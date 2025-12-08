@@ -14,8 +14,6 @@ import {
   Sparkles,
   Globe
 } from "lucide-react";
-import Community from "@/app/components/Community";
-// import ApplyFormModal from "@/app/components/ApplyFormModal";
 
 const JOBS_DATA = [
   {
@@ -124,9 +122,9 @@ export default function JobSlugPage() {
 
   return (
     <>
-      <main className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/20 to-slate-100/30">
+      <main className="py-6 bg-gradient-to-br from-slate-50 via-blue-50/20 to-slate-100/30">
         {/* Container with proper padding */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="main_width mx-auto">
 
           {/* Header Section */}
           <header className="mb-10">
@@ -266,17 +264,7 @@ export default function JobSlugPage() {
           {/* Bottom Spacing */}
           <div className="h-12" />
         </div>
-
-        {/* {showModal && (
-          <ApplyFormModal 
-            jobTitle={job.title} 
-            onClose={() => setShowModal(false)} 
-          />
-        )} */}
       </main>
-
-      {/* Community Section */}
-      <Community />
     </>
   );
 }

@@ -17,13 +17,11 @@ export default function ImageGallery() {
     "/award2.jpeg",
   ];
 
-
   return (
-    <div className="main_width">
+    <div className="py-8 md:py-0 md:pb-16 main_width">
     <h2 className="text-3xl md:text-[36px] text-zinc-800 font-bold mb-3 leading-tight text-center md:text-left">
       Achievements & Certificates
     </h2>
-
     <div className="flex flex-col md:flex-row justify-center md:justify-start gap-6 py-2 items-center">
       {photos.map((img, i) => (
         <div

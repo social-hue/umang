@@ -13,7 +13,7 @@ export default function ContactPage() {
   };
 
   return (
-    <section className="main_width py-8 md:py-16 overflow-hidden">
+    <section className="main_width py-8 md:py-16 overflow-hidden relative">
 
       {/* Heading */}
       <motion.div
