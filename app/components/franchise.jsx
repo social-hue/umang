@@ -159,10 +159,10 @@ export default function FranchisePage() {
   return (
     <>
       {/* HERO */}
-      <header className="py-6 md:py-16 flex justify-center relative overflow-hidden bg-white/60 backdrop-blur-sm">
-        <div className="mx-auto lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+      <header className="main_width py-6 md:py-16 flex justify-center relative overflow-hidden bg-white/60 backdrop-blur-sm">
+        <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="space-y-5">
-            <h1 className="text-3xl md:text-4xl lg:text-[44px] font-extrabold leading-tight text-slate-900">Become Our Franchise Partner & <span className="text-amber-600">Earn From Day One !</span></h1>
+            <h1 className="text-3xl md:text-4xl lg:text-[44px] font-extrabold leading-tight text-slate-900">Become Our Franchise Partner & <span className="text-amber-600">Earn From Day One!</span></h1>
             <p className="text-md leading-relaxed text-slate-700 max-w-xl">Join India&apos;s most trusted senior care brand with minimum investment and be part of a purpose-driven business improving lives across India. We offer Health, Travel, Legal & Finance with a complete ecosystem for modern senior living.</p>
             <div className="mt-4 flex items-start gap-4">
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxn7A3szNNTyelrqs30B9ZbdDC2JFrk1PvIM83owNvYzW9zA/viewform" target="_blank" className="inline-flex items-center px-5 py-3 rounded-2xl bg-amber-600 text-white font-medium shadow-lg hover:shadow-xl transition">Enquire Now</a>
@@ -212,7 +212,7 @@ export default function FranchisePage() {
           </a>
         </div>
       </section> */}
-      <main className="mx-auto lg:px-8">
+      <main className="main_width mx-auto">
         <section className="mb-8">
           <div className="space-y-6">
             <h2 className="text-2xl text-slate-800 font-semibold">Benefits of Becoming an Umang Living Franchise Partner <span className="inline-block -mb-1 text-zinc-900 w-6 h-6"><ArrowRight /></span></h2>
