@@ -1,12 +1,9 @@
 import Image from "next/image";
 import Banner from "../../components/Banner";
-import Community from "../../components/Community";
-// import Footer from "../../components/Footer";
 import { seoData } from "../../lib/seoMeta";
 
 export const generateMetadata = () => {
     const meta = seoData.aboutUs;
-
     return {
         title: meta.title,
         description: meta.description,
@@ -67,9 +64,7 @@ export default function LifeCoach() {
                         </p>
                     </div>
                 </section>
-                <Community />
             </div>
-            {/* <Footer /> */}
         </>
     );
 }

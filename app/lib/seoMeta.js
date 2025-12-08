@@ -96,6 +96,18 @@ export const seoData = {
     canonical: "https://www.umangliving.com/partners",
   },
 
+  careers: {
+    type: "website",
+    url: "https://www.umangliving.com/careers",
+    title: "Career At Umang: Senior Housing India.",
+    description:
+      "Build meaningful work, with people who care at Umang Living",
+    keywords:
+      "senior housing India, career with Umang Living, senior living investment India, careers, job, telecaller, business development manager, retirement homes partnership, investors, financers, real estate developers, builders, senior citizen clubs",
+    image: "https://www.umangliving.com/partner/p1.jpg",
+    canonical: "https://www.umangliving.com/partners",
+  },
+  
   blog: {
     type: "website",
     url: "https://www.umangliving.com/blog",
@@ -188,50 +200,6 @@ export const seoData = {
       keywords: "Delhi to Ayodhya tour for senior citizens, Senior citizen pilgrimage tours in India, Varanasi Prayagraj Ayodhya tour package, Senior-friendly religious tours India, Delhi to Varanasi tour package by train, Comfortable pilgrimage trips for elders, Holy city tour packages from Delhi, Spiritual heritage tours for seniors, Senior citizen group travel India, Guided Ayodhya Varanasi Prayagraj tour, Elderly travel packages with assistance, Religious tourism India senior citizens, Delhi to Sarnath spiritual tour package, Safe and easy travel for senior pilgrims, Senior travel packages North India",
       canonical: "https://www.umangliving.com/services/travel/delhi-ayodhya-varanasi-tour"
     },
-    // {
-    //   type: "website",
-    //   slug: "Why-You-Should-Never-Truly-Retire",
-    //   url: "https://www.umangliving.com/blog/Why-You-Should-Never-Truly-Retire",
-    //   title: "Why You Should Never Truly Retire",
-    //   description:
-    //     "Traditionally, this stage of life was considered “retirement”—a polite word for slowing down, fading into the background, and living a quieter, simpler existence. But does fulfilling your responsibilities mean you must now retreat from life itself? Absolutely not.",
-    //   image: "https://www.umangliving.com/glimps/6.jpg",
-    // },
-    // {
-    //   type: "website",
-    //   slug: "Taking-a-Journey-you-Truly-Deserve",
-    //   url: "https://www.umangliving.com/blog/Taking-a-Journey-you-Truly-Deserve",
-    //   title: "Taking a Journey you Truly Deserve",
-    //   description:
-    //     "Travel after retirement isn’t just a luxury—it’s a gift to your soul, your health, and your sense of purpose. Here’s why you should pack your bags, chase horizons, and start your next great adventure. Retirement is the first time in decades that your calendar is truly yours.",
-    //   image: "https://www.umangliving.com/blog/blog3.jpg",
-    // },
-    // {
-    //   type: "website",
-    //   slug: "Rediscovering-Spirituality-After-Retirement",
-    //   url: "https://www.umangliving.com/blog/Rediscovering-Spirituality-After-Retirement",
-    //   title: "Rediscovering Spirituality After Retirement",
-    //   description:
-    //     "Retirement is not just the end of a career—it’s the beginning of a new, quieter, and more reflective phase of life. It’s when the noise begins to settle, and the soul finally has room to speak.",
-    //   image: "https://www.umangliving.com/spritual.jpg",
-    // },
-    // {
-    //   type: "website",
-    //   slug: "Plan-a-Healthy-Happy-Retirement",
-    //   url: "https://www.umangliving.com/blog/Plan-a-Healthy-Happy-Retirement",
-    //   title: "Plan a Healthy, Happy Retirement",
-    //   description:
-    //     "You’ve worked hard your entire life—raising a family, building a career, supporting loved ones, and managing responsibilities.",
-    //   image: "https://www.umangliving.com/glimps/1.jpg",
-    // },
-    // {
-    //   type: "website",
-    //   slug: "Why-Elderly-Communities-Matter-More-Than-Ever",
-    //   url: "https://www.umangliving.com/blog/Why-Elderly-Communities-Matter-More-Than-Ever",
-    //   title: "Why Elderly Communities Matter More Than Ever | Umang Living",
-    //   description:
-    //     "At Umang Living, we believe that the golden years of life deserve to be filled with joy, purpose, and companionship. That’s the very foundation on which this project was born — from a deeply personal space of observing how emotional well-being declines when seniors feel left behind by a fast-moving world.",
-    //   image: "https://www.umangliving.com/blog/blog_latest01.jpg",
-    // },
+
   ],
 };

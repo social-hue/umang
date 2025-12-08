@@ -1,8 +1,5 @@
-import Banner from "../components/Banner";
-import Community from "../components/Community";
 import Grid from "../components/contact/Grid";
 import ContactGrid from "../components/contact/officeDetails";
-// import Footer from "../components/Footer";
 import { seoData } from "../lib/seoMeta";
 
 export const generateMetadata = () => {
@@ -38,19 +35,15 @@ export const generateMetadata = () => {
       creator: "@umangliving",
       images: [meta.image],
     },
-    keywords: meta.keywords.split(",").map((kw) => kw.trim()), // array of keywords
+    keywords: meta.keywords.split(",").map((kw) => kw.trim()), 
   };
 };
 
 export default function Contact() {
   return (
     <>
-      {/* <Banner title={"Connect with Us"} bgImage={"/banner/contact-banner.webp"} /> */}
-      <div className="relative overflow-hidden">
         <Grid />
         <ContactGrid />
-        <Community />
-      </div>
     </>
   );
 }

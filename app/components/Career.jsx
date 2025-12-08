@@ -43,7 +43,7 @@ const jobs = [
 export default function CareersPage() {
   const router = useRouter();
   return (
-    <main className="min-h-screen text-white">
+    <main className="relative overflow-hidden">
       {/* Top Banner / Hero */}
       <section className="relative overflow-hidden">
         {/* Background image */}
@@ -66,7 +66,7 @@ export default function CareersPage() {
           </div>
 
           <div className="max-w-3xl space-y-4">
-            <h1 className="text-4xl font-bold sm:text-5xl">
+            <h1 className="text-4xl text-white font-bold sm:text-5xl">
               Build meaningful work,
               <span className="bg-gradient-to-r from-orange-500 via-orange-450 to-orange-400 bg-clip-text text-transparent">
                 {" "}
@@ -123,7 +123,7 @@ export default function CareersPage() {
             <h2 className="text-2xl font-bold tracking-tight text-gray-900">
               Open positions
             </h2>
-            <p className="mt-1 text-sm text-gray-600">
+            <p className="text-sm text-gray-600">
               Don’t see a perfect fit? You can still{" "}
               <button className="underline-offset-4 hover:underline text-teal-700">
                 send us your profile
@@ -146,7 +146,7 @@ export default function CareersPage() {
         </div>
 
         {/* Cards */}
-        <div className="mt-8 grid gap-7 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-7 grid gap-7 md:grid-cols-2 lg:grid-cols-3">
           {jobs.map((job) => (
             <article
               key={job.id}
@@ -204,7 +204,7 @@ export default function CareersPage() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-14 max-w-3xl text-xs text-gray-600">
+        <div className="mt-12 max-w-3xl text-xs text-gray-600">
           <p>
             We value curiosity, craftsmanship & kindness over perfect resumes.
             If you’re excited about what we’re building but don’t meet

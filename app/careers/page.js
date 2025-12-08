@@ -1,9 +1,8 @@
 import CareersPage from "../components/Career";
-import Community from "../components/Community";
 import { seoData } from "../lib/seoMeta";
          
 export const generateMetadata = () => {
-  const meta = seoData.blog;
+  const meta = seoData.careers;
   return {
     title: meta.title,
     description: meta.description,
@@ -41,10 +40,7 @@ export const generateMetadata = () => {
 export default function Blog() {   
   return (
     <>
-      <div className="relative overflow-hidden">
-        <CareersPage />
-      </div>
-      <Community />
+      <CareersPage />
     </>
   );
 }

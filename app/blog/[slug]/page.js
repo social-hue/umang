@@ -1,6 +1,5 @@
 import BlogBanner from "@/app/components/blog/banner/BlogBanner";
 import { BlogGrid } from "@/app/components/blog/BlogGrid";
-import Community from "@/app/components/Community";
 import { seoData } from "@/app/lib/seoMeta";
 import { posts } from "@/app/StaticData/posts";
 import Link from "next/link";
@@ -107,7 +106,6 @@ export default async function Page({ params }) {
           <BlogGrid limit={3} />
         </div>
       </div>
-      <Community />
     </>
   );
 }

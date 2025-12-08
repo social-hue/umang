@@ -1,4 +1,3 @@
-import Community from "../../components/Community";
 import { seoData } from "../../lib/seoMeta";
 import LegalServices from "@/app/components/services/LegalServices";
 
@@ -44,7 +43,6 @@ export default function LegalConsultation() {
       <div className="relative overflow-hidden ">
       <LegalServices />
       </div>
-      <Community />
     </>
   );    
 }

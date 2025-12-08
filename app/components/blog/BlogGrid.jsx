@@ -111,7 +111,7 @@ const POSTS = [
 export const BlogGrid = ({ limit }) => {
   const visiblePosts = limit ? POSTS.slice(0, limit) : POSTS;
   return (
-    <section className="main_width py-4 pb-20">
+    <section className="main_width py-8 md:py-12 pb-20 overflow-hidden">
       <div className="grid lg:grid-cols-3 xl:grid-cols-4 sm:grid-cols-2 gap-6">
         {visiblePosts.map((post) => (
           <BlogCard key={post.id} {...post} />
