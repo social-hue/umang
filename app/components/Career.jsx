@@ -51,7 +51,7 @@ export default function CareersPage() {
           className="absolute inset-0 bg-cover bg-center opacity-100"
           style={{
             backgroundImage:
-              "url('/job-banner-12.webp')",
+              "url('/job-banner-11.jpg')",
           }}
         />
 

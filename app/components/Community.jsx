@@ -4,8 +4,13 @@ import { NumberCounter } from "../helpers/NumberCounter";
 
 const Community = () => {
   return (
-    <div className="relative lg:py-8 md:py-8 py-8 bg-[url(/blog/blogbanner1.webp)] bg-cover h-[420px] md:h-[400px] 2xl:h-[600px] flex items-center">
-      <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/20"></div>
+    <div
+      className="relative lg:py-8 md:py-8 py-8 bg-cover bg-center h-[420px] md:h-[400px] 2xl:h-[600px] flex items-center overflow-hidden"
+      style={{
+        backgroundImage:
+          "linear-gradient(90deg, rgba(0,0,0,0.70) 0%, rgba(0,0,0,0.20) 100%), url('/blog/blogbanner1.webp')",
+      }}
+    >
       <div className="main_width z-10">
         <div>
           <p className="mb-2 lg:text-[40px] md:text-[30px] text-[24px] md:leading-[58px] font-semibold text-white">
