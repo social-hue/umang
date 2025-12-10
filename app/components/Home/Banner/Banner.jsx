@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import NewsTicker from "../../breaking/NewsTicker";
 import { Swiper, SwiperSlide } from "swiper/react";       
 import { EffectFade, Autoplay } from "swiper/modules";     
@@ -42,10 +43,15 @@ export default function Banner() {
             <SwiperSlide key={index}>
               <div className="relative w-full h-full">
                 {/* Background Image */}
-                <img
+                <Image
                   src={slide.image}
                   alt={slide.title}
-                  className="w-full h-full object-cover"
+                  fill
+                  priority={index === 0}
+                  fetchPriority={index === 0 ? "high" : "auto"}
+                  loading={index === 0 ? "eager" : "lazy"}
+                  sizes="100vw"
+                  className="object-cover"
                 />
 
                 {/* Overlay */}

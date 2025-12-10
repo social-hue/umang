@@ -290,7 +290,7 @@ export default function FranchisePage() {
           </div>
 
           <div className="rounded-2xl overflow-hidden shadow-lg h-80 relative">
-            <Image src="/elder-walking.webp" alt="community" layout="fill" objectFit="cover" />
+            <Image src="/facilities/lifestyle.webp" alt="community" layout="fill" objectFit="cover" />
           </div>
         </section>
 
