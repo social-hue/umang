@@ -107,7 +107,7 @@ export default function JobSlugPage() {
       <div className="min-h-screen flex items-center justify-center bg-slate-50">
         <div className="text-center space-y-4">
           <h2 className="text-3xl font-bold text-slate-900">Position Not Found</h2>
-          <p className="text-slate-900">The job you're looking for doesn't exist or may have been filled.</p>
+          <p className="text-slate-900">The job you&apos;re looking for doesn&apos;t exist or may have been filled.</p>
           <button
             onClick={() => router.push("/careers")}
             className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white rounded-lg hover:bg-slate-700 transition-colors"
@@ -195,7 +195,7 @@ export default function JobSlugPage() {
                   <div className="w-8 h-8 bg-linear-to-br from-teal-800 to-teal-900 rounded-lg flex items-center justify-center shadow-lg">
                     <CheckCircle className="w-4 h-4 text-white" />
                   </div>
-                  <h2 className="text-2xl font-bold text-teal-900">What We're Looking For</h2>
+                  <h2 className="text-2xl font-bold text-teal-900">What We&apos;re Looking For</h2>
                 </div>
                 <ul className="space-y-1">
                   {job.requirements.map((item, index) => (
@@ -241,7 +241,7 @@ export default function JobSlugPage() {
               <div className="bg-linear-to-br from-slate-50 to-slate-100/50 rounded-xl p-6 border border-slate-200">
                 <h3 className="text-lg font-bold text-slate-900 mb-3">Why Join Us?</h3>
                 <p className="text-slate-700 text-sm leading-relaxed mb-4">
-                  We're building the future of work with a team of passionate individuals who care deeply about making an impact.
+                  We&apos;re building the future of work with a team of passionate individuals who care deeply about making an impact.
                 </p>
                 <div className="space-y-2 text-sm text-slate-900">
                   <div className="flex items-center gap-2">
