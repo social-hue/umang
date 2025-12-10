@@ -1,8 +1,8 @@
+import "./globals.css";
 import { Roboto } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import "./globals.css";
-import Script from "next/script"; //✅import Script from next/Script
+import Script from "next/script";
 import Header from "./components/Header";
 import { Toaster } from "react-hot-toast";
 import FloatingCTA from "./components/floatingButton/floatingButton";
@@ -75,6 +75,7 @@ export default function RootLayout({ children }) {
           type="image/x-icon"
           sizes="any"
         />
+        <link rel="preload" as="image" href="/blog/blogbanner1.webp" />
         {/* ✅ Google Analytics via Next Script */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-X8ZCDZN3QT"

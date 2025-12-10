@@ -113,7 +113,7 @@ export default function FacilitiesSection() {
                     className="object-cover"
                   />
                 </div>
-                <div className="flex flex-col p-4 flex-grow">
+                <div className="flex flex-col p-4 grow">
                   <h3
                     className={` text-md font-semibold mb-1 ${item.accent}`}
                   >
@@ -134,7 +134,7 @@ export default function FacilitiesSection() {
           target="_main"
           className="w-full md:w-auto"
         >
-          <button className="w-full md:w-auto px-8 py-3 bg-red-800 text-white rounded-sm font-semibold hover:bg-red-700 transition">
+          <button className="w-full md:w-auto px-8 py-3 bg-red-700 text-white rounded-sm font-semibold hover:bg-red-700 transition">
             Get Free Membership
           </button>
         </a>

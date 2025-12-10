@@ -79,7 +79,7 @@ export default function Banner() {
                     </p>
                     <a
                       href={slide.href} target="_main"
-                      className="inline-block  bg-gradient-to-r from-orange-600 to-red-700 px-4 md:px-6 py-2 md:py-3 rounded-lg text-sm sm:text-base font-semibold shadow-md hover:opacity-95 transition-all"
+                      className="inline-block  bg-linear-to-r from-orange-600 to-red-700 px-4 md:px-6 py-2 md:py-3 rounded-lg text-sm sm:text-base font-semibold shadow-md hover:opacity-95 transition-all"
                     >
                       {slide.button}
                     </a>
