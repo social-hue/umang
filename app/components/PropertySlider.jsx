@@ -46,7 +46,7 @@ const PropertySlider = ({ listings = [] }) => {
         {[...listings, ...listings].map((item, index) => (
           <div
             key={index}
-            className="relative flex-shrink-0 w-[260px] sm:w-[320px] md:w-[360px] h-[220px] rounded-xl overflow-hidden mx-2 bg-gray-100 shadow-md"
+            className="relative shrink-0 w-[260px] sm:w-[320px] md:w-[360px] h-[220px] rounded-xl overflow-hidden mx-2 bg-gray-100 shadow-md"
           >
             {/* Image */}
             <Image
@@ -67,8 +67,8 @@ const PropertySlider = ({ listings = [] }) => {
         ))}
       </motion.div>
       {/* Fade edges */}
-      <div className="pointer-events-none absolute top-0 left-0 w-8 h-full bg-gradient-to-r from-white via-white/60 to-transparent"></div>
-      <div className="pointer-events-none absolute top-0 right-0 w-8 h-full bg-gradient-to-l from-white via-white/60 to-transparent"></div>
+      <div className="pointer-events-none absolute top-0 left-0 w-8 h-full bg-linear-to-r from-white via-white/60 to-transparent"></div>
+      <div className="pointer-events-none absolute top-0 right-0 w-8 h-full bg-linear-to-l from-white via-white/60 to-transparent"></div>
     </div>
   );
 };

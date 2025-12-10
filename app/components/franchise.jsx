@@ -189,7 +189,7 @@ export default function FranchisePage() {
               />
 
               {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/35 via-transparent to-transparent" />
             </div>
           </a>
 
@@ -420,7 +420,7 @@ technological hurdles" />
         </section> */}
 
         {/* Final CTA & Form */}
-        <section className="rounded-2xl border-1 border-amber-200/60 p-6 bg-gradient-to-r from-amber-50 to-amber-50 shadow-md mb-10 md:mb-16 scroll-mt-32" id="franchise-form">
+        <section className="rounded-2xl border border-amber-200/60 p-6 bg-linear-to-r from-amber-50 to-amber-50 shadow-md mb-10 md:mb-16 scroll-mt-32" id="franchise-form">
           <div className="mx-auto">
             <h2 className="text-2xl text-slate-900 font-semibold mb-2">Begin Your Franchise Journey with Umang Living</h2>
             <p className="text-slate-700 mb-6">A meaningful business opportunity with strong demand, high profitability, and social impact.</p>
@@ -565,12 +565,12 @@ function Stat({ label, value }) {
 
 function IconCheck() {
   return (
-    <svg className="w-5 h-5 text-amber-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+    <svg className="w-5 h-5 text-amber-600 shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
   );
 }
 function IconDot() {
   return (
-    <svg className="w-2 h-2 text-amber-600 mt-2 flex-shrink-0" viewBox="0 0 8 8" fill="currentColor"><circle cx="4" cy="4" r="4" /></svg>
+    <svg className="w-2 h-2 text-amber-600 mt-2 shrink-0" viewBox="0 0 8 8" fill="currentColor"><circle cx="4" cy="4" r="4" /></svg>
   );
 }
 

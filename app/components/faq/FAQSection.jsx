@@ -53,7 +53,7 @@ export default function FAQSection() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-16 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
@@ -77,7 +77,7 @@ export default function FAQSection() {
                   {faq.question}
                 </span>
                 <ChevronDown
-                  className={`w-6 h-6 text-teal-700 flex-shrink-0 transition-transform duration-300 ${
+                  className={`w-6 h-6 text-teal-700 shrink-0 transition-transform duration-300 ${
                     openIndex === index ? 'rotate-180' : ''
                   }`}
                 />
