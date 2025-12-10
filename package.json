@@ -6,7 +6,7 @@
     "lint": "next lint",
     "dev": "next dev",
     "postbuild": "next-sitemap",
-    "build": "next build --no-lint",
+    "build": "next build",
     "start": "next start"
   },
   "dependencies": {
@@ -14,7 +14,6 @@
     "@heroicons/react": "^2.2.0",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
-    "critters-webpack-plugin": "^3.0.2",
     "d3": "^7.9.0",
     "date-fns": "^4.1.0",
     "dotenv": "^17.2.3",
@@ -43,7 +42,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@fullhuman/postcss-purgecss": "^7.0.2",
-    "@tailwindcss/postcss": "^4.1.12",
+    "@tailwindcss/postcss": "^4.1.17",
     "@types/node": "24.5.2",
     "@types/react": "19.1.13",
     "autoprefixer": "^10.4.22",

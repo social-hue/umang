@@ -95,20 +95,20 @@ export default function Testimonial() {
             {testimonials.map((t, i) => (
               <div
                 key={i}
-                className="px-2 sm:px-3 flex-shrink-0"
+                className="px-2 sm:px-3 shrink-0"
                 style={{
                   width: `${100 / visible}%`,
                 }}
               >
                 <div className="bg-white shadow-lg rounded-lg p-4 flex flex-col justify-between h-full">
-                  <p className="text-gray-600 mb-5 leading-relaxed text-md flex-grow">
+                  <p className="text-gray-600 mb-5 leading-relaxed text-md grow">
                     {t.text}
                   </p>
                   <div className="flex items-center">
                     <img
                       src={t.img}
                       alt={t.name}
-                      className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full object-cover flex-shrink-0"
+                      className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full object-cover shrink-0"
                     />
                     <div className="ml-3 sm:ml-4 text-left">
                       <p className="text-gray-800 font-semibold uppercase text-md sm:text-md">

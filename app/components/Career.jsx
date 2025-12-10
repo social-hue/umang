@@ -56,7 +56,7 @@ export default function CareersPage() {
         />
 
         {/* Light Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/65 to-black-50 opacity-70" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/65 to-black-50 opacity-70" />
 
         {/* Content */}
         <div className="relative z-10 mx-auto flex max-w-6xl flex-col gap-8 px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
@@ -68,7 +68,7 @@ export default function CareersPage() {
           <div className="max-w-3xl space-y-4">
             <h1 className="text-4xl text-white font-bold sm:text-5xl">
               Build meaningful work,
-              <span className="bg-gradient-to-r from-orange-500 via-orange-450 to-orange-400 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-orange-500 via-orange-450 to-orange-400 bg-clip-text text-transparent">
                 {" "}
                 with people who care.
               </span>

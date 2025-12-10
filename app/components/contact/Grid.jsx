@@ -189,7 +189,7 @@ export default function Grid() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-gradient-to-r from-[#079184] to-[#075c54] text-white font-medium py-3 hover:opacity-90 transition disabled:opacity-50 rounded-md"
+              className="w-full bg-linear-to-r from-[#079184] to-[#075c54] text-white font-medium py-3 hover:opacity-90 transition disabled:opacity-50 rounded-md"
             >
               {loading ? "Submitting..." : "Submit"}
             </button>

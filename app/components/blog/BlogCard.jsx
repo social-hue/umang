@@ -30,7 +30,7 @@ export const BlogCard = ({
           loading="lazy"
           decoding="async"
         />
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/20 to-transparent"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-linear-to-b from-black/20 to-transparent"></div>
         <div className="absolute top-3 left-3 flex flex-wrap gap-2">
           {categories.map((cat) => (
             <span

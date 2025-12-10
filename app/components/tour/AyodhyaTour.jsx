@@ -63,7 +63,7 @@ export default function AyodhyaTour() {
                             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
                                 <div>
                                     <div className="flex items-center gap-3 mb-2">
-                                        <span className="inline-block w-8 h-[1px] bg-stone-400"></span>
+                                        <span className="inline-block w-8 h-px bg-stone-400"></span>
                                         <span className="text-xs font-semibold tracking-[0.2em] text-stone-600 uppercase">Travel Itinerary</span>
                                     </div>
                                     <h2 className="text-3xl font-light text-stone-900 leading-tight">
@@ -221,7 +221,7 @@ export default function AyodhyaTour() {
                                 <ul className="space-y-1">
                                     {activeDay.bullets.map((b, i) => (
                                         <li key={i} className="flex gap-4 group">
-                                            <span className="flex-shrink-0 mt-1.5 w-1.5 h-1.5 rounded-full bg-stone-300 group-hover:bg-teal-600 transition-colors"></span>
+                                            <span className="shrink-0 mt-1.5 w-1.5 h-1.5 rounded-full bg-stone-300 group-hover:bg-teal-600 transition-colors"></span>
                                             <p className="text-stone-700 text-md font-light leading-relaxed">
                                                 {b}
                                             </p>
