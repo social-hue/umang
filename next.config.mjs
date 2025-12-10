@@ -10,10 +10,6 @@ const securityHeaders = [
 const nextConfig = {
   reactStrictMode: true,
 
-  experimental: {
-    optimizeCss: true, // safe and recommended
-  },
-
   images: {
     dangerouslyAllowSVG: false,
     formats: ["image/avif", "image/webp"],
