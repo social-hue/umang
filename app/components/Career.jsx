@@ -3,6 +3,7 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const jobs = [
   {
@@ -125,9 +126,14 @@ export default function CareersPage() {
             </h2>
             <p className="text-sm text-gray-600">
               Don’t see a perfect fit? You can still{" "}
+              <Link href="https://wa.me/919560986669"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="whatsapp">
               <button className="underline-offset-4 hover:underline text-teal-700">
                 send us your profile
               </button>
+              </Link>
               .
             </p>
           </div>
