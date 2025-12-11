@@ -2,37 +2,33 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
 
-/**
- * NumberCounter
- * Props:
- * - target: number to count to (defaults to 75)
- * - duration: total animation duration in milliseconds (defaults to 2000)
- * - className: optional className for styling
- *
- * This implementation guarantees a smooth, linear, monotonic count
- * and avoids overshoot/bouncing.
- */
 export function NumberCounter({ target = 75, duration = 2000, className = "" }) {
   const ref = useRef(null);
-  // FIX: The "margin" prop has been removed to ensure the animation
-  // triggers as soon as the element enters the viewport on all devices.
   const isInView = useInView(ref, { once: true });
 
-  const [displayValue, setDisplayValue] = useState(0);
+  // START AT TARGET VALUE to prevent layout shift
+  const targetValue = Math.round(Number(target) || 0);
+  const [displayValue, setDisplayValue] = useState(targetValue);
+  const [opacity, setOpacity] = useState(0);
+  
   const startedRef = useRef(false);
   const timerRef = useRef(null);
 
   useEffect(() => {
-    // Ensure numeric integer target
-    const to = Math.round(Number(target) || 0);
+    const to = targetValue;
 
-    // Only start once (or when it becomes visible)
+    // Only start once when it becomes visible
     if (!isInView || startedRef.current) return;
     startedRef.current = true;
 
-    const from = 0; // start from 0 (changeable if you want different start)
+    // Immediately fade in (no layout shift since we start at target)
+    setOpacity(1);
+
+    // Reset to 0 and begin animation
+    const from = 0;
+    setDisplayValue(from);
+
     if (to === from) {
-      setDisplayValue(to);
       return;
     }
 
@@ -75,9 +71,9 @@ export function NumberCounter({ target = 75, duration = 2000, className = "" }) 
         timerRef.current = null;
       }
     };
-  }, [isInView, target, duration]);
+  }, [isInView, targetValue, duration]);
 
-  // Safety cleanup on unmount (extra)
+  // Safety cleanup on unmount
   useEffect(() => {
     return () => {
       if (timerRef.current) {
@@ -87,8 +83,18 @@ export function NumberCounter({ target = 75, duration = 2000, className = "" }) 
   }, []);
 
   return (
-    <span ref={ref} className={`${className} font-bold`}>
-      {displayValue}
+    <span 
+      ref={ref} 
+      className={`${className} font-bold`}
+      style={{
+        opacity,
+        transition: 'opacity 0.3s ease-in',
+        fontVariantNumeric: 'tabular-nums', // Prevent digit width changes
+        display: 'inline-block',
+        minWidth: '1ch' // Ensure space is always reserved
+      }}
+    >
+      {displayValue.toLocaleString()}
     </span>
   );
 }
