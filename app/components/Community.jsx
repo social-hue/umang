@@ -17,7 +17,7 @@ const Community = () => {
         
         {/* Title + Counter */}
         <p className="mb-2 lg:text-[40px] md:text-[30px] text-[24px] md:leading-[58px] font-semibold text-white">
-          Be a part of our growing family,{" "}
+          Be a part of our growing family,{""}
           
           {/* Fixed-width container prevents layout shift during animation */}
           <span 
