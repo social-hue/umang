@@ -25,24 +25,23 @@ export default function Grid() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    const cleanValue = value.replace(/<[^>]*>?/gm, "").trim();
+    const cleanValue = value
+      .replace(/<[^>]*>?/gm, "")      // remove HTML tags
+      .replace(/\s{2,}/g, " ");       // collapse multiple spaces into one
     setFormData((prev) => ({ ...prev, [name]: cleanValue }));
   };
-
+  
   const validateForm = () => {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const numberPattern = /^[0-9]{10}$/;
-
     if (!emailPattern.test(formData.email)) {
       toast.error("Please enter a valid email address.");
       return false;
     }
-
     if (!numberPattern.test(formData.number)) {
       toast.error("Please enter a valid phone number.");
       return false;
     }
-
     if (formData.honeypot) return false;
     return true;
   };

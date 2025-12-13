@@ -20,7 +20,7 @@ const Community = () => {
           Be a part of our growing family,{""}
           
           {/* Fixed-width container prevents layout shift during animation */}
-          <span 
+          <span                  
             className="yellow inline-block text-center"
             style={{
               minWidth: '9ch', // Reserve space for "105,369+" (9 characters including comma)

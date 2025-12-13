@@ -20,9 +20,9 @@ const JOBS_DATA = [
     slug: "business-development-manager",
     title: "Business Development Manager",
     department: "Business",
-    location: "On-site • Noida",
+    location: "On-site",
     type: "Full-time",
-    level: "Senior",
+    level: "Mid-Senior",                                   
     salary: "₹28L – ₹40L",
     description: "The Business Development Manager will lead franchise expansion, identify potential partners, manage sales pipelines, conduct meetings, and ensure smooth onboarding. The role requires strong communication skills, ownership mindset, and the ability to convert leads into franchise partners.",
     requirements: [

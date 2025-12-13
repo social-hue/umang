@@ -1,11 +1,13 @@
 /** @type {import('next').NextConfig} */
 
+const isDev = process.env.NODE_ENV === "development";
+const isProd = process.env.NODE_ENV === "production";
+
 const securityHeaders = [
   { key: "X-Frame-Options", value: "DENY" },
   { key: "X-Content-Type-Options", value: "nosniff" },
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
-  // Add CSP for extra security (optional but recommended)
   {
     key: "Content-Security-Policy",
     value: "frame-ancestors 'none'",
@@ -13,9 +15,9 @@ const securityHeaders = [
 ];
 
 const nextConfig = {
-  reactStrictMode: true,
+  // Temporarily disable for debugging hydration issues
+  reactStrictMode: isDev ? false : true,
 
-  // Optimized package imports (experimental in Next.js 16)
   experimental: {
     optimizePackageImports: [
       'lucide-react',
@@ -24,76 +26,98 @@ const nextConfig = {
     ],
   },
 
-  // Image optimization
   images: {
     dangerouslyAllowSVG: false,
     formats: ["image/avif", "image/webp"],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60 * 60 * 24 * 365, // 1 year for static images
-    remotePatterns: [
-      // Add your image domains here if using external images
-      // {
-      //   protocol: 'https',
-      //   hostname: 'your-cdn.com',
-      // },
-    ],
+    // No cache in dev, aggressive cache in prod
+    minimumCacheTTL: isProd ? 60 * 60 * 24 * 365 : 0,
   },
 
-  // Headers with caching
   async headers() {
-    return [
+    const baseHeaders = [
       {
         source: "/(.*)",
         headers: securityHeaders,
       },
-      // Cache static assets aggressively
+    ];
+
+    // Production: Aggressive caching
+    if (isProd) {
+      return [
+        ...baseHeaders,
+        {
+          source: "/blog/:path*",
+          headers: [
+            {
+              key: "Cache-Control",
+              value: "public, max-age=31536000, immutable",
+            },
+          ],
+        },
+        {
+          source: "/_next/static/:path*",
+          headers: [
+            {
+              key: "Cache-Control",
+              value: "public, max-age=31536000, immutable",
+            },
+          ],
+        },
+        {
+          source: "/_next/image/:path*",
+          headers: [
+            {
+              key: "Cache-Control",
+              value: "public, max-age=31536000, immutable",
+            },
+          ],
+        },
+      ];
+    }
+
+    // Development: No caching
+    return [
+      ...baseHeaders,
       {
-        source: "/blog/:path*",
+        source: "/:path*",
         headers: [
           {
             key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
+            value: "no-store, no-cache, must-revalidate, proxy-revalidate",
           },
-        ],
-      },
-      {
-        source: "/_next/static/:path*",
-        headers: [
           {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
+            key: "Pragma",
+            value: "no-cache",
           },
-        ],
-      },
-      {
-        source: "/_next/image/:path*",
-        headers: [
           {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
+            key: "Expires",
+            value: "0",
           },
         ],
       },
     ];
   },
 
-  // Gzip/Brotli compression
   compress: true,
 
-  // Production optimizations
   compiler: {
-    removeConsole: process.env.NODE_ENV === "production" ? {
-      exclude: ['error', 'warn'], // Keep error/warn logs
+    removeConsole: isProd ? {
+      exclude: ['error', 'warn'],
     } : false,
   },
 
-  // Remove X-Powered-By header
   poweredByHeader: false,
   
-  // Turbopack config (Next.js 16+)
-  // Empty config enables Turbopack with default optimizations
+  // Reduce Turbopack noise in development
   turbopack: {},
+  
+  // Better error messages in development
+  onDemandEntries: {
+    maxInactiveAge: 25 * 1000,
+    pagesBufferLength: 2,
+  },
 };
 
 export default nextConfig;
