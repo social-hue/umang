@@ -136,7 +136,7 @@ export default function RootLayout({ children }) {
             },
           }}
         />
-         <Community />
+        <Community />
         <Footer />
         <FloatingCTA />
         <SpeedInsights/>

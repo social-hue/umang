@@ -57,7 +57,7 @@ export default function CareersPage() {
         />
 
         {/* Light Gradient Overlay */}
-        <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/65 to-black-50 opacity-70" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/40 via-black/65 to-black-40 opacity-70" />
 
         {/* Content */}
         <div className="relative z-10 mx-auto flex max-w-6xl flex-col gap-8 px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
@@ -130,7 +130,7 @@ export default function CareersPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="whatsapp">
-              <button className="underline-offset-4 hover:underline text-teal-700">
+              <button className="cursor-pointer underline-offset-4 hover:underline text-teal-700">
                 send us your profile
               </button>
               </Link>
@@ -187,7 +187,7 @@ export default function CareersPage() {
               </p>
 
               {/* Footer */}
-              <div className="mt-6 flex items-center justify-between gap-3 text-xs">
+              <div className="mt-6 flex items-center justify-between gap-3 text-sm">
                 <div className="text-gray-600">
                   <p className="font-medium text-gray-900">Compensation</p>
                   <p>Competitive Pay</p>
@@ -200,7 +200,7 @@ export default function CareersPage() {
                   onClick={() =>
                     router.push(`/careers/${job.title.toLowerCase().replace(/ /g, "-")}`)
                   }
-                  className="cursor-pointer inline-flex items-center justify-center px-4 py-2 text-xs font-semibold text-slate-700 transition-transform duration-150 hover:scale-105"
+                  className="cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-slate-700 transition-transform duration-150 hover:scale-105"
                 >
                   Apply now <ArrowRight className="inline-block ml-1 h-4 w-4" />
                 </button>

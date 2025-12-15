@@ -226,7 +226,7 @@ export default function FranchisePage() {
                     <div className="text-amber-600 mb-3">
                       {benefit.icon}
                     </div>
-                    <h3 className="text-xl font-semibold text-slate-800 mb-3">
+                    <h3 className="text-lg font-semibold text-slate-800 mb-3">
                       {benefit.title}
                     </h3>
                     <p className="text-slate-600 leading-relaxed text-sm">

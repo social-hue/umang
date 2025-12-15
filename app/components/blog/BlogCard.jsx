@@ -16,7 +16,7 @@ export const BlogCard = ({
   <Link href={`/blog/${slug}`} className="group block">
     <motion.article
       className="flex flex-col cursor-pointer rounded-sm overflow-hidden bg-white border border-zinc-200 shadow-sm hover:shadow-md transition-all duration-300"
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 0 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
