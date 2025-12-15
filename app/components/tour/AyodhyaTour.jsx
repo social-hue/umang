@@ -19,7 +19,7 @@ export default function AyodhyaTour() {
             <div className="main_width py-3 md:py-8 text-slate-800">
                 {/* HEADER */}
                 <header>
-                    <h1 className="text-2xl md:text-4xl font-bold tracking-tight">
+                    <h1 className="text-2xl md:text-4xl font-bold leading-relaxed">
                         {data.title}
                     </h1>
                     <p className="mt-2 text-md md:text-base text-slate-600">
@@ -82,21 +82,21 @@ export default function AyodhyaTour() {
                             {/* Key Metrics Grid */}
                             <div className="grid grid-cols-3 gap-6 py-4 border-y border-stone-100 mb-6">
                                 <div className="flex flex-col gap-1">
-                                    <div className="flex items-center gap-2 text-stone-400 mb-1">
+                                    <div className="flex items-center gap-2 text-stone-600 mb-1">
                                         <Calendar size={14} />
                                         <span className="text-[10px] uppercase tracking-wider font-semibold">Start Date</span>
                                     </div>
                                     <span className="text-stone-800 font-medium">{data.date}</span>
                                 </div>
                                 <div className="flex flex-col gap-1 border-l border-stone-100 pl-6">
-                                    <div className="flex items-center gap-2 text-stone-400 mb-1">
+                                    <div className="flex items-center gap-2 text-stone-600 mb-1">
                                         <Sun size={14} />
                                         <span className="text-[10px] uppercase tracking-wider font-semibold">Duration</span>
                                     </div>
                                     <span className="text-stone-800 font-medium">{data.day}</span>
                                 </div>
                                 <div className="flex flex-col gap-1 border-l border-stone-100 pl-6">
-                                    <div className="flex items-center gap-2 text-stone-400 mb-1">
+                                    <div className="flex items-center gap-2 text-stone-600 mb-1">
                                         <Moon size={14} />
                                         <span className="text-[10px] uppercase tracking-wider font-semibold">Nights</span>
                                     </div>
@@ -222,7 +222,7 @@ export default function AyodhyaTour() {
                                     {activeDay.bullets.map((b, i) => (
                                         <li key={i} className="flex gap-4 group">
                                             <span className="shrink-0 mt-1.5 w-1.5 h-1.5 rounded-full bg-stone-300 group-hover:bg-teal-600 transition-colors"></span>
-                                            <p className="text-stone-700 text-md font-light leading-relaxed">
+                                            <p className="text-stone-800 text-md font-light leading-relaxed">
                                                 {b}
                                             </p>
                                         </li>
@@ -274,7 +274,7 @@ export default function AyodhyaTour() {
                                         </div>
                                         <h5 className="font-semibold text-stone-900 mb-2">3. Secure Booking</h5>
                                         <p className="text-sm text-stone-500 leading-relaxed mb-2">
-                                            Pay a token fee of <span className="text-stone-900 font-medium">₹10,000</span> to Umang SCL Pvt Ltd.
+                                            Pay a token fee of <span className="text-stone-900 font-medium">₹2000</span> to Umang SCL Pvt Ltd.
                                         </p>
                                         <p className="text-xs text-stone-400">Accepted: UPI, Paytm, GPay, Bank Transfer</p>
                                     </div>

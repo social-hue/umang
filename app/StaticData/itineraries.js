@@ -164,7 +164,7 @@ export const itineraries = {
     duration: "5 Nights / 6 Days",
     location: "Maharashtra",
     country: "India Expedition",
-    pace: "Moderate",
+    pace: "  ",
     vibe: "Spirituality",
     image: "/travel/jyotirling-mh.webp",
     description:
