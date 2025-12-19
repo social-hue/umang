@@ -58,7 +58,7 @@ export default function LegalServiceSection() {
   const [activeTab, setActiveTab] = useState(tabs[0]);
 
   return (
-    <div>
+    <>
     <h2 className="text-zinc-800 text-3xl font-bold mb-4">What We Offer ?</h2>
     <section className="flex flex-col md:flex-row bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
       {/* Left Tabs */}
@@ -92,6 +92,6 @@ export default function LegalServiceSection() {
         </ul>
       </div>
     </section>
-    </div>
+    </>
   );
 }

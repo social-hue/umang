@@ -52,12 +52,12 @@ export default function CareersPage() {
           className="absolute inset-0 bg-cover bg-center opacity-100"
           style={{
             backgroundImage:
-              "url('/job-banner-16.webp')",
+              "url('/job-banner-18.jpg')",
           }}
         />
 
         {/* Light Gradient Overlay */}
-        <div className="absolute inset-0 bg-linear-to-b from-black/40 via-black/65 to-black-40 opacity-70" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/40 via-black/65 to-black-40 opacity-50" />
 
         {/* Content */}
         <div className="relative z-10 mx-auto flex max-w-6xl flex-col gap-8 px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
@@ -65,11 +65,11 @@ export default function CareersPage() {
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-white" />
             We’re hiring across Sales, HR & Consultants
           </div>
-
+          
           <div className="max-w-3xl space-y-4">
             <h1 className="text-4xl text-white font-bold sm:text-5xl">
               Build meaningful work,
-              <span className="bg-linear-to-r from-orange-500 via-orange-450 to-orange-400 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-orange-400 via-orange-450 to-orange-400 bg-clip-text text-transparent">
                 {" "}
                 with people who care.
               </span>

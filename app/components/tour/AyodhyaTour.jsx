@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Sun, Moon, MapPin, Clock, Phone, CreditCard, FileText, Plane, Calendar, CheckCircle2, XCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-export default function AyodhyaTour() {
+export default function AyodhyaTour() {  
     
     const { slug } = useParams();
     const data = itineraries[slug];
