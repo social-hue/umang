@@ -179,9 +179,9 @@ export default function FranchisePage() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <div className="relative h-72 sm:h-96 lg:h-80 rounded-2xl overflow-hidden shadow-2xl cursor-pointer">
+            <div className="relative h-72 sm:h-96 lg:h-80 rounded-2xl overflow-hidden shadow-md cursor-pointer">
               <Image
-                src="/Scan_here.webp"
+                src="/franchise-banner.webp"
                 alt="elderly community"
                 fill
                 className="object-cover"

@@ -47,7 +47,7 @@ export const seoData = {
     image: "https://www.umangliving.com/finance-banner.webp",
     canonical: "https://www.umangliving.com/services/finance",
   },
-
+ 
   legal: {
     type: "website",
     url: "https://www.umangliving.com/services/legal",
@@ -191,15 +191,198 @@ export const seoData = {
   tour: [
     {
       type: "website",
-      slug: "delhi-ayodhya-varanasi-tour",
-      url: "https://www.umangliving.com/services/travel/delhi-ayodhya-varanasi-tour",
-      title: "Delhi to Ayodhya, Varanasi, Sarnath & Prayagraj Senior Citizens Tour | Comfortable Spiritual Journey",
+      slug: "madhya-pradesh-jyotirlinga-spiritual-yatra-with-kalbharav-darshan",
+      url: "https://www.umangliving.com/services/travel/madhya-pradesh-jyotirlinga-spiritual-yatra-with-kalbharav-darshan",
+      title: "Madhya Pradesh Jyotirlinga Yatra for Senior Citizens | Ujjain & Omkareshwar Tour",
       description:
-        "Experience a serene 7-day spiritual journey from Delhi to Ayodhya, Varanasi, Sarnath & Prayagraj - designed for senior citizens with comfort, care & guidance.",
+        "A spiritually enriching Madhya Pradesh Jyotirlinga yatra for senior citizens covering Ujjain Mahakaleshwar, Omkareshwar and Kal Bhairav Darshan with senior-friendly travel, comfort stays and guided assistance by Umang Living.",
       image: "https://www.umangliving.com/travel/banaras.webp",
-      keywords: "Delhi to Ayodhya tour for senior citizens, Senior citizen pilgrimage tours in India, Varanasi Prayagraj Ayodhya tour package, Senior-friendly religious tours India, Delhi to Varanasi tour package by train, Comfortable pilgrimage trips for elders, Holy city tour packages from Delhi, Spiritual heritage tours for seniors, Senior citizen group travel India, Guided Ayodhya Varanasi Prayagraj tour, Elderly travel packages with assistance, Religious tourism India senior citizens, Delhi to Sarnath spiritual tour package, Safe and easy travel for senior pilgrims, Senior travel packages North India",
-      canonical: "https://www.umangliving.com/services/travel/delhi-ayodhya-varanasi-tour"
+      keywords:
+        "Madhya Pradesh Jyotirlinga tour for senior citizens, Ujjain Omkareshwar yatra for elders, Kal Bhairav darshan senior tour, Mahakaleshwar pilgrimage for seniors, senior citizen spiritual tours India, MP temple tour elderly friendly, Umang Living senior pilgrimages, safe Jyotirlinga yatra for seniors",
+      canonical:
+        "https://www.umangliving.com/services/travel/madhya-pradesh-jyotirlinga-spiritual-yatra-with-kalbharav-darshan"
     },
-
-  ],
+    {
+      type: "website",
+      slug: "maharashtra-jyotirlinga-spiritual-pilgrimage-for-seniors",
+      url: "https://www.umangliving.com/services/travel/maharashtra-jyotirlinga-spiritual-pilgrimage-for-seniors",
+      title: "Maharashtra Jyotirlinga Pilgrimage for Senior Citizens | Trimbakeshwar & Bhimashankar",
+      description:
+        "A carefully curated Maharashtra Jyotirlinga pilgrimage for senior citizens covering Trimbakeshwar, Bhimashankar and Grishneshwar with slow-paced itineraries, medical support and guided temple visits.",
+      image: "https://www.umangliving.com/travel/banaras.webp",
+      keywords:
+        "Maharashtra Jyotirlinga tour for senior citizens, Trimbakeshwar Bhimashankar yatra elders, senior friendly Jyotirlinga pilgrimage, Grishneshwar temple tour seniors, elderly pilgrimage tours India, Umang Living spiritual journeys, safe temple tours for seniors",
+      canonical:
+        "https://www.umangliving.com/services/travel/maharashtra-jyotirlinga-spiritual-pilgrimage-for-seniors"
+    },
+    {
+      type: "website",
+      slug: "magical-goa",
+      url: "https://www.umangliving.com/services/travel/magical-goa",
+      title: "Magical Goa Tour for Senior Citizens | Relaxed Beach & Heritage Experience",
+      description:
+        "A relaxed and refreshing Goa tour for senior citizens featuring scenic beaches, heritage churches, coastal cuisine and leisure travel with comfortable stays and assisted sightseeing by Umang Living.",
+      image: "https://www.umangliving.com/travel/banaras.webp",
+      keywords:
+        "Goa tour for senior citizens, relaxed Goa holiday for elders, senior friendly beach vacation India, Goa leisure tour seniors, Umang Living senior travel Goa, slow paced Goa itinerary elderly",
+      canonical:
+        "https://www.umangliving.com/services/travel/magical-goa"
+    },
+    {
+      type: "website",
+      slug: "soul-calming-encounters-in-kerala",
+      url: "https://www.umangliving.com/services/travel/soul-calming-encounters-in-kerala",
+      title: "Kerala Tour for Senior Citizens | Backwaters, Nature & Wellness Retreat",
+      description:
+        "A soul-calming Kerala tour for senior citizens with serene backwaters, hill stations, Ayurveda wellness and nature experiences designed for comfort, relaxation and mindful travel.",
+      image: "https://www.umangliving.com/travel/banaras.webp",
+      keywords:
+        "Kerala tour for senior citizens, Kerala backwaters elderly tour, senior friendly Kerala vacation, Ayurveda tour for elders, Umang Living Kerala travel seniors, peaceful tours for senior citizens",
+      canonical:
+        "https://www.umangliving.com/services/travel/soul-calming-encounters-in-kerala"
+    },
+    {
+      type: "website",
+      slug: "khatu-shyam-ji-mandir-itinerary",
+      url: "https://www.umangliving.com/services/travel/khatu-shyam-ji-mandir-itinerary",
+      title: "Khatu Shyam Ji Mandir Yatra for Senior Citizens | Comfortable Temple Visit",
+      description:
+        "A spiritually fulfilling Khatu Shyam Ji Mandir yatra for senior citizens with smooth travel, assisted darshan, comfortable stays and a calm devotional experience curated by Umang Living.",
+      image: "https://www.umangliving.com/travel/banaras.webp",
+      keywords:
+        "Khatu Shyam yatra for senior citizens, Khatu Shyam mandir elderly tour, senior friendly temple darshan Rajasthan, Umang Living pilgrimage tours, devotional tours for elders",
+      canonical:
+        "https://www.umangliving.com/services/travel/khatu-shyam-ji-mandir-itinerary"
+    },
+    {
+      type: "website",
+      slug: "pondicherry-itinerary",
+      url: "https://www.umangliving.com/services/travel/pondicherry-itinerary",
+      title: "Pondicherry Tour for Senior Citizens | Peaceful Heritage & Coastal Escape",
+      description:
+        "A peaceful Pondicherry tour for senior citizens featuring French heritage, spiritual retreats, beaches and relaxed sightseeing with senior-friendly arrangements and guided support.",
+      image: "https://www.umangliving.com/travel/banaras.webp",
+      keywords:
+        "Pondicherry tour for senior citizens, peaceful travel for elders India, heritage tours seniors, Umang Living Pondicherry itinerary, slow paced coastal trips elderly",
+      canonical:
+        "https://www.umangliving.com/services/travel/pondicherry-itinerary"
+    },
+    {
+      type: "website",
+      slug: "kailash-mansarovar-yatra-by-helicopter",
+      url: "https://www.umangliving.com/services/travel/kailash-mansarovar-yatra-by-helicopter",
+      title: "Kailash Mansarovar Yatra by Helicopter for Senior Citizens | Assisted Pilgrimage",
+      description:
+        "An assisted Kailash Mansarovar Yatra by helicopter for senior citizens with minimized physical strain, expert guidance, medical support and carefully planned spiritual journey.",
+      image: "https://www.umangliving.com/travel/banaras.webp",
+      keywords:
+        "Kailash Mansarovar yatra senior citizens, helicopter Kailash yatra elders, senior friendly Kailash tour, Umang Living spiritual expeditions, safe Kailash pilgrimage seniors",
+      canonical:
+        "https://www.umangliving.com/services/travel/kailash-mansarovar-yatra-by-helicopter"
+    },
+    {
+      type: "website",
+      slug: "delhi-jaipur-jaisalmer-heritage-tour",
+      url: "https://www.umangliving.com/services/travel/delhi-jaipur-jaisalmer-heritage-tour",
+      title: "Delhi Jaipur Jaisalmer Heritage Tour for Senior Citizens | Rajasthan Classics",
+      description:
+        "A culturally rich Delhi Jaipur Jaisalmer heritage tour for senior citizens covering forts, palaces and desert landscapes with relaxed pacing and comfortable travel arrangements.",
+      image: "https://www.umangliving.com/travel/banaras.webp",
+      keywords:
+        "Rajasthan heritage tour senior citizens, Delhi Jaipur Jaisalmer elders tour, senior friendly Rajasthan travel, Umang Living cultural tours seniors",
+      canonical:
+        "https://www.umangliving.com/services/travel/delhi-jaipur-jaisalmer-heritage-tour"
+    },
+    {
+      type: "website",
+      slug: "haridwar-rishikesh-and-neelkanth-mahadev",
+      url: "https://www.umangliving.com/services/travel/haridwar-rishikesh-and-neelkanth-mahadev",
+      title: "Haridwar Rishikesh Neelkanth Mahadev Tour for Senior Citizens",
+      description:
+        "A sacred Haridwar and Rishikesh tour for senior citizens including Neelkanth Mahadev temple, Ganga Aarti and spiritual experiences with comfort, safety and guidance.",
+      image: "https://www.umangliving.com/travel/banaras.webp",
+      keywords:
+        "Haridwar Rishikesh tour for seniors, Neelkanth Mahadev yatra elders, spiritual tours Uttarakhand senior citizens, Umang Living pilgrimage India",
+      canonical:
+        "https://www.umangliving.com/services/travel/haridwar-rishikesh-and-neelkanth-mahadev"
+    },
+    {
+      type: "website",
+      slug: "golden-temple-amritsar-and-vaishno-devi-katra",
+      url: "https://www.umangliving.com/services/travel/golden-temple-amritsar-and-vaishno-devi-katra",
+      title: "Golden Temple Amritsar & Vaishno Devi Yatra for Senior Citizens",
+      description:
+        "A spiritually uplifting Amritsar and Vaishno Devi yatra for senior citizens with assisted darshan, comfortable stays and carefully planned travel support.",
+      image: "https://www.umangliving.com/travel/banaras.webp",
+      keywords:
+        "Vaishno Devi yatra senior citizens, Golden Temple Amritsar elders tour, senior friendly pilgrimage North India, Umang Living spiritual journeys",
+      canonical:
+        "https://www.umangliving.com/services/travel/golden-temple-amritsar-and-vaishno-devi-katra"
+    },
+    {
+      type: "website",
+      slug: "delhi-to-bali-itinerary",
+      url: "https://www.umangliving.com/services/travel/delhi-to-bali-itinerary",
+      title: "Delhi to Bali Tour for Senior Citizens | Relaxed International Holiday",
+      description:
+        "A thoughtfully designed Delhi to Bali international tour for senior citizens featuring leisure sightseeing, cultural experiences and stress-free travel arrangements.",
+      image: "https://www.umangliving.com/travel/banaras.webp",
+      keywords:
+        "Bali tour for senior citizens, international trips for elders, Delhi to Bali seniors holiday, Umang Living international tours seniors",
+      canonical:
+        "https://www.umangliving.com/services/travel/delhi-to-bali-itinerary"
+    },
+    {
+      type: "website",
+      slug: "delhi-to-dubai-international-tour",
+      url: "https://www.umangliving.com/services/travel/delhi-to-dubai-international-tour",
+      title: "Delhi to Dubai Tour for Senior Citizens | Comfortable International Travel",
+      description:
+        "A premium Delhi to Dubai international tour for senior citizens with city tours, luxury comfort, guided experiences and senior-friendly pacing.",
+      image: "https://www.umangliving.com/travel/banaras.webp",
+      keywords:
+        "Dubai tour for senior citizens, international travel for elders, Delhi to Dubai seniors trip, Umang Living overseas tours seniors",
+      canonical:
+        "https://www.umangliving.com/services/travel/delhi-to-dubai-international-tour"
+    },
+    {
+      type: "website",
+      slug: "delhi-to-thailand-3n-4d",
+      url: "https://www.umangliving.com/services/travel/delhi-to-thailand-3n-4d",
+      title: "Delhi to Thailand Tour for Senior Citizens | Short International Getaway",
+      description:
+        "A short and comfortable Thailand tour for senior citizens with relaxed sightseeing, guided experiences and easy travel coordination by Umang Living.",
+      image: "https://www.umangliving.com/travel/banaras.webp",
+      keywords:
+        "Thailand tour for senior citizens, short international trips elders, Delhi to Thailand seniors holiday, Umang Living global tours",
+      canonical:
+        "https://www.umangliving.com/services/travel/delhi-to-thailand-3n-4d"
+    },
+    {
+      type: "website",
+      slug: "nepal-3days-4nights",
+      url: "https://www.umangliving.com/services/travel/nepal-3days-4nights",
+      title: "Nepal Tour for Senior Citizens | Spiritual & Scenic Short Escape",
+      description:
+        "A serene Nepal tour for senior citizens featuring temples, Himalayan views and cultural experiences with relaxed itineraries and guided travel.",
+      image: "https://www.umangliving.com/travel/banaras.webp",
+      keywords:
+        "Nepal tour for senior citizens, Kathmandu elderly tour, short international pilgrimage seniors, Umang Living Nepal travel",
+      canonical:
+        "https://www.umangliving.com/services/travel/nepal-3days-4nights"
+    },
+    {
+      type: "website",
+      slug: "meghalaya-4-days-5-nights",
+      url: "https://www.umangliving.com/services/travel/meghalaya-4-days-5-nights",
+      title: "Meghalaya Tour for Senior Citizens | Nature, Waterfalls & Serenity",
+      description:
+        "A nature-rich Meghalaya tour for senior citizens covering waterfalls, scenic landscapes and peaceful hill towns with comfort-first travel planning.",
+      image: "https://www.umangliving.com/travel/banaras.webp",
+      keywords:
+        "Meghalaya tour for senior citizens, northeast tours for elders, senior friendly hill station trips, Umang Living Meghalaya itinerary",
+      canonical:
+        "https://www.umangliving.com/services/travel/meghalaya-4-days-5-nights"
+    }
+  ]  
 };
