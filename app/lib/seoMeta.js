@@ -11,7 +11,7 @@ export const seoData = {
     image: "https://www.umangliving.com/banner.png",
     canonical: "https://www.umangliving.com/",
   },
-
+    
   aboutUs: {
     type: "website",
     url: "https://www.umangliving.com/about",
@@ -119,6 +119,7 @@ export const seoData = {
     image: "https://www.umangliving.com/blog/blog3.jpg",
     canonical: "https://www.umangliving.com/blog",
   },
+  
   contact: {
     type: "website",
     url: "https://www.umangliving.com/contact",
@@ -318,7 +319,7 @@ export const seoData = {
         "Vaishno Devi yatra senior citizens, Golden Temple Amritsar elders tour, senior friendly pilgrimage North India, Umang Living spiritual journeys",
       canonical:
         "https://www.umangliving.com/services/travel/golden-temple-amritsar-and-vaishno-devi-katra"
-    },
+    }, 
     {
       type: "website",
       slug: "delhi-to-bali-itinerary",
