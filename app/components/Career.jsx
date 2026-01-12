@@ -52,15 +52,15 @@ export default function CareersPage() {
           className="absolute inset-0 bg-cover bg-center opacity-100"
           style={{
             backgroundImage:
-              "url('/job-banner-18.jpg')",
+              "url('/job-banner-19.jpg')",
           }}
         />
 
         {/* Light Gradient Overlay */}
-        <div className="absolute inset-0 bg-linear-to-b from-black/40 via-black/65 to-black-40 opacity-50" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/65 to-black-40 opacity-50" />
 
         {/* Content */}
-        <div className="relative z-10 mx-auto flex max-w-6xl flex-col gap-8 px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
+        <div className="relative z-10 mx-auto flex main_width flex-col gap-8 px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
           <div className="inline-flex max-w-fit items-center gap-2 rounded-full border border-white px-3 py-1 text-xs font-medium text-white shadow">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-white" />
             We’re hiring across Sales, HR & Consultants
@@ -117,7 +117,7 @@ export default function CareersPage() {
       </section>
 
       {/* Job Listings */}
-      <section className="mx-auto max-w-6xl px-4 pb-20 pt-12 sm:px-6 lg:px-8">
+      <section className="mx-auto main_width px-4 pb-20 pt-12 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>

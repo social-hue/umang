@@ -17,18 +17,16 @@ const Community = () => {
         
         {/* Title + Counter */}
         <p className="mb-2 lg:text-[40px] md:text-[30px] text-[24px] md:leading-[58px] font-semibold text-white">
-          Be a part of our growing family,{""}
-          
+          Be a part of our growing family,{" "}
           {/* Fixed-width container prevents layout shift during animation */}
           <span                  
             className="yellow inline-block text-center"
             style={{
-              minWidth: '9ch', // Reserve space for "105,369+" (9 characters including comma)
+              minWidth: '7ch', // Reserve space for "105,369+" (9 characters including comma)
               fontVariantNumeric: 'tabular-nums' // Monospace numbers
             }}
-          >
-            <NumberCounter target={105369} duration={3000} />+
-          </span>Members already !
+          ><NumberCounter target={105369} duration={3000} />+
+          </span> Members already !
         </p>
 
         {/* Description + List */}

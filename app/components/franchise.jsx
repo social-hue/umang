@@ -6,9 +6,10 @@ import { AlertTriangle, IndianRupee } from "lucide-react";
 import { motion } from "framer-motion";
 import { Plane, Wallet, Gavel, HeartPulse, ArrowRight } from "lucide-react";
 import { TrendingUp, DollarSign, MapPin, Target, Headphones, Megaphone, GraduationCap, Settings, Users, LineChart, Monitor, Globe } from 'lucide-react';
-import Link from "next/link";
+// import Link from "next/link";
 
 export default function FranchisePage() {
+
   const services = [
     { title: "Travel", icon: Plane },
     { title: "Finance", icon: Wallet },
@@ -216,11 +217,11 @@ export default function FranchisePage() {
         <section className="mb-8">
           <div className="space-y-6">
             <h2 className="text-2xl text-slate-800 font-semibold">Benefits of Becoming an Umang Living Franchise Partner <span className="inline-block -mb-1 text-zinc-900 w-6 h-6"><ArrowRight /></span></h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {benefits.map((benefit, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-sm p-4 shadow-sm hover:shadow-md transition-shadow duration-300 border border-slate-200"
+                  className="bg-white rounded-sm p-3 transition-shadow duration-300"
                 >
                   <div className="flex flex-col h-full">
                     <div className="text-amber-600 mb-3">
